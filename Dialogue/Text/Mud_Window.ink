@@ -1,0 +1,3 @@
+INCLUDE Globals.ink
+Growl...
+Bark! Bark! <<wait:2> Bark!
