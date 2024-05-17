@@ -8,6 +8,7 @@ public class ManageInventory : MonoBehaviour
 
     private Item[] ListOfItems;
     [SerializeField] private ManageUI UIScript;
+    [SerializeField] private DialogueManager dialoguemanager;
     [SerializeField] private TextMeshProUGUI HeldDescriptionText;
     [SerializeField] private TextMeshProUGUI HoveredDescriptionText;
     private string HeldItem;
@@ -293,5 +294,10 @@ public class ManageInventory : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public DialogueManager GetDialogueManager()
+    {
+        return dialoguemanager;
     }
 }

@@ -1432,7 +1432,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIScript: {fileID: 4223321430475256055}
-  DescriptionText: {fileID: 7826528195342530129}
+  HeldDescriptionText: {fileID: 8078328428730530156}
+  HoveredDescriptionText: {fileID: 7826528195342530129}
 --- !u!1 &4955386783425260596
 GameObject:
   m_ObjectHideFlags: 0

@@ -77,8 +77,8 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             Debug.LogWarning("dialogue mangaer is not set to anything, maybe bug idk");
         }
-        return (bool)dialoguemanager.GetVariableStateSystem(itemName);
-     
+        return (bool) FindObjectOfType<DialogueManager>().GetVariableStateSystem(itemName);
+        //return (bool) InventoryScript.GetDialogueManager().GetVariableStateSystem(itemName);
     }
     public void SetState(int state)
     {

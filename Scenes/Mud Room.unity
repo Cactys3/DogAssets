@@ -1028,7 +1028,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 308345273
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ec57bb3bf76e9a0439d101107356d411, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1066,28 +1066,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4179208132734838607, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
   m_PrefabInstance: {fileID: 318206243}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1834949370 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5178061576795825891, guid: 07d14c07300a8d44f97d8bb29b0f1c02, type: 3}
-  m_PrefabInstance: {fileID: 3162479045486287431}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31f202fca65da3e478cfc250a69dc4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1834949371 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3080900704854350830, guid: 07d14c07300a8d44f97d8bb29b0f1c02, type: 3}
-  m_PrefabInstance: {fileID: 3162479045486287431}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8d55391a812bcf48a1c1dddcc748a36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1836636395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,7 +1563,7 @@ PrefabInstance:
     - target: {fileID: 7882680051247847317, guid: 07d14c07300a8d44f97d8bb29b0f1c02, type: 3}
       propertyPath: UIScript
       value: 
-      objectReference: {fileID: 1834949371}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1715,13 +1693,17 @@ PrefabInstance:
     - target: {fileID: 6006485883437304021, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
       propertyPath: InventoryScript
       value: 
-      objectReference: {fileID: 1834949370}
+      objectReference: {fileID: 0}
     - target: {fileID: 7079259213384626165, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7142819116239035855, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2652109247754818943}
+    - target: {fileID: 7290550958483999657, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
+      propertyPath: dialoguemanager
       value: 
       objectReference: {fileID: 2652109247754818943}
     - target: {fileID: 7734302961950988805, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
