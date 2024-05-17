@@ -907,7 +907,7 @@ MonoBehaviour:
   SelectButton: {fileID: 389046317044489521}
   CombineButton: {fileID: 1356687526166674194}
   UnselectButton: {fileID: 6008740280511121347}
-  Silhouette: {fileID: 21300000, guid: 10bdb9440f4e2a141809188c51089174, type: 3}
+  Silhouette: {fileID: 21300000, guid: d89a71f31af1f0b40978bdadaddd3fbf, type: 3}
   FullColor: {fileID: 21300000, guid: 0d3cf18b8fbc8ac4f8b84bae6abd9b8e, type: 3}
   CheckMark: {fileID: 21300000, guid: 10bdb9440f4e2a141809188c51089174, type: 3}
 --- !u!1 &7561767071520561597
