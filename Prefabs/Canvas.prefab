@@ -1417,6 +1417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d55391a812bcf48a1c1dddcc748a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanAccessInventory: 1
   TabPanel: {fileID: 2161864135353335499}
   EscPanel: {fileID: 4235127614138106755}
 --- !u!114 &7290550958483999657
@@ -1432,6 +1433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIScript: {fileID: 4223321430475256055}
+  dialoguemanager: {fileID: 0}
   HeldDescriptionText: {fileID: 8078328428730530156}
   HoveredDescriptionText: {fileID: 7826528195342530129}
 --- !u!1 &4955386783425260596

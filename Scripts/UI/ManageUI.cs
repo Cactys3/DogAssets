@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ManageUI : MonoBehaviour
 {
+    [SerializeField] bool CanAccessInventory;
     [SerializeField] GameObject TabPanel;
     [SerializeField] GameObject EscPanel;
     private bool inTab;
@@ -36,7 +37,7 @@ public class ManageUI : MonoBehaviour
             {
                 EscPanel.SetActive(true);
             }
-            else if (Input.GetKeyDown(KeyCode.Tab))
+            else if (Input.GetKeyDown(KeyCode.Tab) && CanAccessInventory)
             {
                 TabPanel.SetActive(true);
             }
