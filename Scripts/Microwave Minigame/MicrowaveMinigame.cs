@@ -55,6 +55,10 @@ public class MicrowaveMinigame : MonoBehaviour
         }
     }
 
+    public bool IsGameStarted()
+    {
+        return GameStarted;
+    }
     private void StartGame()
     {
         Debug.Log("start game");
@@ -65,8 +69,7 @@ public class MicrowaveMinigame : MonoBehaviour
         float ForceMagnitude = 10;
 
         Wave.AddForce(new Vector2(Mathf.Cos(WaveShooter.rotation * Mathf.Deg2Rad), Mathf.Sin(WaveShooter.rotation * Mathf.Deg2Rad)) * ForceMagnitude, ForceMode2D.Impulse);
-        SetRotation();
-
+        //Wave.SetRotation(WaveShooter.rotation + 180 + 90);
 
     }
     private void ResetGame()
@@ -123,8 +126,10 @@ public class MicrowaveMinigame : MonoBehaviour
     {
         //float angle = Mathf.Atan2(TowardsMouse(WaveShooter.position).y, TowardsMouse(WaveShooter.position).x) * Mathf.Rad2Deg;
         float angle = WaveShooter.rotation;
-        Debug.Log(angle);
-        Wave.SetRotation(angle + 180 + 90);
+        angle = Mathf.Atan2(Wave.velocity.y, Wave.velocity.x) * Mathf.Rad2Deg;
+        Debug.Log(angle * Mathf.Rad2Deg);
+        
+        Wave.SetRotation(angle + 90f);
     }
 
     private void WinLevel()
