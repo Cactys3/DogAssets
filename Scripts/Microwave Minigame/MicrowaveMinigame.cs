@@ -1,6 +1,7 @@
 using Ink.Parsed;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -119,6 +120,11 @@ public class MicrowaveMinigame : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag.Equals("pink reflector") || collision.gameObject.tag.Equals("blue reflector"))
+        {
+            return;
+        }
+
         SetRotation();
     }
 

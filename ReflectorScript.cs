@@ -1,14 +1,23 @@
+using Ink.Parsed;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ReflectorScript : MonoBehaviour
 {
-
+    [SerializeField] MicrowaveMinigame wave;
+    Rigidbody2D waveBody;
     private int ObjectState; //0: game started (disabled), 1: neutral, 2: hovered 3: selected
     // Start is called before the first frame update
     void Start()
     {
+        wave = FindObjectOfType<MicrowaveMinigame>();
+        waveBody = wave.gameObject.GetComponent<Rigidbody2D>();
+        if (wave == null)
+        {
+            Debug.LogError("couldn't find microwave minigame script");
+        }
         ObjectState = 1;
     }
 
@@ -46,6 +55,7 @@ public class ReflectorScript : MonoBehaviour
 
         }
     }
+
 
     private void ChangeObjectState(int NewState)
     {
@@ -95,4 +105,26 @@ public class ReflectorScript : MonoBehaviour
         }
     }
 
+    public void OnSideCollision(Collision2D collision, string reflectorTag)
+    {
+        switch (reflectorTag)
+        {
+            case "pink reflector":
+                Vector2 velocity = waveBody.velocity;
+                waveBody.velocity = waveBody.velocity * new Vector2(1, -1);
+                Debug.Log(velocity + " and " + waveBody.velocity);
+
+                break;
+            case "blue reflector":
+                Vector2 velocity2 = waveBody.velocity;
+                waveBody.velocity = waveBody.velocity * new Vector2(1, -1);
+                Debug.Log(velocity2 + " and " + waveBody.velocity);
+
+                break;
+            default:
+                Debug.LogWarning("called onsidecollision but wasn't blue or pink reflector tag");
+                break;
+        }
+
+    }
 }
