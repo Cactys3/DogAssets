@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ReflectorCollisionScript : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        this.GetComponentInParent<ReflectorScript>().OnSideCollision(collision, this.tag);
+        if (collision.tag.Equals("Player"))
+        {
+            this.GetComponentInParent<ReflectorScript>().OnSideCollision(collision, this.tag);
+        }
     }
 }

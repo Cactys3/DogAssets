@@ -48,11 +48,6 @@ public class MicrowaveMinigame : MonoBehaviour
                 Wave.position = new Vector2(-4.62f + Mathf.Cos(Mathf.Deg2Rad * WaveShooter.rotation) * 0.6528f, 1.8f + Mathf.Sin(Mathf.Deg2Rad * WaveShooter.rotation) * 0.6528f);
                 // 0.6528
             }
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                Debug.Log("mouse moiuse mouse");
-            }
         }
     }
 
@@ -62,7 +57,6 @@ public class MicrowaveMinigame : MonoBehaviour
     }
     private void StartGame()
     {
-        Debug.Log("start game");
         GameStarted = true;
         //Wave.AddForce(TowardsMouse(Wave.position) * speed, ForceMode2D.Impulse);
         //Wave.AddForce(speed * new Vector2(WaveShooter.rotation.y, WaveShooter.position.x), ForceMode2D.Impulse);
@@ -75,7 +69,6 @@ public class MicrowaveMinigame : MonoBehaviour
     }
     private void ResetGame()
     {
-        Debug.Log("reset game");
         GameStarted = false;
         Wave.position = new Vector2(-4f, 1.8f);
         Wave.SetRotation(0);
@@ -106,6 +99,11 @@ public class MicrowaveMinigame : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag.Equals("pink reflector") || collision.gameObject.tag.Equals("blue reflector"))
+        {
+            return;
+        }
+
         Debug.Log("collider " + collision.tag);
         if (collision.tag.Equals("goal"))
         {
@@ -120,11 +118,6 @@ public class MicrowaveMinigame : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("pink reflector") || collision.gameObject.tag.Equals("blue reflector"))
-        {
-            return;
-        }
-
         SetRotation();
     }
 
@@ -133,7 +126,7 @@ public class MicrowaveMinigame : MonoBehaviour
         //float angle = Mathf.Atan2(TowardsMouse(WaveShooter.position).y, TowardsMouse(WaveShooter.position).x) * Mathf.Rad2Deg;
         float angle = WaveShooter.rotation;
         angle = Mathf.Atan2(Wave.velocity.y, Wave.velocity.x) * Mathf.Rad2Deg;
-        Debug.Log(angle * Mathf.Rad2Deg);
+        //Debug.Log(angle * Mathf.Rad2Deg);
         
         Wave.SetRotation(angle + 90f);
     }
