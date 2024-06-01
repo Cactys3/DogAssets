@@ -189,8 +189,10 @@ public class ReflectorScript : MonoBehaviour
                 StartCoroutine("DisableReflectors");
                 Vector2 velocity = waveBody.velocity;
                 waveBody.position = blue.position;
-                waveBody.velocity = new Vector2(waveBody.velocity.x, waveBody.velocity.y) * new Vector2(blue.up.x + 1, -(blue.up.y)); //multiplies normalized rotation of pink/blue part of the reflector to the velocity of the wave to impart the reflector's direction
-                break;
+                waveBody.velocity = new Vector2(waveBody.velocity.x, waveBody.velocity.y) * new Vector2(blue.up.x + 1, (blue.up.y)); //multiplies normalized rotation of pink/blue part of the reflector to the velocity of the wave to impart the reflector's direction
+                Debug.Log(new Vector2(waveBody.velocity.x, -1 * waveBody.velocity.y));
+                Debug.Log(new Vector2(waveBody.velocity.x, waveBody.velocity.y) * new Vector2(blue.up.x + 1, (blue.up.y)));
+                break; // * new Vector2(blue.up.x + 1, -(blue.up.y)
             case "blue reflector":
                 StartCoroutine("DisableReflectors");
                 Vector2 velocity2 = waveBody.velocity;
@@ -259,7 +261,7 @@ public class ReflectorScript : MonoBehaviour
     {
         // Get the mouse position in screen coordinates
         Vector2 MouseScreenPosition = Input.mousePosition;
-
+        
         // Convert mouse position from screen coordinates to world coordinates
         Vector2 MouseWorldPosition = Camera.main.ScreenToWorldPoint(MouseScreenPosition);
 

@@ -29,7 +29,7 @@ public class DialogueVariables
         {
             Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
             variables.Add(name, value);
-            Debug.Log("Initialized global dialogue variable: " + name + " = " + value);
+            //Debug.Log("Initialized global dialogue variable: " + name + " = " + value);
         }
     }
     public void StartListening(Story story)
@@ -50,8 +50,9 @@ public class DialogueVariables
             variables.Add(name, value);
             if (name.ToLower().Contains("has"))
             {
-                Debug.Log("Changed variable: " + name + " to " + ToSystem(value));
-                GameObject.FindObjectOfType<ManageInventory>().SetState(name, (bool) ToSystem(value));
+                //Debug.Log("Changed variable: " + name + " to " + ToSystem(value));
+                //GameObject.FindObjectOfType<ManageInventory>().SetState(name, (bool) ToSystem(value));
+                GameObject.FindObjectOfType<ManageInventory>().UpdateItemStateList();
             }
             SaveVariables();
         }
@@ -67,7 +68,7 @@ public class DialogueVariables
         foreach(KeyValuePair<string, Ink.Runtime.Object> variable in variables)
         {
             story.variablesState.SetGlobal(variable.Key, variable.Value);
-            Debug.Log("changed (maybe) global dialogue variable: " + variable.Key + " = " + variable.Value);
+            //Debug.Log("changed (maybe) global dialogue variable: " + variable.Key + " = " + variable.Value);
         }
     }
 
@@ -80,7 +81,8 @@ public class DialogueVariables
             variables.Add(VariableName, VariableValue);
             if (VariableName.Contains("has_"))
             {
-                GameObject.FindObjectOfType<ManageInventory>().SetState(VariableName, (bool) Value);
+                //GameObject.FindObjectOfType<ManageInventory>().SetState(VariableName, (bool) Value);
+                //GameObject.FindObjectOfType<ManageInventory>().UpdateItemStateList();
             }
             SaveVariables();
         }

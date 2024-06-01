@@ -1,12 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net.NetworkInformation;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ManageInventory : MonoBehaviour
 {
 
     private Item[] ListOfItems;
+    private List<string> EnabledItems;
     [SerializeField] private ManageUI UIScript;
     [SerializeField] private DialogueManager dialoguemanager;
     [SerializeField] private TextMeshProUGUI HeldDescriptionText;
@@ -17,28 +22,94 @@ public class ManageInventory : MonoBehaviour
     private bool somethingIsHovered;
     private string SelectedItem;
     private bool somethingIsSelected;
+
+    private string dogfood = "has_dogfood";
+    private string defaultitem = "has_default";
+    private string flimsykey = "has_flimsykey";
+    private string clay = "has_clay";
+    private string poop = "has_poop";
+    private string candy = "has_candy";
+    private string moldableclay = "has_moldableclay";
+    private string keymold = "has_keymold";
+    private string tastykeymold = "has_tastyfilledkeymold";
+    private string stinkyfilledkeymold = "has_stinkyfilledkeymold";
+    private string stinkykey = "has_stinkykey";
+    private string tastykey = "has_tastykey";
+
     void Start()
     {
-        ListOfItems = GameObject.FindObjectsByType<Item>(0);
+        ListOfItems = GameObject.FindObjectsByType<Item>(FindObjectsInactive.Include, 0);
 
-        Debug.Log(ListOfItems.Length);
-        //go to dialoguemanager and ask what the state of each item is, then set the state of each item to that
+        EnabledItems = new List<string>
+        {
+            "hello"
+        };
+        Debug.Log(EnabledItems[0]);
+        EnabledItems.Clear();
+
+        UpdateItemStateList(); //Sets the EnabledItems list properly.
+
+        StartCoroutine("whatever");
+    }
+    private IEnumerator whatever()
+    {
+        Debug.Log("eaioswrnh");
+        yield return new WaitForSeconds(1f);
+        UpdateItemStateList();
+        Debug.Log("eaioswrnh");
+    }
+    /**
+     * Sets the EnabledItems list properly
+     */
+    public void UpdateItemStateList()
+    {
+        //first we need to make sure the EnabledItems list is complete and correctly ordered. Here we also set disabled items.
         foreach (Item i in ListOfItems)
         {
-            i.SetState((bool)FindObjectOfType<DialogueManager>().GetVariableStateSystem(i.GetName()));
-            Debug.Log(FindObjectOfType<DialogueManager>().GetVariableStateSystem(i.GetName()));
+            if ((bool)DialogueManager.GetInstance().GetVariableStateSystem(i.GetName())) //if the item should be enabled               ((bool)FindObjectOfType<DialogueManager>().GetVariableStateSystem(i.GetName()))
+            {
+                if (!EnabledItems.Contains(i.GetName())) //if item is newly being added to the list
+                {
+                    EnabledItems.Add(i.GetName()); //add it to the list
+                }
+            }
+            else //if the item should be disabled
+            {
+                if (EnabledItems.Contains(i.GetName())) //if item was previously enabled, remove it from the list
+                {
+                    EnabledItems.Remove(i.GetName());
+                }
+            }
         }
-        
     }
-
-    // Update is called once per frame
-    void Update()
+    /**
+    private void UpdateItemStates()
     {
-        
+        //now that the EnabledItems list is correct, we setup the EnabledItems
+        foreach (Item i in ListOfItems)
+        {
+            if (EnabledItems.Contains(i.GetName())) //if it should be enabled
+            {
+                i.SetState(EnabledItems.IndexOf(i.GetName())); //Set its ItemState to its place in the list
+            }
+            else //if it should be disabled
+            {
+                i.SetState(-1); //set it to -1 which means it won't display itself
+            }
+        }
+    } */
+    public int GetItemSlot(string name)
+    {
+        if (EnabledItems.Contains(name))
+        {
+            return EnabledItems.IndexOf(name);
+        }
+        return -1;
     }
-
-    public void SetState(string name, bool state)
+    /**
+    public void SetState(string name, bool state) old, replaced by UpdateItemState();
     {
+    
         foreach (Item i in ListOfItems)
         {
             if (i.GetName().Equals(name))
@@ -48,7 +119,7 @@ public class ManageInventory : MonoBehaviour
             }
         }
         Debug.LogWarning("called ManageInventory.SetState() but with a name we dont have an item for! name was: " + name);
-    }
+    }**/
 
     public void ClearHovered(string name)
     {
@@ -231,19 +302,6 @@ public class ManageInventory : MonoBehaviour
         {
             Debug.LogWarning("tried to clearhelditem with + " + name + " as an input but somethingisheld was false");
         }
-    }
-    public void AddItem(string name)
-    {
-        foreach (Item i in ListOfItems)
-        {
-            if ((i.GetName()).Equals(name))
-            {
-                i.SetState(true);
-                Debug.Log("just added the item: " + name);
-                return;
-            }
-        }
-        Debug.Log("didn't find the item: " + name);
     }
     public void TryCombine(string ItemTwo)
     {

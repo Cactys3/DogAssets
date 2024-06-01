@@ -18,12 +18,12 @@ public class DialogueTrigger : MonoBehaviour
     }
     private void Update()
     {
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if (playerInRange && !FindObjectOfType<DialogueManager>().dialogueIsPlaying)
         {
             visualCue.SetActive(true);
             if (Input.GetKey(interactKeybind))
             {
-                DialogueManager.GetInstance().EnterDialogueMode(text);
+                FindObjectOfType<DialogueManager>().EnterDialogueMode(text);
             }
         }
         else

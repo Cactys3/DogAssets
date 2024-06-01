@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ReflectorScriptHorizontal : MonoBehaviour
 {
+    [SerializeField] bool Vertical;
     [SerializeField] float MaxDistance;
     [SerializeField] float MinDistance;
     [SerializeField] GameObject SelectedVisual;
@@ -61,12 +62,27 @@ public class ReflectorScriptHorizontal : MonoBehaviour
 
                 break;
             case 2:
-                Rigidbody2D body = gameObject.GetComponent<Rigidbody2D>();
                 //TODO: move it left or right if player clicks and holds and drags left or right (mouse was initially hovering on this object)
-               
+                switch (Vertical)
+                {
 
+                    case false:
+                        float MousePosX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
+                        if (MousePosX > MinDistance && MousePosX < MaxDistance)
+                        {
+                            transform.SetPositionAndRotation(new Vector3(MousePosX, transform.position.y, 0), transform.rotation);
+                        }
+                        break;
+                    case true:
+                        float MousePosY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
+                        if (MousePosY > MinDistance && MousePosY < MaxDistance)
+                        {
+                            transform.SetPositionAndRotation(new Vector3(transform.position.x, MousePosY, 0), transform.rotation);
+                        }
+                        break;
+                }
                 break;
-            default:
+            default: 
 
                 break;
 

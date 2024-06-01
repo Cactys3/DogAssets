@@ -4,11 +4,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+using UnityEngine.XR;
 
 public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    private bool GameHasLoaded;
     //is the string of the item that the class holds
+    [SerializeField] private GameObject ItemPanel;
     [SerializeField] private string itemName;
     private EventSystem eventsystem;
     private ManageInventory InventoryScript;
@@ -18,14 +20,20 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] private GameObject SelectButton;
     [SerializeField] private GameObject CombineButton;
     [SerializeField] private GameObject UnselectButton;
-    [SerializeField] private Sprite Silhouette;
-    [SerializeField] private Sprite FullColor;
-    [SerializeField] private Sprite CheckMark;
+    [SerializeField] int MaxItemsPerRow;
+    [SerializeField] int MaxItemsTotal;
+    [SerializeField] int OffsetY;
+    [SerializeField] int OffsetX;
     private int ItemState; //From -1 to 4, -1: Item was combined and is complete, 0: item is not obtained, 1: item is obtained, 2: item is hovered: 3: something is selected
-
+    private int ItemSlot;
     // Start is called before the first frame update
     void Start()
     {
+        MaxItemsPerRow = 4;
+        MaxItemsTotal = 9;
+        OffsetY = -200;
+        OffsetX = 200;
+        ItemSlot = 01238;
         eventsystem = FindObjectOfType<EventSystem>();
         InventoryScript = FindObjectOfType<ManageInventory>();
         dialoguemanager = FindObjectOfType<DialogueManager>();
@@ -39,73 +47,24 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         UnholdButton.SetActive(false);
         UnselectButton.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-    /**
-     * 0 = not obtained, 1 = obtained, -1 = combined and completed
-     */
-    public void SetState(bool state)
-    {
-        Debug.Log("SetState(" + state + ") for " + itemName);
-        switch (state)
-        {
-            case false:
-                ItemState = 0;
-                this.gameObject.GetComponent<Image>().sprite = Silhouette;
-                break;
-            case true:
-                ItemState = 1;
-                this.gameObject.GetComponent<Image>().sprite = FullColor;
-                break;
-            default:
-                ItemState = -1;
-                this.gameObject.GetComponent<Image>().sprite = CheckMark; //this is the case that it's 
-                break;
-        }
-    }
     /**
      * used OnEnable for item classes to check if their obtained/not obtained state changed while their GameObject was disabled
      * 
      */
-    public bool CheckState()
-    {
-        if (dialoguemanager != null)
-        {
-            Debug.LogWarning("dialogue mangaer is not set to anything, maybe bug idk");
-        }
-        return (bool) FindObjectOfType<DialogueManager>().GetVariableStateSystem(itemName);
-        //return (bool) InventoryScript.GetDialogueManager().GetVariableStateSystem(itemName);
-    }
-    public void SetState(int state)
-    {
-        Debug.Log("SetState(" + state + ") for " + itemName);
-        switch (state)
-        {
-            case 0:
-                ItemState = 0;
-                this.gameObject.GetComponent<Image>().sprite = Silhouette;
-                break;
-            case 1:
-                ItemState = 1;
-                this.gameObject.GetComponent<Image>().sprite = FullColor;
-                break;
-            case -1:
-                ItemState = -1;
-                this.gameObject.GetComponent<Image>().sprite = CheckMark; //this is the case that it's 
-                break;
-        }
-
-    }
     private void OnEnable()
     {
-        if (CheckState() == false)
+        if (!GameHasLoaded)
         {
-            SetState(false);
+            GameHasLoaded = true; //well i dont want this script to try to run when the level is loaded for the first time, only when the gameobject is activated after being deactivated.
+            return;
         }
+
+        if (CheckSlot() != ItemSlot) 
+        {
+            Debug.Log("changing itemslot from: " + ItemSlot + " to: " + CheckSlot());
+            SetItemSlot(CheckSlot()); //if the item slot has changed, enable/disable/move this item based on the new number;
+        }
+
         if (ItemState == 1)
         {
             SelectButton.SetActive(false);
@@ -127,9 +86,42 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             SomethingSelected(true);
         }
-        if (ItemState == -1)
+    }
+    public int CheckSlot()
+    {
+        return FindObjectOfType<ManageInventory>().GetItemSlot(itemName);
+    }
+    public void SetItemSlot(int number)
+    {
+        ItemSlot = number;
+        if (ItemSlot == -1)
         {
-            //should be setup already
+            Debug.Log("setting itemslot to -1");
+            ItemState = 0;
+            ItemPanel.SetActive(false);
+        }
+        else
+        {
+            if (ItemState == -1 || ItemState == 0)
+            {
+                ItemState = 1;
+            }
+            ItemPanel.SetActive(true);
+            
+
+            if (ItemSlot >= MaxItemsTotal)
+            {
+                Debug.LogError("Trying to setup an item but itemslot is: " + ItemSlot + ", which is greater than the max:  9");
+            }
+            else
+            {
+                int Collumn = (ItemSlot % MaxItemsPerRow);
+                int Row = (ItemSlot / MaxItemsPerRow); //i assume this does integer division
+                int y = OffsetY * Row;
+                int x = OffsetX * Collumn;
+                ItemPanel.transform.position += new Vector3(x, y, 0);
+                Debug.Log("setting item position to: " + x + " " + y);
+            }
         }
     }
     /**

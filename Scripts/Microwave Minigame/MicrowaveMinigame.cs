@@ -38,16 +38,14 @@ public class MicrowaveMinigame : MonoBehaviour
             if (angle > (WaveShooter.rotation) + 0.5f && WaveShooter.rotation < 90)
             {
                 WaveShooter.SetRotation(WaveShooter.rotation + (RotationSpeed * Time.deltaTime));
-                Wave.SetRotation(WaveShooter.rotation + 90 + 180);
-                Wave.position = new Vector2(-4.62f + Mathf.Cos(Mathf.Deg2Rad * WaveShooter.rotation) * 0.6528f, 1.8f + Mathf.Sin(Mathf.Deg2Rad * WaveShooter.rotation) * 0.6528f);
             }
             else if (angle < (WaveShooter.rotation) - 0.5f && WaveShooter.rotation > -90)
             {
                 WaveShooter.SetRotation(WaveShooter.rotation - (RotationSpeed * Time.deltaTime));
-                Wave.SetRotation(WaveShooter.rotation + 90 + 180);
-                Wave.position = new Vector2(-4.62f + Mathf.Cos(Mathf.Deg2Rad * WaveShooter.rotation) * 0.6528f, 1.8f + Mathf.Sin(Mathf.Deg2Rad * WaveShooter.rotation) * 0.6528f);
                 // 0.6528
             }
+            Wave.SetRotation(WaveShooter.rotation + 90 + 180);
+            Wave.position = new Vector2(-4.62f + Mathf.Cos(Mathf.Deg2Rad * WaveShooter.rotation) * 0.6528f, 1.8f + Mathf.Sin(Mathf.Deg2Rad * WaveShooter.rotation) * 0.6528f);
         }
     }
 
@@ -121,6 +119,11 @@ public class MicrowaveMinigame : MonoBehaviour
         SetRotation();
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        SetRotation();
+    }
+
     private void SetRotation()
     {
         //float angle = Mathf.Atan2(TowardsMouse(WaveShooter.position).y, TowardsMouse(WaveShooter.position).x) * Mathf.Rad2Deg;
@@ -133,8 +136,9 @@ public class MicrowaveMinigame : MonoBehaviour
 
     private void WinLevel()
     {
-        Debug.Log("Won level, go to next level");
-        //SceneManager
+        int NextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        Debug.Log("Won level, go to scene #: " + NextScene);
+        SceneManager.LoadScene(NextScene);
     }
 }
 

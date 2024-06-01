@@ -37,11 +37,12 @@ public class DialogueManager : MonoBehaviour
     private float typingSpeed;
     private string defaultTypingSound = "default";
     private string currentTypingSound;
-    [SerializeField] private int mudScene = 1;
-    [SerializeField] private int kitchenScene = 2;
-    [SerializeField] private int bathroomScene = 3;
-    [SerializeField] private int officeScene = 4;
-    [SerializeField] private int deckScene = 5;
+    //Scenes
+    private string mudScene = "Mud Room";
+    private string kitchenScene = "Kitchen Dining Room";
+    private string bathroomScene = "Bathroom One";
+    private string officeScene = "Office Room";
+    private string deckScene = "Deck";
 
     private Coroutine displayLineCoroutine;
     private bool canContinueToNextLine = false;
@@ -465,6 +466,10 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("go to scene: " + name);
         switch (name)
         {
+            case "next":
+                Debug.Log("on this scene: " + SceneManager.GetActiveScene().buildIndex + ", changing to that + 1 which is: " + SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).name);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                break;
             case "kitchen":
                 SceneManager.LoadScene(kitchenScene);
                 return;
@@ -515,6 +520,7 @@ public class DialogueManager : MonoBehaviour
         if (dialogueVariables != null)
         {
             dialogueVariables.SetVariable(name, value);
+            GameObject.FindObjectOfType<ManageInventory>().UpdateItemStateList();
         }
         else
         {
