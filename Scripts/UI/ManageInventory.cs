@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class ManageInventory : MonoBehaviour
 {
-
+    private string[] ListOfItemNames;
     private Item[] ListOfItems;
     private List<string> EnabledItems;
     [SerializeField] private ManageUI UIScript;
@@ -23,41 +23,38 @@ public class ManageInventory : MonoBehaviour
     private string SelectedItem;
     private bool somethingIsSelected;
 
-    private string dogfood = "has_dogfood";
-    private string defaultitem = "has_default";
-    private string flimsykey = "has_flimsykey";
-    private string clay = "has_clay";
-    private string poop = "has_poop";
-    private string candy = "has_candy";
-    private string moldableclay = "has_moldableclay";
-    private string keymold = "has_keymold";
-    private string tastykeymold = "has_tastyfilledkeymold";
-    private string stinkyfilledkeymold = "has_stinkyfilledkeymold";
-    private string stinkykey = "has_stinkykey";
-    private string tastykey = "has_tastykey";
+    private const string dogfood = "has_dogfood";
+    private const string defaultitem = "has_default";
+    private const string flimsykey = "has_flimsykey";
+    private const string clay = "has_clay";
+    private const string poop = "has_poop";
+    private const string candy = "has_candy";
+    private const string moldableclay = "has_moldableclay";
+    private const string keymold = "has_keymold";
+    private const string tastykeymold = "has_tastyfilledkeymold";
+    private const string stinkyfilledkeymold = "has_stinkyfilledkeymold";
+    private const string stinkykey = "has_stinkykey";
+    private const string tastykey = "has_tastykey";
 
     void Start()
     {
         ListOfItems = GameObject.FindObjectsByType<Item>(FindObjectsInactive.Include, 0);
-
+        ListOfItemNames = new string[] { dogfood, defaultitem, flimsykey, clay, poop, candy, moldableclay, keymold, stinkyfilledkeymold, tastykeymold, stinkykey, tastykey};
         EnabledItems = new List<string>
         {
             "hello"
         };
-        Debug.Log(EnabledItems[0]);
         EnabledItems.Clear();
 
         UpdateItemStateList(); //Sets the EnabledItems list properly.
 
-        StartCoroutine("whatever");
+    //    StartCoroutine("whatever");
     }
-    private IEnumerator whatever()
-    {
-        Debug.Log("eaioswrnh");
-        yield return new WaitForSeconds(1f);
-        UpdateItemStateList();
-        Debug.Log("eaioswrnh");
-    }
+  //  private IEnumerator whatever()
+  //  {
+  //      yield return new WaitForSeconds(1f);
+  //      UpdateItemStateList();
+ //   }
     /**
      * Sets the EnabledItems list properly
      */
@@ -212,19 +209,26 @@ public class ManageInventory : MonoBehaviour
     }
     public void SetHold(string name)
     {
-        if (somethingIsHeld == false)
+        if (!somethingIsHeld)
         {
-            HeldItem = name;
-            somethingIsHeld = true;
-            UIScript.DisableUI();
-
+            if (ListOfItemNames.Contains(name))
+            {
+                HeldDescriptionText.text = name;
+                HeldItem = name;
+                somethingIsHeld = true;
+                UIScript.DisableUI();
+            }
+            else
+            {
+                Debug.LogWarning("SetHold() was called with a string name: " + name + " that isn't one of the items");
+            }/**
             switch (name)
             {
-                case "has_dogfood":
+                case dogfood:
                     HeldDescriptionText.text = "this is the description for dogfood";
                     break;
-                case "has_filledkeymold":
-                    HeldDescriptionText.text = "has_filledkeymold";
+                case stinkyfilledkeymold:
+                    HeldDescriptionText.text = stinkyfilledkeymold;
                     break;
                 case "has_keymold":
                     HeldDescriptionText.text = "has_keymold";
@@ -250,7 +254,7 @@ public class ManageInventory : MonoBehaviour
                 default:
                     Debug.LogWarning("SetHold(name) was called with a string name that isn't one of the items");
                     break;
-            }
+            }*/
         }
         else
         {

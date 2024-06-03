@@ -15,6 +15,8 @@ VAR completed_utensils = false
 VAR completed_fridgeoven = false
 VAR completed_microwave = false
 VAR completed_UFO = false
+//played_name is if an ink story has already been played once
+VAR played_bath1_toilet = false
 //has_itemname is if a particular is currently obtained
 VAR has_dogfood = false
 VAR has_default = true
@@ -24,5 +26,10 @@ VAR has_poop = false
 VAR has_candy = false
 VAR has_moldableclay = false
 VAR has_keymold = false
-VAR has_filledkeymold = false
-VAR has_key = false
+VAR has_stinkyfilledkeymold = false
+VAR has_tastyfilledkeymold = false
+VAR has_stinkykey = false
+VAR has_tastykey = false
+//if it's holding an item and what item
+VAR holding_item = false
+VAR held_item = ""

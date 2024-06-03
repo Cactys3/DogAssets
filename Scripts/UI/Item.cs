@@ -116,11 +116,11 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             else
             {
                 int Collumn = (ItemSlot % MaxItemsPerRow);
-                int Row = (ItemSlot / MaxItemsPerRow); //i assume this does integer division
+                int Row = (ItemSlot / MaxItemsPerRow);
                 int y = OffsetY * Row;
                 int x = OffsetX * Collumn;
-                ItemPanel.transform.position += new Vector3(x, y, 0);
-                Debug.Log("setting item position to: " + x + " " + y);
+                transform.localPosition = new Vector3(x, y, 0);
+                //Debug.Log("Pos of " + itemName + ": " + transform.localPosition);
             }
         }
     }
