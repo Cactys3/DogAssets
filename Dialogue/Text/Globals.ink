@@ -15,6 +15,12 @@ VAR completed_utensils = false
 VAR completed_fridgeoven = false
 VAR completed_microwave = false
 VAR completed_UFO = false
+VAR completed_computer = false
+VAR completed_bookshelf = false
+VAR completed_off_cabinets = false
+VAR completed_flimsykey = false
+VAR completed_liv_doortostairs = false
+VAR completed_liv_cabinet = false
 //played_name is if an ink story has already been played once
 VAR played_bath1_toilet = false
 //has_itemname is if a particular is currently obtained
