@@ -13,7 +13,7 @@ public class ManageInventory : MonoBehaviour
     private Item[] ListOfItems;
     private List<string> EnabledItems;
     [SerializeField] private ManageUI UIScript;
-    [SerializeField] private DialogueManager dialoguemanager;
+    private DialogueManager dialoguemanager;
     [SerializeField] private TextMeshProUGUI HeldDescriptionText;
     [SerializeField] private TextMeshProUGUI HoveredDescriptionText;
     private string HeldItem;
@@ -36,8 +36,14 @@ public class ManageInventory : MonoBehaviour
     private const string stinkykey = "has_stinkykey";
     private const string tastykey = "has_tastykey";
 
-    void Start()
+
+        void Start()
     {
+    //    UIScript = FindAnyObjectByType<ManageUI>();
+        dialoguemanager = FindAnyObjectByType<DialogueManager>();
+     //   HeldDescriptionText = GameObject.FindGameObjectWithTag("hovered").GetComponent<TextMeshProUGUI>();
+     //   HoveredDescriptionText = GameObject.FindGameObjectWithTag("held").GetComponent<TextMeshProUGUI>();
+
         ListOfItems = GameObject.FindObjectsByType<Item>(FindObjectsInactive.Include, 0);
         ListOfItemNames = new string[] { dogfood, defaultitem, flimsykey, clay, poop, candy, moldableclay, keymold, stinkyfilledkeymold, tastykeymold, stinkykey, tastykey};
         EnabledItems = new List<string>
@@ -60,6 +66,7 @@ public class ManageInventory : MonoBehaviour
      */
     public void UpdateItemStateList()
     {
+        
         //first we need to make sure the EnabledItems list is complete and correctly ordered. Here we also set disabled items.
         foreach (Item i in ListOfItems)
         {
@@ -216,6 +223,8 @@ public class ManageInventory : MonoBehaviour
                 HeldDescriptionText.text = name;
                 HeldItem = name;
                 somethingIsHeld = true;
+                FindObjectOfType<DialogueManager>().SetVariableStateSystem("holding_item", true);
+                FindObjectOfType<DialogueManager>().SetVariableStateSystem("held_item", name);
                 UIScript.DisableUI();
             }
             else
@@ -294,6 +303,8 @@ public class ManageInventory : MonoBehaviour
             {
                 HeldItem = null;
                 somethingIsHeld = false;
+                FindObjectOfType<DialogueManager>().SetVariableStateSystem("holding_item", false);
+                FindObjectOfType<DialogueManager>().SetVariableStateSystem("held_item", "");
 
                 HeldDescriptionText.text = "Item Name: this is the default text the item description textbox would display given";
             }

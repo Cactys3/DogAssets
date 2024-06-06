@@ -292,5 +292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba347a7ed621ffe4ab448d835eb956ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactKeybind: 101
   visualCue: {fileID: 4769180217670185565}
   text: {fileID: 4900000, guid: 3bea9041197cf8743a4a6f874f8c9018, type: 3}

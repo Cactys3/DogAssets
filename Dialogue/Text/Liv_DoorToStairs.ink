@@ -22,7 +22,7 @@ Temporary text: unlock door with key?
 ~has_tastykey = false
 ~has_stinkykey = false
 ~completed_liv_doortostairs = true //TODO: this variable should unlock the door and make display the opening door animation
-->END
+->Completed
 * [leave]
 ->END
 - else:
@@ -31,7 +31,7 @@ You don't have a key!
 }
 
 ===Completed===
-Open door?
+Go through door?
 *[yes]
 #scene:next
 ->END

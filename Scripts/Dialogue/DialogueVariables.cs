@@ -7,10 +7,48 @@ using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using System;
 
-public class DialogueVariables
+public class DialogueVariables : MonoBehaviour
 {
     public Dictionary<string, Ink.Runtime.Object> variables { get; private set; }
     private Story globalVariablesStory;
+    [SerializeField] private TextAsset loadGlobalsJSON;
+    private DialogueVariables instance;
+    private void Awake()
+    {
+
+
+        transform.SetParent(null);
+        if (instance == null)
+        { instance = this; }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(this);
+
+
+        // create the story
+        globalVariablesStory = new Story(loadGlobalsJSON.text);
+        // if we have saved data, load it on startup
+        if (true)//if saveload system has saved data to load on startup
+        {
+            string jsonState = null; //TODO: set jsonState to the data
+            //TODO: save the INK variables data to data system
+            // globalVariablesStory.state.LoadJson(jsonState); //TODO: remove the comment after jsonState is implemented
+        }
+
+        // initialize the dictionary
+        variables = new Dictionary<string, Ink.Runtime.Object>();
+        foreach (string name in globalVariablesStory.variablesState)
+        {
+            Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
+            variables.Add(name, value);
+            //Debug.Log("Initialized global dialogue variable: " + name + " = " + value);
+        }
+        //LoadVariables();
+    }
+    /**
     public DialogueVariables(TextAsset loadGlobalsJSON)
     {
         // create the story
@@ -31,7 +69,8 @@ public class DialogueVariables
             variables.Add(name, value);
             //Debug.Log("Initialized global dialogue variable: " + name + " = " + value);
         }
-    }
+        //LoadVariables();
+    } */
     public void StartListening(Story story)
     {
         //important that VariablesToStory is called before the listener is assigned!
@@ -48,8 +87,9 @@ public class DialogueVariables
         {
             variables.Remove(name);
             variables.Add(name, value);
-            if (name.ToLower().Contains("has"))
+            if ((name.Equals("holding_item") && value.Equals(false)) || name.ToLower().Contains("has"))
             {
+
                 //Debug.Log("Changed variable: " + name + " to " + ToSystem(value));
                 //GameObject.FindObjectOfType<ManageInventory>().SetState(name, (bool) ToSystem(value));
                 GameObject.FindObjectOfType<ManageInventory>().UpdateItemStateList();
@@ -113,6 +153,19 @@ public class DialogueVariables
             //load the current state ofa ll our variables to the globals stroy
             VariablesToStory(globalVariablesStory);
             //TODO: here we save the globalVariablesStory.state.ToJson() to our save system
+        }
+    }
+    public void LoadVariables()
+    {
+        Dictionary<string, object> SaveDictionary = new Dictionary<string, object>();
+
+        foreach (string s in SaveDictionary.Keys)//should be other dictionary
+        {
+            if (!variables[s].Equals(SaveDictionary[s]))
+            {
+                SetVariable(s, SaveDictionary[s]);
+                Debug.Log("set variable from save file: " + variables[s]);
+            }
         }
     }
 

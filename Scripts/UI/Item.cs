@@ -47,6 +47,19 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         UnholdButton.SetActive(false);
         UnselectButton.SetActive(false);
     }
+    private void Update()
+    {
+
+        if (itemName.Equals("has_default"))
+        {
+            Debug.Log(CheckSlot());
+        }    
+        if (ItemState != 0 && CheckSlot() != -1)
+        {
+            Debug.Log(itemName + " slot: " + CheckSlot() + " state: " + ItemState);
+        }
+    }
+
     /**
      * used OnEnable for item classes to check if their obtained/not obtained state changed while their GameObject was disabled
      * 
@@ -61,7 +74,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
         if (CheckSlot() != ItemSlot) 
         {
-            Debug.Log("changing itemslot from: " + ItemSlot + " to: " + CheckSlot());
+            Debug.Log("changing itemslot from: " + ItemSlot + " to: " + CheckSlot() + " on item: " + itemName);
             SetItemSlot(CheckSlot()); //if the item slot has changed, enable/disable/move this item based on the new number;
         }
 
@@ -96,7 +109,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         ItemSlot = number;
         if (ItemSlot == -1)
         {
-            Debug.Log("setting itemslot to -1");
+            Debug.Log("setting item: " + itemName + " to -1");
             ItemState = 0;
             ItemPanel.SetActive(false);
         }
@@ -169,7 +182,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     private void OnHover()
     {
-        Debug.Log(ItemState);
+        //Debug.Log(ItemState);
         if (ItemState == 0) //if we are sillohte we dont change anything
         {
             return;

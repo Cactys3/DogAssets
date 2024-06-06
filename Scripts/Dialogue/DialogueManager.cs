@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
 
     // variable for the load_globals.ink JSON
     [Header("Load Globals JSON")]
-    [SerializeField] private TextAsset loadGlobalsJSON;
+    //[SerializeField] private TextAsset loadGlobalsJSON;
 
     //custom rich text tags
     private const string DELETE_CUSTOM = "del";
@@ -58,7 +58,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
     [SerializeField] private GameObject canContinueIcon;
-    private Animator layoutAnimator;
+
+    [SerializeField] private Animator layoutAnimator;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -67,23 +68,34 @@ public class DialogueManager : MonoBehaviour
     private String currentLine;
     public bool dialogueIsPlaying { get; private set; } = false;
 
-    private DialogueVariables dialogueVariables;
 
+
+    private DialogueVariables dialogueVariables;
+    
     private void Awake()
     {
-        transform.SetParent(null);
+        // pass that variable to the DIalogueVariables constructor in the Awake method
+
+        //dialogueVariables = new DialogueVariables(loadGlobalsJSON);
+        dialogueVariables = FindObjectOfType<DialogueVariables>();
+
         if (instance != null)
         {
             Debug.LogWarning("multiple instances of dialogue manager in scene");
         }
         instance = this;
-        // pass that variable to the DIalogueVariables constructor in the Awake method
-        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
-    private void Start()
+
+    public void SetVariables()
     {
-        typingSpeed = defaultTypingSpeed;
+       // dialoguePanel = GameObject.FindGameObjectWithTag("dpanel");
+      //  dialogueText = GameObject.FindGameObjectWithTag("dtext").GetComponent<TextMeshProUGUI>();
+     //   displayNameText = GameObject.FindGameObjectWithTag("dname").GetComponent<TextMeshProUGUI>();
+      //  canContinueIcon = GameObject.FindGameObjectWithTag("dicon");
+     //   portraitAnimator = GameObject.FindGameObjectWithTag("dportrait").GetComponent<Animator>();
         layoutAnimator = dialoguePanel.GetComponent<Animator>();
+
+        typingSpeed = defaultTypingSpeed;
         dialoguePanel.SetActive(false);
         choicesText = new TextMeshProUGUI[choices.Length];
         portraitClips = portraitAnimator.runtimeAnimatorController.animationClips;
@@ -93,6 +105,12 @@ public class DialogueManager : MonoBehaviour
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
+    }
+    private void Start()
+    {
+        SetVariables();
+
+        
     }
     private void Update()
     {
@@ -463,8 +481,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ChangeScene(String name)
     {
-        Debug.Log("go to scene: " + name);
-        switch (name)
+        switch (name) //try to load scene by name
         {
             case "next":
                 Debug.Log("on this scene: " + SceneManager.GetActiveScene().buildIndex + ", changing to that + 1 which is: " + SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).name);
@@ -483,7 +500,16 @@ public class DialogueManager : MonoBehaviour
                 SceneManager.LoadScene(bathroomScene);
                 return;
             default:
-                Debug.LogWarning("tried to change scene through INK but couldn't find specified scene name");
+                int value = -99;
+                if (int.TryParse(name, out value) && value >= 0 && value <= SceneManager.sceneCountInBuildSettings)
+                {
+                    SceneManager.LoadScene(value);
+                }
+                else
+                {
+                    Debug.LogWarning("tried to change scene through INK but couldn't find specified scene name or buildnumber, string: " + name);
+                }
+                Debug.Log(value + " " + SceneManager.sceneCountInBuildSettings);
                 break;
         }
     }

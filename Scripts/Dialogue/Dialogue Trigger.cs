@@ -3,7 +3,8 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
-    private KeyCode interactKeybind;
+    [Header("Keybind To Trigger NPC")]
+    [SerializeField] private KeyCode interactKeybind;
 
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
@@ -14,7 +15,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         visualCue.SetActive(false);
         playerInRange = false;
-        interactKeybind = KeyCode.E;
+        //interactKeybind = KeyCode.E;
     }
     private void Update()
     {

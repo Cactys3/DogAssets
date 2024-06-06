@@ -30,7 +30,6 @@ Transform:
   m_Children:
   - {fileID: 5974846082017938574}
   - {fileID: 2114554012224164879}
-  - {fileID: 6857223621519870960}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,18 +77,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347acf3d363c2264d963dcc414f0ef48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadGlobalsJSON: {fileID: 4900000, guid: 2fb926155333bc24598a5fc1b30a4ae8, type: 3}
   defaultTypingSpeed: 0.04
-  mudScene: 1
-  kitchenScene: 2
-  bathroomScene: 3
-  officeScene: 4
-  deckScene: 5
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
   displayNameText: {fileID: 0}
   portraitAnimator: {fileID: 0}
   canContinueIcon: {fileID: 0}
+  layoutAnimator: {fileID: 0}
   choices:
   - {fileID: 0}
   - {fileID: 0}
@@ -164,79 +158,3 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!1 &8408975198575407077
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6857223621519870960}
-  - component: {fileID: 7438956963452923101}
-  m_Layer: 0
-  m_Name: Audio Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6857223621519870960
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408975198575407077}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -162.23004, y: -751.66797, z: -4.653193}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4704761193260043156}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7438956963452923101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408975198575407077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d79bfc3c73a72294eae240a074455b0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: jump1
-    clip: {fileID: 8300000, guid: 0963b7847b380c74085fcf90f73a22ec, type: 3}
-    volume: 1
-    loop: 0
-    pitch: 1
-    source: {fileID: 0}
-  typingSounds:
-  - name: burito
-    clip: {fileID: 8300000, guid: 11f2469a3a9e339468dfd78d2317b3e4, type: 3}
-    volume: 1
-    loop: 0
-    pitch: 1
-    source: {fileID: 0}
-  - name: mystery
-    clip: {fileID: 8300000, guid: 78abad222e9fb5140b8b386dd9341171, type: 3}
-    volume: 1
-    loop: 0
-    pitch: 1
-    source: {fileID: 0}
-  - name: default
-    clip: {fileID: 8300000, guid: bc5841e8a1be657479772d0fe1003688, type: 3}
-    volume: 1
-    loop: 0
-    pitch: 1
-    source: {fileID: 0}
-  - name: blind
-    clip: {fileID: 8300000, guid: a25c8df8bf72db1409c17fce055b4ba0, type: 3}
-    volume: 1
-    loop: 0
-    pitch: 1
-    source: {fileID: 0}

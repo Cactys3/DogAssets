@@ -23,6 +23,7 @@ INCLUDE Globals.ink
   You dare challenge US??? 
   (now we go to minigame scene)
      #scene:fridgeoven
+     ~completed_fridgeoven = true
   -> END
   
   
