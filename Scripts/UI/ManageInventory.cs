@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class ManageInventory : MonoBehaviour
@@ -320,53 +321,587 @@ public class ManageInventory : MonoBehaviour
     }
     public void TryCombine(string ItemTwo)
     {
-        string Combined = "";
         string ItemOne = SelectedItem;
-        if (SelectedItem == null)
+        string Message = "Failed to combine: " + ItemOne + " and " + ItemTwo;
+        if (SelectedItem == null || ItemTwo == null || ItemTwo.Equals(ItemOne))
         {
             Debug.LogError("trying to combine but selected item is null!!!");
+            FailCombine(ItemOne, ItemTwo, Message);
         }
-        if (ItemOne.CompareTo(ItemTwo) < 0)
+        else 
         {
-            Combined = ItemOne + ItemTwo;
-        }
-        else if (ItemOne.CompareTo(ItemTwo) > 0)
-        {
-            Combined = ItemTwo + ItemOne;
-        }
-        else
-        {
-            Debug.LogError("comparing these two strings to combine these two items resulted in equal strings?");
-        }
-        switch (Combined)
-        {
-            case "flimsykeymoldableclay":
-                //It then sets the new item to true by calling DialogueMangager (It dones't have to set it true by the listofitems)
-                Combine(Combined);
-                break;
-            default:
-                foreach (Item i in ListOfItems)
-                {
-                    i.SomethingSelected(false);
-                    //TODO: put up some UI text message that that combine attetmpt failed, have custom text for certian combinations (or all of them)
-                }
-                break;
-        }
-    }
-    private void Combine(string Combined)
-    {
-        foreach (Item i in ListOfItems)
-        {
-            switch(Combined)
+            bool SuccessfullyCombined = false;
+            switch (ItemTwo) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
             {
-                case "keymold":
-                    FindObjectOfType<DialogueManager>().SetVariableStateSystem(Combined, false); //set the two combined items to false (dialogue manager will call SetState())
-                    FindObjectOfType<DialogueManager>().SetVariableStateSystem(SelectedItem, false);
-                    FindObjectOfType<DialogueManager>().SetVariableStateSystem("has_keymold", true); //set the new item to true  (dialogue manager will call SetState())
-                    Debug.Log("just combined items: " + Combined + " and " + SelectedItem + " into item: " + "keymold");
+                case dogfood:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+                            
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case defaultitem:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case flimsykey:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+                            Message = "combined moldable clay and flimsy key!!!";
+                            SuccessfullyCombined = true;
+                            Combine(keymold, ItemOne, ItemTwo, Message);
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case clay:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case poop:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+                            Message = "combined keymold and poop!!!";
+                            SuccessfullyCombined = true;
+                            Combine(stinkyfilledkeymold, ItemOne, ItemTwo, Message);
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case candy:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+                            Message = "combined keymold and candy!!!";
+                            SuccessfullyCombined = true;
+                            Combine(tastykeymold, ItemOne, ItemTwo, Message);
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case moldableclay:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+                            Message = "combined moldable clay and flimsy key!!!";
+                            SuccessfullyCombined = true;
+                            Combine(keymold, ItemOne, ItemTwo, Message);
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case tastykeymold:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case stinkyfilledkeymold:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case stinkykey:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case tastykey:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+
+                            break;
+                        case candy:
+
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                case keymold:
+                    switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
+                    {
+                        case dogfood:
+
+                            break;
+                        case defaultitem:
+
+                            break;
+                        case flimsykey:
+
+                            break;
+                        case clay:
+
+                            break;
+                        case poop:
+                            Message = "combined keymold and poop!!!";
+                            SuccessfullyCombined = true;
+                            Combine(stinkyfilledkeymold, ItemOne, ItemTwo, Message);
+                            break;
+                        case candy:
+                            Message = "combined keymold and candy!!!";
+                            SuccessfullyCombined = true;
+                            Combine(tastykeymold, ItemOne, ItemTwo, Message);
+                            break;
+                        case moldableclay:
+
+                            break;
+                        case tastykeymold:
+
+                            break;
+                        case stinkyfilledkeymold:
+
+                            break;
+                        case stinkykey:
+
+                            break;
+                        case tastykey:
+
+                            break;
+                        case keymold:
+
+                            break;
+                        default:
+                            Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
+                            break;
+                    }
+                    break;
+                default:
+                    Debug.LogWarning("failed to combine because one item wasn't a listed item: " + ItemOne + " and " + ItemTwo);
                     break;
             }
+            if (!SuccessfullyCombined)
+            {
+                FailCombine(ItemOne, ItemTwo, Message);
+            }
         }
+    }
+    private void Combine(string NewItem, string ItemOne, string ItemTwo, string Message)
+    {
+        //TODO: use Message to display the successfully combined thing!
+        FindObjectOfType<DialogueManager>().SetVariableStateSystem(NewItem, true); //set the two combined items to false (dialogue manager will call SetState())
+        FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemOne, false);
+        FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemTwo, false); 
+        Debug.Log("just combined items: " + ItemOne + " and " + ItemTwo + " into item: " + NewItem);
+        ClearSelected(SelectedItem);
+        UIScript.DisableUI();
+    }
+    private void FailCombine(string ItemOne, string ItemTwo, string Message)
+    {
+        //TODO: use Message to display the failed combined thing!
+        //TODO: put up some UI text message that that combine attetmpt failed, have custom text for certian combinations (or all of them)
+        FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemOne, false);
+        FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemTwo, false);
+        Debug.Log("just failed to combined items: " + ItemOne + " and " + ItemTwo);
+        ClearSelected(SelectedItem);
+        UIScript.DisableUI();
     }
 
     public DialogueManager GetDialogueManager()

@@ -47,18 +47,6 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         UnholdButton.SetActive(false);
         UnselectButton.SetActive(false);
     }
-    private void Update()
-    {
-
-        if (itemName.Equals("has_default"))
-        {
-            Debug.Log(CheckSlot());
-        }    
-        if (ItemState != 0 && CheckSlot() != -1)
-        {
-            Debug.Log(itemName + " slot: " + CheckSlot() + " state: " + ItemState);
-        }
-    }
 
     /**
      * used OnEnable for item classes to check if their obtained/not obtained state changed while their GameObject was disabled
