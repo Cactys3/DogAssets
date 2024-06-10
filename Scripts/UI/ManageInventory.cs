@@ -54,20 +54,15 @@ public class ManageInventory : MonoBehaviour
         EnabledItems.Clear();
 
         UpdateItemStateList(); //Sets the EnabledItems list properly.
-
-    //    StartCoroutine("whatever");
     }
-  //  private IEnumerator whatever()
-  //  {
-  //      yield return new WaitForSeconds(1f);
-  //      UpdateItemStateList();
- //   }
+
     /**
      * Sets the EnabledItems list properly
      */
     public void UpdateItemStateList()
     {
-        
+       
+
         //first we need to make sure the EnabledItems list is complete and correctly ordered. Here we also set disabled items.
         foreach (Item i in ListOfItems)
         {
@@ -137,7 +132,7 @@ public class ManageInventory : MonoBehaviour
         }
         else
         { 
-            Debug.LogWarning("clearHovered was called when something else was already being hovered?");
+            Debug.LogWarning("clearHovered was called when something else was already being hovered? " + name + " != " + HoveredItem);
         }
     }
     public void SetHovered(string name)
@@ -147,35 +142,44 @@ public class ManageInventory : MonoBehaviour
 
         switch (name)
         {
-            case "has_dogfood":
+            case dogfood:
                 HoveredDescriptionText.text = "this is the description for dogfood";
                 break;
-            case "has_filledkeymold":
+            case stinkyfilledkeymold:
                 HoveredDescriptionText.text = "has_filledkeymold";
                 break;
-            case "has_keymold":
+            case tastykeymold:
+                HoveredDescriptionText.text = "has_filledkeymold";
+                break;
+            case keymold:
                 HoveredDescriptionText.text = "has_keymold";
                 break;
-            case "has_moldableclay":
+            case moldableclay:
                 HoveredDescriptionText.text = "has_moldableclay";
                 break;
-            case "has_candy":
+            case candy:
                 HoveredDescriptionText.text = "has_candy";
                 break;
-            case "has_poop":
+            case poop:
                 HoveredDescriptionText.text = "has_poop";
                 break;
-            case "has_clay":
+            case clay:
                 HoveredDescriptionText.text = "has_clay";
                 break;
-            case "has_flimsykey":
+            case flimsykey:
                 HoveredDescriptionText.text = "has_flimsykey";
                 break;
-            case "has_default":
+            case defaultitem:
                 HoveredDescriptionText.text = "has_default";
                 break;
+            case tastykey:
+                HoveredDescriptionText.text = "has_tastykey";
+                break;
+            case stinkykey:
+                HoveredDescriptionText.text = "has_stinkykey";
+                break;
             default:
-                Debug.LogWarning("SetHovered(name) was called with a string name that isn't one of the items");
+                Debug.LogWarning("SetHovered(name) was called with a string name that isn't one of the items: " + name);
                 break;
         }
     }
@@ -197,6 +201,7 @@ public class ManageInventory : MonoBehaviour
         {
             Debug.LogWarning("tried to set selected to " + name + " but selected item was already set: " + SelectedItem);
         }
+        RefreshItems();
     }
     public void ClearSelected(string name)
     {
@@ -214,6 +219,7 @@ public class ManageInventory : MonoBehaviour
         {
             Debug.LogWarning("Called ClearSelected but nothing was selected or clearselected(string) was called with the wrong name: " + name + " != " + SelectedItem);
         }
+        RefreshItems();
     }
     public void SetHold(string name)
     {
@@ -885,27 +891,31 @@ public class ManageInventory : MonoBehaviour
     }
     private void Combine(string NewItem, string ItemOne, string ItemTwo, string Message)
     {
-        //TODO: use Message to display the successfully combined thing!
         FindObjectOfType<DialogueManager>().SetVariableStateSystem(NewItem, true); //set the two combined items to false (dialogue manager will call SetState())
         FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemOne, false);
         FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemTwo, false); 
         Debug.Log("just combined items: " + ItemOne + " and " + ItemTwo + " into item: " + NewItem);
         ClearSelected(SelectedItem);
-        UIScript.DisableUI();
+
+        RefreshItems();
+        //UIScript.DisableUI(); if we want to instead disable UI and display the combined message
+        //TODO: use Message to display the successfully combined thing!
     }
     private void FailCombine(string ItemOne, string ItemTwo, string Message)
     {
         //TODO: use Message to display the failed combined thing!
         //TODO: put up some UI text message that that combine attetmpt failed, have custom text for certian combinations (or all of them)
-        FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemOne, false);
-        FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemTwo, false);
         Debug.Log("just failed to combined items: " + ItemOne + " and " + ItemTwo);
         ClearSelected(SelectedItem);
-        UIScript.DisableUI();
+        RefreshItems();
     }
 
-    public DialogueManager GetDialogueManager()
+    private void RefreshItems()
     {
-        return dialoguemanager;
+        UpdateItemStateList();
+        foreach (Item i in ListOfItems)
+        {
+            i.Refresh();
+        }
     }
 }

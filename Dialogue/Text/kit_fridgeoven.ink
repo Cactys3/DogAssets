@@ -55,11 +55,25 @@ INCLUDE Globals.ink
   
   
   ===ObtainKey===
+  #name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
   The Oven bakes the mold which then goes straight into the Fridge to cool and...
   #name:fridgeoven #image:fridgeoven #layout:fridgeoven #sound:fridgeoven
   VOILA!
   A perfectly shapen and hardend key!
-  ~has_stinkykey = true
+  {has_stinkyfilledkeymold:
+  #name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
+    This should work for the locked living room door!
+  Although it is a bit stinky...
+    ~has_stinkykey = true
+    ~has_stinkyfilledkeymold = false
+  }
+  {has_tastyfilledkeymold:
+  #name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
+  This should work for the locked living room door!
+  Although it is a bit sticky...
+    ~has_tastykey = true
+    ~has_tastyfilledkeymold = false
+  }
   ->END
   
   

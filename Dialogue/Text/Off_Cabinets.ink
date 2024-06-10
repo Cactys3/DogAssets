@@ -18,11 +18,14 @@ sniff... sniff....
 #name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
 The dog wishes to search through the cabinets <<wait:0.5>, will you allow it?
 * [yes]
+#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
+- The dog searches through the cabinets and finds some hard candy.
 * [no]
 #name:dog #image:dog_woof #layout:dog1 #sound:dog_woof
 - Woof!
 #name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
-The dog searches through the cabinets and finds some hard candy.
+- The dog searches through the cabinets anyways and finds some hard candy.
+#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
 ~has_candy = true
 ~completed_off_cabinets = true
 ->END

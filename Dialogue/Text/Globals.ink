@@ -21,8 +21,9 @@ VAR completed_off_cabinets = false
 VAR completed_flimsykey = false
 VAR completed_liv_doortostairs = false
 VAR completed_liv_cabinet = false
-//played_name is if an ink story has already been played once
+//played_name is if an ink story has already been played in whatever way the particular story cares about (usually only used within that one story)
 VAR played_bath1_toilet = false
+VAR played_DoorToStairs = false
 //has_itemname is if a particular is currently obtained
 VAR has_dogfood = false
 VAR has_default = true

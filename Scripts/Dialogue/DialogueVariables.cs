@@ -92,7 +92,9 @@ public class DialogueVariables : MonoBehaviour
 
                 //Debug.Log("Changed variable: " + name + " to " + ToSystem(value));
                 //GameObject.FindObjectOfType<ManageInventory>().SetState(name, (bool) ToSystem(value));
-                GameObject.FindObjectOfType<ManageInventory>().UpdateItemStateList();
+                ManageInventory inven = GameObject.FindObjectOfType<ManageInventory>();
+                inven.ClearHeldItem(inven.GetHeldItem());
+                inven.UpdateItemStateList();
             }
             SaveVariables();
         }

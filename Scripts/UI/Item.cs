@@ -26,6 +26,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] int OffsetX;
     private int ItemState; //From -1 to 4, -1: Item was combined and is complete, 0: item is not obtained, 1: item is obtained, 2: item is hovered: 3: something is selected
     private int ItemSlot;
+    private bool MouseOnThis;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +55,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
      */
     private void OnEnable()
     {
+        MouseOnThis = false;
         if (!GameHasLoaded)
         {
             GameHasLoaded = true; //well i dont want this script to try to run when the level is loaded for the first time, only when the gameobject is activated after being deactivated.
@@ -166,6 +168,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     //displays the select and hold buttons if nothing else is being hovered, if else is being hovered, displays the combine button
     public void OnPointerEnter(PointerEventData eventData)
     {
+        MouseOnThis = true;
         OnHover();
     }
     private void OnHover()
@@ -200,6 +203,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void OnPointerExit(PointerEventData eventData)
     {
+        MouseOnThis = false;
         OnExitHover();
     }
     private void OnExitHover()
@@ -310,5 +314,35 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         return ItemState;
     }
+    public void Refresh()
+    {
+        /**   if (CheckSlot() == -1) //if this item should be disabled
+           {
+               OnExitHover();
 
+               return;
+           } */
+
+        if (CheckSlot() == -1) //if this has been disabled, disable it
+        {
+            OnExitHover();
+            OnEnable();
+            
+           // ItemPanel.SetActive(false);
+        }
+        else
+        {
+            if (MouseOnThis) //if this should be hovered, update it and then hover it
+            {
+                OnExitHover();
+                OnEnable();
+                OnHover();
+            }
+            else // if this shouldn't be hoverd, update it then unhover it
+            {
+                OnExitHover();
+                OnEnable();
+            }
+        }
+    }
 }
