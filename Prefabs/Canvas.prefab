@@ -2324,7 +2324,7 @@ RectTransform:
   - {fileID: 1266457835502367263}
   - {fileID: 2101007054855006755}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3084,6 +3084,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clay
       objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e97361a56592284baa3e45a7105921c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3224,6 +3232,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy
       objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 87725cb17e266ab40b23d1effe296ce6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3294,6 +3310,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DogFood
       objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8611d0a02516d704889191f124789bca, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3434,6 +3458,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlimsyKey
       objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 14e36c79403b2aa46b84d0472d76f434, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3644,6 +3676,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoldableClay
       objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f28b7b5651e08f14baa7eaeda5647d48, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3714,6 +3754,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poop
       objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198701499039613112, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ca1aae856c5d28d488f6050f6afb1fac, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

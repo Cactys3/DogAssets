@@ -139,26 +139,6 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Item Food_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 28
-      width: 16
-      height: 16
-    spriteID: 1a7bc8b34c3cd9c4bbe6022ad58cd452
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 28}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -168,7 +148,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Item Food_Frame_0
+    - name: Item Food
       frameIndex: 0
       cellRect:
         x: 0
@@ -176,14 +156,6 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 3bdd4dd49286dfc418a67933dd766d5b
-    - name: Item Food_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      spriteId: 1a7bc8b34c3cd9c4bbe6022ad58cd452
     linkedCells: []
     parentIndex: -1
   platformSettings: []

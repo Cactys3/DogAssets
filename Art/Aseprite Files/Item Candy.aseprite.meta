@@ -139,26 +139,6 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Item Candy_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 28
-      width: 16
-      height: 16
-    spriteID: 2391a6a7d027bee4fbc963c4c3aaa834
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 28}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -168,7 +148,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Item Candy_Frame_0
+    - name: Item Candy
       frameIndex: 0
       cellRect:
         x: 0
@@ -176,14 +156,6 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 9dcb6e4918f000b4a829467d8ce86043
-    - name: Item Candy_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      spriteId: 2391a6a7d027bee4fbc963c4c3aaa834
     linkedCells: []
     parentIndex: -1
   platformSettings: []
