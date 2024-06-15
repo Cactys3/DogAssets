@@ -6,7 +6,6 @@ public class MyCursor : MonoBehaviour
 {
     private void Start()
     {
-        //FindObjectOfType<DialogueManager>().SetVariables();
         Cursor.visible = false;
     }
     void Update()

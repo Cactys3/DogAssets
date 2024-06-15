@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: a66b5c68b5155714a9539d4459a1f153
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Exhaust Pipe Background
+    originalName: 
+    pivot: {x: 0.8888887, y: -0.2121212}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 136
+      y: 188
+      width: 9
+      height: 66
+    spriteID: 3b9f2f35ebbad0d4fb8ac68abea07ea6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 136, y: 188}
+  - name: Exhaust Pipe Background_Frame_1
+    originalName: 
+    pivot: {x: 0.9285716, y: -0.18666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 188
+      width: 14
+      height: 75
+    spriteID: e2e8e32129643824fb0e1a205f908f7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 188}
+  - name: Exhaust Pipe Background_Frame_2
+    originalName: 
+    pivot: {x: 0.8055555, y: -0.15730336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 410
+      width: 36
+      height: 89
+    spriteID: a8706bb1ecb546e4685e49786752d875
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 410}
+  - name: Exhaust Pipe Background_Frame_3
+    originalName: 
+    pivot: {x: 0.9722222, y: -0.14893617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 308
+      width: 36
+      height: 94
+    spriteID: e85a48ac996746c4d84d83eeddd7e75d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 308}
+  - name: Exhaust Pipe Background_Frame_4
+    originalName: 
+    pivot: {x: 0.7142857, y: -0.14893617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 49
+      height: 94
+    spriteID: fff09302857cfcf488caad15950ff3fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Exhaust Pipe Background_Frame_5
+    originalName: 
+    pivot: {x: 0.7608695, y: -0.14893617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 208
+      width: 46
+      height: 94
+    spriteID: ec4a71724315bb749b405829d576e681
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 208}
+  - name: Exhaust Pipe Background_Frame_6
+    originalName: 
+    pivot: {x: 0.7142857, y: -0.14893617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 106
+      width: 49
+      height: 94
+    spriteID: 700bbf7d2bc9be944af5bd5af6834f6a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 106}
+  - name: Exhaust Pipe Background_Frame_7
+    originalName: 
+    pivot: {x: 0.68888897, y: -0.14893617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 310
+      width: 45
+      height: 94
+    spriteID: 52be9b22e06391646a2cc73c076cfc35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 310}
+  - name: Exhaust Pipe Background_Frame_8
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.14893617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 412
+      width: 45
+      height: 94
+    spriteID: 097ee00dde161e74899632311c8f5888
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 412}
+  - name: Exhaust Pipe Background_Frame_9
+    originalName: 
+    pivot: {x: 0.7111111, y: -0.14893617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 4
+      width: 45
+      height: 94
+    spriteID: 13f812a7713968246965f97fa47f594f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 4}
+  - name: Exhaust Pipe Background_Frame_10
+    originalName: 
+    pivot: {x: 0.7045455, y: -0.1521739}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 208
+      width: 44
+      height: 92
+    spriteID: 498576be78502444fa9056b149d8622b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 208}
+  - name: Exhaust Pipe Background_Frame_11
+    originalName: 
+    pivot: {x: 0.7045455, y: -0.14893617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 106
+      width: 44
+      height: 94
+    spriteID: a2dfd50265350644694fd9b7ab226ebe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 106}
+  - name: Exhaust Pipe Background_Frame_12
+    originalName: 
+    pivot: {x: 0.87096775, y: -0.1627907}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 94
+      width: 31
+      height: 86
+    spriteID: 4bddfb14f889f3147846a7883a679e53
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 94}
+  - name: Exhaust Pipe Background_Frame_13
+    originalName: 
+    pivot: {x: 0.72727275, y: -0.17073171}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 4
+      width: 33
+      height: 82
+    spriteID: 61e9575bf03bb3942a11cd97ca4ea2a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 4}
+  - name: Exhaust Pipe Background_Frame_14
+    originalName: 
+    pivot: {x: 0.8333335, y: -0.20588234}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 271
+      width: 12
+      height: 68
+    spriteID: ea2b2758e7050984194eb1d550d13b3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 271}
+  - name: Exhaust Pipe Background_Frame_15
+    originalName: 
+    pivot: {x: 0.8888887, y: -0.23333332}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 347
+      width: 9
+      height: 60
+    spriteID: 4c4930b1b4703bb4498ffaedbafffe62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 347}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1562863260
+    name: Exhaust Pipe Background
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Exhaust Pipe Background_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 88
+        y: 14
+        width: 9
+        height: 66
+      spriteId: 3b9f2f35ebbad0d4fb8ac68abea07ea6
+    - name: Exhaust Pipe Background_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 83
+        y: 14
+        width: 14
+        height: 75
+      spriteId: e2e8e32129643824fb0e1a205f908f7f
+    - name: Exhaust Pipe Background_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 67
+        y: 14
+        width: 36
+        height: 89
+      spriteId: a8706bb1ecb546e4685e49786752d875
+    - name: Exhaust Pipe Background_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 61
+        y: 14
+        width: 36
+        height: 94
+      spriteId: e85a48ac996746c4d84d83eeddd7e75d
+    - name: Exhaust Pipe Background_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 61
+        y: 14
+        width: 49
+        height: 94
+      spriteId: fff09302857cfcf488caad15950ff3fb
+    - name: Exhaust Pipe Background_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 61
+        y: 14
+        width: 46
+        height: 94
+      spriteId: ec4a71724315bb749b405829d576e681
+    - name: Exhaust Pipe Background_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 61
+        y: 14
+        width: 49
+        height: 94
+      spriteId: 700bbf7d2bc9be944af5bd5af6834f6a
+    - name: Exhaust Pipe Background_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 65
+        y: 14
+        width: 45
+        height: 94
+      spriteId: 52be9b22e06391646a2cc73c076cfc35
+    - name: Exhaust Pipe Background_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 63
+        y: 14
+        width: 45
+        height: 94
+      spriteId: 097ee00dde161e74899632311c8f5888
+    - name: Exhaust Pipe Background_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 64
+        y: 14
+        width: 45
+        height: 94
+      spriteId: 13f812a7713968246965f97fa47f594f
+    - name: Exhaust Pipe Background_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 65
+        y: 14
+        width: 44
+        height: 92
+      spriteId: 498576be78502444fa9056b149d8622b
+    - name: Exhaust Pipe Background_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 65
+        y: 14
+        width: 44
+        height: 94
+      spriteId: a2dfd50265350644694fd9b7ab226ebe
+    - name: Exhaust Pipe Background_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 69
+        y: 14
+        width: 31
+        height: 86
+      spriteId: 4bddfb14f889f3147846a7883a679e53
+    - name: Exhaust Pipe Background_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 72
+        y: 14
+        width: 33
+        height: 82
+      spriteId: 61e9575bf03bb3942a11cd97ca4ea2a8
+    - name: Exhaust Pipe Background_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 86
+        y: 14
+        width: 12
+        height: 68
+      spriteId: ea2b2758e7050984194eb1d550d13b3f
+    - name: Exhaust Pipe Background_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 88
+        y: 14
+        width: 9
+        height: 60
+      spriteId: 4c4930b1b4703bb4498ffaedbafffe62
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 192, y: 108}
