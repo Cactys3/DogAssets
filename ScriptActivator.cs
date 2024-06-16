@@ -6,7 +6,7 @@ using UnityEngine;
 public class ScriptActivator : MonoBehaviour
 {
     [SerializeField] JuicerMinigameManager manager;
-    [Header("1: 2x, 2: 8x, 3: 512x, 4: Juice!")]
+    [Header("0: Juice!, 1: 2x, 2: 8x, 3: 512x")]
     [SerializeField] int Button;
     private bool Hovered;
     void Start()

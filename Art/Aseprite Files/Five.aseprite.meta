@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e8c82ee161c4d364aaae677255e0d59e
+guid: 04a916fe07cd6e043adbb29fd29743ef
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Progression Bar Background
+  - name: Five
     originalName: 
-    pivot: {x: 1.882353, y: 0}
+    pivot: {x: 0.33333334, y: -0.8333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 51
-      height: 216
-    spriteID: 960c229e843f7f948bd6e1a232424a97
+      width: 3
+      height: 6
+    spriteID: f70b76dd199cb604385c50206d5a8fdc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,23 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -2147092848
-    name: Progression Bar Background
+    guid: -1754208262
+    name: Five
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Progression Bar Background
+    - name: Five
       frameIndex: 0
       cellRect:
-        x: 96
-        y: 0
-        width: 51
-        height: 216
-      spriteId: 960c229e843f7f948bd6e1a232424a97
+        x: 7
+        y: 5
+        width: 3
+        height: 6
+      spriteId: f70b76dd199cb604385c50206d5a8fdc
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 384, y: 216}
+  canvasSize: {x: 16, y: 16}
