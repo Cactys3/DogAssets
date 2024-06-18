@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: faf73090efa23274ea56f34288e05e68
+guid: 1d8eaf4e1c3bd2c47b01db4580ff7c34
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: max UI
+  - name: Press U P
     originalName: 
-    pivot: {x: 0.44827583, y: 0}
+    pivot: {x: 0.4848485, y: -0.18181819}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 29
-      height: 12
-    spriteID: 4568368cff975cb4ab846ede9fe04b84
+      width: 66
+      height: 11
+    spriteID: d832fd3c30de2ea46b9e5e220c9a176a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,23 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1203555566
-    name: max UI
+    guid: 1504664626
+    name: Press U P
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: max UI
+    - name: Press U P
       frameIndex: 0
       cellRect:
-        x: 5
-        y: 0
-        width: 29
-        height: 12
-      spriteId: 4568368cff975cb4ab846ede9fe04b84
+        x: 8
+        y: 2
+        width: 66
+        height: 11
+      spriteId: d832fd3c30de2ea46b9e5e220c9a176a
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 36, y: 16}
+  canvasSize: {x: 80, y: 16}

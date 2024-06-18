@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.NetworkInformation;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class ManageInventory : MonoBehaviour
@@ -38,15 +35,15 @@ public class ManageInventory : MonoBehaviour
     private const string tastykey = "has_tastykey";
 
 
-        void Start()
+    void Start()
     {
-    //    UIScript = FindAnyObjectByType<ManageUI>();
+        //    UIScript = FindAnyObjectByType<ManageUI>();
         dialoguemanager = FindAnyObjectByType<DialogueManager>();
-     //   HeldDescriptionText = GameObject.FindGameObjectWithTag("hovered").GetComponent<TextMeshProUGUI>();
-     //   HoveredDescriptionText = GameObject.FindGameObjectWithTag("held").GetComponent<TextMeshProUGUI>();
+        //   HeldDescriptionText = GameObject.FindGameObjectWithTag("hovered").GetComponent<TextMeshProUGUI>();
+        //   HoveredDescriptionText = GameObject.FindGameObjectWithTag("held").GetComponent<TextMeshProUGUI>();
 
         ListOfItems = GameObject.FindObjectsByType<Item>(FindObjectsInactive.Include, 0);
-        ListOfItemNames = new string[] { dogfood, defaultitem, flimsykey, clay, poop, candy, moldableclay, keymold, stinkyfilledkeymold, tastykeymold, stinkykey, tastykey};
+        ListOfItemNames = new string[] { dogfood, defaultitem, flimsykey, clay, poop, candy, moldableclay, keymold, stinkyfilledkeymold, tastykeymold, stinkykey, tastykey };
         EnabledItems = new List<string>
         {
             "hello"
@@ -61,7 +58,7 @@ public class ManageInventory : MonoBehaviour
      */
     public void UpdateItemStateList()
     {
-       
+
 
         //first we need to make sure the EnabledItems list is complete and correctly ordered. Here we also set disabled items.
         foreach (Item i in ListOfItems)
@@ -131,7 +128,7 @@ public class ManageInventory : MonoBehaviour
             HoveredDescriptionText.text = "Item Name: this is the default text the item description textbox would display given";
         }
         else
-        { 
+        {
             Debug.LogWarning("clearHovered was called when something else was already being hovered? " + name + " != " + HoveredItem);
         }
     }
@@ -276,7 +273,7 @@ public class ManageInventory : MonoBehaviour
         {
             Debug.LogError("tried to set an item to being held but an item was already held");
         }
-        
+
     }
     public bool SomethingHeld()
     {
@@ -334,7 +331,7 @@ public class ManageInventory : MonoBehaviour
             Debug.LogError("trying to combine but selected item is null!!!");
             FailCombine(ItemOne, ItemTwo, Message);
         }
-        else 
+        else
         {
             bool SuccessfullyCombined = false;
             switch (ItemTwo) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
@@ -343,7 +340,7 @@ public class ManageInventory : MonoBehaviour
                     switch (ItemOne) //fail: FailCombine(string ItemOne, string ItemTwo) suceed: Combine("new item", ItemOne, ItemTwo);
                     {
                         case dogfood:
-                            
+
                             break;
                         case defaultitem:
 
@@ -893,7 +890,7 @@ public class ManageInventory : MonoBehaviour
     {
         FindObjectOfType<DialogueManager>().SetVariableStateSystem(NewItem, true); //set the two combined items to false (dialogue manager will call SetState())
         FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemOne, false);
-        FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemTwo, false); 
+        FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemTwo, false);
         Debug.Log("just combined items: " + ItemOne + " and " + ItemTwo + " into item: " + NewItem);
         ClearSelected(SelectedItem);
 

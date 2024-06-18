@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6588137150247373841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4679659396952191930}
+  - component: {fileID: 7152488235761497703}
+  m_Layer: 0
+  m_Name: Numbers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4679659396952191930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6588137150247373841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5323849, y: -0.090836376, z: -0.048296005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7152488235761497703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6588137150247373841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeedf1748a1714e41b1f85466c0533d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Zero: {fileID: 21300000, guid: a8bc006959584034f95325858557fec0, type: 3}
+  One: {fileID: 21300000, guid: c192811fc04a66847aee81e4d4b1b6bd, type: 3}
+  Two: {fileID: 21300000, guid: 2a31a11bbcf1ce149b46dbb32608ff0a, type: 3}
+  Three: {fileID: 21300000, guid: 991763a53efece8499bd3ac698478dd3, type: 3}
+  Four: {fileID: 21300000, guid: 72716cd8ca3136d468e23d938a4e6ce1, type: 3}
+  Five: {fileID: 21300000, guid: 944e3fe4cca660b4381e0d25b9587880, type: 3}
+  Six: {fileID: 21300000, guid: 7522915d613dbcd4aac9a1d167290f72, type: 3}
+  Seven: {fileID: 21300000, guid: 22cf7e4bd78e9894a8734d1f0ec4fc3b, type: 3}
+  Eight: {fileID: 21300000, guid: 7d67bc1ec2a85fd41bd1d32f91c1604c, type: 3}
+  Nine: {fileID: 21300000, guid: f13de6b4959373844b531155130e061b, type: 3}
+  Blank: {fileID: 21300000, guid: b244077ec8d40a44391ec42e04843249, type: 3}
+  Max: {fileID: 21300000, guid: a8f3efd956375ed4691c239fb179a1f9, type: 3}
+  NumberInstance: {fileID: 6256430513550598445, guid: 195205d1325fc0f4394b7cdd7f3190c7, type: 3}
+  Number: 0
+  Offset: 0.5
+  MaxNumber: 0

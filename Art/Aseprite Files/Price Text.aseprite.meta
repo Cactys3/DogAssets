@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: faf73090efa23274ea56f34288e05e68
+guid: f41aed2e443ae29499004fa56bbcfc4e
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: max UI
+  - name: Price Text
     originalName: 
-    pivot: {x: 0.44827583, y: 0}
+    pivot: {x: 0.5, y: -0.27272728}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 29
-      height: 12
-    spriteID: 4568368cff975cb4ab846ede9fe04b84
+      width: 32
+      height: 11
+    spriteID: 39907818fa61185499aee43e67908e19
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,23 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1203555566
-    name: max UI
+    guid: 1378194518
+    name: Price Text
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: max UI
+    - name: Price Text
       frameIndex: 0
       cellRect:
-        x: 5
-        y: 0
-        width: 29
-        height: 12
-      spriteId: 4568368cff975cb4ab846ede9fe04b84
+        x: 0
+        y: 3
+        width: 32
+        height: 11
+      spriteId: 39907818fa61185499aee43e67908e19
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 36, y: 16}
+  canvasSize: {x: 32, y: 16}
