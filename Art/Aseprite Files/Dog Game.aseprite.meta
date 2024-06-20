@@ -739,6 +739,86 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 700}
+  - name: Dog Game_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 700
+      width: 192
+      height: 108
+    spriteID: ff386b3aab2bd32458082c61c57511e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 700}
+  - name: Dog Game_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 700
+      width: 192
+      height: 108
+    spriteID: 046617fac29fbe84b854008aba048fa5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 700}
+  - name: Dog Game_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 700
+      width: 192
+      height: 108
+    spriteID: ee76cfba6b1be634489cb9a9ede4751e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 700}
+  - name: Dog Game_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 700
+      width: 192
+      height: 108
+    spriteID: 423d227cce90012489d2505b681df076
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 804, y: 700}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -988,6 +1068,38 @@ ScriptedImporter:
         width: 192
         height: 108
       spriteId: 2ec855ab7b72cfc4db682ce2665b1db7
+    - name: Dog Game_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: e36b69517d55ef64d80e1a876a3e15ff
+    - name: Dog Game_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: ff386b3aab2bd32458082c61c57511e9
+    - name: Dog Game_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 046617fac29fbe84b854008aba048fa5
+    - name: Dog Game_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: ee76cfba6b1be634489cb9a9ede4751e
     - name: Dog Game_Frame_20
       frameIndex: 20
       cellRect:
@@ -995,7 +1107,7 @@ ScriptedImporter:
         y: 0
         width: 192
         height: 108
-      spriteId: e36b69517d55ef64d80e1a876a3e15ff
+      spriteId: 423d227cce90012489d2505b681df076
     linkedCells: []
     parentIndex: -1
   platformSettings:
