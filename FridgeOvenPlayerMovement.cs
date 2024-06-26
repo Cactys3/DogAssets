@@ -151,7 +151,7 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         //Debug.Log("IsGrouded: false");
         return false;
     }
-    private bool CheckUpright()
+    public bool CheckUpright()
     {
         bool temp = (Mathf.Abs(body.rotation % 360) < 1);
         //Debug.Log("upright: " + temp);

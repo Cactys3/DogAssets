@@ -1,14 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+
 
 public class ChangeToScene : MonoBehaviour
 {
-    public MyEnum Scene = new MyEnum();
+    public SceneName Scene = new SceneName();
     [SerializeField] private int Level;
 
 
@@ -18,22 +14,22 @@ public class ChangeToScene : MonoBehaviour
         {
             switch(Scene)
             {
-                case MyEnum.Intro:
+                case SceneName.Intro:
                     SceneManager.LoadScene("Intro Animation");
                     break;
-                case MyEnum.Mud:
+                case SceneName.Mud:
                     SceneManager.LoadScene("Mud Room");
                     break;
-                case MyEnum.Lockpicking:
+                case SceneName.Lockpicking:
                     SceneManager.LoadScene("Lockpicking Intro");
                     break;
-                case MyEnum.DogNip:
+                case SceneName.DogNip:
                     SceneManager.LoadScene("DogNip Animation");
                     break;
-                case MyEnum.KitchenDining:
+                case SceneName.KitchenDining:
                     SceneManager.LoadScene("Kitchen Dining Room");
                     break;
-                case MyEnum.Microwave:
+                case SceneName.Microwave:
                     if (Level > 0 && Level <= 5)
                     {
                         SceneManager.LoadScene("Microwave " + Level.ToString());
@@ -43,11 +39,11 @@ public class ChangeToScene : MonoBehaviour
                         Debug.LogError("Tried Going To Microwave Level: " + Level + ". That isn't a valid level (or you need to reset ChangeToScene script");
                     }
                     break;
-                case MyEnum.Juicer:
+                case SceneName.Juicer:
                     SceneManager.LoadScene("Juicer Minigame");
                     break;
-                case MyEnum.FridgeOven:
-                    if (Level > 0 && Level <= 2)
+                case SceneName.FridgeOven:
+                    if (Level > 0 && Level <= 4)
                     {
                         SceneManager.LoadScene("Fridge Level " + Level.ToString());
                     }
@@ -56,14 +52,17 @@ public class ChangeToScene : MonoBehaviour
                         Debug.LogError("Tried Going To FridgeOven Level: " + Level + ". That isn't a valid level (or you need to reset ChangeToScene script");
                     }
                     break;
-                case MyEnum.Living:
+                case SceneName.Living:
                     SceneManager.LoadScene("Living Room");
                     break;
-                case MyEnum.Office:
+                case SceneName.Office:
                     SceneManager.LoadScene("Office Room");
                     break;
-                case MyEnum.Bathroom1:
+                case SceneName.Bathroom1:
                     SceneManager.LoadScene("Bathroom 1");
+                    break;
+                case SceneName.DemoEnd:
+                    SceneManager.LoadScene("Demo End");
                     break;
                 default:
                     Debug.LogError("ChangeToScene on object: " + this.gameObject.name + ", is not setup properly");
@@ -73,7 +72,7 @@ public class ChangeToScene : MonoBehaviour
     }
 }
 
-public enum MyEnum
+public enum SceneName
 {
     Intro,
     Mud,
@@ -85,5 +84,6 @@ public enum MyEnum
     FridgeOven,
     Living,
     Office,
-    Bathroom1
+    Bathroom1,
+    DemoEnd
 };
