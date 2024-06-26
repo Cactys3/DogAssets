@@ -7,15 +7,19 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
 {
     [SerializeField] private float Movespeed;
     [SerializeField] private float JumpSpeed;
-    [SerializeField] private float Divespeed;
+    [SerializeField] private float DiveSpeedRot;
+    [SerializeField] private float DiveSpeedForce;
     [SerializeField] private float Uprightspeed;
     [SerializeField] private float FrictionValue;
     [SerializeField] private bool Upright;
     [SerializeField] private bool IsGrounded;
     [SerializeField] private Transform GroundCheck;
+    [SerializeField] private Sprite StaticSprite;
+    [SerializeField] private Sprite MovingSprite;
     private Rigidbody2D body;
     private Vector3 Spawn;
     private bool IsMoving;
+    private SpriteRenderer sprite;
     void Start()
     {
         FrictionValue = 0.9f;
@@ -24,14 +28,25 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         Movespeed = 4;
         JumpSpeed = 7;
-        Divespeed = 30;
-        Uprightspeed = 0.56f;
+        DiveSpeedRot = 30;
+        DiveSpeedForce = 100;
+        Uprightspeed = 0.59f;
         body.freezeRotation = true;
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            body.angularDrag = 0.05f;
+        }
+        else
+        {
+            body.angularDrag = 0.5f;
+        }
         IsMoving = false;
         Debug.Log(body.constraints);
 
@@ -42,19 +57,18 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftShift)) //we diving now
             {
+                int DiveSpeedSign = -1;
                 body.freezeRotation = false;
                 if (Input.GetKey(KeyCode.A))
                 {
-                    Divespeed = Mathf.Abs(Divespeed);
+                    DiveSpeedSign = 1;
                 }
-                else
-                {
-                    Divespeed = Mathf.Abs(Divespeed) * -1;
-                }
-                //body.AddForceAtPosition(new Vector2(Divespeed, 0), this.transform.position + new Vector3(0, 2, 0));
+
+                //body.AddForceAtPosition(new Vector2(DiveSpeedRot, 0), this.transform.position + new Vector3(0, 2, 0));
                 IsMoving = true;
-                body.AddTorque(Divespeed);
-                Debug.Log("added torq: " + Divespeed);
+                body.AddTorque(DiveSpeedSign * Mathf.Abs(DiveSpeedRot / (body.velocity.magnitude + 0.5f)));
+                body.AddForce(new Vector2(DiveSpeedSign * DiveSpeedSign * DiveSpeedForce, 0));
+                Debug.Log("added torq: " + DiveSpeedRot);
             }
             else
             {
@@ -111,6 +125,16 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         {
             Reset();
         }
+        if (IsMoving) //body.velocity.magnitude < 1
+        {
+            GetComponent<Animator>().Play("player");
+            //sprite.sprite = StaticSprite;
+        }
+        else
+        {
+            GetComponent<Animator>().Play("player_static");
+            //sprite.sprite = MovingSprite;
+        }
     }
     private bool CheckIsGrounded()
     {
@@ -139,6 +163,7 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         this.transform.position = Spawn;
         this.body.velocity = new Vector2(0, 0);
         this.body.rotation = 0;
+        body.freezeRotation = true;
     }
     private IEnumerator FreezeRotation()
     {
@@ -148,6 +173,7 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
             yield return null;
         }
         Debug.Log("waiot until condition: ");
+        body.rotation = 0;
         body.freezeRotation = true;
     }
     private void FixedUpdate()
