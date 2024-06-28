@@ -7,9 +7,15 @@ INCLUDE Globals.ink
 }
 
  === Completed ===
- 
+ YOU STRONG NOW!!!
  -> END
  
-  === NotCompleted ===
- #scene:juicer
+  ===NotCompleted===
+  Do you want to skip juicer minigame or do it?
+  + [SKIP]?
+  ~completed_jucier = true
+  -> END
+  + [DO IT]?
+  ~completed_jucier = true
+ #scene:Juicer Minigame
   -> END

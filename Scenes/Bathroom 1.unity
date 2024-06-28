@@ -1301,8 +1301,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 224833833755961019, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Name
-      value: Door
+      value: DoorToLiving
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 4900000, guid: 83f7d62fceff113418505ac74a3dddf5, type: 3}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
       value: 1.0515304

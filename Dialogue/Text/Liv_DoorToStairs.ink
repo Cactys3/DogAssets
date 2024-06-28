@@ -62,7 +62,7 @@ The dog wishes to make one with his molding skills.
 ===Completed===
 Go through door?
 *[yes]
-#scene:next
+#scene:Demo End
 ->END
 *[no]
 ->END

@@ -30,7 +30,7 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         JumpSpeed = 7;
         DiveSpeedRot = 30;
         DiveSpeedForce = 100;
-        Uprightspeed = 0.59f;
+        Uprightspeed = 0.57f;
         body.freezeRotation = true;
         sprite = GetComponent<SpriteRenderer>();
     }
@@ -57,17 +57,32 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftShift)) //we diving now
             {
-                int DiveSpeedSign = -1;
+                int DiveSpeedSign = 0;
+                int DiveSpinSign = -1;
                 body.freezeRotation = false;
-                if (Input.GetKey(KeyCode.A))
+                if (Input.GetKey(KeyCode.Q))
                 {
+                    DiveSpinSign = 1;
+                    DiveSpeedSign = -1;
+                }
+                else if (Input.GetKey(KeyCode.E))
+                {
+                    DiveSpinSign = -1;
                     DiveSpeedSign = 1;
                 }
 
+
                 //body.AddForceAtPosition(new Vector2(DiveSpeedRot, 0), this.transform.position + new Vector3(0, 2, 0));
                 IsMoving = true;
-                body.AddTorque(DiveSpeedSign * Mathf.Abs(DiveSpeedRot / (body.velocity.magnitude + 0.5f)));
-                body.AddForce(new Vector2(DiveSpeedSign * DiveSpeedSign * DiveSpeedForce, 0));
+                body.AddTorque(DiveSpinSign * Mathf.Abs((DiveSpeedRot +0.5f) / (body.velocity.magnitude + 0.5f)));
+                if (DiveSpeedSign == 0)
+                {
+                    body.AddForce(new Vector2(35 * DiveSpinSign, 0)); // to counter the rightward torque
+                }
+                else
+                {
+                    body.AddForce(new Vector2(DiveSpeedSign * DiveSpeedForce, 0));
+                }
                 Debug.Log("added torq: " + DiveSpeedRot);
             }
             else
@@ -97,7 +112,7 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         else
         {
             
-            if (Input.GetKeyDown(KeyCode.W) && (((Mathf.Abs(body.rotation) % 360) < 95 && (Mathf.Abs(body.rotation) % 360) > 85) || ((Mathf.Abs(body.rotation) % 360) < 275 && (Mathf.Abs(body.rotation) % 360) > 265))) //to get upright
+            if (Input.GetKeyDown(KeyCode.W) && !CheckUpright() && body.velocity.magnitude < 1) //to get upright, OLD: && (((Mathf.Abs(body.rotation) % 360) < 95 && (Mathf.Abs(body.rotation) % 360) > 85) || ((Mathf.Abs(body.rotation) % 360) < 275 && (Mathf.Abs(body.rotation) % 360) > 265))
             {
                 IsMoving = true;
                 StartCoroutine("FreezeRotation");

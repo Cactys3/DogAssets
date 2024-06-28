@@ -40,9 +40,10 @@ public class DialogueManager : MonoBehaviour
     //Scenes
     private string mudScene = "Mud Room";
     private string kitchenScene = "Kitchen Dining Room";
-    private string bathroomScene = "Bathroom One";
+    private string bathroomScene = "Bathroom 1";
     private string officeScene = "Office Room";
     private string deckScene = "Deck";
+    private string livingScene = "Living Room";
 
     private Coroutine displayLineCoroutine;
     private bool canContinueToNextLine = false;
@@ -496,21 +497,25 @@ public class DialogueManager : MonoBehaviour
             case "mud":
                 SceneManager.LoadScene(mudScene);
                 return;
-            case "bathroom":
+            case "bathroom1":
                 SceneManager.LoadScene(bathroomScene);
+                return;
+            case "living":
+                SceneManager.LoadScene(livingScene);
                 return;
             default:
                 int value = -99;
-                if (int.TryParse(name, out value) && value >= 0 && value <= SceneManager.sceneCountInBuildSettings)
+                if (int.TryParse(name, out value) && value > 0 && value <= SceneManager.sceneCountInBuildSettings)
                 {
-                    SceneManager.LoadScene(value);
+                    SceneManager.LoadScene(value); //TODO: no longer using the "value" part of this code since I'm going to load scenes via name string. Maybe delete later.
                 }
                 else
                 {
-                    Debug.LogWarning("tried to change scene through INK but couldn't find specified scene name or buildnumber, string: " + name);
+                    SceneManager.LoadScene(name);
+                    //Debug.LogWarning("tried to change scene through INK but may have encountered error with scenename: " + name);
                 }
-                Debug.Log(value + " " + SceneManager.sceneCountInBuildSettings);
-                break;
+                break; 
+               
         }
     }
     public Ink.Runtime.Object GetVariableStateInk(string variableName)

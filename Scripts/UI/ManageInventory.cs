@@ -53,6 +53,13 @@ public class ManageInventory : MonoBehaviour
         UpdateItemStateList(); //Sets the EnabledItems list properly.
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            HoveredDescriptionText.text = "";
+        }
+    }
     /**
      * Sets the EnabledItems list properly
      */
@@ -125,7 +132,7 @@ public class ManageInventory : MonoBehaviour
             somethingIsHovered = false;
             HoveredItem = null;
 
-            HoveredDescriptionText.text = "Item Name: this is the default text the item description textbox would display given";
+            HoveredDescriptionText.text = "";
         }
         else
         {
@@ -140,40 +147,40 @@ public class ManageInventory : MonoBehaviour
         switch (name)
         {
             case dogfood:
-                HoveredDescriptionText.text = "this is the description for dogfood";
+                HoveredDescriptionText.text = "dogfood stinky...";
                 break;
             case stinkyfilledkeymold:
-                HoveredDescriptionText.text = "has_filledkeymold";
+                HoveredDescriptionText.text = "filled key mold, you could cook i";
                 break;
             case tastykeymold:
-                HoveredDescriptionText.text = "has_filledkeymold";
+                HoveredDescriptionText.text = "filled key mold, you could cook it?";
                 break;
             case keymold:
-                HoveredDescriptionText.text = "has_keymold";
+                HoveredDescriptionText.text = "keymold, u like... freeze it? Or no! You add the material to it!";
                 break;
             case moldableclay:
-                HoveredDescriptionText.text = "has_moldableclay";
+                HoveredDescriptionText.text = "Moldable Clay... You could put something in it to create a mold!";
                 break;
             case candy:
-                HoveredDescriptionText.text = "has_candy";
+                HoveredDescriptionText.text = "Candy! Yum! Don't eat!";
                 break;
             case poop:
-                HoveredDescriptionText.text = "has_poop";
+                HoveredDescriptionText.text = "Poopy! Yum! Don't eat!";
                 break;
             case clay:
-                HoveredDescriptionText.text = "has_clay";
+                HoveredDescriptionText.text = "Clay! It's hard tho... Maybe dip it in some water so you can work with it!";
                 break;
             case flimsykey:
-                HoveredDescriptionText.text = "has_flimsykey";
+                HoveredDescriptionText.text = "Toy key! Kids like you would love this!";
                 break;
             case defaultitem:
-                HoveredDescriptionText.text = "has_default";
+                HoveredDescriptionText.text = "What?! This is the default?!! You can't have this!!! GIVE IT BACK NOW.";
                 break;
             case tastykey:
-                HoveredDescriptionText.text = "has_tastykey";
+                HoveredDescriptionText.text = "i want to eat it (try using it on that locked door in the living room)";
                 break;
             case stinkykey:
-                HoveredDescriptionText.text = "has_stinkykey";
+                HoveredDescriptionText.text = "i want to eat it (try using it on that locked door in the living room)";
                 break;
             default:
                 Debug.LogWarning("SetHovered(name) was called with a string name that isn't one of the items: " + name);
@@ -224,7 +231,7 @@ public class ManageInventory : MonoBehaviour
         {
             if (ListOfItemNames.Contains(name))
             {
-                HeldDescriptionText.text = name;
+                HeldDescriptionText.text = "Holding a " + name;
                 HeldItem = name;
                 somethingIsHeld = true;
                 FindObjectOfType<DialogueManager>().SetVariableStateSystem("holding_item", true);

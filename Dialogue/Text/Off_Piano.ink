@@ -3,7 +3,8 @@ INCLUDE Globals.ink
 VAR played = 0
 //blank tag 
 #name:blank #image:blank layout:blank #sound:blank #typingspeed:0
-
+why did i set it up like this, it don't work at all bro
+->END
 Play a note?
 * [A].#sound:A
 -> Play

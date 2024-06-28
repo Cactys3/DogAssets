@@ -1,13 +1,13 @@
 INCLUDE Globals.ink
 Go Through Door?
- + [Go]
+ * [Go]
  -> go
- + [Don't Go]
+ * [Don't Go]
  -> dont
 
 
 === go ===
-#scene:kitchen
+#scene:bathroom1
 -> END
 
 

@@ -19,13 +19,16 @@ INCLUDE Globals.ink
  -> END
 
   ===NotCompleted===
+  Do you want to skip fridge minigame or do it?
+  + [SKIP]?
+  ~completed_fridgeoven = true
+  -> END
+  + [DO IT]?
   #name:fridgeoven #image:fridgeoven #layout:fridgeoven #sound:fridgeoven
   You dare challenge US??? 
-  (now we go to minigame scene)
-     #scene:fridgeoven
-     ~completed_fridgeoven = true
+       ~completed_fridgeoven = true
+     #scene:Fridge Level 1
   -> END
-  
   
   ===TryCombine(item)===
 
