@@ -136,9 +136,7 @@ public class MicrowaveMinigame : MonoBehaviour
 
     private void WinLevel()
     {
-        int NextScene = SceneManager.GetActiveScene().buildIndex + 1;
-        Debug.Log("Won level, go to scene #: " + NextScene);
-        SceneManager.LoadScene(NextScene);
+        FindObjectOfType<ChangeToScene>().ChangeScene();
     }
 }
 

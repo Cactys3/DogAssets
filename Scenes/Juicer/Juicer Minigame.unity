@@ -873,6 +873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 923336161}
   - component: {fileID: 923336162}
+  - component: {fileID: 923336163}
   m_Layer: 0
   m_Name: Minigame Manager
   m_TagString: Untagged
@@ -959,6 +960,20 @@ MonoBehaviour:
   FiveTwelveXPriceNumber: {fileID: 945852410}
   TwoXPriceNumber: {fileID: 1354839280}
   EightXPriceNumber: {fileID: 1754504540}
+--- !u!114 &923336163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923336160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004a22055d4c7ba4caa7bebc1a8d2dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: 4
+  Level: 0
 --- !u!4 &945852409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4679659396952191930, guid: 67f8ce830c898b64a8d770f1bb7614be, type: 3}

@@ -220,14 +220,7 @@ public class JuicerMinigameManager : MonoBehaviour
 
     private void Won()
     {
-        try
-        {
-            SceneManager.LoadScene("Kitchen Dining Room");
-        }
-        catch
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        GetComponent<ChangeToScene>().ChangeScene();
     }
 
     private void JuiceClicked()
