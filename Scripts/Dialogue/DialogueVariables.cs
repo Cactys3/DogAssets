@@ -85,6 +85,11 @@ public class DialogueVariables : MonoBehaviour
     {
         if (variables.ContainsKey(name))
         {
+            if (value == true && name.ToLower().Contains("has"))
+            {
+                FindObjectOfType<ObtainedItemScript>().AddedItem(name);
+                Debug.Log("obtained item: " + name);
+            }
             variables.Remove(name);
             variables.Add(name, value);
             if ((name.Equals("holding_item") && value.Equals(false)) || name.ToLower().Contains("has"))

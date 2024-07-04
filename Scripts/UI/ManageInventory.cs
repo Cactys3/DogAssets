@@ -21,18 +21,18 @@ public class ManageInventory : MonoBehaviour
     private string SelectedItem;
     private bool somethingIsSelected;
 
-    private const string dogfood = "has_dogfood";
-    private const string defaultitem = "has_default";
-    private const string flimsykey = "has_flimsykey";
-    private const string clay = "has_clay";
-    private const string poop = "has_poop";
-    private const string candy = "has_candy";
-    private const string moldableclay = "has_moldableclay";
-    private const string keymold = "has_keymold";
-    private const string tastykeymold = "has_tastyfilledkeymold";
-    private const string stinkyfilledkeymold = "has_stinkyfilledkeymold";
-    private const string stinkykey = "has_stinkykey";
-    private const string tastykey = "has_tastykey";
+    public const string dogfood = "has_dogfood";
+    public const string defaultitem = "has_default";
+    public const string flimsykey = "has_flimsykey";
+    public const string clay = "has_clay";
+    public const string poop = "has_poop";
+    public const string candy = "has_candy";
+    public const string moldableclay = "has_moldableclay";
+    public const string keymold = "has_keymold";
+    public const string tastykeymold = "has_tastyfilledkeymold";
+    public const string stinkyfilledkeymold = "has_stinkyfilledkeymold";
+    public const string stinkykey = "has_stinkykey";
+    public const string tastykey = "has_tastykey";
 
 
     void Start()
@@ -58,6 +58,7 @@ public class ManageInventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             HoveredDescriptionText.text = "";
+            HeldDescriptionText.text = "Holding no item!";
         }
     }
     /**
@@ -132,7 +133,9 @@ public class ManageInventory : MonoBehaviour
             somethingIsHovered = false;
             HoveredItem = null;
 
-            HoveredDescriptionText.text = "";
+            HeldDescriptionText.text = "Holding no item!";
+            //HoveredDescriptionText.text = "";
+
         }
         else
         {
@@ -241,40 +244,49 @@ public class ManageInventory : MonoBehaviour
             else
             {
                 Debug.LogWarning("SetHold() was called with a string name: " + name + " that isn't one of the items");
-            }/**
+            }
             switch (name)
             {
                 case dogfood:
-                    HeldDescriptionText.text = "this is the description for dogfood";
+                    HeldDescriptionText.text = "Holding dogfood";
                     break;
                 case stinkyfilledkeymold:
-                    HeldDescriptionText.text = stinkyfilledkeymold;
+                    HeldDescriptionText.text = "Holding a keymold filled with poop...   i guess you could bake it to make the key?";
+                    break;
+                case tastykeymold:
+                    HeldDescriptionText.text = "Holding a keymold filled with poop...   i guess you could bake it to make the key?";
                     break;
                 case "has_keymold":
-                    HeldDescriptionText.text = "has_keymold";
+                    HeldDescriptionText.text = "Holding a keymold! Why?";
                     break;
                 case "has_moldableclay":
-                    HeldDescriptionText.text = "has_moldableclay";
+                    HeldDescriptionText.text = "Holding moldableclay! Why?";
                     break;
                 case "has_candy":
-                    HeldDescriptionText.text = "has_candy";
+                    HeldDescriptionText.text = "Holding candy! Why?";
                     break;
                 case "has_poop":
-                    HeldDescriptionText.text = "has_poop";
+                    HeldDescriptionText.text = "Holding poop! Why?";
                     break;
                 case "has_clay":
-                    HeldDescriptionText.text = "has_clay";
+                    HeldDescriptionText.text = "Holding clay! It's a little hard though, dipping it in some water might do the trick!";
                     break;
                 case "has_flimsykey":
-                    HeldDescriptionText.text = "has_flimsykey";
+                    HeldDescriptionText.text = "Holding a toy key! It's a bit too malleable to open any doors though...";
                     break;
                 case "has_default":
-                    HeldDescriptionText.text = "has_default";
+                    HeldDescriptionText.text = "Holding the default item! This does nothing! It's not a real item! Give it back!";
+                    break;
+                case tastykey:
+                    HoveredDescriptionText.text = "Holding a key that I want to eat! It should be solid enough to open a door.";
+                    break;
+                case stinkykey:
+                    HoveredDescriptionText.text = "Holding a key made of poop! Why did you do this? You had other options! It should be solid enough to open a door though...";
                     break;
                 default:
-                    Debug.LogWarning("SetHold(name) was called with a string name that isn't one of the items");
+                    Debug.LogWarning("SetHold(name) was called with a string name that isn't one of the items: " + name);
                     break;
-            }*/
+            }
         }
         else
         {

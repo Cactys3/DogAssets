@@ -51,7 +51,7 @@ public class TitleScreenScript : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("Load Managers");
+                GetComponent<ChangeToScene>().ChangeScene();
             }
         }
     }

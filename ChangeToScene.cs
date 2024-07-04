@@ -6,8 +6,14 @@ public class ChangeToScene : MonoBehaviour
 {
     public SceneName Scene = new SceneName();
     [SerializeField] private int Level;
-
-
+    [SerializeField] private bool ChangeSceneOnEnabled;
+    private void OnEnable()
+    {
+        if (ChangeSceneOnEnabled)
+        {
+            ChangeScene();
+        }
+    }
     public void ChangeScene()
     {
         switch (Scene)
@@ -62,6 +68,9 @@ public class ChangeToScene : MonoBehaviour
             case SceneName.DemoEnd:
                 SceneManager.LoadScene("Demo End");
                 break;
+            case SceneName.LoadInk:
+                SceneManager.LoadScene("Load Managers");
+                break;
             default:
                 Debug.LogError("ChangeToScene on object: " + this.gameObject.name + ", is not setup properly");
                 break;
@@ -83,5 +92,6 @@ public enum SceneName
     Living,
     Office,
     Bathroom1,
-    DemoEnd
+    DemoEnd,
+    LoadInk
 };
