@@ -25,21 +25,25 @@ public class ManageUI : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
+                    Time.timeScale = 1;
                     TabPanel.SetActive(false);
                     EscPanel.SetActive(false);
                 }
                 if (Input.GetKeyDown(KeyCode.Tab))
                 {
                     TabPanel.SetActive(false);
+                    Time.timeScale = 1;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
                 EscPanel.SetActive(true);
+                Time.timeScale = 0;
             }
             else if (Input.GetKeyDown(KeyCode.Tab) && CanAccessInventory)
             {
                 TabPanel.SetActive(true);
+                Time.timeScale = 0;
             }
         }
     }
@@ -47,6 +51,7 @@ public class ManageUI : MonoBehaviour
     {
         TabPanel.SetActive(false);
         EscPanel.SetActive(false);
+        Time.timeScale = 1;
     }
     public bool DisplayingUI()
     {

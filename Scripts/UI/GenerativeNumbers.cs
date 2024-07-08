@@ -40,7 +40,7 @@ public class GenerativeNumbers : MonoBehaviour
     }
     public void SetNumber(long num)
     {
-        Debug.Log("Number is now: " + num);
+        //Debug.Log("Number is now: " + num);
         Number = num;
         UpdateNumbers();
     }
@@ -93,7 +93,7 @@ public class GenerativeNumbers : MonoBehaviour
             NewInstance.transform.parent = ParentObject.transform;
             NewInstance.transform.localScale = new Vector3(Scale, Scale, 1);
             NewInstance.transform.position = this.transform.position - new Vector3(Offset * J, 0, 0);
-            Debug.Log(this.transform.position.x + " minus " + Offset * J + " should equal: " + NewInstance.transform.position.x);
+            //Debug.Log(this.transform.position.x + " minus " + Offset * J + " should equal: " + NewInstance.transform.position.x);
 
             NewInstance.GetComponent<SpriteRenderer>().sprite = GetNumberSprite((Number / (long)(Mathf.Pow(10, J))) % 10);
             J += 1;

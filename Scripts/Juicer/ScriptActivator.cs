@@ -18,7 +18,7 @@ public class ScriptActivator : MonoBehaviour
     {
         if (Hovered && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Debug.Log("clicked " + Button);
+            //Debug.Log("clicked " + Button);
             manager.ButtonClicked(Button);
         }
     }

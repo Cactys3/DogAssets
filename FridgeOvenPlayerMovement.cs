@@ -60,12 +60,12 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
                 int DiveSpeedSign = 0;
                 int DiveSpinSign = -1;
                 body.freezeRotation = false;
-                if (Input.GetKey(KeyCode.Q))
+                if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.A))
                 {
                     DiveSpinSign = 1;
                     DiveSpeedSign = -1;
                 }
-                else if (Input.GetKey(KeyCode.E))
+                else if (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.D))
                 {
                     DiveSpinSign = -1;
                     DiveSpeedSign = 1;
@@ -210,8 +210,7 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
     {
         if (collision.tag.Equals("scene"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Debug.Log("Next scene: " + SceneManager.GetActiveScene().name);
+            FindObjectOfType<ChangeToScene>().ChangeScene();
         }
     }
 }

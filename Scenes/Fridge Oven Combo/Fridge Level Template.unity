@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 214848456}
   m_Layer: 0
   m_Name: SceneSwitcher
-  m_TagString: Untagged
+  m_TagString: scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scene: 7
   Level: 2
+  ChangeSceneOnEnabled: 0
 --- !u!1 &344324940
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +316,129 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &394145307
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 876371540479336149, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_text
+      value: 'A/D to move  left/right
+
+
+        While Moving: Shift to Dive for max
+        distance!
+
+
+        While Still: Shift + E / Shift + Q to Dive right/left
+        for max rotation!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197097106432592378, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_Name
+      value: Canvas - Minigames
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610584952429379113, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_text
+      value: 'The dog, while on "dognip" (it''s meth) hallucinates the kitchen appliances
+        into giving him challenges he MUST complete before moving on!
+
+
+        For
+        this, you must maneuver through a series of challenges to escape the fridge
+        unit!'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
 --- !u!4 &404886103 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1214622862077344887, guid: c7f2c0238049d0647aec7cee58d46953, type: 3}

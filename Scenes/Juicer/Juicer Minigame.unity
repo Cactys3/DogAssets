@@ -123,6 +123,121 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &34445885
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 876371540479336149, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_text
+      value: Click!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197097106432592378, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_Name
+      value: Canvas - Minigames
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610584952429379113, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_text
+      value: 'The dog, while on "dognip" (it''s meth) hallucinates the kitchen appliances
+        into giving him challenges he MUST complete before moving on!
+
+
+        For
+        this, you must MAKE SOME JUICE!! The Juicing Juicer wants some JUICE and
+        YOU are going to provide!'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
 --- !u!1 &155949424
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,11 +1039,12 @@ MonoBehaviour:
   FiveTwelveXCost: 0
   MaxFiveTwelveX: 0
   FiveTwelveXCostMultiplier: 0
-  Blender: {fileID: 1386878623}
-  Blender_ClickingTrue: {fileID: 1386878624}
-  Exhaust: {fileID: 1280754348}
-  Exhaust_ClickingFalse: {fileID: -916353735, guid: 23f1dc6d93a72974eacd8411db87a8f2, type: 3}
-  Exhaust_ClickingTrue: {fileID: 1280754349}
+  BlenderClipLoop: {fileID: 7400000, guid: 550db7856f4c16f429b39ef6b752f1e0, type: 2}
+  BlenderClipStill: {fileID: 7400000, guid: 33ccd793978182548821db10d024452c, type: 2}
+  BlenderAnimator: {fileID: 1386878624}
+  ExhaustClipLoop: {fileID: 7400000, guid: c0724359731ebad41b09c04f47fa1bf0, type: 2}
+  ExhaustClipStill: {fileID: 7400000, guid: d2f8a90970a686942994ca30d7634e86, type: 2}
+  ExhaustAnimator: {fileID: 1280754349}
   Zero: {fileID: 21300000, guid: a8bc006959584034f95325858557fec0, type: 3}
   One: {fileID: 21300000, guid: c192811fc04a66847aee81e4d4b1b6bd, type: 3}
   Two: {fileID: 21300000, guid: 2a31a11bbcf1ce149b46dbb32608ff0a, type: 3}
@@ -974,6 +1090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scene: 4
   Level: 0
+  ChangeSceneOnEnabled: 0
 --- !u!4 &945852409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4679659396952191930, guid: 67f8ce830c898b64a8d770f1bb7614be, type: 3}

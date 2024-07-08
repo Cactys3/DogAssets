@@ -57,6 +57,7 @@ public class ManageInventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+
             HoveredDescriptionText.text = "";
             HeldDescriptionText.text = "Holding no item!";
         }

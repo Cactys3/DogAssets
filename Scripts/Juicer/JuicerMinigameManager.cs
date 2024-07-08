@@ -24,12 +24,13 @@ public class JuicerMinigameManager : MonoBehaviour
     [SerializeField] private long MaxFiveTwelveX;
     [SerializeField] private long FiveTwelveXCostMultiplier;
     [Header("Blender Sprite Stuff")]
-    [SerializeField] private SpriteRenderer Blender; 
-    [SerializeField] private Animator Blender_ClickingTrue;
+    [SerializeField] private AnimationClip BlenderClipLoop;
+    [SerializeField] private AnimationClip BlenderClipStill;
+    [SerializeField] private Animator BlenderAnimator;
     [Header("Exhaust Sprite Stuff")]
-    [SerializeField] private SpriteRenderer Exhaust;
-    [SerializeField] private Sprite Exhaust_ClickingFalse;
-    [SerializeField] private Animator Exhaust_ClickingTrue;
+    [SerializeField] private AnimationClip ExhaustClipLoop;
+    [SerializeField] private AnimationClip ExhaustClipStill;
+    [SerializeField] private Animator ExhaustAnimator;
     [Header("Number Sprite Stuff")]
     [SerializeField] private Sprite Zero;
     [SerializeField] private Sprite One;
@@ -69,7 +70,7 @@ public class JuicerMinigameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DelayBeforeNotClicking = 100;
+        DelayBeforeNotClicking = 3;
         WinCon = 100000000;
         ClickWeight = 1;
         MaxEightX = 1;
@@ -94,14 +95,14 @@ public class JuicerMinigameManager : MonoBehaviour
         TwoXPriceNumber.SetSpacing(0.13f);
         EightXPriceNumber.SetSpacing(0.13f);
         FiveTwelveXPriceNumber.SetSpacing(0.13f);
+
     }
     void Update()
     {
         test();
 
-
-        ClickTimer += (1 * Time.deltaTime);
-        if (ClickTimer >= DelayBeforeNotClicking) //if it's been a certian time since the last click
+        // Check if enough time has passed since the last click
+        if (ClickTimer >= DelayBeforeNotClicking)
         {
             IsClicking = false;
         }
@@ -109,6 +110,37 @@ public class JuicerMinigameManager : MonoBehaviour
         {
             IsClicking = true;
         }
+
+        // Logic for when clicking
+        if (IsClicking)
+        {
+            if (!BlenderAnimator.GetCurrentAnimatorStateInfo(0).IsName(BlenderClipLoop.name))
+            {
+                // Make the Blender Animator play BlenderClipLoop
+                BlenderAnimator.Play(BlenderClipLoop.name);
+            }
+            if (!ExhaustAnimator.GetCurrentAnimatorStateInfo(0).IsName(ExhaustClipLoop.name))
+            {
+                // Make the Exhaust Animator play ExhaustClipLoop
+                ExhaustAnimator.Play(ExhaustClipLoop.name);
+            }
+        }
+        else
+        {
+            if ((BlenderAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1) > 0.95)
+            {
+                // Make the Blender Animator play BlenderClipStill
+                BlenderAnimator.Play(BlenderClipStill.name);
+            }
+            if ((ExhaustAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1) > 0.95)
+            {
+                // Make the Exhaust Animator play ExhaustClipStill
+                ExhaustAnimator.Play(ExhaustClipStill.name);
+            }
+        }
+
+        // Update the ClickTimer
+        ClickTimer += (1 * Time.deltaTime);
     }
     private void test()
     {
@@ -237,5 +269,9 @@ public class JuicerMinigameManager : MonoBehaviour
         {
             ProgressionBar.position = new Vector2(ProgressionBar.position.x, -3f + (6.12f * ((float)CurrentClicks / (float)WinCon)));
         }
+    }
+    private bool AnimationFinished(Animator a)
+    {
+        return a.GetCurrentAnimatorStateInfo(0).normalizedTime > 1;
     }
 }
