@@ -5,14 +5,19 @@ public class DialogueTrigger : MonoBehaviour
     // Start is called before the first frame update
     [Header("Keybind To Trigger NPC")]
     [SerializeField] private KeyCode interactKeybind;
-
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
     [Header("Ink JSON")]
     [SerializeField] private TextAsset text;
+    [Header("Sprites")]
+    [SerializeField] private Sprite ActiveSprite;
+    [SerializeField] private Sprite InactiveSprite;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private bool playerInRange;
+    private bool Active;
     private void Awake()
     {
+        Active = true;
         visualCue.SetActive(false);
         playerInRange = false;
         //interactKeybind = KeyCode.E;
@@ -21,10 +26,19 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (playerInRange && !FindObjectOfType<DialogueManager>().dialogueIsPlaying)
         {
-            visualCue.SetActive(true);
-            if (Input.GetKey(interactKeybind))
+            if (Active)
             {
-                FindObjectOfType<DialogueManager>().EnterDialogueMode(text);
+                visualCue.SetActive(true);
+                spriteRenderer.sprite = ActiveSprite;
+                if (Input.GetKey(interactKeybind))
+                {
+                    FindObjectOfType<DialogueManager>().EnterDialogueMode(text);
+                }
+            }
+            else
+            {
+                visualCue.SetActive(true);
+                spriteRenderer.sprite = InactiveSprite;
             }
         }
         else
@@ -36,6 +50,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            FindObjectOfType<InteractManager>().AddTrigger(this);
             playerInRange = true;
         }
     }
@@ -43,7 +58,13 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            FindObjectOfType<InteractManager>().RemoveTrigger(this);
             playerInRange = false;
         }
+    }
+
+    public void SetActive(bool b)
+    {
+        Active = b;
     }
 }

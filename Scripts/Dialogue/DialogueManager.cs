@@ -325,8 +325,8 @@ public class DialogueManager : MonoBehaviour
                     dialogueText.maxVisibleCharacters++;
                     //TODO: add a thing that makes it so a word jumps to the next line if it can't fit completely on the current line
                     if (!letter.ToString().Equals(" ") && !skip && currentTypingSound != "silent" && !isAddingCustomText)
-                    {//TODO: if we are adding a letter and not skipping, play a sound
-                        FindObjectOfType<AudioManager>().PlayTypingSound(currentTypingSound);
+                    {
+                        //TODO: if we are adding a letter and not skipping, play a sound
                     }
                     else
                     {

@@ -1,21 +1,28 @@
+﻿using UnityEngine.Audio;
 using UnityEngine;
 
 [System.Serializable]
-public class Sound
-{
-    // this class was created by BRACKEYS, please check em out on ytube if you want to learn unity
-    public string name;
+public class Sound {
 
-    public AudioClip clip;
+	public string name;
 
-    [Range(0f, 1f)]
-    public float volume = 1f;
+	public AudioClip clip;
 
-    public bool loop;
+	[Range(0f, 1f)]
+	public float volume = .75f;
+	[Range(0f, 1f)]
+	public float volumeVariance = .1f;
 
-    [Range(-3f, 3f)]
-    public float pitch;
+	[Range(.1f, 3f)]
+	public float pitch = 1f;
+	[Range(0f, 1f)]
+	public float pitchVariance = .1f;
 
-    [HideInInspector]
-    public AudioSource source;
+	public bool loop = false;
+
+	public AudioMixerGroup mixerGroup;
+
+	[HideInInspector]
+	public AudioSource source;
+
 }
