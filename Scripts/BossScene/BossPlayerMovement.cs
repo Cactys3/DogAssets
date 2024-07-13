@@ -24,7 +24,7 @@ public class BossPlayerMovement : MonoBehaviour
     public bool CanMove;
     public const string ThrustAnimName = "P_Thrust";
     public const string SpinAnimName = "P_Spin";
-    private int AnimState; // 0:Static, 1:Thrust, 2:Spin
+    public int AnimState; // 0:Static, 1:Thrust, 2:Spin
     private void Start()
     {
         DashCDnum = 2;
@@ -40,7 +40,7 @@ public class BossPlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(PlayingAnim(ThrustAnimName));
+        //Debug.Log(PlayingAnim(ThrustAnimName));
         if (CanMove)
         {
             //Point Towards Cursor
@@ -136,7 +136,7 @@ public class BossPlayerMovement : MonoBehaviour
         ThrustHitbox.enabled = true;
         yield return new WaitForSeconds(0.1f);
         yield return new WaitUntil(() => AnimDone(ThrustAnimName));
-        Debug.Log("done t");
+        //Debug.Log("done t");
         ThrustHitbox.enabled = false;
         AnimState = 0;
     }
@@ -145,7 +145,7 @@ public class BossPlayerMovement : MonoBehaviour
         SpinHitbox.enabled = true;
         yield return new WaitForSeconds(0.1f);
         yield return new WaitUntil(() => AnimDone(SpinAnimName));
-        Debug.Log("done s");
+        //Debug.Log("done s");
         SpinHitbox.enabled = false;
         AnimState = 0;
     }

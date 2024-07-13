@@ -39,7 +39,7 @@ public class BossHUDManager : MonoBehaviour
     }
     public void UpdatePlayerStamina(float num)
     {
-        Debug.Log("Üpdated Statmina: " + (PlayerStamina.transform.position.x > StaminaMinValue) + " " + PlayerStamina.position.x + (num * -PlayerStaminaOffset));
+        //Debug.Log("Üpdated Statmina: " + (PlayerStamina.transform.position.x > StaminaMinValue) + " " + PlayerStamina.position.x + (num * -PlayerStaminaOffset));
 
             PlayerStamina.transform.position = new Vector3(StaminaMinValue + ((num / 100) * -StaminaMinValue), PlayerStamina.position.y, PlayerStamina.position.z);
         

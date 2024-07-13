@@ -19,11 +19,11 @@ public class BossFightManager : MonoBehaviour
     [SerializeField] public float PlayerStaminaRegen;
     [SerializeField] private BossHUDManager HUD;
     [SerializeField] private float PlayerStamina;
+    [SerializeField] public int PhaseNum;
     private bool StaminaRegening;
 
     private void Start()
     {
-
         StaminaRegening = true;
         PlayerStamina = 100;
         PlayerStaminaRegen = 20f;
