@@ -26,7 +26,7 @@ VAR played_bath1_toilet = false
 VAR played_DoorToStairs = false
 //has_itemname is if a particular is currently obtained
 VAR has_dogfood = false
-VAR has_default = true
+VAR has_default = false
 VAR has_flimsykey = false
 VAR has_clay = false
 VAR has_poop = false

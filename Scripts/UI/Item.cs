@@ -25,7 +25,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] int OffsetY;
     [SerializeField] int OffsetX;
     private int ItemState; //From -1 to 4, -1: Item was combined and is complete, 0: item is not obtained, 1: item is obtained, 2: item is hovered: 3: something is selected
-    private int ItemSlot;
+    int ItemSlot;
     private bool MouseOnThis;
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         MaxItemsTotal = 9;
         OffsetY = -200;
         OffsetX = 200;
-        ItemSlot = 01238;
+        ItemSlot = 38;
         eventsystem = FindObjectOfType<EventSystem>();
         InventoryScript = FindObjectOfType<ManageInventory>();
         dialoguemanager = FindObjectOfType<DialogueManager>();
@@ -48,7 +48,6 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         UnholdButton.SetActive(false);
         UnselectButton.SetActive(false);
     }
-
     /**
      * used OnEnable for item classes to check if their obtained/not obtained state changed while their GameObject was disabled
      * 
@@ -99,7 +98,6 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         ItemSlot = number;
         if (ItemSlot == -1)
         {
-            Debug.Log("setting item: " + itemName + " to -1");
             ItemState = 0;
             ItemPanel.SetActive(false);
         }
@@ -110,8 +108,6 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 ItemState = 1;
             }
             ItemPanel.SetActive(true);
-            
-
             if (ItemSlot >= MaxItemsTotal)
             {
                 Debug.LogError("Trying to setup an item but itemslot is: " + ItemSlot + ", which is greater than the max:  9");
@@ -123,9 +119,11 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 int y = OffsetY * Row;
                 int x = OffsetX * Collumn;
                 transform.localPosition = new Vector3(x, y, 0);
+                Debug.Log("setting item: " + itemName + " to x: " + x + " y: " + y);
                 //Debug.Log("Pos of " + itemName + ": " + transform.localPosition);
             }
         }
+        Debug.Log("setting item: " + itemName + " to itemslot " + ItemSlot + " and itemstate: " + ItemState);
     }
     /**
      * True to set this item to ItemState 3, meaning it will display the combine button. This is used when an item is selected. 

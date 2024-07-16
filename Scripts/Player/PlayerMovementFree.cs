@@ -71,7 +71,6 @@ public class PlayerMovementFree : MonoBehaviour
                 {
                     if (wasHorizontal)
                     {
-                        FindObjectOfType<AudioManager>().PlaySFX("left");
                         this.transform.position = this.transform.position + new Vector3(0, MoveSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime, 0);
                     }
                     else
