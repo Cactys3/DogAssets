@@ -15,12 +15,17 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     private bool playerInRange;
     private bool Active;
+    private InteractManager interactManager;
     private void Awake()
     {
         Active = true;
         visualCue.SetActive(false);
         playerInRange = false;
         //interactKeybind = KeyCode.E;
+    }
+    private void Start()
+    {
+        interactManager = FindObjectOfType<InteractManager>();
     }
     private void Update()
     {
@@ -50,7 +55,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            FindObjectOfType<InteractManager>().AddTrigger(this);
+            interactManager.AddTrigger(this);
             playerInRange = true;
         }
     }
@@ -58,7 +63,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            FindObjectOfType<InteractManager>().RemoveTrigger(this);
+            interactManager.RemoveTrigger(this);
             playerInRange = false;
         }
     }

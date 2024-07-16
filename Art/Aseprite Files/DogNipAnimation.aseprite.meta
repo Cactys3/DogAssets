@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 79dc4bcc6277c764aa48a2260d157ffe
+guid: 201b0fa170ba76c4a8e9d1cf03459e47
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Mystery Appliance
+  - name: DogNipAnimation
     originalName: 
-    pivot: {x: 0.5, y: -0.75}
+    pivot: {x: 0, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 10
-      height: 8
-    spriteID: 89aff3bb9bad80b498866ff78c632005
+      width: 192
+      height: 108
+    spriteID: eeae0dd7e8889ed428cf29af29f57b48
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,23 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -433555448
-    name: Mystery Appliance
+    guid: 911160089
+    name: DogNipAnimation
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Mystery Appliance
+    - name: DogNipAnimation
       frameIndex: 0
       cellRect:
-        x: 3
-        y: 6
-        width: 10
-        height: 8
-      spriteId: 89aff3bb9bad80b498866ff78c632005
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: eeae0dd7e8889ed428cf29af29f57b48
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 16}
+  canvasSize: {x: 192, y: 108}
