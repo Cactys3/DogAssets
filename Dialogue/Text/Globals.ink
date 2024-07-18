@@ -7,6 +7,7 @@ VAR skin_color = "" //light, dark, cyborg, demon
 VAR unlocked_deck = false
 VAR unlocked_speech = false
 VAR unlocked_dooropening = false
+VAR ate_dognip = false
 //completed_name is if an ink story has already been played out
 VAR completed_dogfood = false
 VAR completed_plant = false

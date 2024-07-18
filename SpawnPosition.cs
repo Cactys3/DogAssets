@@ -56,6 +56,9 @@ public class SpawnPosition : MonoBehaviour
                         case "Living Room":
                             player.position = Spawn2.position;
                             break;
+                        case "DogNip":
+                            player.position = Spawn4.position;
+                            break;
                         default:
                             player.position = Spawn3.position; //this is for minigames
                             break;

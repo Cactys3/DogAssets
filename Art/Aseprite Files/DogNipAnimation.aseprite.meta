@@ -121,15 +121,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: DogNipAnimation
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: -3, y: -1.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 192
-      height: 108
+      y: 100
+      width: 16
+      height: 30
     spriteID: eeae0dd7e8889ed428cf29af29f57b48
     spriteBone: []
     spriteOutline: []
@@ -138,7 +138,447 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    uvTransform: {x: 4, y: 100}
+  - name: DogNipAnimation_Frame_1
+    originalName: 
+    pivot: {x: -2.6666667, y: -1.4444444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 34
+      width: 18
+      height: 27
+    spriteID: 743143f72c61d4c48a1ff0614c5d22fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 34}
+  - name: DogNipAnimation_Frame_2
+    originalName: 
+    pivot: {x: -2.2857144, y: -1.8695651}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 69
+      width: 21
+      height: 23
+    spriteID: 6012fb690c62bca4a8c59fe12f167af4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 69}
+  - name: DogNipAnimation_Frame_3
+    originalName: 
+    pivot: {x: -2.0869565, y: -2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 23
+      height: 22
+    spriteID: 80886dcfce3abb64ca39eac4846a3054
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: DogNipAnimation_Frame_4
+    originalName: 
+    pivot: {x: -2, y: -2.473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 4
+      width: 24
+      height: 19
+    spriteID: f0d65b02c6b11244fb01cb1d5af568aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 4}
+  - name: DogNipAnimation_Frame_5
+    originalName: 
+    pivot: {x: -1.92, y: -2.7777777}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 4
+      width: 25
+      height: 18
+    spriteID: 2a2f37f21a1114f4796959f02c33582f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 4}
+  - name: DogNipAnimation_Frame_6
+    originalName: 
+    pivot: {x: -2, y: -2.8888888}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 31
+      width: 24
+      height: 18
+    spriteID: 223ad5fca8467b847b5a99b24137b573
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 31}
+  - name: DogNipAnimation_Frame_7
+    originalName: 
+    pivot: {x: -2.0869565, y: -3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 138
+      width: 23
+      height: 18
+    spriteID: 3c62349d194659d43bca70b178bffb54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 138}
+  - name: DogNipAnimation_Frame_8
+    originalName: 
+    pivot: {x: -2.0869565, y: -3.1111112}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 164
+      width: 23
+      height: 18
+    spriteID: d5372c7a0917ad44e8132dad77d84849
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 164}
+  - name: DogNipAnimation_Frame_9
+    originalName: 
+    pivot: {x: -2.1818182, y: -3.222222}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 190
+      width: 22
+      height: 18
+    spriteID: 1c4a8b785a7bb974dbd4a01a05ac4dad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 190}
+  - name: DogNipAnimation_Frame_10
+    originalName: 
+    pivot: {x: -2.1818182, y: -3.222222}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 216
+      width: 22
+      height: 18
+    spriteID: b1abd7de8aa6ee54bba9a9aaa11cf35c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 216}
+  - name: DogNipAnimation_Frame_11
+    originalName: 
+    pivot: {x: -2.1818182, y: -3.4117644}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 57
+      width: 22
+      height: 17
+    spriteID: 38bcc6cc4cb0956438fddc70e11d145e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 57}
+  - name: DogNipAnimation_Frame_12
+    originalName: 
+    pivot: {x: -2.1818182, y: -3.6249998}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 82
+      width: 22
+      height: 16
+    spriteID: 1e186607147a76142b98b95b1ff0b945
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 82}
+  - name: DogNipAnimation_Frame_13
+    originalName: 
+    pivot: {x: -2.1818182, y: -3.8666663}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 154
+      width: 22
+      height: 15
+    spriteID: 2e7baf0a767110146b5875d581b9ad5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 154}
+  - name: DogNipAnimation_Frame_14
+    originalName: 
+    pivot: {x: -2.1818182, y: -3.6249998}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 106
+      width: 22
+      height: 16
+    spriteID: 67e8ea33f52f7744089ed19a819e6a8b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 106}
+  - name: DogNipAnimation_Frame_15
+    originalName: 
+    pivot: {x: -2.1818182, y: -3.8666663}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 177
+      width: 22
+      height: 15
+    spriteID: 3846d2e668949c84eb7e7af4e1d457e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 177}
+  - name: DogNipAnimation_Frame_16
+    originalName: 
+    pivot: {x: -2.1818182, y: -3.6249998}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 130
+      width: 22
+      height: 16
+    spriteID: 5a5d32843c89ead4a94d36b5920735cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 130}
+  - name: DogNipAnimation_Frame_17
+    originalName: 
+    pivot: {x: -2.5000002, y: -3.8666663}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 224
+      width: 20
+      height: 15
+    spriteID: cf05cc8ffd30c2b4b97abecc09e71cf8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 224}
+  - name: DogNipAnimation_Frame_18
+    originalName: 
+    pivot: {x: -2.5000002, y: -3.6249998}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 200
+      width: 20
+      height: 16
+    spriteID: de38b92d67515754b8a9f367e87ea8e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 200}
+  - name: DogNipAnimation_Frame_19
+    originalName: 
+    pivot: {x: -2.6842103, y: -3.8666663}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 54
+      width: 19
+      height: 15
+    spriteID: 549e703549a5fe947a065fc70a3b1382
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 54}
+  - name: DogNipAnimation_Frame_20
+    originalName: 
+    pivot: {x: -2.8888888, y: -3.6249998}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 30
+      width: 18
+      height: 16
+    spriteID: 377748dd83b86ca429f5f453cbc5919b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 30}
+  - name: DogNipAnimation_Frame_21
+    originalName: 
+    pivot: {x: -3.375, y: -3.4117644}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 77
+      width: 16
+      height: 17
+    spriteID: a842432ff1787344c91332be184c8a33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 77}
+  - name: DogNipAnimation_Frame_22
+    originalName: 
+    pivot: {x: -3.6666665, y: -3.222222}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 102
+      width: 15
+      height: 18
+    spriteID: 2a2c01a0a5a3e364984c94e59b2d6d67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 102}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -148,14 +588,190 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: DogNipAnimation
+    - name: DogNipAnimation_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 108
+        x: 144
+        y: 36
+        width: 16
+        height: 30
       spriteId: eeae0dd7e8889ed428cf29af29f57b48
+    - name: DogNipAnimation_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 144
+        y: 39
+        width: 18
+        height: 27
+      spriteId: 743143f72c61d4c48a1ff0614c5d22fd
+    - name: DogNipAnimation_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 144
+        y: 43
+        width: 21
+        height: 23
+      spriteId: 6012fb690c62bca4a8c59fe12f167af4
+    - name: DogNipAnimation_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 144
+        y: 44
+        width: 23
+        height: 22
+      spriteId: 80886dcfce3abb64ca39eac4846a3054
+    - name: DogNipAnimation_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 144
+        y: 47
+        width: 24
+        height: 19
+      spriteId: f0d65b02c6b11244fb01cb1d5af568aa
+    - name: DogNipAnimation_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 144
+        y: 50
+        width: 25
+        height: 18
+      spriteId: 2a2f37f21a1114f4796959f02c33582f
+    - name: DogNipAnimation_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 144
+        y: 52
+        width: 24
+        height: 18
+      spriteId: 223ad5fca8467b847b5a99b24137b573
+    - name: DogNipAnimation_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 144
+        y: 54
+        width: 23
+        height: 18
+      spriteId: 3c62349d194659d43bca70b178bffb54
+    - name: DogNipAnimation_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 144
+        y: 56
+        width: 23
+        height: 18
+      spriteId: d5372c7a0917ad44e8132dad77d84849
+    - name: DogNipAnimation_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 144
+        y: 58
+        width: 22
+        height: 18
+      spriteId: 1c4a8b785a7bb974dbd4a01a05ac4dad
+    - name: DogNipAnimation_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 144
+        y: 58
+        width: 22
+        height: 18
+      spriteId: b1abd7de8aa6ee54bba9a9aaa11cf35c
+    - name: DogNipAnimation_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 144
+        y: 58
+        width: 22
+        height: 17
+      spriteId: 38bcc6cc4cb0956438fddc70e11d145e
+    - name: DogNipAnimation_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 144
+        y: 58
+        width: 22
+        height: 16
+      spriteId: 1e186607147a76142b98b95b1ff0b945
+    - name: DogNipAnimation_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 144
+        y: 58
+        width: 22
+        height: 15
+      spriteId: 2e7baf0a767110146b5875d581b9ad5a
+    - name: DogNipAnimation_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 144
+        y: 58
+        width: 22
+        height: 16
+      spriteId: 67e8ea33f52f7744089ed19a819e6a8b
+    - name: DogNipAnimation_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 144
+        y: 58
+        width: 22
+        height: 15
+      spriteId: 3846d2e668949c84eb7e7af4e1d457e4
+    - name: DogNipAnimation_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 144
+        y: 58
+        width: 22
+        height: 16
+      spriteId: 5a5d32843c89ead4a94d36b5920735cf
+    - name: DogNipAnimation_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 146
+        y: 58
+        width: 20
+        height: 15
+      spriteId: cf05cc8ffd30c2b4b97abecc09e71cf8
+    - name: DogNipAnimation_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 146
+        y: 58
+        width: 20
+        height: 16
+      spriteId: de38b92d67515754b8a9f367e87ea8e1
+    - name: DogNipAnimation_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 147
+        y: 58
+        width: 19
+        height: 15
+      spriteId: 549e703549a5fe947a065fc70a3b1382
+    - name: DogNipAnimation_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 148
+        y: 58
+        width: 18
+        height: 16
+      spriteId: 377748dd83b86ca429f5f453cbc5919b
+    - name: DogNipAnimation_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 150
+        y: 58
+        width: 16
+        height: 17
+      spriteId: a842432ff1787344c91332be184c8a33
+    - name: DogNipAnimation_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 151
+        y: 58
+        width: 15
+        height: 18
+      spriteId: 2a2c01a0a5a3e364984c94e59b2d6d67
     linkedCells: []
     parentIndex: -1
   platformSettings: []

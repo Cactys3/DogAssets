@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
     private string officeScene = "Office Room";
     private string deckScene = "Deck";
     private string livingScene = "Living Room";
+    private string dognip = "DogNip";
 
     private Coroutine displayLineCoroutine;
     private bool canContinueToNextLine = false;
@@ -503,6 +504,9 @@ public class DialogueManager : MonoBehaviour
             case "living":
                 SceneManager.LoadScene(livingScene);
                 return;
+            case "dognip":
+                SceneManager.LoadScene(dognip);
+                break;
             default:
                 int value = -99;
                 if (int.TryParse(name, out value) && value > 0 && value <= SceneManager.sceneCountInBuildSettings)
