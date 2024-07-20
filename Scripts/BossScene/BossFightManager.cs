@@ -18,12 +18,24 @@ public class BossFightManager : MonoBehaviour
     [SerializeField] public int PlayerSpinStaminaCost;
     [SerializeField] public float PlayerStaminaRegen;
     [SerializeField] private BossHUDManager HUD;
+    [SerializeField] private BossAIScript boss;
+    [SerializeField] private BossPlayerMovement player;
+    [SerializeField] private ChangeToScene SceneChanger;
     [SerializeField] private float PlayerStamina;
     [SerializeField] public int PhaseNum;
+    [SerializeField] private GameObject PhaseTransitionExplosion;
+    [SerializeField] private GameObject BounceCollider;
     private bool StaminaRegening;
+
+    private bool won;
+
+    private float Stopwatch;
 
     private void Start()
     {
+        BounceCollider.SetActive(false);
+        won = false;
+        PhaseTransitionExplosion.SetActive(false);
         StaminaRegening = true;
         PlayerStamina = 100;
         PlayerStaminaRegen = 20f;
@@ -41,9 +53,17 @@ public class BossFightManager : MonoBehaviour
     }
     private void Update()
     {
-        if (BossHP <= 0)
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            BossHP = 0;
+        }
+
+
+        Stopwatch = Time.timeSinceLevelLoad;
+        if (PhaseNum == 1 && BossHP == 5 && !won)
         {
             Win();
+            won = true;
         }
         if (PlayerHP <= 0)
         {
@@ -92,12 +112,16 @@ public class BossFightManager : MonoBehaviour
         {
             case "PlayerThrust":
                 BossHP -= PlayerThrustDamage;
-                FindObjectOfType<BossPlayerMovement>().DisableWeapons();
+                player.DisableWeapons();
                 break;
             case "PlayerSlash":
                 BossHP -= PlayerSpinDamage;
-                FindObjectOfType<BossPlayerMovement>().DisableWeapons();
+                player.DisableWeapons();
                 break;
+        }
+        if (BossHP < 5 && PhaseNum == 1)
+        {
+            BossHP = 5; //can only go to 5hp for phase one
         }
         if (CurrentHP != BossHP)
         {
@@ -106,7 +130,46 @@ public class BossFightManager : MonoBehaviour
     }
     public void Win()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        Time.timeScale = 0f;
+        boss.DisableEverything();
+        player.DisableEverything();
+        BounceCollider.SetActive(true);
+
+        //TODO: set player and boss velocities and make explosion animation happen
+        PhaseTransitionExplosion.SetActive(true);
+        PhaseTransitionExplosion.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) / 2, (player.transform.position.y + boss.transform.position.y) / 2, 0);
+        PhaseTransitionExplosion.GetComponent<Animator>().Play("Explosion");
+
+        float ExplosionForce = 2000;
+
+        Time.timeScale = 1f;
+        player.body.AddForce((player.transform.position - boss.transform.position).normalized * ExplosionForce);
+        Debug.Log((player.transform.position - boss.transform.position).normalized + " is " + (player.transform.position - boss.transform.position).normalized * ExplosionForce);
+        boss.body.AddForce((boss.transform.position - player.transform.position).normalized * ExplosionForce);
+
+        
+
+        StartCoroutine("StartPhaseTwo");
+    }
+    IEnumerator StartPhaseTwo()
+    {
+        boss.SetupPhaseTwo();
+        player.SetupPhase2();
+        yield return new WaitUntil(() => (player.PlayerInPosition() && boss.BossInPosition()));
+        //TODO: go to phase 2
+        boss.PhaseTwoAnimation();
+        yield return new WaitForSeconds(0.1f);
+        yield return new WaitUntil(() => boss.AnimDone("animation"));
+
+        PlayerHP = 100;
+        BossHP = 10;
+        PhaseNum = 2;
+        won = false;
+        boss.EnablePhaseTwo();
+        player.EnableEverything();
+
     }
     public void Lose()
     {
@@ -133,5 +196,10 @@ public class BossFightManager : MonoBehaviour
         StaminaRegening = false;
         yield return new WaitForSeconds(1);
         StaminaRegening = true;
+    }
+
+    public float GetTime()
+    {
+        return Stopwatch;
     }
 }

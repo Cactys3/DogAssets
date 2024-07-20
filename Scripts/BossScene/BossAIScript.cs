@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,7 +13,8 @@ public class BossAIScript : MonoBehaviour
     int AnimState = 0;
 
     [Header("References")]
-    [SerializeField] private Rigidbody2D body;
+    [SerializeField] public Rigidbody2D body;
+    [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private BossPlayerMovement player;
     [SerializeField] private BossFightManager manager;
     [SerializeField] private Animator anim;
@@ -42,8 +44,14 @@ public class BossAIScript : MonoBehaviour
     private bool PointTowardsPlayerBool;
     private bool ChooseActionBool;
 
+    private Vector3 PhaseTwoPosition;
+
+    private bool FadeOutBool;
+
+
     void Start()
     {
+        Testing();
         MoveBoss = false;
         WalkTowardsPlayerBool = false;
         ChooseActionBool = true;
@@ -56,29 +64,46 @@ public class BossAIScript : MonoBehaviour
         SlashDistance = 2.7f;
         manager.PhaseNum = 1;
         anim.Play(Static1Name);
+
+        PhaseTwoPosition = new Vector3(0.4f, 2.9f, 0);
+        FadeOutBool = false;
     }
     void Update()
     {
-        Debug.Log(Vector2.Distance(transform.position, player.transform.position));
+        if (FadeOutBool)
+        {
+            if (sprite.color.a - (0.5f * Time.deltaTime) < 0)
+            {
+                Color color = sprite.color;
+                color.a = 0;
+                sprite.color = color;
+                FadeOutBool = false;
+            }
+            else
+            {
+                Color color = sprite.color;
+                color.a = color.a - (0.5f * Time.deltaTime);
+                sprite.color = color;
+            }
+        }
+
+        //Debug.Log(Vector2.Distance(transform.position, player.transform.position));
         if (manager.PhaseNum == 1)
         {
-            Testing();
+           // Testing();
+            if (AnimState == 0 && !MoveBoss && ChooseActionBool) //phase one
+            {
+
+                StartCoroutine("ChooseAction");
+            }
         }
         if (PointTowardsPlayerBool)
         {
-            PointTowardsPlayer();
+            PointTowards(player.gameObject.transform.position);
         }
         if (WalkTowardsPlayerBool)
         {
             WalkTowardsPlayer();
-        }
-    }
-    private void FixedUpdate()
-    {
-        if (AnimState == 0 && !MoveBoss && ChooseActionBool)
-        {
-
-            StartCoroutine("ChooseAction");
         }
     }
     IEnumerator ChooseAction()
@@ -86,6 +111,10 @@ public class BossAIScript : MonoBehaviour
         ChooseActionBool = false;
         int i = Random.Range(0, 8);
 
+        yield return new WaitForSeconds(0.5f); //base delay between moves
+
+        float WaitTime = 0;
+        float StartTime = 0;
 
         switch(i)
         {
@@ -104,29 +133,63 @@ public class BossAIScript : MonoBehaviour
                 WalkTowardsPlayerBool = false;
                 break;
             case 2:
-                yield return new WaitUntil(() => (player.AnimState > 0 && (Vector2.Distance(transform.position, player.transform.position) < SlashDistance)));
-                StartCoroutine("DashR");
-                StartCoroutine("Slash");
+
+                WaitTime = 5;
+                StartTime = manager.GetTime();
+
+                yield return new WaitUntil(() => ((manager.GetTime() - StartTime) > WaitTime) || (player.AnimState > 0 && (Vector2.Distance(transform.position, player.transform.position) < SlashDistance))); //wait until player is in range OR it's been WaitTime seconds
+                if (((manager.GetTime() - StartTime) < WaitTime)) // if it hasn't been WaitTime seconds, attack. Else, get a new action
+                {
+                    StartCoroutine("DashR");
+                    StartCoroutine("Slash");
+                }
                 break;
             case 3:
-                yield return new WaitUntil(() => (player.AnimState > 0 && (Vector2.Distance(transform.position, player.transform.position) < SlashDistance)));
+
+                WaitTime = 5;
+                StartTime = manager.GetTime();
+
+                yield return new WaitUntil(() => ((manager.GetTime() - StartTime) > WaitTime) || (player.AnimState > 0 && (Vector2.Distance(transform.position, player.transform.position) < SlashDistance)));
                 StartCoroutine("DashL");
                 StartCoroutine("Slash");
                 break;
             case 4:
-                yield return new WaitUntil(() => (player.AnimState > 0 && (Vector2.Distance(transform.position, player.transform.position) < SlashDistance)));
+
+                WaitTime = 5;
+                StartTime = manager.GetTime();
+
+                yield return new WaitUntil(() => ((manager.GetTime() - StartTime) > WaitTime) || (player.AnimState > 0 && (Vector2.Distance(transform.position, player.transform.position) < SlashDistance)));
                 StartCoroutine("DashL");
                 StartCoroutine("Thrust");
                 break;
         }
-        yield return new WaitForSeconds(0.5f);
         ChooseActionBool = true;
         
     }
-    private void PointTowardsPlayer()
+    IEnumerator PhaseTwo()
+    {
+        transform.position = PhaseTwoPosition;
+        anim.Play("Static2");
+        Color color = sprite.color;
+        color.a = 1;
+        sprite.color = color;
+
+        yield return new WaitForSeconds(1);
+
+        //TODO: If player ever dies, stopallcoroutines and restart to PhaseTwo();
+
+        //TODO: First do the miniNukes as an ienumerator then wait for that to be done
+        //TODO: Second do the Swipy Sword thing as an ienumerator, then wait for that to be done
+        //TODO: Third... Phantoms
+        //TODO: Lastly... Big Nuke
+        //TODO: Then Change scenes to ending where dog wakes up.
+    }
+
+
+    private void PointTowards(Vector3 Object)
     {
         float angle;
-        Vector3 mousePos = player.gameObject.transform.position;
+        Vector3 mousePos = Object;
         mousePos.z = 0;
         Vector3 direction = mousePos - transform.position;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -142,15 +205,155 @@ public class BossAIScript : MonoBehaviour
             body.velocity = MoveSpeed * -transform.up.normalized;
         }
     }
+ 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        manager.BossHit(collision.tag.ToString());
+    }
+
+    IEnumerator Thrust()
+    {
+        AnimState = 1;
+        anim.Play(Thrust1Name);
+        yield return new WaitForSeconds(0.1f);
+        yield return new WaitUntil(() => AnimDone(Thrust1Name));
+        yield return new WaitForSeconds(0.7f);
+
+        PointTowardsPlayerBool = false;
+
+        anim.Play(Thrust2Name);
+        ThrustCollider.enabled = true;
+        body.AddForce(new Vector2(-transform.up.x, -transform.up.y) * Mathf.Abs(ThrustSpeed), ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => AnimDone(Thrust1Name));
+        anim.Play(Static1Name);
+        AnimState = 0;
+        ThrustCollider.enabled = false;
+
+        PointTowardsPlayerBool = true;
+
+    }
+    IEnumerator Slash()
+    {
+
+        AnimState = 2;
+        anim.Play(Slash1Name);
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => AnimDone(Slash1Name));
+        PointTowardsPlayerBool = false;
+        anim.Play(Slash2Name);
+        Slash2Collider.enabled = true;
+        body.AddForce(new Vector2(-transform.up.x, -transform.up.y) * Mathf.Abs(SlashSpeed), ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => AnimDone(Slash2Name));
+        Slash2Collider.enabled = false;
+        Slash3Collider.enabled = true;
+        anim.Play(Slash3Name);
+        yield return new WaitForSeconds(0.1f);
+        yield return new WaitUntil(() => AnimDone(Slash3Name));
+        anim.Play(Static1Name);
+        Slash3Collider.enabled = false;
+        AnimState = 0;
+        PointTowardsPlayerBool = true;
+    }
+    IEnumerator DashR()
+    {
+        AnimState = 3;
+        anim.Play(DashRName);
+        body.AddForce(new Vector2(transform.up.y, -transform.up.x) * Mathf.Abs(DashSpeed), ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => AnimDone(DashRName));
+        anim.Play(Static1Name);
+        AnimState = 0;
+    }
+    IEnumerator DashL()
+    {
+        AnimState = 3;
+        anim.Play(DashLName);
+        body.AddForce(new Vector2(-transform.up.y, transform.up.x) * Mathf.Abs(DashSpeed), ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => AnimDone(DashLName));
+        anim.Play(Static1Name);
+        AnimState = 0;
+    }
+
+    public bool AnimDone(string name)
+    {
+        return anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1;
+    }
+    private bool PlayingAnim(string name)
+    {
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        int nameHash = stateInfo.shortNameHash;
+        var controller = anim.runtimeAnimatorController;
+        foreach (var animationClip in controller.animationClips)
+        {
+            if (Animator.StringToHash(animationClip.name) == nameHash)
+            {
+                if (name.Equals(animationClip.name))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public void DisableEverything()
+    {
+        StopAllCoroutines();
+        Slash2Collider.enabled = false;
+        Slash3Collider.enabled = false;
+        ThrustCollider.enabled = false;
+        BaseCollider.enabled = false;
+        MoveBoss = false;
+        WalkTowardsPlayerBool = false;
+        PointTowardsPlayerBool = false;
+        ChooseActionBool = false;
+        body.velocity = Vector3.zero;
+        anim.Play(Static1Name);
+    }
+    public void SetupPhaseTwo()
+    {
+        FadeOutBool = true;
+    }
+    public void PhaseTwoAnimation()
+    {
+        //anim.Play("PhaseTwoTransition");
+    }
+    public void EnablePhaseTwo()
+    {
+        StartCoroutine("PhaseTwo");
+    }
+
+    public bool BossInPosition()
+    {
+
+        if (sprite.color.a == 0)
+        {
+            body.rotation = 0;
+            body.velocity = Vector3.zero;
+            transform.position = PhaseTwoPosition;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+
     private void Testing()
     {
+        //UnityEngine.Debug.Log(Vector2.Distance(transform.position, PhaseTwoPosition) + " <- Position, angle -> " + ((Mathf.Atan2((Phase2Point - transform.position).y, (Phase2Point - transform.position).x) * Mathf.Rad2Deg) + 90 - transform.rotation.eulerAngles.z) % 360);
+
         if (Input.GetKeyDown(KeyCode.Period))
         {
             MoveBoss = !MoveBoss;
+            FindObjectOfType<BossPlayerMovement>().CanMove = !MoveBoss;
         }
-
-        FindObjectOfType<BossPlayerMovement>().CanMove = !MoveBoss;
-
         if (!MoveBoss)
         {
             return;
@@ -218,89 +421,4 @@ public class BossAIScript : MonoBehaviour
             }
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        manager.BossHit(collision.tag.ToString());
-    }
-
-    IEnumerator Thrust()
-    {
-        AnimState = 1;
-        anim.Play(Thrust1Name);
-        yield return new WaitForSeconds(0.2f);
-        yield return new WaitUntil(() => AnimDone(Thrust1Name));
-        anim.Play(Thrust2Name);
-        ThrustCollider.enabled = true;
-        body.AddForce(new Vector2(-transform.up.x, -transform.up.y) * Mathf.Abs(ThrustSpeed), ForceMode2D.Impulse);
-        yield return new WaitForSeconds(0.2f);
-        yield return new WaitUntil(() => AnimDone(Thrust1Name));
-        anim.Play(Static1Name);
-        AnimState = 0;
-        ThrustCollider.enabled = false;
-    }
-    IEnumerator Slash()
-    {
-        AnimState = 2;
-        anim.Play(Slash1Name);
-        yield return new WaitForSeconds(0.2f);
-        yield return new WaitUntil(() => AnimDone(Slash1Name));
-        anim.Play(Slash2Name);
-        Slash2Collider.enabled = true;
-        body.AddForce(new Vector2(-transform.up.x, -transform.up.y) * Mathf.Abs(SlashSpeed), ForceMode2D.Impulse);
-        yield return new WaitForSeconds(0.2f);
-        yield return new WaitUntil(() => AnimDone(Slash2Name));
-        Slash2Collider.enabled = false;
-        Slash3Collider.enabled = true;
-        anim.Play(Slash3Name);
-        yield return new WaitForSeconds(0.1f);
-        yield return new WaitUntil(() => AnimDone(Slash3Name));
-        anim.Play(Static1Name);
-        Slash3Collider.enabled = false;
-        AnimState = 0;
-    }
-    IEnumerator DashR()
-    {
-        AnimState = 3;
-        anim.Play(DashRName);
-        body.AddForce(new Vector2(transform.up.y, -transform.up.x) * Mathf.Abs(DashSpeed), ForceMode2D.Impulse);
-        yield return new WaitForSeconds(0.2f);
-        yield return new WaitUntil(() => AnimDone(DashRName));
-        anim.Play(Static1Name);
-        AnimState = 0;
-    }
-    IEnumerator DashL()
-    {
-        AnimState = 3;
-        anim.Play(DashLName);
-        body.AddForce(new Vector2(-transform.up.y, transform.up.x) * Mathf.Abs(DashSpeed), ForceMode2D.Impulse);
-        yield return new WaitForSeconds(0.2f);
-        yield return new WaitUntil(() => AnimDone(DashLName));
-        anim.Play(Static1Name);
-        AnimState = 0;
-    }
-
-    private bool AnimDone(string name)
-    {
-        return anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1;
-    }
-    private bool PlayingAnim(string name)
-    {
-        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        int nameHash = stateInfo.shortNameHash;
-        var controller = anim.runtimeAnimatorController;
-        foreach (var animationClip in controller.animationClips)
-        {
-            if (Animator.StringToHash(animationClip.name) == nameHash)
-            {
-                if (name.Equals(animationClip.name))
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
- 
 }

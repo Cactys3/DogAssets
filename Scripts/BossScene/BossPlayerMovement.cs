@@ -1,7 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
 
@@ -9,11 +6,13 @@ public class BossPlayerMovement : MonoBehaviour
 {
     [SerializeField] private Collider2D PlayerHitbox;
     [SerializeField] private BossHUDManager UI;
-    [SerializeField] private Rigidbody2D body;
+    [SerializeField] public Rigidbody2D body;
     [SerializeField] private BossFightManager manager;
     [SerializeField] private Animator anim;
     [SerializeField] private Collider2D ThrustHitbox;
     [SerializeField] private Collider2D SpinHitbox;
+
+    [SerializeField] private SpriteRenderer sprite;
 
     [SerializeField] LayerMask StopsMovement;
     [SerializeField] private float MoveSpeed;
@@ -24,9 +23,16 @@ public class BossPlayerMovement : MonoBehaviour
     public bool CanMove;
     public const string ThrustAnimName = "P_Thrust";
     public const string SpinAnimName = "P_Spin";
+    public const string StaticAnimName = "Static1";
     public int AnimState; // 0:Static, 1:Thrust, 2:Spin
+
+    private bool FadeOutBool;
+    public bool GetBelowBool;
+    private bool PlayerInPositionBool;
+
     private void Start()
     {
+        PlayerInPositionBool = false;
         DashCDnum = 2;
         MoveSpeed = 5;
         DashSpeed = 0.5f;
@@ -36,10 +42,49 @@ public class BossPlayerMovement : MonoBehaviour
         DashingOnCD = false;
         ThrustHitbox.enabled = false;
         SpinHitbox.enabled = false;
+        FadeOutBool = false;
+        GetBelowBool = false;
     }
 
     void Update()
     {
+        if (FadeOutBool)
+        {
+            if (sprite.color.a - (0.5f * Time.deltaTime) < 0)
+            {
+                Color color = sprite.color;
+                color.a = 0;
+                sprite.color = color;
+                FadeOutBool = false;
+            }
+            else
+            {
+                Color color = sprite.color;
+                color.a = color.a - (0.5f * Time.deltaTime);
+                sprite.color = color;
+            }
+        }
+        if (GetBelowBool)
+        {
+            //Debug.Log("Step One");
+            if (transform.position.y > -1)
+            {
+                //body.velocity += new Vector2(0, -0.5f * Time.deltaTime);
+                if (body.velocity.magnitude < 1)
+                {
+                    if (body.velocity.x > 0)
+                    {
+                        body.velocity = new Vector2(body.velocity.x - 0.1f, -0.5f);
+                    }
+                    else
+                    {
+                        body.velocity = new Vector2(body.velocity.x + 0.1f, -0.5f);
+                    }
+                }
+            }
+        }
+        
+
         //Debug.Log(PlayingAnim(ThrustAnimName));
         if (CanMove)
         {
@@ -57,7 +102,7 @@ public class BossPlayerMovement : MonoBehaviour
             //Horizontal Movement
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
-                if (!Physics2D.OverlapBox(transform.position + new Vector3(Input.GetAxisRaw("Horizontal") * 0.05f, 0, 0), new Vector2(1f, 1f), 0, StopsMovement))
+                if (!Physics2D.OverlapBox(transform.position + new Vector3(Input.GetAxisRaw("Horizontal") * 0.05f, 0, 0), new Vector2(0.2f, 0.2f), 0, StopsMovement))
                 {
                     this.transform.position = this.transform.position + new Vector3(MoveSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime, 0, 0);
                 }
@@ -65,7 +110,7 @@ public class BossPlayerMovement : MonoBehaviour
             //Vertical Movement
             if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
-                if (!Physics2D.OverlapBox(transform.position + new Vector3(0, Input.GetAxisRaw("Vertical") * 0.05f, 0), new Vector2(1f, 1f), 0, StopsMovement))
+                if (!Physics2D.OverlapBox(transform.position + new Vector3(0, Input.GetAxisRaw("Vertical") * 0.05f, 0), new Vector2(0.2f, 0.2f), 0, StopsMovement))
                 {
                     this.transform.position = this.transform.position + new Vector3(0, MoveSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime, 0);
                 }
@@ -182,6 +227,47 @@ public class BossPlayerMovement : MonoBehaviour
     {
         SpinHitbox.enabled = false;
         ThrustHitbox.enabled = false;
+    }
+    public void DisableEverything()
+    {
+        CanMove = false;
+        StopAllCoroutines();
+        body.velocity = Vector3.zero;
+        anim.Play(StaticAnimName);
+        AnimState = 0;
+    }
+    public void EnableEverything()
+    {
+        CanMove = true;
+        anim.Play(StaticAnimName);
+        AnimState = 0;
+        DashingOnCD = false;
+    }
+    public void SetupPhase2()
+    {
+        StartCoroutine("GetBelow");
+    }
+    IEnumerator GetBelow()
+    {
+        yield return new WaitForSeconds(4);
+        GetBelowBool = true;
+        Debug.Log("on");
+        yield return new WaitUntil(() => transform.position.y < -1 && body.velocity.magnitude < 0.5);
+        GetBelowBool = false;
+        PlayerInPositionBool = true;
+        Debug.Log("off");
+    }
+    public bool PlayerInPosition()
+    {
+        if (PlayerInPositionBool)
+        {
+            body.velocity = Vector2.zero;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 

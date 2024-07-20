@@ -1,0 +1,948 @@
+fileFormatVersion: 2
+guid: 235d92dceb2313742b0fd0a3b374f20c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: MapSlash
+    originalName: 
+    pivot: {x: 1.8750001, y: -32.333332}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 500
+      width: 16
+      height: 6
+    spriteID: daeaf29b4239faa4b8671cf704c4e562
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 500}
+  - name: MapSlash_Frame_1
+    originalName: 
+    pivot: {x: 1.6666666, y: -9.526316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 473
+      width: 18
+      height: 19
+    spriteID: 9b1a5036f690eff40ad6f4f08c4f6b8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 473}
+  - name: MapSlash_Frame_2
+    originalName: 
+    pivot: {x: 1.3043479, y: -3.4444444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 258
+      y: 420
+      width: 23
+      height: 45
+    spriteID: fdad77c454aa005479048a665ac3616f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 258, y: 420}
+  - name: MapSlash_Frame_3
+    originalName: 
+    pivot: {x: 1.1111112, y: -1.7777777}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 363
+      y: 420
+      width: 27
+      height: 72
+    spriteID: 639b1cb02adf53c49acdd0b988c90459
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 363, y: 420}
+  - name: MapSlash_Frame_4
+    originalName: 
+    pivot: {x: 1.0344828, y: -1.0202019}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 451
+      y: 141
+      width: 29
+      height: 99
+    spriteID: c329cb5c80193c94f8317558ddd384d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 451, y: 141}
+  - name: MapSlash_Frame_5
+    originalName: 
+    pivot: {x: 0.99999994, y: -0.55038756}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 346
+      width: 33
+      height: 129
+    spriteID: c61b4a3ec4fbce34b9f7c44db919b84a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 346}
+  - name: MapSlash_Frame_6
+    originalName: 
+    pivot: {x: 1, y: -0.22699387}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 4
+      width: 39
+      height: 163
+    spriteID: 1589b2e00efffe243aaddca1b764ddf9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 4}
+  - name: MapSlash_Frame_7
+    originalName: 
+    pivot: {x: 1, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 56
+      height: 200
+    spriteID: c0ee0a52188abdb42a03c7e2361fde20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: MapSlash_Frame_8
+    originalName: 
+    pivot: {x: 1, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 212
+      width: 56
+      height: 200
+    spriteID: d8836521e58449e4484cd61a658dda8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 212}
+  - name: MapSlash_Frame_9
+    originalName: 
+    pivot: {x: 1, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 4
+      width: 56
+      height: 200
+    spriteID: 3f1676b127545bd4bbfdc835d00cd9ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 4}
+  - name: MapSlash_Frame_10
+    originalName: 
+    pivot: {x: 1.037037, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 4
+      width: 54
+      height: 200
+    spriteID: 9de1a0aba8891584e9e9de9904df021a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 4}
+  - name: MapSlash_Frame_11
+    originalName: 
+    pivot: {x: 1.12, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 258
+      y: 4
+      width: 50
+      height: 200
+    spriteID: 2ea18ab852cda8a429a00f3b89b13eb0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 258, y: 4}
+  - name: MapSlash_Frame_12
+    originalName: 
+    pivot: {x: 1.4358975, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 316
+      y: 4
+      width: 39
+      height: 200
+    spriteID: b8ae406003d2b794fbb95c3e6e281cb5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 316, y: 4}
+  - name: MapSlash_Frame_13
+    originalName: 
+    pivot: {x: 1.6969697, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 363
+      y: 4
+      width: 33
+      height: 200
+    spriteID: d42ebed0fda333b48a02f3d1f30b6502
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 363, y: 4}
+  - name: MapSlash_Frame_15
+    originalName: 
+    pivot: {x: 1.8750001, y: -32.333332}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 258
+      y: 500
+      width: 16
+      height: 6
+    spriteID: 5bd2fb04fe8c828429b981bc6e75b9c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 258, y: 500}
+  - name: MapSlash_Frame_16
+    originalName: 
+    pivot: {x: 1.6666666, y: -9.526316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 258
+      y: 473
+      width: 18
+      height: 19
+    spriteID: 6d8c0a99e4fc9f84fa944b5c622e090c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 258, y: 473}
+  - name: MapSlash_Frame_17
+    originalName: 
+    pivot: {x: 1.3043479, y: -3.4444444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 420
+      width: 23
+      height: 45
+    spriteID: 6f90a7d66b72f2240bd999835000abba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 420}
+  - name: MapSlash_Frame_18
+    originalName: 
+    pivot: {x: 1.1111112, y: -1.7777777}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 316
+      y: 420
+      width: 27
+      height: 72
+    spriteID: c65fd331029fd9944ae9e8e7e44f383d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 316, y: 420}
+  - name: MapSlash_Frame_19
+    originalName: 
+    pivot: {x: 1.0344828, y: -1.0202019}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 451
+      y: 248
+      width: 29
+      height: 99
+    spriteID: f428c7aa9934eef4f9f92c1bfcdaeefc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 451, y: 248}
+  - name: MapSlash_Frame_20
+    originalName: 
+    pivot: {x: 0.99999994, y: -0.55038756}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 451
+      y: 4
+      width: 33
+      height: 129
+    spriteID: 2202727771c7dc547ae60bc640c81570
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 451, y: 4}
+  - name: MapSlash_Frame_21
+    originalName: 
+    pivot: {x: 1, y: -0.22699387}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 175
+      width: 39
+      height: 163
+    spriteID: ede5410faef1a1c489f386b4211cd26c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 175}
+  - name: MapSlash_Frame_22
+    originalName: 
+    pivot: {x: 1, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 212
+      width: 56
+      height: 200
+    spriteID: d8bdda6ca023d1d43a2a5dafc06171a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 212}
+  - name: MapSlash_Frame_23
+    originalName: 
+    pivot: {x: 1, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 4
+      width: 56
+      height: 200
+    spriteID: 0b4024a6f9ba437488c003d1c34d2594
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 4}
+  - name: MapSlash_Frame_24
+    originalName: 
+    pivot: {x: 1, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 212
+      width: 56
+      height: 200
+    spriteID: be5d49303135a594aac4cf213acf5336
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 212}
+  - name: MapSlash_Frame_25
+    originalName: 
+    pivot: {x: 1.037037, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 212
+      width: 54
+      height: 200
+    spriteID: 4b5d95cbce37dc7459de470ab467a459
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 212}
+  - name: MapSlash_Frame_26
+    originalName: 
+    pivot: {x: 1.12, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 258
+      y: 212
+      width: 50
+      height: 200
+    spriteID: c16d0ded914ea064a96abc07fbf6549b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 258, y: 212}
+  - name: MapSlash_Frame_27
+    originalName: 
+    pivot: {x: 1.4358975, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 316
+      y: 212
+      width: 39
+      height: 200
+    spriteID: 52e954bf145ca5044b09d18e291a34ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 316, y: 212}
+  - name: MapSlash_Frame_28
+    originalName: 
+    pivot: {x: 1.6969697, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 363
+      y: 212
+      width: 33
+      height: 200
+    spriteID: 0ef3cda003bfa6047b7c0bc57816cc57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 363, y: 212}
+  - name: MapSlash_Frame_29
+    originalName: 
+    pivot: {x: 1.8750001, y: -32.333332}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 363
+      y: 500
+      width: 16
+      height: 6
+    spriteID: 22ddeb455c8d379469796a44aceb12fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 363, y: 500}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1381010727
+    name: MapSlash
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: MapSlash_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 70
+        y: 194
+        width: 16
+        height: 6
+      spriteId: daeaf29b4239faa4b8671cf704c4e562
+    - name: MapSlash_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 70
+        y: 181
+        width: 18
+        height: 19
+      spriteId: 9b1a5036f690eff40ad6f4f08c4f6b8d
+    - name: MapSlash_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 70
+        y: 155
+        width: 23
+        height: 45
+      spriteId: fdad77c454aa005479048a665ac3616f
+    - name: MapSlash_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 70
+        y: 128
+        width: 27
+        height: 72
+      spriteId: 639b1cb02adf53c49acdd0b988c90459
+    - name: MapSlash_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 70
+        y: 101
+        width: 29
+        height: 99
+      spriteId: c329cb5c80193c94f8317558ddd384d9
+    - name: MapSlash_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 67
+        y: 71
+        width: 33
+        height: 129
+      spriteId: c61b4a3ec4fbce34b9f7c44db919b84a
+    - name: MapSlash_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 61
+        y: 37
+        width: 39
+        height: 163
+      spriteId: 1589b2e00efffe243aaddca1b764ddf9
+    - name: MapSlash_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 44
+        y: 0
+        width: 56
+        height: 200
+      spriteId: c0ee0a52188abdb42a03c7e2361fde20
+    - name: MapSlash_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 44
+        y: 0
+        width: 56
+        height: 200
+      spriteId: d8836521e58449e4484cd61a658dda8f
+    - name: MapSlash_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 44
+        y: 0
+        width: 56
+        height: 200
+      spriteId: 3f1676b127545bd4bbfdc835d00cd9ba
+    - name: MapSlash_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 44
+        y: 0
+        width: 54
+        height: 200
+      spriteId: 9de1a0aba8891584e9e9de9904df021a
+    - name: MapSlash_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 44
+        y: 0
+        width: 50
+        height: 200
+      spriteId: 2ea18ab852cda8a429a00f3b89b13eb0
+    - name: MapSlash_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 44
+        y: 0
+        width: 39
+        height: 200
+      spriteId: b8ae406003d2b794fbb95c3e6e281cb5
+    - name: MapSlash_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 44
+        y: 0
+        width: 33
+        height: 200
+      spriteId: d42ebed0fda333b48a02f3d1f30b6502
+    - name: MapSlash_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 70
+        y: 194
+        width: 16
+        height: 6
+      spriteId: 5bd2fb04fe8c828429b981bc6e75b9c7
+    - name: MapSlash_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 70
+        y: 181
+        width: 18
+        height: 19
+      spriteId: 6d8c0a99e4fc9f84fa944b5c622e090c
+    - name: MapSlash_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 70
+        y: 155
+        width: 23
+        height: 45
+      spriteId: 6f90a7d66b72f2240bd999835000abba
+    - name: MapSlash_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 70
+        y: 128
+        width: 27
+        height: 72
+      spriteId: c65fd331029fd9944ae9e8e7e44f383d
+    - name: MapSlash_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 70
+        y: 101
+        width: 29
+        height: 99
+      spriteId: f428c7aa9934eef4f9f92c1bfcdaeefc
+    - name: MapSlash_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 67
+        y: 71
+        width: 33
+        height: 129
+      spriteId: 2202727771c7dc547ae60bc640c81570
+    - name: MapSlash_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 61
+        y: 37
+        width: 39
+        height: 163
+      spriteId: ede5410faef1a1c489f386b4211cd26c
+    - name: MapSlash_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 44
+        y: 0
+        width: 56
+        height: 200
+      spriteId: d8bdda6ca023d1d43a2a5dafc06171a4
+    - name: MapSlash_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 44
+        y: 0
+        width: 56
+        height: 200
+      spriteId: 0b4024a6f9ba437488c003d1c34d2594
+    - name: MapSlash_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 44
+        y: 0
+        width: 56
+        height: 200
+      spriteId: be5d49303135a594aac4cf213acf5336
+    - name: MapSlash_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 44
+        y: 0
+        width: 54
+        height: 200
+      spriteId: 4b5d95cbce37dc7459de470ab467a459
+    - name: MapSlash_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 44
+        y: 0
+        width: 50
+        height: 200
+      spriteId: c16d0ded914ea064a96abc07fbf6549b
+    - name: MapSlash_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 44
+        y: 0
+        width: 39
+        height: 200
+      spriteId: 52e954bf145ca5044b09d18e291a34ba
+    - name: MapSlash_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 44
+        y: 0
+        width: 33
+        height: 200
+      spriteId: 0ef3cda003bfa6047b7c0bc57816cc57
+    - name: MapSlash_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 70
+        y: 194
+        width: 16
+        height: 6
+      spriteId: 22ddeb455c8d379469796a44aceb12fc
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 200, y: 200}

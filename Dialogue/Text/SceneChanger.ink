@@ -8,16 +8,16 @@ what u want
 
 ===first===
 Go to... #typingspeed:0
-*[0 - Fridge]
+*[Fridge]
 #scene:Fridge Level 1
 ->END
-*[1 - mud room]
+*[mud room]
 #scene:Mud Room
 ->END
-*[2 - kitchen dining room]
+*[kitchen dining room]
 #scene:Kitchen Dining Room
 ->END
-*[3 - living room]
+*[living room]
 #scene:Living Room
 ->END
 *[see more]
@@ -27,17 +27,17 @@ Go to... #typingspeed:0
 ===second===
 Go to... #typingspeed:0
 
-*[4 office room]
+*[office room]
 #scene:Office Room
 ->END
-*[5 - bathroom]
+*[bathroom]
 #scene:Bathroom 1
 ->END
 *[Microwave]
 #scene:Microwave 1
 ->END
-*[Juicer]
-#scene:Juicer Minigame
+*[Boss]
+#scene:boss
 ->END
 *[Finish]
 ->END
