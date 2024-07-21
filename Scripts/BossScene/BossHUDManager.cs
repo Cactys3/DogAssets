@@ -9,11 +9,14 @@ public class BossHUDManager : MonoBehaviour
     [SerializeField] private SpriteRenderer DashCDRenderer;
     [SerializeField] private BossPlayerMovement player;
     [SerializeField] private Transform PlayerHP;
+    [SerializeField] private Transform PlayerHPE;
     [SerializeField] private Transform PlayerStamina;
+    [SerializeField] private Transform PlayerStaminaE;
     [SerializeField] private float PlayerStaminaOffset;
     [Header("Boss Stuff")]
     [SerializeField] private BossAIScript boss;
     [SerializeField] private Transform BossHP;
+    [SerializeField] private Transform BossHPE;
     [SerializeField] private BossFightManager manager;
 
     private float BossMinValue;
@@ -30,19 +33,32 @@ public class BossHUDManager : MonoBehaviour
     public void UpdatePlayerHP(float num)
     {
         //Debug.Log("update player hp" + new Vector3(PlayerMinValue + ((num / 100) * -PlayerMinValue), PlayerHP.position.y, PlayerHP.position.z));
-        PlayerHP.position = new Vector3(PlayerMinValue + ((num / 100) * -PlayerMinValue), PlayerHP.position.y, PlayerHP.position.z);
+        
+        PlayerHPE.position = new Vector3(PlayerMinValue + ((num / 100) * -PlayerMinValue), PlayerHPE.position.y, PlayerHPE.position.z);
+
+        PlayerHP.localScale = new Vector3(num / 100f, 1, 1);
+
+        Debug.Log("PH: " + num + " " + num / 100f);
     }
     public void UpdateBossHP(float num)
     {
         //Debug.Log("update boss hp" + BossMinValue + " " +  ((num / 100) + " " +  -BossMinValue));
-        BossHP.position = new Vector3(BossMinValue + ((num / 100) * -BossMinValue), BossHP.position.y, BossHP.position.z);
+        
+        BossHPE.position = new Vector3(BossMinValue + ((num / 100) * -BossMinValue), BossHPE.position.y, BossHPE.position.z);
+
+        BossHP.localScale = new Vector3(num / 100f, 1, 1);
+
+        Debug.Log("BH: " + num + " " + num / 100f);
     }
     public void UpdatePlayerStamina(float num)
     {
         //Debug.Log("Üpdated Statmina: " + (PlayerStamina.transform.position.x > StaminaMinValue) + " " + PlayerStamina.position.x + (num * -PlayerStaminaOffset));
-
-            PlayerStamina.transform.position = new Vector3(StaminaMinValue + ((num / 100) * -StaminaMinValue), PlayerStamina.position.y, PlayerStamina.position.z);
         
+        PlayerStaminaE.transform.position = new Vector3(StaminaMinValue + ((num / 100) * -StaminaMinValue), PlayerStaminaE.position.y, PlayerStaminaE.position.z);
+
+        PlayerStamina.localScale = new Vector3(num / 100f, 1, 1);
+
+        Debug.Log("PS: " + num + " " + num / 100f);
     }
     //Player Stuff
     public void StartDashCD()

@@ -18,6 +18,7 @@ public class BossAIScript : MonoBehaviour
     [SerializeField] private BossPlayerMovement player;
     [SerializeField] private BossFightManager manager;
     [SerializeField] private Animator anim;
+    [SerializeField] private Collider2D BossHitbox;
     [SerializeField] private Collider2D BaseCollider;
     [SerializeField] private Collider2D Slash2Collider;
     [SerializeField] private Collider2D Slash3Collider;
@@ -303,9 +304,6 @@ public class BossAIScript : MonoBehaviour
     public void DisableEverything()
     {
         StopAllCoroutines();
-        Slash2Collider.enabled = false;
-        Slash3Collider.enabled = false;
-        ThrustCollider.enabled = false;
         BaseCollider.enabled = false;
         MoveBoss = false;
         WalkTowardsPlayerBool = false;
@@ -313,6 +311,11 @@ public class BossAIScript : MonoBehaviour
         ChooseActionBool = false;
         body.velocity = Vector3.zero;
         anim.Play(Static1Name);
+        BaseCollider.enabled = false;
+        Slash2Collider.enabled = false;
+        Slash3Collider.enabled = false;
+        ThrustCollider.enabled = false;
+        BossHitbox.enabled = false;
     }
     public void SetupPhaseTwo()
     {

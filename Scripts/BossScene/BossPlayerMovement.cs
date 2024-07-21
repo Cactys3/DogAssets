@@ -27,7 +27,6 @@ public class BossPlayerMovement : MonoBehaviour
     public int AnimState; // 0:Static, 1:Thrust, 2:Spin
 
     private bool FadeOutBool;
-    public bool GetBelowBool;
     private bool PlayerInPositionBool;
 
     private void Start()
@@ -43,7 +42,6 @@ public class BossPlayerMovement : MonoBehaviour
         ThrustHitbox.enabled = false;
         SpinHitbox.enabled = false;
         FadeOutBool = false;
-        GetBelowBool = false;
     }
 
     void Update()
@@ -62,25 +60,6 @@ public class BossPlayerMovement : MonoBehaviour
                 Color color = sprite.color;
                 color.a = color.a - (0.5f * Time.deltaTime);
                 sprite.color = color;
-            }
-        }
-        if (GetBelowBool)
-        {
-            //Debug.Log("Step One");
-            if (transform.position.y > -1)
-            {
-                //body.velocity += new Vector2(0, -0.5f * Time.deltaTime);
-                if (body.velocity.magnitude < 1)
-                {
-                    if (body.velocity.x > 0)
-                    {
-                        body.velocity = new Vector2(body.velocity.x - 0.1f, -0.5f);
-                    }
-                    else
-                    {
-                        body.velocity = new Vector2(body.velocity.x + 0.1f, -0.5f);
-                    }
-                }
             }
         }
         
@@ -228,12 +207,20 @@ public class BossPlayerMovement : MonoBehaviour
         SpinHitbox.enabled = false;
         ThrustHitbox.enabled = false;
     }
+    public void SetDrag(float drag, float angular)
+    {
+        body.drag = drag;
+        body.angularDrag = angular;
+    }
     public void DisableEverything()
     {
         CanMove = false;
         StopAllCoroutines();
         body.velocity = Vector3.zero;
         anim.Play(StaticAnimName);
+        PlayerHitbox.enabled = false;
+        SpinHitbox.enabled = false;
+        ThrustHitbox.enabled = false;
         AnimState = 0;
     }
     public void EnableEverything()
@@ -242,26 +229,35 @@ public class BossPlayerMovement : MonoBehaviour
         anim.Play(StaticAnimName);
         AnimState = 0;
         DashingOnCD = false;
+        PlayerHitbox.enabled = true;
     }
     public void SetupPhase2()
     {
-        StartCoroutine("GetBelow");
+        StartCoroutine("SetupPhase2Enum");
     }
-    IEnumerator GetBelow()
+    IEnumerator SetupPhase2Enum()
     {
-        yield return new WaitForSeconds(4);
-        GetBelowBool = true;
-        Debug.Log("on");
-        yield return new WaitUntil(() => transform.position.y < -1 && body.velocity.magnitude < 0.5);
-        GetBelowBool = false;
+        PlayerInPositionBool = false;
+        SetDrag(0, 0);
+        yield return new WaitForSeconds(1);
+        SetDrag(0.1f, 0.1f);
+        yield return new WaitForSeconds(1);
+        SetDrag(0.2f, 0.2f);
+        yield return new WaitForSeconds(1);
+        SetDrag(0.3f, 0.3f);
+        yield return new WaitForSeconds(1);
+        SetDrag(0.4f, 0.4f);
+        yield return new WaitForSeconds(1);
+        SetDrag(0.5f, 0.5f);
+        yield return new WaitForSeconds(1);
         PlayerInPositionBool = true;
-        Debug.Log("off");
     }
     public bool PlayerInPosition()
     {
-        if (PlayerInPositionBool)
+        if (PlayerInPositionBool && body.velocity.magnitude < 0.1f)
         {
-            body.velocity = Vector2.zero;
+            //body.angularVelocity = 0;
+            //body.velocity = Vector2.zero;
             return true;
         }
         else

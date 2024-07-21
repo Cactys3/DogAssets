@@ -102,6 +102,10 @@ public class BossFightManager : MonoBehaviour
         }
         if (CurrentHP != PlayerHP)
         {
+            if (PlayerHP < 0)
+            {
+                PlayerHP = 0;
+            }
             HUD.UpdatePlayerHP(PlayerHP);
         }
     }
@@ -125,6 +129,10 @@ public class BossFightManager : MonoBehaviour
         }
         if (CurrentHP != BossHP)
         {
+            if (BossHP < 0)
+            {
+                BossHP = 0;
+            }
             HUD.UpdateBossHP(BossHP);
         }
     }
@@ -135,6 +143,7 @@ public class BossFightManager : MonoBehaviour
         Time.timeScale = 0f;
         boss.DisableEverything();
         player.DisableEverything();
+        player.SetDrag(0, 0);
         BounceCollider.SetActive(true);
 
         //TODO: set player and boss velocities and make explosion animation happen
@@ -177,18 +186,25 @@ public class BossFightManager : MonoBehaviour
     }
     public void UseStamina(string name)
     {
+        float CurrentStamina = PlayerStamina;
         StopCoroutine("StaminaTimer");
         StartCoroutine("StaminaTimer");
         switch(name)
         {
             case BossPlayerMovement.ThrustAnimName:
                 PlayerStamina -= PlayerThrustStaminaCost;
-                HUD.UpdatePlayerStamina(PlayerStamina);
                 break;
             case BossPlayerMovement.SpinAnimName:
                 PlayerStamina -= PlayerSpinStaminaCost;
-                HUD.UpdatePlayerStamina(PlayerStamina);
                 break;
+        }
+        if (PlayerStamina != CurrentStamina)
+        {
+            if (PlayerStamina < 0)
+            {
+                PlayerStamina = 0;
+            }
+            HUD.UpdatePlayerStamina(PlayerStamina);
         }
     }
     IEnumerator StaminaTimer()
