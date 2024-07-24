@@ -38,7 +38,7 @@ public class BossHUDManager : MonoBehaviour
 
         PlayerHP.localScale = new Vector3(num / 100f, 1, 1);
 
-        Debug.Log("PH: " + num + " " + num / 100f);
+        //Debug.Log("PH: " + num + " " + num / 100f);
     }
     public void UpdateBossHP(float num)
     {
@@ -48,7 +48,7 @@ public class BossHUDManager : MonoBehaviour
 
         BossHP.localScale = new Vector3(num / 100f, 1, 1);
 
-        Debug.Log("BH: " + num + " " + num / 100f);
+        //Debug.Log("BH: " + num + " " + num / 100f);
     }
     public void UpdatePlayerStamina(float num)
     {
@@ -58,7 +58,7 @@ public class BossHUDManager : MonoBehaviour
 
         PlayerStamina.localScale = new Vector3(num / 100f, 1, 1);
 
-        Debug.Log("PS: " + num + " " + num / 100f);
+        //Debug.Log("PS: " + num + " " + num / 100f);
     }
     //Player Stuff
     public void StartDashCD()
