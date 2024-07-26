@@ -1,0 +1,1984 @@
+fileFormatVersion: 2
+guid: 51b09707836ad6f4f99493b19ddc12d0
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: AbandonScene
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 192
+      height: 108
+    spriteID: 0aa823d3a2265c0428358336ad165f71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: AbandonScene_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 120
+      width: 192
+      height: 108
+    spriteID: 86adb44c05c022d44a05c077dc1388aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 120}
+  - name: AbandonScene_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 236
+      width: 192
+      height: 108
+    spriteID: 74e0a28767ea04e4782f7154d9e2bdf7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 236}
+  - name: AbandonScene_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 352
+      width: 192
+      height: 108
+    spriteID: 19183923eda42c249bbbb8ed0391a701
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 352}
+  - name: AbandonScene_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 468
+      width: 192
+      height: 108
+    spriteID: d730b7f4023a7d041af04fb9ef6fad45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 468}
+  - name: AbandonScene_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 584
+      width: 192
+      height: 108
+    spriteID: 23b3850a9d983e542a2c94f25a894782
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 584}
+  - name: AbandonScene_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 700
+      width: 192
+      height: 108
+    spriteID: 2aaf3b801e8b48c49aa214bc1cd0fb60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 700}
+  - name: AbandonScene_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 816
+      width: 192
+      height: 108
+    spriteID: 5c6bca797f396e5438509fd7e9d85928
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 816}
+  - name: AbandonScene_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 932
+      width: 192
+      height: 108
+    spriteID: 2743487760667d64f8c717aeebb6b989
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 932}
+  - name: AbandonScene_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1048
+      width: 192
+      height: 108
+    spriteID: 9c7fd7e6bf456f04c9b380b081fe3d02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1048}
+  - name: AbandonScene_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1164
+      width: 192
+      height: 108
+    spriteID: a0348091f94f85445b77378cfc11d20f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1164}
+  - name: AbandonScene_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1280
+      width: 192
+      height: 108
+    spriteID: 9e1ea96ed4922624b9ca43d1b0646ac8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1280}
+  - name: AbandonScene_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1396
+      width: 192
+      height: 108
+    spriteID: 9e8ee5fa52ede6e4f9dfc4442712da69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1396}
+  - name: AbandonScene_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1512
+      width: 192
+      height: 108
+    spriteID: 5b2e85b2f64c56841a26b7ac809e214a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1512}
+  - name: AbandonScene_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1628
+      width: 192
+      height: 108
+    spriteID: ea82f3dc0d88ea7418a56f4c2fc76fdc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1628}
+  - name: AbandonScene_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1744
+      width: 192
+      height: 108
+    spriteID: 3a312e8a4bea4d44fbbc910b2501480b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1744}
+  - name: AbandonScene_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1860
+      width: 192
+      height: 108
+    spriteID: 8731e105063d5eb409b0806be5d76035
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1860}
+  - name: AbandonScene_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 4
+      width: 192
+      height: 108
+    spriteID: e51be63d7d51a4544a000e925eb1bdc7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 4}
+  - name: AbandonScene_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 120
+      width: 192
+      height: 108
+    spriteID: 082ddc4e1142a6a4fa458e561ec75012
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 120}
+  - name: AbandonScene_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 236
+      width: 192
+      height: 108
+    spriteID: 4425d8619847d41418bb5ea84a843466
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 236}
+  - name: AbandonScene_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 352
+      width: 192
+      height: 108
+    spriteID: 1113edd850dc1d84ba7cdde5f6f84577
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 352}
+  - name: AbandonScene_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 468
+      width: 192
+      height: 108
+    spriteID: 466856f898e214f4b9c0d7243f18b6f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 468}
+  - name: AbandonScene_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 584
+      width: 192
+      height: 108
+    spriteID: 1b7d622c87b8942458a70912e8461a5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 584}
+  - name: AbandonScene_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 700
+      width: 192
+      height: 108
+    spriteID: e9d85b18dd48e3841a3d07e60906cd71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 700}
+  - name: AbandonScene_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 816
+      width: 192
+      height: 108
+    spriteID: df18626a1a9b5bd458405091f2fb0749
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 816}
+  - name: AbandonScene_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 932
+      width: 192
+      height: 108
+    spriteID: 32ee829fb4658b24eb8e16f1f30bbb6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 932}
+  - name: AbandonScene_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 1048
+      width: 192
+      height: 108
+    spriteID: fb3cd3727ea2e444d8955f57cb4926af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 1048}
+  - name: AbandonScene_Frame_27
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 1164
+      width: 192
+      height: 108
+    spriteID: cc270a6ef45fea040bc7e912aaf8b9b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 1164}
+  - name: AbandonScene_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 1280
+      width: 192
+      height: 108
+    spriteID: 9f8b19268ad96ae429e0269c324648c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 1280}
+  - name: AbandonScene_Frame_29
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 1396
+      width: 192
+      height: 108
+    spriteID: 409f138712fecb74698e578144025e0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 1396}
+  - name: AbandonScene_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 1512
+      width: 192
+      height: 108
+    spriteID: 442f85048a172304f86845d7f2ff305f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 1512}
+  - name: AbandonScene_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 1628
+      width: 192
+      height: 108
+    spriteID: 1ae9dc0211d3b12418d2ade7986a5ace
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 1628}
+  - name: AbandonScene_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 1744
+      width: 192
+      height: 108
+    spriteID: 6740fe0b548a00d42ab402b3df0530a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 1744}
+  - name: AbandonScene_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 1860
+      width: 192
+      height: 108
+    spriteID: 636c8b553e0848440817a1831191f0bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 1860}
+  - name: AbandonScene_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 4
+      width: 192
+      height: 108
+    spriteID: c3e04006f957bfb42bfd05c7ea3fddb6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 4}
+  - name: AbandonScene_Frame_35
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 120
+      width: 192
+      height: 108
+    spriteID: e8a830eaf8600b84eb36649146f5c400
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 120}
+  - name: AbandonScene_Frame_36
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 236
+      width: 192
+      height: 108
+    spriteID: 19059b243cd1e4e4fb482ce3199ea136
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 236}
+  - name: AbandonScene_Frame_37
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 352
+      width: 192
+      height: 108
+    spriteID: 1261cd34bf5414e4da202a310d64131c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 352}
+  - name: AbandonScene_Frame_38
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 468
+      width: 192
+      height: 108
+    spriteID: 87f1f261f56606d4dba728dce944655f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 468}
+  - name: AbandonScene_Frame_39
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 584
+      width: 192
+      height: 108
+    spriteID: 4ea9361730c07b349b6718579f3e74c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 584}
+  - name: AbandonScene_Frame_40
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 700
+      width: 192
+      height: 108
+    spriteID: ddbd13862794790488f09728f2177a0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 700}
+  - name: AbandonScene_Frame_41
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 816
+      width: 192
+      height: 108
+    spriteID: 3fe8045432ab7944fa8cbf2c954f9068
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 816}
+  - name: AbandonScene_Frame_42
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 932
+      width: 192
+      height: 108
+    spriteID: 6b3e553abf1265a4ab986c01e5c9a309
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 932}
+  - name: AbandonScene_Frame_43
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 1048
+      width: 192
+      height: 108
+    spriteID: e039f79746905bb4cac4024eaef74557
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 1048}
+  - name: AbandonScene_Frame_44
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 1164
+      width: 192
+      height: 108
+    spriteID: bc71dee9962a05e42933f0f29826bae1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 1164}
+  - name: AbandonScene_Frame_45
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 1280
+      width: 192
+      height: 108
+    spriteID: eee7bdef99feaf345936c03540c8babd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 1280}
+  - name: AbandonScene_Frame_46
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 1396
+      width: 192
+      height: 108
+    spriteID: c006bd3f13f1f3f4a9929fb4cc4e6304
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 1396}
+  - name: AbandonScene_Frame_47
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 1512
+      width: 192
+      height: 108
+    spriteID: a3b4bd8c130ee804296f38515873a972
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 1512}
+  - name: AbandonScene_Frame_48
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 1628
+      width: 192
+      height: 108
+    spriteID: 5ec9caac9381a2244a2c6fb89aee2f96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 1628}
+  - name: AbandonScene_Frame_49
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 1744
+      width: 192
+      height: 108
+    spriteID: ba2349b046afd964294890320d478e6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 1744}
+  - name: AbandonScene_Frame_50
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 1860
+      width: 192
+      height: 108
+    spriteID: 45a88e7f70063f34c8ceee7accd32520
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 404, y: 1860}
+  - name: AbandonScene_Frame_51
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 4
+      width: 192
+      height: 108
+    spriteID: 0941e9274c8d08d4abc9011d2e463f01
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 4}
+  - name: AbandonScene_Frame_52
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 120
+      width: 192
+      height: 108
+    spriteID: 971884e35755386458ddf34839721c82
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 120}
+  - name: AbandonScene_Frame_53
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 236
+      width: 192
+      height: 108
+    spriteID: a22cdd4d6846db34ca2c1c2e29f3df1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 236}
+  - name: AbandonScene_Frame_54
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 352
+      width: 192
+      height: 108
+    spriteID: 9f0f7b478da4261409276db4d9a3a26a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 352}
+  - name: AbandonScene_Frame_55
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 468
+      width: 192
+      height: 108
+    spriteID: 1d04553caf83a184f92af7db55412119
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 468}
+  - name: AbandonScene_Frame_56
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 584
+      width: 192
+      height: 108
+    spriteID: 4ece39b9b69380247825d140ad60220f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 584}
+  - name: AbandonScene_Frame_57
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 700
+      width: 192
+      height: 108
+    spriteID: a23bff215c1b3fa4384888f26b917e97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 700}
+  - name: AbandonScene_Frame_58
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 816
+      width: 192
+      height: 108
+    spriteID: 0a15566b120051548be005f92b7345c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 816}
+  - name: AbandonScene_Frame_59
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 932
+      width: 192
+      height: 108
+    spriteID: f4ee8e8d97de0c840987e1c5c60704c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 932}
+  - name: AbandonScene_Frame_60
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 1048
+      width: 192
+      height: 108
+    spriteID: c94b67de6e7b39c41b9a199f4c25a33a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 1048}
+  - name: AbandonScene_Frame_61
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 1164
+      width: 192
+      height: 108
+    spriteID: aa9ac2a1d70183f488d7583888be210b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 1164}
+  - name: AbandonScene_Frame_62
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 1280
+      width: 192
+      height: 108
+    spriteID: 85d9cd6282672c8429ca14631324dfcd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 1280}
+  - name: AbandonScene_Frame_63
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 1396
+      width: 192
+      height: 108
+    spriteID: 48b6b98256404eb41aa05ac13a263f12
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 1396}
+  - name: AbandonScene_Frame_64
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 1512
+      width: 192
+      height: 108
+    spriteID: 3528cf545701706449c224fc71c42b4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 1512}
+  - name: AbandonScene_Frame_65
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 1628
+      width: 192
+      height: 108
+    spriteID: 28c60b2e4d8bb154daa8ee530e2477f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 1628}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -2139093937
+    name: AbandonScene
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: AbandonScene_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 0aa823d3a2265c0428358336ad165f71
+    - name: AbandonScene_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 86adb44c05c022d44a05c077dc1388aa
+    - name: AbandonScene_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 74e0a28767ea04e4782f7154d9e2bdf7
+    - name: AbandonScene_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 19183923eda42c249bbbb8ed0391a701
+    - name: AbandonScene_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: d730b7f4023a7d041af04fb9ef6fad45
+    - name: AbandonScene_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 23b3850a9d983e542a2c94f25a894782
+    - name: AbandonScene_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 2aaf3b801e8b48c49aa214bc1cd0fb60
+    - name: AbandonScene_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 5c6bca797f396e5438509fd7e9d85928
+    - name: AbandonScene_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 2743487760667d64f8c717aeebb6b989
+    - name: AbandonScene_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 9c7fd7e6bf456f04c9b380b081fe3d02
+    - name: AbandonScene_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: a0348091f94f85445b77378cfc11d20f
+    - name: AbandonScene_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 9e1ea96ed4922624b9ca43d1b0646ac8
+    - name: AbandonScene_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 9e8ee5fa52ede6e4f9dfc4442712da69
+    - name: AbandonScene_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 5b2e85b2f64c56841a26b7ac809e214a
+    - name: AbandonScene_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: ea82f3dc0d88ea7418a56f4c2fc76fdc
+    - name: AbandonScene_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 3a312e8a4bea4d44fbbc910b2501480b
+    - name: AbandonScene_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 8731e105063d5eb409b0806be5d76035
+    - name: AbandonScene_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: e51be63d7d51a4544a000e925eb1bdc7
+    - name: AbandonScene_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 082ddc4e1142a6a4fa458e561ec75012
+    - name: AbandonScene_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 4425d8619847d41418bb5ea84a843466
+    - name: AbandonScene_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 1113edd850dc1d84ba7cdde5f6f84577
+    - name: AbandonScene_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 466856f898e214f4b9c0d7243f18b6f7
+    - name: AbandonScene_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 1b7d622c87b8942458a70912e8461a5a
+    - name: AbandonScene_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: e9d85b18dd48e3841a3d07e60906cd71
+    - name: AbandonScene_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: df18626a1a9b5bd458405091f2fb0749
+    - name: AbandonScene_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 32ee829fb4658b24eb8e16f1f30bbb6b
+    - name: AbandonScene_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: fb3cd3727ea2e444d8955f57cb4926af
+    - name: AbandonScene_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: cc270a6ef45fea040bc7e912aaf8b9b7
+    - name: AbandonScene_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 9f8b19268ad96ae429e0269c324648c0
+    - name: AbandonScene_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 409f138712fecb74698e578144025e0f
+    - name: AbandonScene_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 442f85048a172304f86845d7f2ff305f
+    - name: AbandonScene_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 1ae9dc0211d3b12418d2ade7986a5ace
+    - name: AbandonScene_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 6740fe0b548a00d42ab402b3df0530a1
+    - name: AbandonScene_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 636c8b553e0848440817a1831191f0bc
+    - name: AbandonScene_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: c3e04006f957bfb42bfd05c7ea3fddb6
+    - name: AbandonScene_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: e8a830eaf8600b84eb36649146f5c400
+    - name: AbandonScene_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 19059b243cd1e4e4fb482ce3199ea136
+    - name: AbandonScene_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 1261cd34bf5414e4da202a310d64131c
+    - name: AbandonScene_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 87f1f261f56606d4dba728dce944655f
+    - name: AbandonScene_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 4ea9361730c07b349b6718579f3e74c1
+    - name: AbandonScene_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: ddbd13862794790488f09728f2177a0f
+    - name: AbandonScene_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 3fe8045432ab7944fa8cbf2c954f9068
+    - name: AbandonScene_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 6b3e553abf1265a4ab986c01e5c9a309
+    - name: AbandonScene_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: e039f79746905bb4cac4024eaef74557
+    - name: AbandonScene_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: bc71dee9962a05e42933f0f29826bae1
+    - name: AbandonScene_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: eee7bdef99feaf345936c03540c8babd
+    - name: AbandonScene_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: c006bd3f13f1f3f4a9929fb4cc4e6304
+    - name: AbandonScene_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: a3b4bd8c130ee804296f38515873a972
+    - name: AbandonScene_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 5ec9caac9381a2244a2c6fb89aee2f96
+    - name: AbandonScene_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: ba2349b046afd964294890320d478e6c
+    - name: AbandonScene_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 45a88e7f70063f34c8ceee7accd32520
+    - name: AbandonScene_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 0941e9274c8d08d4abc9011d2e463f01
+    - name: AbandonScene_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 971884e35755386458ddf34839721c82
+    - name: AbandonScene_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: a22cdd4d6846db34ca2c1c2e29f3df1a
+    - name: AbandonScene_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 9f0f7b478da4261409276db4d9a3a26a
+    - name: AbandonScene_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 1d04553caf83a184f92af7db55412119
+    - name: AbandonScene_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 4ece39b9b69380247825d140ad60220f
+    - name: AbandonScene_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: a23bff215c1b3fa4384888f26b917e97
+    - name: AbandonScene_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 0a15566b120051548be005f92b7345c8
+    - name: AbandonScene_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: f4ee8e8d97de0c840987e1c5c60704c8
+    - name: AbandonScene_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: c94b67de6e7b39c41b9a199f4c25a33a
+    - name: AbandonScene_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: aa9ac2a1d70183f488d7583888be210b
+    - name: AbandonScene_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 85d9cd6282672c8429ca14631324dfcd
+    - name: AbandonScene_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 48b6b98256404eb41aa05ac13a263f12
+    - name: AbandonScene_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 3528cf545701706449c224fc71c42b4f
+    - name: AbandonScene_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 28c60b2e4d8bb154daa8ee530e2477f8
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 192, y: 108}

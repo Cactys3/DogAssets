@@ -14,7 +14,7 @@ public class ChangeToScene : MonoBehaviour
             ChangeScene();
         }
     }
-    public void ChangeScene()
+    [SerializeField] public void ChangeScene()
     {
         switch (Scene)
         {
@@ -71,6 +71,15 @@ public class ChangeToScene : MonoBehaviour
             case SceneName.LoadInk:
                 SceneManager.LoadScene("Load Managers");
                 break;
+            case SceneName.Ending1:
+                SceneManager.LoadScene("Ending2");
+                break;
+            case SceneName.Ending2:
+                SceneManager.LoadScene("Ending2");
+                break;
+            case SceneName.Boss:
+                SceneManager.LoadScene("boss");
+                break;
             default:
                 Debug.LogError("ChangeToScene on object: " + this.gameObject.name + ", is not setup properly");
                 break;
@@ -93,5 +102,8 @@ public enum SceneName
     Office,
     Bathroom1,
     DemoEnd,
-    LoadInk
+    LoadInk,
+    Ending1,
+    Ending2,
+    Boss
 };

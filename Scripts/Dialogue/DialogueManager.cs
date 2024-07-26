@@ -8,6 +8,7 @@ using UnityEngine;
 using System.Runtime.CompilerServices;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 //TODO: gave error, i dont know if i need this: using Ink.UnityIntegration;
 
 public class DialogueManager : MonoBehaviour
@@ -38,14 +39,17 @@ public class DialogueManager : MonoBehaviour
     private string defaultTypingSound = "default";
     private string currentTypingSound;
     //Scenes
-    private string mudScene = "Mud Room";
-    private string kitchenScene = "Kitchen Dining Room";
-    private string bathroomScene = "Bathroom 1";
-    private string officeScene = "Office Room";
-    private string deckScene = "Deck";
-    private string livingScene = "Living Room";
-    private string dognipScene = "DogNip";
-    private string bossScene = "Final Boss";
+    private const string mudScene = "Mud Room";
+    private const string kitchenScene = "Kitchen Dining Room";
+    private const string bathroomScene = "Bathroom 1";
+    private const string officeScene = "Office Room";
+    private const string deckScene = "Deck";
+    private const string livingScene = "Living Room";
+    private const string dognipScene = "DogNip";
+    private const string bossScene = "Final Boss";
+    private const string ending1Scene = "Ending1";
+    private const string ending2Scene = "Ending2";
+    private const string endchoiceScene = "EndChoice";
 
     private Coroutine displayLineCoroutine;
     private bool canContinueToNextLine = false;
@@ -88,7 +92,10 @@ public class DialogueManager : MonoBehaviour
         }
         instance = this;
     }
-
+    private void Start()
+    {
+        SetVariables();
+    }
     public void SetVariables()
     {
        // dialoguePanel = GameObject.FindGameObjectWithTag("dpanel");
@@ -102,18 +109,13 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
         choicesText = new TextMeshProUGUI[choices.Length];
         portraitClips = portraitAnimator.runtimeAnimatorController.animationClips;
+        Debug.Log(portraitClips.ToString());
         int index = 0;
         foreach (GameObject choice in choices)
         {
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
-    }
-    private void Start()
-    {
-        SetVariables();
-
-        
     }
     private void Update()
     {
@@ -453,12 +455,19 @@ public class DialogueManager : MonoBehaviour
                         break;
                     case IMAGE_TAG:
                         bool isValidPortraitName = false;
-                        foreach (AnimationClip a in portraitClips)
+                        if (!portraitClips.IsUnityNull())
                         {
-                            if (a.name.Equals(tagValue))
+                            foreach (AnimationClip a in portraitClips)
                             {
-                                isValidPortraitName = true;
+                                if (a.name.Equals(tagValue))
+                                {
+                                    isValidPortraitName = true;
+                                }
                             }
+                        }
+                        else
+                        {
+                            Debug.LogWarning("PortraitClips is Unity Null again...");
                         }
                         if (isValidPortraitName)
                         {
@@ -510,6 +519,15 @@ public class DialogueManager : MonoBehaviour
                 break;
             case "boss":
                 SceneManager.LoadScene(bossScene);
+                break;
+            case "end1":
+                SceneManager.LoadScene(ending1Scene);
+                break;
+            case "end2":
+                SceneManager.LoadScene(ending2Scene);
+                break;
+            case "endchoice":
+                SceneManager.LoadScene(endchoiceScene);
                 break;
             default:
                 int value = -99;

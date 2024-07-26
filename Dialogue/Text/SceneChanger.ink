@@ -39,9 +39,23 @@ Go to... #typingspeed:0
 *[Boss]
 #scene:boss
 ->END
+*[Next]
+->Six
+
+===Six===
+Go to... #typingspeed:0
+
+*[Ending1]
+#scene:end1
+->END
+*[Ending2]
+#scene:end2
+->END
+*[End Choice]
+#scene:endchoice
+->END
 *[Finish]
 ->END
-
 
 ===third===
 obtain item...

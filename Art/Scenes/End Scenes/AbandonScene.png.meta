@@ -1,0 +1,1605 @@
+fileFormatVersion: 2
+guid: be364da65e3519849b08bbf0243d3f08
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AbandonScene_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757a097665e5c8049b7c066aa9ba0b25
+      internalID: 1903886522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f454e330fd8ef664fa71a2a0bf586ad4
+      internalID: -656086180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dad26e1f3368a45ad71194d2f94690
+      internalID: -991178160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbba87a674a8cd442a927f8fd95485ba
+      internalID: 752391215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdae9fd767b9e154ea1cc033419f4ffd
+      internalID: -1111737961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946c22c998238ca4aa5a7bb87ba69307
+      internalID: 32286041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1343cf97bc20121498e37f371d62b0a5
+      internalID: -2066028134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c073459e566836a45968ab14f8fa454e
+      internalID: -1119247233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_8
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9644201573960f44a8ff249b5af27b02
+      internalID: 90203541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_9
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0c619e8f656504fb5f7fac681c4ef8
+      internalID: -711839215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c78dae07d5857a428cefa713d5a3969
+      internalID: 432822638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_11
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6cc10c6c7989748b2c5f1c7f83e89d
+      internalID: -1898484798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_12
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9e636c845b36849af0dac81790de21
+      internalID: -1152787608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_13
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988b9e549c7d4c847a9d4f23943a9ae9
+      internalID: -1045765402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_14
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeb843c4f2f5884c9ae83a0ec74750f
+      internalID: -1294305943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_15
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a052f25af65e17429a008f552a2ff84
+      internalID: 403540440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_16
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dcb17de444137c4d9a937f7c734108a
+      internalID: -1044095757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_17
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a2abf35bdddc3459d30b60fe80a563
+      internalID: 605384447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_18
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7705cd94942fc449dc3276395fcd5f
+      internalID: 728885683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_19
+      rect:
+        serializedVersion: 2
+        x: 3648
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e95ff14737c88c41bdd255dca488ef7
+      internalID: 389284815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_20
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7332fb8622da54d92977bfbf6345d9
+      internalID: -424411857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_21
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9f0adb16c64c94d8135396dbb4ca42
+      internalID: -300441626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_22
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12a3cdf4eeffb94dac9c4ee53f4b763
+      internalID: 40359134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_23
+      rect:
+        serializedVersion: 2
+        x: 4416
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec37703311de4dc438ed0e3db7a7147f
+      internalID: 654486691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_24
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e12686d0d1cd14d86d4983abcdd7b9
+      internalID: 1792708002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_25
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a6cbf4359fc7b419d3d0be83518bb8
+      internalID: 1962605222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_26
+      rect:
+        serializedVersion: 2
+        x: 4992
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235cc8e9f5e712c41b3a1bd56328957c
+      internalID: 16261718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_27
+      rect:
+        serializedVersion: 2
+        x: 5184
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022b4adda3b41cf46bd9433d54e12a8e
+      internalID: -1313711023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_28
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9d4a7ebcfd42342bafb0a437061ddb
+      internalID: 1518210719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_29
+      rect:
+        serializedVersion: 2
+        x: 5568
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8464bc4965ea1b44ab13d8a8b93aedf0
+      internalID: -1367709641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_30
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8cde230dbbe0645bdb1e94063a5f40
+      internalID: -896878703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_31
+      rect:
+        serializedVersion: 2
+        x: 5952
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac91c57c66a1c645bae565d223beb73
+      internalID: 600471373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_32
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0509f52c5252ab04a8e8a25b6fd42bc5
+      internalID: 223214345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_33
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230a554288296ad45b90c1f97a321f4c
+      internalID: 86057412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_34
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632a997961e1c3d4ca8886d4362797a2
+      internalID: 458489015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_35
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1656e72ceb9674db8c5c866da2f43b
+      internalID: 342812842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_36
+      rect:
+        serializedVersion: 2
+        x: 6912
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e19223d0d691084b80898546714ac49
+      internalID: 1044097436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_37
+      rect:
+        serializedVersion: 2
+        x: 7104
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c185427b1643e014e95233e28ec45d48
+      internalID: 611393827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_38
+      rect:
+        serializedVersion: 2
+        x: 7296
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5790d7ea514c13942a11827dde37fe8b
+      internalID: 1110493651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_39
+      rect:
+        serializedVersion: 2
+        x: 7488
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724a9f9354e52a84d8f4f10b254dcc9e
+      internalID: 1869191805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_40
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5acba78206ebb14da81667fc49b68d2
+      internalID: 2010266086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_41
+      rect:
+        serializedVersion: 2
+        x: 7872
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39b4b563f774434cb0004a192b34b7a
+      internalID: 230815497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_42
+      rect:
+        serializedVersion: 2
+        x: 8064
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83713bbe699e6e64a9586a77fec9ae75
+      internalID: 803714195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_43
+      rect:
+        serializedVersion: 2
+        x: 8256
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61609b403b8008c4ba5e43d9bb55b3d8
+      internalID: -722010431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_44
+      rect:
+        serializedVersion: 2
+        x: 8448
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a091fab9b303748abb9872580f2ac6
+      internalID: 553799142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_45
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b043db203cda57b4cbce27639a83e003
+      internalID: -247256119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_46
+      rect:
+        serializedVersion: 2
+        x: 8832
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6e3c819741c024cbe727e4b7ad8d85
+      internalID: -1064227693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_47
+      rect:
+        serializedVersion: 2
+        x: 9024
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444c2cf82e3dd1d45a20ff12d4b95e9d
+      internalID: 1280531506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_48
+      rect:
+        serializedVersion: 2
+        x: 9216
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c2e0f4ad2ad2f4ea6cfc91d851e507
+      internalID: 683339149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_49
+      rect:
+        serializedVersion: 2
+        x: 9408
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d800d18b997714a90b5c4bbcc26a33
+      internalID: 293688429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_50
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785589fa5af6f5a4a8a92de5754ca851
+      internalID: -186209493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_51
+      rect:
+        serializedVersion: 2
+        x: 9792
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175f5adc0864ff046b3df862df48295b
+      internalID: -985429090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_52
+      rect:
+        serializedVersion: 2
+        x: 9984
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0872021e236e66848bb5fe8449b834d9
+      internalID: -1103309922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_53
+      rect:
+        serializedVersion: 2
+        x: 10176
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be10e2bcf0f11ef4cb3a2fab603df7d0
+      internalID: -1127569238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_54
+      rect:
+        serializedVersion: 2
+        x: 10368
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc66d339d19a0447a39804dd43ebdac
+      internalID: -1274169790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_55
+      rect:
+        serializedVersion: 2
+        x: 10560
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d683eed67e8cd28488fb0f2550d54198
+      internalID: 278259459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_56
+      rect:
+        serializedVersion: 2
+        x: 10752
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1255c10476155e14e947faef7ab533d2
+      internalID: 351568395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_57
+      rect:
+        serializedVersion: 2
+        x: 10944
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0deebf7726fce8e4d875f791cb4d7484
+      internalID: 1378742567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_58
+      rect:
+        serializedVersion: 2
+        x: 11136
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8f64f5aea65eb41ac3da03fb702a80
+      internalID: -1315605121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_59
+      rect:
+        serializedVersion: 2
+        x: 11328
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6af9a247816a6409fd7c13cbd1de13
+      internalID: -306495585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_60
+      rect:
+        serializedVersion: 2
+        x: 11520
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce28a66da70d7144b930bf2285e00719
+      internalID: 1999103625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_61
+      rect:
+        serializedVersion: 2
+        x: 11712
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b723c60ab2a6d4fb43fd9acde11ebe
+      internalID: 1894154876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_62
+      rect:
+        serializedVersion: 2
+        x: 11904
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f38254ac1261fa46ac6da88dcc30b2d
+      internalID: -1344048089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_63
+      rect:
+        serializedVersion: 2
+        x: 12096
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46caa9480f47b7b4c9c1b97788dae844
+      internalID: 1135844832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_64
+      rect:
+        serializedVersion: 2
+        x: 12288
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992181dfe09acb14aaa0c5abdba0313f
+      internalID: 146667932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbandonScene_65
+      rect:
+        serializedVersion: 2
+        x: 12480
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1771a771f87c5af4bbd67757798d2f77
+      internalID: 1176152810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AbandonScene_0: 1903886522
+      AbandonScene_1: -656086180
+      AbandonScene_10: 432822638
+      AbandonScene_11: -1898484798
+      AbandonScene_12: -1152787608
+      AbandonScene_13: -1045765402
+      AbandonScene_14: -1294305943
+      AbandonScene_15: 403540440
+      AbandonScene_16: -1044095757
+      AbandonScene_17: 605384447
+      AbandonScene_18: 728885683
+      AbandonScene_19: 389284815
+      AbandonScene_2: -991178160
+      AbandonScene_20: -424411857
+      AbandonScene_21: -300441626
+      AbandonScene_22: 40359134
+      AbandonScene_23: 654486691
+      AbandonScene_24: 1792708002
+      AbandonScene_25: 1962605222
+      AbandonScene_26: 16261718
+      AbandonScene_27: -1313711023
+      AbandonScene_28: 1518210719
+      AbandonScene_29: -1367709641
+      AbandonScene_3: 752391215
+      AbandonScene_30: -896878703
+      AbandonScene_31: 600471373
+      AbandonScene_32: 223214345
+      AbandonScene_33: 86057412
+      AbandonScene_34: 458489015
+      AbandonScene_35: 342812842
+      AbandonScene_36: 1044097436
+      AbandonScene_37: 611393827
+      AbandonScene_38: 1110493651
+      AbandonScene_39: 1869191805
+      AbandonScene_4: -1111737961
+      AbandonScene_40: 2010266086
+      AbandonScene_41: 230815497
+      AbandonScene_42: 803714195
+      AbandonScene_43: -722010431
+      AbandonScene_44: 553799142
+      AbandonScene_45: -247256119
+      AbandonScene_46: -1064227693
+      AbandonScene_47: 1280531506
+      AbandonScene_48: 683339149
+      AbandonScene_49: 293688429
+      AbandonScene_5: 32286041
+      AbandonScene_50: -186209493
+      AbandonScene_51: -985429090
+      AbandonScene_52: -1103309922
+      AbandonScene_53: -1127569238
+      AbandonScene_54: -1274169790
+      AbandonScene_55: 278259459
+      AbandonScene_56: 351568395
+      AbandonScene_57: 1378742567
+      AbandonScene_58: -1315605121
+      AbandonScene_59: -306495585
+      AbandonScene_6: -2066028134
+      AbandonScene_60: 1999103625
+      AbandonScene_61: 1894154876
+      AbandonScene_62: -1344048089
+      AbandonScene_63: 1135844832
+      AbandonScene_64: 146667932
+      AbandonScene_65: 1176152810
+      AbandonScene_7: -1119247233
+      AbandonScene_8: 90203541
+      AbandonScene_9: -711839215
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
