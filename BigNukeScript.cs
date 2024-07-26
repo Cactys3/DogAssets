@@ -17,9 +17,10 @@ public class BigNukeScript : MonoBehaviour
     private float InitialDistance;
     private void OnEnable()
     {
+        Anim.enabled = false;
         Text.SetActive(false);
         TowardsBossSpeed = 20f;
-        TowardsPlayerSpeed = 20f;
+        TowardsPlayerSpeed = 8f;
         TowardsPlayer = true;
         TowardsBoss = true;
         Anim.StopPlayback();
@@ -27,11 +28,11 @@ public class BigNukeScript : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(TowardsPlayer + " " + TowardsBoss);
 
-        float CurrentDistance = Vector3.Distance(Player.position, transform.position);
+        float CurrentDistance = 0;
         if (TowardsPlayer)
         {
+            CurrentDistance = Vector3.Distance(Player.position, transform.position);
             PointTowards(Player.position);
             if (CurrentDistance < 1)
             {
@@ -72,21 +73,29 @@ public class BigNukeScript : MonoBehaviour
         }
         else if (TowardsBoss)
         {
+            CurrentDistance = Vector3.Distance(Boss.position, transform.position);
             PointTowards(Boss.position);
-            if (CurrentDistance < 1)
+            if (CurrentDistance < 0.2f)
             {
                 TowardsBoss = false;
-                Anim.Play("Exploding");
+                Anim.enabled = true;
+                Anim.Play("Explosion");
             }
             else
             {
                 transform.position += (Boss.position - transform.position).normalized * TowardsBossSpeed * Time.deltaTime;
             }
         }
+
+        Debug.Log(TowardsPlayer + " " + TowardsBoss + " " + CurrentDistance);
     }
     public bool Done()
     {
         return (!TowardsBoss && !TowardsPlayer);
+    }
+    public bool AtPlayer()
+    {
+        return Vector3.Distance(Player.position, transform.position) < 1;
     }
     private void PointTowards(Vector3 Object)
     {

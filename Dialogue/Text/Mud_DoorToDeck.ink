@@ -1,6 +1,6 @@
 INCLUDE Globals.ink
 
-Go Through Door?
+Go to the balcony?
  * [Go]
 { unlocked_deck:
  -> go.unlocked //only can go through this door if unlocked deck

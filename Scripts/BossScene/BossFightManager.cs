@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class BossFightManager : MonoBehaviour
 {
     [SerializeField] private int PlayerHP;
-    [SerializeField] private int BossHP;
+    [SerializeField] private float BossHP;
     private int BasicEnemyDamage;
     private int BossThrustDamage;
     private int BossWaterfowlDamage;
@@ -52,15 +52,15 @@ public class BossFightManager : MonoBehaviour
         PlayerStaminaRegen = 20f;
         PlayerHP = 100;
         BossHP = 100;
-        PlayerThrustDamage = 20;
+        PlayerThrustDamage = 5;
         PlayerSpinDamage = 10;
         PlayerThrustStaminaCost = 10;
         PlayerSpinStaminaCost = 25;
-        BossThrustDamage = 10;
-        BossWaterfowlDamage = 10;
-        BossWeaponDamage = 10;
+        BossThrustDamage = 65;
+        BossWaterfowlDamage = 30;
+        BossWeaponDamage = 20;
         BossNukeDamage = 100;
-        BasicEnemyDamage = 10;
+        BasicEnemyDamage = 20;
         MiniNukeDamage = 35;
         MapSlashDamage = 45;
         PhantomDamage = 45;
@@ -93,6 +93,7 @@ public class BossFightManager : MonoBehaviour
             }
             if (PhaseNum == 2)
             {
+                Lose(); //temporary solution to just reset level on phase 2
                 StopAllCoroutines();
                 StartCoroutine("PhaseTwo");
             }
@@ -104,14 +105,15 @@ public class BossFightManager : MonoBehaviour
         }
         if (DrainBossHP)
         {
-            if (((float)BossHP) - (5f * Time.deltaTime) < 0)
+            if (BossHP - (170f * Time.deltaTime) < 0)
             {
                 DrainBossHP = false;
                 HUD.UpdateBossHP(0);
             }
             else
             {
-                HUD.UpdateBossHP(((float)BossHP) - (5f * Time.deltaTime));
+                BossHP = BossHP - (170f * Time.deltaTime);
+                HUD.UpdateBossHP(BossHP);
             }
         }
     }
@@ -166,7 +168,7 @@ public class BossFightManager : MonoBehaviour
         {
             return; //can't hit boss during phase 2!
         }
-        int CurrentHP = BossHP;
+        float CurrentHP = BossHP;
         switch (name)
         {
             case "PlayerThrust":
@@ -256,7 +258,6 @@ public class BossFightManager : MonoBehaviour
     }
     IEnumerator PhaseTwo()
     {
-        /*
         yield return new WaitForSeconds(2);
         boss.PlayPoint();
         //TODO: mininukes first
@@ -295,9 +296,9 @@ public class BossFightManager : MonoBehaviour
         //TODO: another round of mininukes but faster spawnrate
         yield return new WaitForSeconds(2);
         boss.PlayPoint();
-        MiniNukeSpawn.Delay = 0.9f;
+        MiniNukeSpawn.Delay = 0.6f;
         MiniNukeSpawn.StartSpawning();
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(15f);
         MiniNukeSpawn.StopSpawning();
         yield return new WaitForSeconds(7f);
         BossHP = 85;
@@ -318,12 +319,11 @@ public class BossFightManager : MonoBehaviour
         }
         yield return new WaitForSeconds(5f);
 
-        **/
+        
         BossHP = 100;
         HUD.UpdateBossHP(100);
 
         //TODO: change to bignuke scene
-        player.DisableEverything();
         boss.DisableEverything(2);
 
         //boss creates the bignuke visual
@@ -338,13 +338,18 @@ public class BossFightManager : MonoBehaviour
         boss.anim.Play(BossAIScript.Static2Name);
 
         //make the bignuke rush to the player and then stop time and player movement
-        
+        yield return new WaitUntil(() => BigNuke.AtPlayer());
+
         player.DisableEverything();
+        player.body.angularVelocity = 0;
+        player.transform.rotation = Quaternion.Euler(0, 0, -90 + Mathf.Atan2((boss.transform.position - player.transform.position).normalized.y, (boss.transform.position - player.transform.position).normalized.x) * Mathf.Rad2Deg);
 
+        yield return new WaitUntil(() => BigNuke.Done());
         DrainBossHP = true;
+        boss.FadeOut();
 
-        yield return new WaitUntil(() => BossHP == 0);
-        yield return new WaitForSeconds(3);
+        yield return new WaitUntil(() => BossHP < 2);
+        yield return new WaitForSeconds(6);
 
         SceneChanger.ChangeScene();
     }
