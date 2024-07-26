@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,16 +8,19 @@ public class BossFightManager : MonoBehaviour
 {
     [SerializeField] private int PlayerHP;
     [SerializeField] private int BossHP;
-    [SerializeField] private int BasicEnemyDamage;
-    [SerializeField] private int BossThrustDamage;
-    [SerializeField] private int BossWaterfowlDamage;
-    [SerializeField] private int BossNukeDamage;
-    [SerializeField] private int BossWeaponDamage;
-    [SerializeField] private int PlayerThrustDamage;
-    [SerializeField] private int PlayerSpinDamage;
-    [SerializeField] public int PlayerThrustStaminaCost;
-    [SerializeField] public int PlayerSpinStaminaCost;
-    [SerializeField] public float PlayerStaminaRegen;
+    private int BasicEnemyDamage;
+    private int BossThrustDamage;
+    private int BossWaterfowlDamage;
+    private int BossNukeDamage;
+    private int BossWeaponDamage;
+    private int PlayerThrustDamage;
+    private int PlayerSpinDamage;
+    private int MapSlashDamage;
+    private int PhantomDamage;
+    private int MiniNukeDamage;
+    public int PlayerThrustStaminaCost;
+    public int PlayerSpinStaminaCost;
+    public float PlayerStaminaRegen;
     [SerializeField] private BossHUDManager HUD;
     [SerializeField] private BossAIScript boss;
     [SerializeField] private BossPlayerMovement player;
@@ -25,14 +29,21 @@ public class BossFightManager : MonoBehaviour
     [SerializeField] public int PhaseNum;
     [SerializeField] private GameObject PhaseTransitionExplosion;
     [SerializeField] private GameObject BounceCollider;
+    [SerializeField] private MiniNukeSpawner MiniNukeSpawn;
+    [SerializeField] private GameObject MapSlashObject;
+    [SerializeField] private GameObject PhantomObject;
+    [SerializeField] private BigNukeScript BigNuke;
     private bool StaminaRegening;
-
     private bool won;
+    private bool DrainBossHP;
+
 
     private float Stopwatch;
 
+    private bool PhaseTwoPlayedBefore;
     private void Start()
     {
+        DrainBossHP = false;
         BounceCollider.SetActive(false);
         won = false;
         PhaseTransitionExplosion.SetActive(false);
@@ -50,9 +61,18 @@ public class BossFightManager : MonoBehaviour
         BossWeaponDamage = 10;
         BossNukeDamage = 100;
         BasicEnemyDamage = 10;
+        MiniNukeDamage = 35;
+        MapSlashDamage = 45;
+        PhantomDamage = 45;
+        PhaseTwoPlayedBefore = false;
     }
     private void Update()
     {
+        if (Mathf.Abs(player.transform.position.x) > 10 || Mathf.Abs(player.transform.position.y) > 10)
+        {
+            player.transform.position = new Vector3(0, -2, 0);
+        }
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             BossHP = 0;
@@ -67,20 +87,41 @@ public class BossFightManager : MonoBehaviour
         }
         if (PlayerHP <= 0)
         {
-            Lose();
+            if (PhaseNum == 1)
+            {
+                Lose();
+            }
+            if (PhaseNum == 2)
+            {
+                StopAllCoroutines();
+                StartCoroutine("PhaseTwo");
+            }
         }
         if (PlayerStamina < 100 && StaminaRegening)
         {
             PlayerStamina += PlayerStaminaRegen * Time.deltaTime;
             HUD.UpdatePlayerStamina(PlayerStamina);
         }
+        if (DrainBossHP)
+        {
+            if (((float)BossHP) - (5f * Time.deltaTime) < 0)
+            {
+                DrainBossHP = false;
+                HUD.UpdateBossHP(0);
+            }
+            else
+            {
+                HUD.UpdateBossHP(((float)BossHP) - (5f * Time.deltaTime));
+            }
+        }
     }
     public bool HasStamina(int cost)
     {
         return (PlayerStamina > cost);
     }
-    public void PlayerHit(string name)
+    public void PlayerHit(Collider2D collision)
     {
+        string name = collision.tag;
         int CurrentHP = PlayerHP;
         switch(name)
         {
@@ -99,6 +140,16 @@ public class BossFightManager : MonoBehaviour
             case "Enemy":
                 PlayerHP -= BasicEnemyDamage;
                 break;
+            case "MapSlash":
+                PlayerHP -= MapSlashDamage;
+                break;
+            case "Phantom":
+                PlayerHP -= PhantomDamage;
+                break;
+            case "MiniNuke":
+                PlayerHP -= MiniNukeDamage;
+                player.body.AddForce((player.transform.position - collision.transform.position).normalized * 700);
+                break;
         }
         if (CurrentHP != PlayerHP)
         {
@@ -111,6 +162,10 @@ public class BossFightManager : MonoBehaviour
     }
     public void BossHit(string name)
     {
+        if (PhaseNum == 2)
+        {
+            return; //can't hit boss during phase 2!
+        }
         int CurrentHP = BossHP;
         switch (name)
         {
@@ -141,7 +196,7 @@ public class BossFightManager : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         Time.timeScale = 0f;
-        boss.DisableEverything();
+        boss.DisableEverything(1);
         player.DisableEverything();
         player.SetDrag(0, 0);
         BounceCollider.SetActive(true);
@@ -160,25 +215,138 @@ public class BossFightManager : MonoBehaviour
 
         
 
-        StartCoroutine("StartPhaseTwo");
+        StartCoroutine("SetupPhaseTwo");
     }
-    IEnumerator StartPhaseTwo()
+    IEnumerator SetupPhaseTwo()
     {
-        boss.SetupPhaseTwo();
-        player.SetupPhase2();
-        yield return new WaitUntil(() => (player.PlayerInPosition() && boss.BossInPosition()));
-        //TODO: go to phase 2
+        if (PhaseTwoPlayedBefore) //reset to phase 2 start
+        {
+            boss.DisableEverything(1);
+            player.DisableEverything();
+            player.transform.position = new Vector3(0, -2, 0);
+            player.transform.rotation = Quaternion.identity; // what does this do ?
+            boss.anim.Play("Blank");
+            boss.transform.position = boss.PhaseTwoPosition;
+            boss.transform.rotation = Quaternion.identity;
+            BossHP = 5;
+            HUD.UpdateBossHP(5);
+            PlayerHP = 100;
+            HUD.UpdatePlayerHP(100);
+        }
+        else //continue 
+        {
+            PhaseTwoPlayedBefore = true;
+            boss.FadeOut();
+            player.SetupPhase2();
+            yield return new WaitUntil(() => (player.PlayerInPosition() && boss.BossInPosition()));
+        }
+
+        //start phase 2:
         boss.PhaseTwoAnimation();
         yield return new WaitForSeconds(0.1f);
-        yield return new WaitUntil(() => boss.AnimDone("animation"));
+        yield return new WaitUntil(() => boss.AnimDone("Transition"));
 
         PlayerHP = 100;
-        BossHP = 10;
+        HUD.UpdatePlayerHP(100);
         PhaseNum = 2;
         won = false;
         boss.EnablePhaseTwo();
         player.EnableEverything();
+        StartCoroutine("PhaseTwo");
+    }
+    IEnumerator PhaseTwo()
+    {
+        /*
+        yield return new WaitForSeconds(2);
+        boss.PlayPoint();
+        //TODO: mininukes first
+        MiniNukeSpawn.Delay = 0.9f;
+        MiniNukeSpawn.StartSpawning();
+        yield return new WaitForSeconds(10f);
+        MiniNukeSpawn.StopSpawning();
+        yield return new WaitForSeconds(7f);
+        BossHP = 30;
+        HUD.UpdateBossHP(30);
 
+        yield return new WaitForSeconds(2);
+        boss.PlayPoint();
+        //TODO: mapslash second
+        foreach (MapSlashScript p in MapSlashObject.GetComponentsInChildren<MapSlashScript>())
+        {
+            p.Play();
+            yield return new WaitForSeconds(1f);
+        }
+        yield return new WaitForSeconds(5f);
+        BossHP = 55;
+        HUD.UpdateBossHP(55);
+
+
+        yield return new WaitForSeconds(2);
+        boss.PlayPoint();
+        //TODO: phantoms third
+        foreach (PhantomScript p in PhantomObject.GetComponentsInChildren<PhantomScript>())
+        {
+            p.Delay = 0.6f;
+            p.Play();
+        }
+        BossHP = 70;
+        HUD.UpdateBossHP(70);
+
+        //TODO: another round of mininukes but faster spawnrate
+        yield return new WaitForSeconds(2);
+        boss.PlayPoint();
+        MiniNukeSpawn.Delay = 0.9f;
+        MiniNukeSpawn.StartSpawning();
+        yield return new WaitForSeconds(10f);
+        MiniNukeSpawn.StopSpawning();
+        yield return new WaitForSeconds(7f);
+        BossHP = 85;
+        HUD.UpdateBossHP(85);
+
+        //TODO: now mapslash and phantoms at the same time
+        yield return new WaitForSeconds(1);
+        boss.PlayPoint();
+        foreach (PhantomScript p in PhantomObject.GetComponentsInChildren<PhantomScript>())
+        {
+            p.Delay = 0.6f;
+            p.Play();
+        }
+        foreach (MapSlashScript p in MapSlashObject.GetComponentsInChildren<MapSlashScript>())
+        {
+            p.Play();
+            yield return new WaitForSeconds(1f);
+        }
+        yield return new WaitForSeconds(5f);
+
+        **/
+        BossHP = 100;
+        HUD.UpdateBossHP(100);
+
+        //TODO: change to bignuke scene
+        player.DisableEverything();
+        boss.DisableEverything(2);
+
+        //boss creates the bignuke visual
+        boss.PlayBigNuke();
+
+        yield return new WaitUntil(() => boss.DoneWithBigNukeBool);
+
+        //set the actual bignuke visual active and remove it from boss's sprite
+        BigNuke.transform.position = boss.transform.position + new Vector3(0.2502f, -0.628f, 0);
+        BigNuke.gameObject.SetActive(true);
+        
+        boss.anim.Play(BossAIScript.Static2Name);
+
+        //make the bignuke rush to the player and then stop time and player movement
+        
+        player.DisableEverything();
+
+        DrainBossHP = true;
+
+        yield return new WaitUntil(() => BossHP == 0);
+        yield return new WaitForSeconds(3);
+
+        SceneChanger.ChangeScene();
     }
     public void Lose()
     {
@@ -217,5 +385,18 @@ public class BossFightManager : MonoBehaviour
     public float GetTime()
     {
         return Stopwatch;
+    }
+
+    public float GetPlayerHP()
+    {
+        return PlayerHP;
+    }
+    public float GetPlayerStamina()
+    {
+        return PlayerStamina;
+    }
+    public float GetBossHP()
+    {
+        return BossHP;
     }
 }

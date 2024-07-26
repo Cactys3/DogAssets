@@ -7,6 +7,8 @@ public class MiniNukeScript : MonoBehaviour
     [SerializeField] private Animator Anim;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Sprite[] SpriteList;
+    [SerializeField] private Collider2D hitbox;
+    private int CurrentSprite;
     private float Delay;
     private Transform Player;
     private float MoveSpeed;
@@ -17,6 +19,7 @@ public class MiniNukeScript : MonoBehaviour
         Delay = 1;
         Player = FindObjectOfType<BossPlayerMovement>().gameObject.transform;
         StartCoroutine("TickingTimeBomb");
+        CurrentSprite = 0;
     }
     private void Update()
     {
@@ -24,18 +27,20 @@ public class MiniNukeScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg) + 90f);
         transform.position += Direction * MoveSpeed * Time.deltaTime;
     }
+    private void AddTick() //maybe when the player hits a bomb with a sword?
+    {
+        StopAllCoroutines();
+        CurrentSprite++;
+        StartCoroutine("TickingTimeBomb");
+    }
     private IEnumerator TickingTimeBomb()
     {
-        sprite.sprite = SpriteList[0];
-        yield return new WaitForSeconds(Delay);
-        sprite.sprite = SpriteList[1];
-        yield return new WaitForSeconds(Delay);
-        sprite.sprite = SpriteList[2];
-        yield return new WaitForSeconds(Delay);
-        sprite.sprite = SpriteList[3];
-        yield return new WaitForSeconds(Delay);
-        sprite.sprite = SpriteList[4];
-        yield return new WaitForSeconds(Delay);
+        while(CurrentSprite < 5)
+        {
+            sprite.sprite = SpriteList[CurrentSprite];
+            yield return new WaitForSeconds(Delay);
+            CurrentSprite++;
+        }
         sprite.sprite = SpriteList[5];
         yield return new WaitForSeconds(0.2f);
         StartCoroutine("Explode");
@@ -52,6 +57,7 @@ public class MiniNukeScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            hitbox.enabled = false;
             StopAllCoroutines();
             StartCoroutine("Explode");
         }

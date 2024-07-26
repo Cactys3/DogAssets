@@ -12,14 +12,14 @@ public class MapSlashScript : MonoBehaviour
     [SerializeField] private bool P;
     private string ChosenFadeInAnim = "";
     private string ChosenSlashAnim = "";
-    private const string FadeInAnimR = "";
-    private const string SlashAnimR = "";
-    private const string FadeInAnimL = "";
-    private const string SlashAnimL = "";
-    private const string FadeInAnimM = "";
-    private const string SlashAnimM = "";
-    private const string FadeInAnimP = "";
-    private const string SlashAnimP = "";
+    private const string FadeInAnimR = "MSFadeR";
+    private const string SlashAnimR = "MSSlashR";
+    private const string FadeInAnimL = "MSFadeL";
+    private const string SlashAnimL = "MSSlashL";
+    private const string FadeInAnimM = "MSFadeM";
+    private const string SlashAnimM = "MSSlashM";
+    private const string FadeInAnimP = "MSFadeP";
+    private const string SlashAnimP = "MSSlashP";
 
 
     private bool DoneBool;
@@ -87,5 +87,15 @@ public class MapSlashScript : MonoBehaviour
     private bool AnimDone(float i)
     {
         return anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= i;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            foreach (Collider2D c in colliders)
+            {
+                c.enabled = false;
+            }
+        }
     }
 }

@@ -176,7 +176,7 @@ public class BossPlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        manager.PlayerHit(collision.tag.ToString());
+        manager.PlayerHit(collision);
     }
 
     private bool AnimDone(string name)
@@ -265,5 +265,11 @@ public class BossPlayerMovement : MonoBehaviour
             return false;
         }
     }
+
+
+
+
+
+
 }
 

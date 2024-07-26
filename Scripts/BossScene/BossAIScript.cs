@@ -13,11 +13,12 @@ public class BossAIScript : MonoBehaviour
     int AnimState = 0;
 
     [Header("References")]
+    [SerializeField] private GameObject BigNukeText;
     [SerializeField] public Rigidbody2D body;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private BossPlayerMovement player;
     [SerializeField] private BossFightManager manager;
-    [SerializeField] private Animator anim;
+    public Animator anim;
     [SerializeField] private Collider2D BossHitbox;
     [SerializeField] private Collider2D BaseCollider;
     [SerializeField] private Collider2D Slash2Collider;
@@ -32,6 +33,7 @@ public class BossAIScript : MonoBehaviour
     public const string DashRName = "DashR";
     public const string Static1Name = "Static1";
     public const string Static2Name = "Static2";
+    public const string PointName = "Point";
 
     [Header("Attack Values")]
     [SerializeField] private float ThrustSpeed;
@@ -45,7 +47,9 @@ public class BossAIScript : MonoBehaviour
     private bool PointTowardsPlayerBool;
     private bool ChooseActionBool;
 
-    private Vector3 PhaseTwoPosition;
+    public bool DoneWithBigNukeBool;
+
+    public Vector3 PhaseTwoPosition;
 
     private bool FadeOutBool;
 
@@ -61,6 +65,7 @@ public class BossAIScript : MonoBehaviour
         Slash2Collider.enabled = false;
         Slash3Collider.enabled = false;
         ThrustCollider.enabled = false;
+        DoneWithBigNukeBool = false;
         ThrustDistance = 4.1f;
         SlashDistance = 2.7f;
         manager.PhaseNum = 1;
@@ -75,16 +80,12 @@ public class BossAIScript : MonoBehaviour
         {
             if (sprite.color.a - (0.5f * Time.deltaTime) < 0)
             {
-                Color color = sprite.color;
-                color.a = 0;
-                sprite.color = color;
+                SetAlpha(0);
                 FadeOutBool = false;
             }
             else
             {
-                Color color = sprite.color;
-                color.a = color.a - (0.5f * Time.deltaTime);
-                sprite.color = color;
+                SetAlpha(sprite.color.a - (0.5f * Time.deltaTime));
             }
         }
 
@@ -166,24 +167,6 @@ public class BossAIScript : MonoBehaviour
         }
         ChooseActionBool = true;
         
-    }
-    IEnumerator PhaseTwo()
-    {
-        transform.position = PhaseTwoPosition;
-        anim.Play("Static2");
-        Color color = sprite.color;
-        color.a = 1;
-        sprite.color = color;
-
-        yield return new WaitForSeconds(1);
-
-        //TODO: If player ever dies, stopallcoroutines and restart to PhaseTwo();
-
-        //TODO: First do the miniNukes as an ienumerator then wait for that to be done
-        //TODO: Second do the Swipy Sword thing as an ienumerator, then wait for that to be done
-        //TODO: Third... Phantoms
-        //TODO: Lastly... Big Nuke
-        //TODO: Then Change scenes to ending where dog wakes up.
     }
 
 
@@ -278,7 +261,31 @@ public class BossAIScript : MonoBehaviour
         anim.Play(Static1Name);
         AnimState = 0;
     }
+    IEnumerator Point()
+    {
+        AnimState = 3;
+        anim.Play(PointName);
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => AnimDone(PointName));
+        anim.Play(Static2Name);
+        AnimState = 0;
+    }
+    IEnumerator BigNuke()
+    {
+        anim.Play("BigNuke1");
+        yield return new WaitForSeconds(0.1f);
+        yield return new WaitUntil(() => AnimDone("BigNuke1"));
 
+        anim.Play("BigNuke2");
+        yield return new WaitForSeconds(0.1f);
+        yield return new WaitUntil(() => AnimDone("BigNuke2"));
+
+        DoneWithBigNukeBool = true;
+    }
+    public void PlayBigNuke()
+    {
+        StartCoroutine("BigNuke");
+    }
     public bool AnimDone(string name)
     {
         return anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1;
@@ -301,7 +308,7 @@ public class BossAIScript : MonoBehaviour
         return false;
     }
 
-    public void DisableEverything()
+    public void DisableEverything(int phase)
     {
         StopAllCoroutines();
         BaseCollider.enabled = false;
@@ -310,24 +317,36 @@ public class BossAIScript : MonoBehaviour
         PointTowardsPlayerBool = false;
         ChooseActionBool = false;
         body.velocity = Vector3.zero;
-        anim.Play(Static1Name);
+        if (phase == 1)
+        {
+            anim.Play(Static1Name);
+        }
+        else
+        {
+            anim.Play(Static2Name);
+        }
         BaseCollider.enabled = false;
         Slash2Collider.enabled = false;
         Slash3Collider.enabled = false;
         ThrustCollider.enabled = false;
         BossHitbox.enabled = false;
+        transform.rotation = Quaternion.identity;
     }
-    public void SetupPhaseTwo()
+    public void FadeOut()
     {
         FadeOutBool = true;
     }
     public void PhaseTwoAnimation()
     {
-        //anim.Play("PhaseTwoTransition");
+        transform.position = PhaseTwoPosition;
+        anim.Play("Blank");
+        SetAlpha(1);
+        anim.Play("Transition");
     }
     public void EnablePhaseTwo()
     {
-        StartCoroutine("PhaseTwo");
+        anim.Play("Static2");
+        PointTowardsPlayerBool = true; //tenative
     }
 
     public bool BossInPosition()
@@ -346,8 +365,17 @@ public class BossAIScript : MonoBehaviour
         }
     }
 
+    public void PlayPoint()
+    {
+        StartCoroutine("Point");
+    }
 
-
+    public void SetAlpha(float a)
+    {
+        Color color = sprite.color;
+        color.a = a;
+        sprite.color = color;
+    }
     private void Testing()
     {
         //UnityEngine.Debug.Log(Vector2.Distance(transform.position, PhaseTwoPosition) + " <- Position, angle -> " + ((Mathf.Atan2((Phase2Point - transform.position).y, (Phase2Point - transform.position).x) * Mathf.Rad2Deg) + 90 - transform.rotation.eulerAngles.z) % 360);

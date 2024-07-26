@@ -15,6 +15,8 @@ public class PhantomScript : MonoBehaviour
 
     [SerializeField] private bool Flip;
 
+    public float Delay;
+
     private Vector3 StartPos;
     private Vector3 EndPos;
     private float MoveSpeed;
@@ -37,7 +39,6 @@ public class PhantomScript : MonoBehaviour
             EndPos = EndObj.position;
             StartPos = StartObj.position;
         }
-        Debug.Log(Phantom.position);
 
         Phantom.gameObject.transform.position = StartPos;
         Direction = (EndPos - StartPos).normalized;
@@ -50,6 +51,8 @@ public class PhantomScript : MonoBehaviour
         DoneBool = false;
         FadeInBool = false;
         FadeOutBool = false;
+
+        Delay = 1;
 
         Color tmp = sprite.color;
         tmp.a = 0f;
@@ -129,6 +132,9 @@ public class PhantomScript : MonoBehaviour
     {
         DoneBool = false;
         MoveBool = false;
+
+        yield return new WaitForSeconds(((float)SpriteNum0To9) * Delay);
+
         Phantom.position = StartPos;
         Direction = (EndPos - StartPos).normalized;
         //Phantom.rotation = Mathf.Atan2(Direction.x, Direction.y) * Mathf.Rad2Deg;

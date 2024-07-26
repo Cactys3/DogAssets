@@ -22,7 +22,6 @@ public class BossHUDManager : MonoBehaviour
     private float BossMinValue;
     private float PlayerMinValue;
     private float StaminaMinValue;
-    // Start is called before the first frame update
     void Start()
     {
         BossMinValue = -5.875f;

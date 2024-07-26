@@ -189,11 +189,11 @@ GameObject:
   - component: {fileID: 1872092475783734142}
   m_Layer: 0
   m_Name: PhantomPath5
-  m_TagString: Untagged
+  m_TagString: Phantom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6304503248943057749
 Transform:
   m_ObjectHideFlags: 0

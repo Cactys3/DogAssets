@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4352999804339428025}
   m_Layer: 0
   m_Name: MiniNuke
-  m_TagString: Untagged
+  m_TagString: MiniNuke
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +108,7 @@ MonoBehaviour:
   - {fileID: -861837036, guid: 10a595de1fcb9d144947d7e2544d31c9, type: 3}
   - {fileID: 397163738, guid: 10a595de1fcb9d144947d7e2544d31c9, type: 3}
   - {fileID: 1902694145, guid: 10a595de1fcb9d144947d7e2544d31c9, type: 3}
+  hitbox: {fileID: 1734353066107990397}
 --- !u!70 &1734353066107990397
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,7 +138,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.035542592, y: 0.0792875}
