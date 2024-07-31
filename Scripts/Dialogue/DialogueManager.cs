@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 //TODO: gave error, i dont know if i need this: using Ink.UnityIntegration;
 
 public class DialogueManager : MonoBehaviour
@@ -50,11 +51,23 @@ public class DialogueManager : MonoBehaviour
     private const string ending1Scene = "Ending1";
     private const string ending2Scene = "Ending2";
     private const string endchoiceScene = "EndChoice";
-
+    //Names
+    private const string NarratorName = "narrator";
+    private const string DogName = "dog";
     private Coroutine displayLineCoroutine;
     private bool canContinueToNextLine = false;
     private bool canSkipTyping = true;
     private float autoSkip = 0f;
+    //Sounds
+    private const string NarratorSoundDefault = "narrator_default";
+    private const string DogSoundDefault = "dog_neutral";
+    private const string DogSoundBark = "dog_bark";
+    private const string DogSoundGrowl = "dog_growl";
+    private const string DogSoundWhine = "dog_whine";
+    private const string DogSoundWoof = "dog_woof";
+    //Layouts
+    private const string LayoutUP = "up";
+    private const string LayoutDown = "down";
     // TODO: implement keybinds (this is the continue dialogue keybind)
     private KeyCode SubmitKeybind = KeyCode.Space;
     private static DialogueManager instance;
@@ -439,10 +452,10 @@ public class DialogueManager : MonoBehaviour
                 switch (tagKey)
                 {//if it's a two word tag then it goes to this switch statement
                     case NAME_TAG:
-                        displayNameText.text = tagValue;
+                        ChangeName(tagValue);
                         break;
                     case SOUND_TAG:
-                        currentTypingSound = tagValue;
+                        ChangeSound(tagValue);
                         break;
                     case TYPING_SPEED:
                         typingSpeed = float.Parse(tagValue);
@@ -454,34 +467,10 @@ public class DialogueManager : MonoBehaviour
                         autoSkip = float.Parse(tagValue);
                         break;
                     case IMAGE_TAG:
-                        bool isValidPortraitName = false;
-                        if (!portraitClips.IsUnityNull())
-                        {
-                            foreach (AnimationClip a in portraitClips)
-                            {
-                                if (a.name.Equals(tagValue))
-                                {
-                                    isValidPortraitName = true;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            Debug.LogWarning("PortraitClips is Unity Null again...");
-                        }
-                        if (isValidPortraitName)
-                        {
-                            portraitAnimator.Play(tagValue);
-                        }
-                        else
-                        {
-                            Debug.LogWarning("Portrait Tag Value: " + tagValue + " is not in the list of animation clips, playing default"); // (maybe it's named wrong in INK/portrait animation clip)
-                            portraitAnimator.Play("default");
-                        }
+                        ChangePortrait(tagValue);
                         break;
-
                     case LAYOUT_TAG:
-                        layoutAnimator.Play(tagValue);
+                        ChangeLayout(tagValue);
                         break;
                     default:
                         Debug.LogWarning("Tag isn't one of the defined keys: " + tag);
@@ -490,7 +479,93 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
-
+    private void ChangePortrait(string name)
+    {
+        bool isValidPortraitName = false;
+        if (!portraitClips.IsUnityNull())
+        {
+            foreach (AnimationClip a in portraitClips)
+            {
+                if (a.name.Equals(name))
+                {
+                    isValidPortraitName = true;
+                }
+            }
+        }
+        else
+        {
+            Debug.LogWarning("PortraitClips is Unity Null again...");
+        }
+        if (isValidPortraitName)
+        {
+            portraitAnimator.Play(name);
+        }
+        else
+        {
+            Debug.LogWarning("Portrait Tag Value: " + name + " is not in the list of animation clips, playing default"); // (maybe it's named wrong in INK/portrait animation clip)
+            portraitAnimator.Play("default");
+        }
+    }
+    private void ChangeLayout(string name)
+    {
+        switch (name)
+        {
+            case LayoutUP:
+                layoutAnimator.Play("up");
+                break;
+            case LayoutDown:
+                layoutAnimator.Play("down");
+                break;
+            default:
+                layoutAnimator.Play("up");
+                Debug.LogWarning("Couldn't Find Layout Tag: " + name);
+                break;
+        }
+    }
+    private void ChangeName(string name)
+    {
+        switch(name)
+        {
+            case DogName:
+                displayNameText.text = "Dog";
+                break;
+            case NarratorName:
+                displayNameText.text = "Narrator";
+                break;
+            default:
+                displayNameText.text = "???";
+                Debug.LogWarning("Couldn't Find Name Tag: " + name);
+                break;
+        }
+    }
+    private void ChangeSound(string name)
+    {
+        switch (name)
+        {
+            case DogSoundBark:
+                currentTypingSound = "dog_bark";
+                break;
+            case DogSoundDefault:
+                currentTypingSound = "dog_default";
+                break;
+            case DogSoundGrowl:
+                currentTypingSound = "dog_growl";
+                break;
+            case DogSoundWhine:
+                currentTypingSound = "dog_whine";
+                break;
+            case DogSoundWoof:
+                currentTypingSound = "dog_woof";
+                break;
+            case NarratorName:
+                currentTypingSound = "narrator_default";
+                break;
+            default:
+                currentTypingSound = defaultTypingSound;
+                Debug.LogWarning("Couldn't Find Sound Tag: " + name);
+                break;
+        }
+    }
     public void ChangeScene(String name)
     {
         switch (name) //try to load scene by name
