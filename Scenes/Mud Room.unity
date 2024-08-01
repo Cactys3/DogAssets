@@ -407,6 +407,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 4900000, guid: 05d807487a1ab124ea70cc89b04c9b9a, type: 3}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: SoundName
+      value: test
+      objectReference: {fileID: 0}
     - target: {fileID: 4179208132734838607, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -497,6 +501,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 4900000, guid: 6fbe54d0f7916ed409600e44bc699f2d, type: 3}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: SoundName
+      value: test1
+      objectReference: {fileID: 0}
     - target: {fileID: 4179208132734838607, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -937,6 +945,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 4900000, guid: 3535bd85bf09cd04187eff78e5e3ed14, type: 3}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: SoundName
+      value: test
+      objectReference: {fileID: 0}
     - target: {fileID: 4179208132734838607, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_RootOrder
       value: -1

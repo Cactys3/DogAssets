@@ -1,8 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
+    [Header("Sound Effect To Play")]
+    [SerializeField] private string SoundName;
     [Header("Keybind To Trigger NPC")]
     [SerializeField] private KeyCode interactKeybind;
     [Header("Visual Cue")]
@@ -37,6 +40,11 @@ public class DialogueTrigger : MonoBehaviour
                 spriteRenderer.sprite = ActiveSprite;
                 if (Input.GetKey(interactKeybind))
                 {
+                    if (!SoundName.IsUnityNull())
+                    {
+                        FindObjectOfType<AudioManager>().PlaySFX(SoundName);
+                        Debug.Log("interact sound: " + SoundName);
+                    }
                     FindObjectOfType<DialogueManager>().EnterDialogueMode(text);
                 }
             }

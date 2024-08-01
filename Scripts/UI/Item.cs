@@ -20,6 +20,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] private GameObject SelectButton;
     [SerializeField] private GameObject CombineButton;
     [SerializeField] private GameObject UnselectButton;
+    [SerializeField] private GameObject ItemFrame;
     [SerializeField] int MaxItemsPerRow;
     [SerializeField] int MaxItemsTotal;
     [SerializeField] int OffsetY;
@@ -30,10 +31,10 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     // Start is called before the first frame update
     void Start()
     {
-        MaxItemsPerRow = 4;
-        MaxItemsTotal = 9;
-        OffsetY = -200;
-        OffsetX = 200;
+        MaxItemsPerRow = 2;
+        MaxItemsTotal = 6;
+        OffsetY = -150;
+        OffsetX = 500;
         ItemSlot = 38;
         eventsystem = FindObjectOfType<EventSystem>();
         InventoryScript = FindObjectOfType<ManageInventory>();
@@ -47,6 +48,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         CombineButton.SetActive(false);
         UnholdButton.SetActive(false);
         UnselectButton.SetActive(false);
+        ItemFrame.SetActive(false);
     }
     /**
      * used OnEnable for item classes to check if their obtained/not obtained state changed while their GameObject was disabled
@@ -74,6 +76,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             CombineButton.SetActive(false);
             UnholdButton.SetActive(false);
             UnselectButton.SetActive(false);
+            ItemFrame.SetActive(false);
         }
         if (ItemState == 2)
         {
@@ -83,6 +86,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             CombineButton.SetActive(false);
             UnholdButton.SetActive(false);
             UnselectButton.SetActive(false);
+            ItemFrame.SetActive(false);
         }
         if (ItemState == 3)
         {
@@ -182,6 +186,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         }
 
         InventoryScript.SetHovered(itemName);
+        ItemFrame.SetActive(true);
         SelectButton.SetActive(true); //since nothing else is selected, we show select
         if (ItemState == 1)
         {
@@ -225,6 +230,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             CombineButton.SetActive(false);
             UnholdButton.SetActive(false);
             UnselectButton.SetActive(false);
+            ItemFrame.SetActive(false);
             if (ItemState == 2)
             {
                 ItemState = 1;

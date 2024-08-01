@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8cefe575f14a454488afbee7e44658e4
+guid: 4e4368c1a1628db4299687d9941367f3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blender_0
+      name: MicrowaveFridgeOvenSprites-Fridge_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3428ac098a2218e4c838a026ab926ad7
-      internalID: 2064734457
+      spriteID: f1ab8ccd651ae8e429dd4c766031323d
+      internalID: 2123363825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_1
+      name: MicrowaveFridgeOvenSprites-Fridge_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 192
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07daaca112ce28a43b181d342b9c10da
-      internalID: -715421660
+      spriteID: db75a83a4fb45634487fdd7bd7c0c4bb
+      internalID: -1610893996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_2
+      name: MicrowaveFridgeOvenSprites-Fridge_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 384
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45c48facc2a7feb4db3df05c85d06951
-      internalID: -676141911
+      spriteID: 322948d80e6380046b70b9dc0f4ec46c
+      internalID: -592734567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_3
+      name: MicrowaveFridgeOvenSprites-Fridge_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 576
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7db278a27cc5e5545b7cf286d05158e5
-      internalID: -1266121736
+      spriteID: 1bb84f4b7d7680047b0a52710e868050
+      internalID: -1518749327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_4
+      name: MicrowaveFridgeOvenSprites-Fridge_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 768
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a65fa5e79873984f845d1ec5a396d02
-      internalID: 1857117257
+      spriteID: af5c7625e8863ff459f3e50b4e82cfd3
+      internalID: -323505247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_5
+      name: MicrowaveFridgeOvenSprites-Fridge_5
       rect:
         serializedVersion: 2
-        x: 80
+        x: 960
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,29 +255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdfbd14968022a84888b6005860fe1fb
-      internalID: -815524499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blender_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52882f85aba590b46b2808758480e338
-      internalID: 476940253
+      spriteID: 370f2db75c6560540ab2d395cd4890d0
+      internalID: -531003746
       vertices: []
       indices: 
       edges: []
@@ -293,13 +272,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Blender_0: 2064734457
-      Blender_1: -715421660
-      Blender_2: -676141911
-      Blender_3: -1266121736
-      Blender_4: 1857117257
-      Blender_5: -815524499
-      Blender_6: 476940253
+      MicrowaveFridgeOvenSprites-Fridge_0: 2123363825
+      MicrowaveFridgeOvenSprites-Fridge_1: -1610893996
+      MicrowaveFridgeOvenSprites-Fridge_2: -592734567
+      MicrowaveFridgeOvenSprites-Fridge_3: -1518749327
+      MicrowaveFridgeOvenSprites-Fridge_4: -323505247
+      MicrowaveFridgeOvenSprites-Fridge_5: -531003746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

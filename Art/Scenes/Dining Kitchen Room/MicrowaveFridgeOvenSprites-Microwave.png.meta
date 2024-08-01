@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8cefe575f14a454488afbee7e44658e4
+guid: e0a0ebd2ad78c5646b378b6140126765
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blender_0
+      name: MicrowaveFridgeOvenSprites-Microwave_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3428ac098a2218e4c838a026ab926ad7
-      internalID: 2064734457
+      spriteID: 13b24a0386306d94ea6901c5b00d3319
+      internalID: -32167368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_1
+      name: MicrowaveFridgeOvenSprites-Microwave_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 192
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07daaca112ce28a43b181d342b9c10da
-      internalID: -715421660
+      spriteID: f32ba257253e7cb46a1faf6b226b6b64
+      internalID: -1178692755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_2
+      name: MicrowaveFridgeOvenSprites-Microwave_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 384
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45c48facc2a7feb4db3df05c85d06951
-      internalID: -676141911
+      spriteID: 41459f44bfe0aad47af6be48335d90a5
+      internalID: -648588553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_3
+      name: MicrowaveFridgeOvenSprites-Microwave_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 576
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7db278a27cc5e5545b7cf286d05158e5
-      internalID: -1266121736
+      spriteID: 045e6580a5c1a994fa246c83d0bc0f5c
+      internalID: 2141718868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_4
+      name: MicrowaveFridgeOvenSprites-Microwave_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 768
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a65fa5e79873984f845d1ec5a396d02
-      internalID: 1857117257
+      spriteID: 471563fe17b690e4481b317d8c1ef528
+      internalID: -737430567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_5
+      name: MicrowaveFridgeOvenSprites-Microwave_5
       rect:
         serializedVersion: 2
-        x: 80
+        x: 960
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdfbd14968022a84888b6005860fe1fb
-      internalID: -815524499
+      spriteID: 8513dec7eb50ed74e91799597e617cd4
+      internalID: 1853337527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blender_6
+      name: MicrowaveFridgeOvenSprites-Microwave_6
       rect:
         serializedVersion: 2
-        x: 96
+        x: 1152
         y: 0
-        width: 16
-        height: 16
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,8 +276,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52882f85aba590b46b2808758480e338
-      internalID: 476940253
+      spriteID: 67fd56125b5a8484f90e72510759d1b2
+      internalID: -766195744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MicrowaveFridgeOvenSprites-Microwave_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3587b2426452b140b8ad0e6ee732b18
+      internalID: 1224542939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MicrowaveFridgeOvenSprites-Microwave_8
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127d7a55e3fbb5d409500fe7f8af5c4c
+      internalID: 2143818676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MicrowaveFridgeOvenSprites-Microwave_9
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8dbf01d7be38ad499807f70e18ecb7c
+      internalID: -695153888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MicrowaveFridgeOvenSprites-Microwave_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a20249612e55df4787f2a541f3165dd
+      internalID: -51810972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MicrowaveFridgeOvenSprites-Microwave_11
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f676b301052fbaf45913354298a26ced
+      internalID: 1446403155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MicrowaveFridgeOvenSprites-Microwave_12
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776d02331a6af81438d104fd717e92a1
+      internalID: 1036079802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MicrowaveFridgeOvenSprites-Microwave_13
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0daba38717add2b4c9af4309fd6bb4bf
+      internalID: 275096034
       vertices: []
       indices: 
       edges: []
@@ -293,13 +440,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Blender_0: 2064734457
-      Blender_1: -715421660
-      Blender_2: -676141911
-      Blender_3: -1266121736
-      Blender_4: 1857117257
-      Blender_5: -815524499
-      Blender_6: 476940253
+      MicrowaveFridgeOvenSprites-Microwave_0: -32167368
+      MicrowaveFridgeOvenSprites-Microwave_1: -1178692755
+      MicrowaveFridgeOvenSprites-Microwave_10: -51810972
+      MicrowaveFridgeOvenSprites-Microwave_11: 1446403155
+      MicrowaveFridgeOvenSprites-Microwave_12: 1036079802
+      MicrowaveFridgeOvenSprites-Microwave_13: 275096034
+      MicrowaveFridgeOvenSprites-Microwave_2: -648588553
+      MicrowaveFridgeOvenSprites-Microwave_3: 2141718868
+      MicrowaveFridgeOvenSprites-Microwave_4: -737430567
+      MicrowaveFridgeOvenSprites-Microwave_5: 1853337527
+      MicrowaveFridgeOvenSprites-Microwave_6: -766195744
+      MicrowaveFridgeOvenSprites-Microwave_7: 1224542939
+      MicrowaveFridgeOvenSprites-Microwave_8: 2143818676
+      MicrowaveFridgeOvenSprites-Microwave_9: -695153888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

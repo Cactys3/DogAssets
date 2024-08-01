@@ -435,27 +435,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
-  SFXSounds:
-  - name: left
-    clip: {fileID: 8300000, guid: 36aa2152ec2dfa340bc0241f5619ca66, type: 3}
-    volume: 0.49
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
+  AudioPrefab: {fileID: 8250371898052299822, guid: 8e0d99a63b21b75439649d2f3316c239, type: 3}
+  MicrowaveMinigame: []
+  JuicerMinigame: []
+  FridgeMinigame: []
+  Boss: []
+  TabUI: []
+  OtherUI: []
+  SceneSounds:
+  - name: test1
+    clip: {fileID: 8300000, guid: d0772755ff39d9844bb292e9e7f2e030, type: 3}
+    volume: 0.757
+    volumeVariance: 0.443
+    pitch: 1.127
+    pitchVariance: 0.587
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: right
-    clip: {fileID: 8300000, guid: 803eed14566482545878ee3c28ecb756, type: 3}
-    volume: 0.49
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
+  InteractSounds:
+  - name: test
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0.39
+    pitch: 1.203
+    pitchVariance: 0.531
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   TypeSounds: []
-  MusicSounds: []
+  MusicSounds:
+  - name: Default
+    clip: {fileID: 0}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Song1
+    clip: {fileID: 8300000, guid: 9009241f19fabef449aea4d37a23bb82, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Song2
+    clip: {fileID: 8300000, guid: 7a681510fd619dc42b2aeb6d9ab6c2a1, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   MusicSource: {fileID: 1185568081}
   TypeSource: {fileID: 1897768093}
 --- !u!1 &1632047536

@@ -1,0 +1,1116 @@
+fileFormatVersion: 2
+guid: 8b0773a04e8e8744794beac5b38b11c7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: MicrowaveFridgeOvenSprites_Frame_0
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 237
+      width: 15
+      height: 13
+    spriteID: 7956a7c83ae6b224a8afb23cec9700b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 237}
+  - name: MicrowaveFridgeOvenSprites_Frame_1
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 236
+      width: 15
+      height: 13
+    spriteID: c653b85156b4bb64d95debbb1d97d42f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 236}
+  - name: MicrowaveFridgeOvenSprites_Frame_2
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 154
+      width: 15
+      height: 13
+    spriteID: e078c9e4aaa7be14ab2128ca529b2dc3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 154}
+  - name: MicrowaveFridgeOvenSprites_Frame_3
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 175
+      width: 15
+      height: 13
+    spriteID: 168e562908676fd47a603fa517b4ebcd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 175}
+  - name: MicrowaveFridgeOvenSprites_Frame_4
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 196
+      width: 15
+      height: 13
+    spriteID: e45f76b467726864a8ab61f8ceebf93b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 196}
+  - name: MicrowaveFridgeOvenSprites_Frame_5
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 217
+      width: 15
+      height: 13
+    spriteID: 6e1cd4f5f225f594eab3f0c09eec4386
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 217}
+  - name: MicrowaveFridgeOvenSprites_Frame_6
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 238
+      width: 15
+      height: 13
+    spriteID: a3d379942f3dab1458968eb94ec8afa7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 238}
+  - name: MicrowaveFridgeOvenSprites_Frame_7
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 4
+      width: 15
+      height: 13
+    spriteID: d7bdada4665144f4387c195348c9823b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 4}
+  - name: MicrowaveFridgeOvenSprites_Frame_8
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 25
+      width: 15
+      height: 13
+    spriteID: 5169c621390a37f458a2fa8fe1e7f384
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 25}
+  - name: MicrowaveFridgeOvenSprites_Frame_9
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 46
+      width: 15
+      height: 13
+    spriteID: 5c0cd636a3ac4b044bc5d9b61f38fafd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 46}
+  - name: MicrowaveFridgeOvenSprites_Frame_10
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 67
+      width: 15
+      height: 13
+    spriteID: 049316ad92b52584fa5ea7526a57f06f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 67}
+  - name: MicrowaveFridgeOvenSprites_Frame_11
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 88
+      width: 15
+      height: 13
+    spriteID: 865431450b6266a4a879836bdde23a98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 88}
+  - name: MicrowaveFridgeOvenSprites_Frame_12
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 109
+      width: 15
+      height: 13
+    spriteID: 1f9e2f1c1b42d784fb36c154169f97d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 109}
+  - name: MicrowaveFridgeOvenSprites_Frame_13
+    originalName: 
+    pivot: {x: -3.6666665, y: -6.461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 130
+      width: 15
+      height: 13
+    spriteID: 50bf75f7224521b40aab25c353c53a98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 130}
+  - name: MicrowaveFridgeOvenSprites_Frame_14
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 16
+      height: 21
+    spriteID: 53460577221fb424a8bed078786df129
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: MicrowaveFridgeOvenSprites_Frame_15
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 33
+      width: 16
+      height: 21
+    spriteID: c0efe3c101e990e4886172d527036f8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 33}
+  - name: MicrowaveFridgeOvenSprites_Frame_16
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 62
+      width: 16
+      height: 21
+    spriteID: 910fc864dc599374a875862f8c866a5b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 62}
+  - name: MicrowaveFridgeOvenSprites_Frame_17
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 91
+      width: 16
+      height: 21
+    spriteID: 30b090f5198749b4dbfa2d43af6c7a7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 91}
+  - name: MicrowaveFridgeOvenSprites_Frame_18
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 120
+      width: 16
+      height: 21
+    spriteID: 5dec69d2369893144aee2fd974d0019b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 120}
+  - name: MicrowaveFridgeOvenSprites_Frame_19
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 149
+      width: 16
+      height: 21
+    spriteID: 354e33d2f74f4634f83e17006b9dd0b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 149}
+  - name: MicrowaveFridgeOvenSprites_Frame_20
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 178
+      width: 16
+      height: 21
+    spriteID: 1e42d48b655469b44847c3803f776d1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 178}
+  - name: MicrowaveFridgeOvenSprites_Frame_21
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 207
+      width: 16
+      height: 21
+    spriteID: 3adbbc8feb9e248459dfeeb27ef21481
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 207}
+  - name: MicrowaveFridgeOvenSprites_Frame_22
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 4
+      width: 16
+      height: 21
+    spriteID: 00699473ba3252b47a4bf6eab0bdb4a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 4}
+  - name: MicrowaveFridgeOvenSprites_Frame_23
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 33
+      width: 16
+      height: 21
+    spriteID: 416059fa695e6c348b8364969f0ef762
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 33}
+  - name: MicrowaveFridgeOvenSprites_Frame_24
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 62
+      width: 16
+      height: 21
+    spriteID: cf87bf11e4497494896857d611260b3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 62}
+  - name: MicrowaveFridgeOvenSprites_Frame_25
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 91
+      width: 16
+      height: 21
+    spriteID: 90e194ea1ec66d94095f11d316f82bd3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 91}
+  - name: MicrowaveFridgeOvenSprites_Frame_26
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 120
+      width: 16
+      height: 21
+    spriteID: c935a800ad3a8fe4b8a9222a606e9fe1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 120}
+  - name: MicrowaveFridgeOvenSprites_Frame_27
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 149
+      width: 16
+      height: 21
+    spriteID: 6af3ca2865830334795bf314b58fbf6d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 149}
+  - name: MicrowaveFridgeOvenSprites_Frame_28
+    originalName: 
+    pivot: {x: -0.99999976, y: -3.952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 178
+      width: 16
+      height: 21
+    spriteID: 3a08d14f38faa1f4cafefe137bd50e8e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 178}
+  - name: MicrowaveFridgeOvenSprites_Frame_29
+    originalName: 
+    pivot: {x: -2.6666665, y: -3.7727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 207
+      width: 15
+      height: 22
+    spriteID: 471a8862204f91640b345f665001e0d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 207}
+  - name: MicrowaveFridgeOvenSprites_Frame_30
+    originalName: 
+    pivot: {x: -2.6666665, y: -3.7727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 4
+      width: 15
+      height: 22
+    spriteID: f1b80c6a1fb464f498e3e7d0bc8af0f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 4}
+  - name: MicrowaveFridgeOvenSprites_Frame_31
+    originalName: 
+    pivot: {x: -2.6666665, y: -3.7727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 34
+      width: 15
+      height: 22
+    spriteID: 80940a7521c23424aa69a610f81d755d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 34}
+  - name: MicrowaveFridgeOvenSprites_Frame_32
+    originalName: 
+    pivot: {x: -2.6666665, y: -3.7727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 64
+      width: 15
+      height: 22
+    spriteID: c37908a91f5e2e74e822c56ed68d3e4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 64}
+  - name: MicrowaveFridgeOvenSprites_Frame_33
+    originalName: 
+    pivot: {x: -2.6666665, y: -3.7727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 94
+      width: 15
+      height: 22
+    spriteID: 0c41dc58fa7e3894bb9285d2d1a10c01
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 94}
+  - name: MicrowaveFridgeOvenSprites_Frame_34
+    originalName: 
+    pivot: {x: -2.6666665, y: -3.7727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 124
+      width: 15
+      height: 22
+    spriteID: b52a5e686a22bf742a9b996474feae5c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 124}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -387866618
+    name: MicrowaveFridgeOvenSprites
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: MicrowaveFridgeOvenSprites_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: 7956a7c83ae6b224a8afb23cec9700b6
+    - name: MicrowaveFridgeOvenSprites_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: c653b85156b4bb64d95debbb1d97d42f
+    - name: MicrowaveFridgeOvenSprites_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: e078c9e4aaa7be14ab2128ca529b2dc3
+    - name: MicrowaveFridgeOvenSprites_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: 168e562908676fd47a603fa517b4ebcd
+    - name: MicrowaveFridgeOvenSprites_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: e45f76b467726864a8ab61f8ceebf93b
+    - name: MicrowaveFridgeOvenSprites_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: 6e1cd4f5f225f594eab3f0c09eec4386
+    - name: MicrowaveFridgeOvenSprites_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: a3d379942f3dab1458968eb94ec8afa7
+    - name: MicrowaveFridgeOvenSprites_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: d7bdada4665144f4387c195348c9823b
+    - name: MicrowaveFridgeOvenSprites_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: 5169c621390a37f458a2fa8fe1e7f384
+    - name: MicrowaveFridgeOvenSprites_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: 5c0cd636a3ac4b044bc5d9b61f38fafd
+    - name: MicrowaveFridgeOvenSprites_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: 049316ad92b52584fa5ea7526a57f06f
+    - name: MicrowaveFridgeOvenSprites_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: 865431450b6266a4a879836bdde23a98
+    - name: MicrowaveFridgeOvenSprites_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: 1f9e2f1c1b42d784fb36c154169f97d0
+    - name: MicrowaveFridgeOvenSprites_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 151
+        y: 84
+        width: 15
+        height: 13
+      spriteId: 50bf75f7224521b40aab25c353c53a98
+    - name: MicrowaveFridgeOvenSprites_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 53460577221fb424a8bed078786df129
+    - name: MicrowaveFridgeOvenSprites_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: c0efe3c101e990e4886172d527036f8c
+    - name: MicrowaveFridgeOvenSprites_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 910fc864dc599374a875862f8c866a5b
+    - name: MicrowaveFridgeOvenSprites_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 30b090f5198749b4dbfa2d43af6c7a7e
+    - name: MicrowaveFridgeOvenSprites_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 5dec69d2369893144aee2fd974d0019b
+    - name: MicrowaveFridgeOvenSprites_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 354e33d2f74f4634f83e17006b9dd0b2
+    - name: MicrowaveFridgeOvenSprites_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 1e42d48b655469b44847c3803f776d1d
+    - name: MicrowaveFridgeOvenSprites_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 3adbbc8feb9e248459dfeeb27ef21481
+    - name: MicrowaveFridgeOvenSprites_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 00699473ba3252b47a4bf6eab0bdb4a8
+    - name: MicrowaveFridgeOvenSprites_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 416059fa695e6c348b8364969f0ef762
+    - name: MicrowaveFridgeOvenSprites_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: cf87bf11e4497494896857d611260b3f
+    - name: MicrowaveFridgeOvenSprites_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 90e194ea1ec66d94095f11d316f82bd3
+    - name: MicrowaveFridgeOvenSprites_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: c935a800ad3a8fe4b8a9222a606e9fe1
+    - name: MicrowaveFridgeOvenSprites_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 6af3ca2865830334795bf314b58fbf6d
+    - name: MicrowaveFridgeOvenSprites_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 112
+        y: 83
+        width: 16
+        height: 21
+      spriteId: 3a08d14f38faa1f4cafefe137bd50e8e
+    - name: MicrowaveFridgeOvenSprites_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 136
+        y: 83
+        width: 15
+        height: 22
+      spriteId: 471a8862204f91640b345f665001e0d7
+    - name: MicrowaveFridgeOvenSprites_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 136
+        y: 83
+        width: 15
+        height: 22
+      spriteId: f1b80c6a1fb464f498e3e7d0bc8af0f2
+    - name: MicrowaveFridgeOvenSprites_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 136
+        y: 83
+        width: 15
+        height: 22
+      spriteId: 80940a7521c23424aa69a610f81d755d
+    - name: MicrowaveFridgeOvenSprites_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 136
+        y: 83
+        width: 15
+        height: 22
+      spriteId: c37908a91f5e2e74e822c56ed68d3e4d
+    - name: MicrowaveFridgeOvenSprites_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 136
+        y: 83
+        width: 15
+        height: 22
+      spriteId: 0c41dc58fa7e3894bb9285d2d1a10c01
+    - name: MicrowaveFridgeOvenSprites_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 136
+        y: 83
+        width: 15
+        height: 22
+      spriteId: b52a5e686a22bf742a9b996474feae5c
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 192, y: 108}

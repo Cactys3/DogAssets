@@ -139,6 +139,126 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Blender_Frame_1
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.09090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 44
+      width: 9
+      height: 11
+    spriteID: 46684c203ce28d949bc6cca76604acba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 44}
+  - name: Blender_Frame_2
+    originalName: 
+    pivot: {x: 0.6, y: -0.1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 21
+      y: 4
+      width: 10
+      height: 10
+    spriteID: f227b57cf2bf7124c9cb595857e2b7c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 21, y: 4}
+  - name: Blender_Frame_3
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.09090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 21
+      y: 40
+      width: 9
+      height: 11
+    spriteID: 273532cbb3c486b4bac425b46414506c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 21, y: 40}
+  - name: Blender_Frame_4
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.083333336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 24
+      width: 9
+      height: 12
+    spriteID: 565b601130d4edc4caf0658039215178
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 24}
+  - name: Blender_Frame_5
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.09090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 4
+      width: 9
+      height: 11
+    spriteID: a56a646ec6578244096497d47d7305f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 4}
+  - name: Blender_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: -0.1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 21
+      y: 22
+      width: 10
+      height: 10
+    spriteID: bb926de5c5c88e6488b7af52a4dfe5f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 21, y: 22}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -148,7 +268,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Blender
+    - name: Blender_Frame_0
       frameIndex: 0
       cellRect:
         x: 3
@@ -156,6 +276,54 @@ ScriptedImporter:
         width: 9
         height: 12
       spriteId: c2c5de931cbe28147a59f85ff64d7417
+    - name: Blender_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 3
+        y: 1
+        width: 9
+        height: 11
+      spriteId: 46684c203ce28d949bc6cca76604acba
+    - name: Blender_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 2
+        y: 1
+        width: 10
+        height: 10
+      spriteId: f227b57cf2bf7124c9cb595857e2b7c1
+    - name: Blender_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 3
+        y: 1
+        width: 9
+        height: 11
+      spriteId: 273532cbb3c486b4bac425b46414506c
+    - name: Blender_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 3
+        y: 1
+        width: 9
+        height: 12
+      spriteId: 565b601130d4edc4caf0658039215178
+    - name: Blender_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 3
+        y: 1
+        width: 9
+        height: 11
+      spriteId: a56a646ec6578244096497d47d7305f1
+    - name: Blender_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 3
+        y: 1
+        width: 10
+        height: 10
+      spriteId: bb926de5c5c88e6488b7af52a4dfe5f0
     linkedCells: []
     parentIndex: -1
   platformSettings: []
