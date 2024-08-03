@@ -47,7 +47,9 @@ public class FridgePlatformMover : MonoBehaviour
             //body.velocity = new Vector2(Speed, 0);
             if (transform.position.x >= RightMax)
             {
+
                 HorizontalBool = !HorizontalBool;
+                PlaySound();
             }
         }
         else
@@ -55,6 +57,7 @@ public class FridgePlatformMover : MonoBehaviour
             if (transform.position.x <= LeftMax)
             {
                 HorizontalBool = !HorizontalBool;
+                PlaySound();
             }
             //body.velocity = new Vector2(Speed * -1, 0);
         }
@@ -70,6 +73,7 @@ public class FridgePlatformMover : MonoBehaviour
             if (transform.position.y >= UpMax)
             {
                 VerticalBool = false;
+                PlaySound();
                 Debug.Log("changed to Up");
             }
         }
@@ -83,6 +87,7 @@ public class FridgePlatformMover : MonoBehaviour
             {
                 Debug.Log("changed to Down");
                 VerticalBool = true;
+                PlaySound();
             }
         }
         if (PlayerOnPlatform && FindObjectOfType<FridgeOvenPlayerMovement>().CheckUpright())
@@ -118,7 +123,12 @@ public class FridgePlatformMover : MonoBehaviour
             PlayerOnPlatform = false;
         }
     }
+    private void PlaySound()
+    {
+        FindObjectOfType<AudioManager>().PlayingSFX("f_platform");
+    }
 }
+
 public enum MovementDirection
 {
     Horizontal,

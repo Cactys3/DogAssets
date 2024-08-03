@@ -543,6 +543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skip Button
       objectReference: {fileID: 0}
+    - target: {fileID: 6376383025123686113, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6727212422522264856, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
       propertyPath: m_RootOrder
       value: 6

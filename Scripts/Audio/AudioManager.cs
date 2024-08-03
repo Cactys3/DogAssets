@@ -83,11 +83,16 @@ public class AudioManager : MonoBehaviour
 	{
 		Sound s = Array.Find(SFXSounds, item => item.name == sound);
 
-		if (s == null || s.source.isPlaying)
+		if (s == null)
 		{
 			Debug.LogWarning("Sound: " + sound + " not found!");
 			return;
 		}
+        else if (s.source.isPlaying)
+        {
+            Debug.LogWarning("Sound: " + sound + " is playing: " + s.source.time);
+            return;
+        }
         else
         {
             Debug.Log("Sound: " + sound);
@@ -97,6 +102,22 @@ public class AudioManager : MonoBehaviour
 		s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
 		s.source.Play();
+    }
+
+    public bool PlayingSFX(string sound)
+    {
+        Sound s = Array.Find(SFXSounds, item => item.name == sound);
+
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + sound + " not found!");
+            return false;
+        }
+        else if (s.source.isPlaying)
+        {
+            return true;
+        }
+        return false;
     }
 
     public void PlayMultipleSFX(string sound)
@@ -121,6 +142,29 @@ public class AudioManager : MonoBehaviour
         audioSource.Play();
 
         Destroy(soundObject, audioSource.clip.length + 1f); // Destroy slightly after the clip ends
+    }
+    public void SetPitchSFX(string sound, float pitch)
+    {
+        Sound s = Array.Find(SFXSounds, item => item.name == sound);
+
+        if (s == null)
+        {
+            Debug.LogError("Sound: " + sound + " not found!");
+            return;
+        }
+        if (pitch <= 3 && pitch >= 0)
+        {
+            s.source.pitch = pitch;
+        }
+        else if (pitch > 3)
+        {
+            pitch = 3;
+        }
+        else
+        {
+            pitch = 0;
+        }
+        s.pitch = pitch;
     }
 
     public void StopPlayingSFX(string sound)

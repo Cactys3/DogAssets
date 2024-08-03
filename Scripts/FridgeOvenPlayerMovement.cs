@@ -16,12 +16,28 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
     [SerializeField] private Transform GroundCheck;
     [SerializeField] private Sprite StaticSprite;
     [SerializeField] private Sprite MovingSprite;
+    private const string LandingSound = "f_landing";
+    private const string WinSound = "f_win";
+    private const string GoalSound = "f_goal";
+    private const string JumpSound = "f_jump";
+    private const string FootstepsSound = "f_footsteps";
+    private const string DiveSound = "f_dive";
+    private const string GetUp1Sound = "f_getup_1";
+    private const string GetUp2Sound = "f_getup_2";
     private Rigidbody2D body;
+    private AudioManager AudioMan;
     private Vector3 Spawn;
     private bool IsMoving;
+    private bool WasMoving;
     private SpriteRenderer sprite;
+    private bool CanMove;
+    private bool PlayLandingSound;
+    private bool AllowFootsteps;
     void Start()
     {
+        AllowFootsteps = true;
+        PlayLandingSound = false;
+        CanMove = true;
         FrictionValue = 0.9f;
         Upright = true;
         Spawn = this.transform.position;
@@ -33,25 +49,55 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         Uprightspeed = 0.57f;
         body.freezeRotation = true;
         sprite = GetComponent<SpriteRenderer>();
+        WasMoving = false;
+        AudioMan = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (!CanMove)
         {
-            body.angularDrag = 0.05f;
+            return;
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift)) 
+        {
+            body.angularDrag = 0.05f;//idk about this, maybe do this with upright or grounded?
         }
         else
         {
             body.angularDrag = 0.5f;
         }
+
+        if (WasMoving != IsMoving && AllowFootsteps)
+        {
+            //Debug.Log("Was Moving: " + WasMoving);
+            if (!WasMoving)
+            {
+                AudioMan.PlaySFX(FootstepsSound); //is set to loop
+            }
+            else
+            {
+                AudioMan.StopPlayingSFX(FootstepsSound);
+            }
+            WasMoving = IsMoving;
+        }
+        if (AudioMan.PlayingSFX(JumpSound))
+        {
+            AudioMan.StopPlayingSFX(FootstepsSound);
+        }
         IsMoving = false;
-        Debug.Log(body.constraints);
+        ////Debug.Log(body.constraints);
 
         IsGrounded = CheckIsGrounded();
         Upright = CheckUpright();
+
+        if (Upright && Mathf.Abs( body.velocity.y ) > 1f && !PlayLandingSound)
+        {
+            //Debug.Log("play landing sound true!");
+            PlayLandingSound = true;
+        }
 
         if (Upright) //if not diving
         {
@@ -75,6 +121,7 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
                 //body.AddForceAtPosition(new Vector2(DiveSpeedRot, 0), this.transform.position + new Vector3(0, 2, 0));
                 IsMoving = true;
                 body.AddTorque(DiveSpinSign * Mathf.Abs((DiveSpeedRot +0.5f) / (body.velocity.magnitude + 0.5f)));
+                //Debug.Log(DiveSpinSign * Mathf.Abs((DiveSpeedRot + 0.5f) / (body.velocity.magnitude + 0.5f)));
                 if (DiveSpeedSign == 0)
                 {
                     body.AddForce(new Vector2(35 * DiveSpinSign, 0)); // to counter the rightward torque
@@ -83,7 +130,8 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
                 {
                     body.AddForce(new Vector2(DiveSpeedSign * DiveSpeedForce, 0));
                 }
-                Debug.Log("added torq: " + DiveSpeedRot);
+                StartCoroutine("PlayDiveSounds");
+                //Debug.Log("added torq: " + DiveSpeedRot);
             }
             else
             {
@@ -101,6 +149,11 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
                 {
                     body.velocity = new Vector2(body.velocity.x, JumpSpeed);
                     IsMoving = true;
+                    if (!AudioMan.PlayingSFX(JumpSound))
+                    {
+                        AudioMan.StopPlayingSFX(FootstepsSound);
+                        AudioMan.PlaySFX(JumpSound);
+                    }
                 }
                 if (Input.GetKey(KeyCode.S) && IsGrounded)
                 {
@@ -108,12 +161,14 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
                     IsMoving = true;
                 }
             }
+
         }
         else
         {
             
             if (Input.GetKeyDown(KeyCode.W) && !CheckUpright() && body.velocity.magnitude < 1) //to get upright, OLD: && (((Mathf.Abs(body.rotation) % 360) < 95 && (Mathf.Abs(body.rotation) % 360) > 85) || ((Mathf.Abs(body.rotation) % 360) < 275 && (Mathf.Abs(body.rotation) % 360) > 265))
             {
+                AudioMan.PlayMultipleSFX(GetUp1Sound);
                 IsMoving = true;
                 StartCoroutine("FreezeRotation");
                 
@@ -127,8 +182,8 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
                 float torque = rotationDifference * Uprightspeed;
 
                 // Apply the torque to the Rigidbody2D
-                // Debug.Log("it's not upright so we add torque: " + 50 + " * " + torque/Mathf.Abs(torque));
-                Debug.Log("torque: " + torque);
+                // //Debug.Log("it's not upright so we add torque: " + 50 + " * " + torque/Mathf.Abs(torque));
+                //Debug.Log("torque: " + torque);
                 body.AddTorque(torque);
                 
 
@@ -159,17 +214,17 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         {
             if (collider.gameObject.CompareTag("collide"))
             {
-                //Debug.Log("IsGrouded: true");
+                ////Debug.Log("IsGrouded: true");
                 return true;
             }
         }
-        //Debug.Log("IsGrouded: false");
+        ////Debug.Log("IsGrouded: false");
         return false;
     }
     public bool CheckUpright()
     {
         bool temp = (Mathf.Abs(body.rotation % 360) < 1);
-        //Debug.Log("upright: " + temp);
+        ////Debug.Log("upright: " + temp);
         return temp;
     }
 
@@ -187,9 +242,29 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         {
             yield return null;
         }
-        Debug.Log("waiot until condition: ");
+        //Debug.Log("waiot until condition: ");
+        AudioMan.PlayMultipleSFX(GetUp2Sound);
         body.rotation = 0;
         body.freezeRotation = true;
+    }
+    private IEnumerator PlayDiveSounds()
+    {
+        float pitch = 1;
+        if (body.velocity.magnitude > 0.5f)
+        {
+            pitch = Random.Range(1, 1.5f);
+            pitch = 0.5f;
+        }
+        else
+        {
+            pitch = Random.Range(0.5f, 1f);
+            pitch = 1.5f;
+        }
+        AudioMan.SetPitchSFX(DiveSound, pitch);
+        AudioMan.PlaySFX(DiveSound);
+        yield return new WaitForSeconds(0.4f);
+        yield return new WaitUntil(() => (body.velocity.magnitude + body.angularVelocity) < 0.8f);
+        AudioMan.StopPlayingSFX(DiveSound);
     }
     private void FixedUpdate()
     {
@@ -210,8 +285,25 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
     {
         if (collision.tag.Equals("scene"))
         {
-            FindObjectOfType<ChangeToScene>().ChangeScene();
+            StartCoroutine("NextLevel");
+            CanMove = false;
+            AllowFootsteps = false;
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (CheckIsGrounded())
+        {
+            //Debug.Log("play landing sound false!");
+            AudioMan.PlaySFX(LandingSound);
+            PlayLandingSound = false;
+        }
+    }
+    private IEnumerator NextLevel()
+    {
+        AudioMan.PlaySFX(GoalSound);
+        yield return new WaitForSeconds(3);
+        FindObjectOfType<ChangeToScene>().ChangeScene();
     }
 }
 
