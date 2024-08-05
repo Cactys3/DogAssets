@@ -7,6 +7,21 @@ public class ChangeToScene : MonoBehaviour
     public SceneName Scene = new SceneName();
     [SerializeField] private int Level;
     [SerializeField] private bool ChangeSceneOnEnabled;
+    public const string MudScene = "Mud Room";
+    public const string IntroScene = "Intro Animation";
+    public const string LockpickingScene = "";
+    public const string DogNipScene = "DogNip Animation";
+    public const string KitchenScene = "Kitchen Dining Room";
+    public const string LivingRoomScene = "Living Room";
+    public const string OfficeScene = "Office Room";
+    public const string BathroomScene = "Bathroom 1";
+    public const string BossScene = "boss";
+    public const string Ending1Scene = "Ending1";
+    public const string Ending2Scene = "Ending2";
+    public const string DemoEndScene = "Demo End";
+    public const string FridgeLevelOne = "Fridge Level 1";
+    public const string MicrowaveLevelOne = "Microwave Minigame 1";
+    public const string JuicerLevelOne = "Juicer Minigame";
     private void OnEnable()
     {
         if (ChangeSceneOnEnabled)

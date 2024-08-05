@@ -294,6 +294,15 @@ MonoBehaviour:
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: dognip
+    clip: {fileID: 8300000, guid: cdd435991d822a0459cec80c528257ac, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   MusicSource: {fileID: 9097247632348483150}
   TypeSource: {fileID: 6299114705575056528}
 --- !u!1 &5545769935646708130

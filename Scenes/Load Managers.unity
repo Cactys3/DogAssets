@@ -315,8 +315,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1850187357}
   - component: {fileID: 1850187356}
+  - component: {fileID: 1850187358}
   m_Layer: 0
-  m_Name: Scene Manager
+  m_Name: Scene Setups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,6 +350,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1850187358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850187355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5821e57c8f173e347b10c76c31ed32ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneTrack: {fileID: 1850187356}
+  audioMan: {fileID: 4227362194369388267}
 --- !u!1 &2060309487
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,3 +472,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e4860eb34c3a1418b7116fe3b74102, type: 3}
+--- !u!114 &4227362194369388267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7935146334157349303, guid: 35e4860eb34c3a1418b7116fe3b74102, type: 3}
+  m_PrefabInstance: {fileID: 4227362194369388266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6639cfcf215c0f64b88bba06cfde4eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
