@@ -7,21 +7,7 @@ public class ChangeToScene : MonoBehaviour
     public SceneName Scene = new SceneName();
     [SerializeField] private int Level;
     [SerializeField] private bool ChangeSceneOnEnabled;
-    public const string MudScene = "Mud Room";
-    public const string IntroScene = "Intro Animation";
-    public const string LockpickingScene = "";
-    public const string DogNipScene = "DogNip Animation";
-    public const string KitchenScene = "Kitchen Dining Room";
-    public const string LivingRoomScene = "Living Room";
-    public const string OfficeScene = "Office Room";
-    public const string BathroomScene = "Bathroom 1";
-    public const string BossScene = "boss";
-    public const string Ending1Scene = "Ending1";
-    public const string Ending2Scene = "Ending2";
-    public const string DemoEndScene = "Demo End";
-    public const string FridgeLevelOne = "Fridge Level 1";
-    public const string MicrowaveLevelOne = "Microwave Minigame 1";
-    public const string JuicerLevelOne = "Juicer Minigame";
+
     private void OnEnable()
     {
         if (ChangeSceneOnEnabled)
@@ -34,19 +20,19 @@ public class ChangeToScene : MonoBehaviour
         switch (Scene)
         {
             case SceneName.Intro:
-                SceneManager.LoadScene("Intro Animation");
+                SceneManager.LoadScene(DialogueManager.introScene);
                 break;
             case SceneName.Mud:
-                SceneManager.LoadScene("Mud Room");
+                SceneManager.LoadScene(DialogueManager.mudScene);
                 break;
             case SceneName.Lockpicking:
-                SceneManager.LoadScene("Lockpicking Intro");
+                SceneManager.LoadScene(DialogueManager.lockpickingScene);
                 break;
             case SceneName.DogNip:
-                SceneManager.LoadScene("DogNip Animation");
+                SceneManager.LoadScene(DialogueManager.dognipScene);
                 break;
             case SceneName.KitchenDining:
-                SceneManager.LoadScene("Kitchen Dining Room");
+                SceneManager.LoadScene(DialogueManager.kitchenScene);
                 break;
             case SceneName.Microwave:
                 if (Level > 0 && Level <= 5)
@@ -59,7 +45,7 @@ public class ChangeToScene : MonoBehaviour
                 }
                 break;
             case SceneName.Juicer:
-                SceneManager.LoadScene("Juicer Minigame");
+                SceneManager.LoadScene(DialogueManager.juicerScene);
                 break;
             case SceneName.FridgeOven:
                 if (Level > 0 && Level <= 4)
@@ -72,28 +58,28 @@ public class ChangeToScene : MonoBehaviour
                 }
                 break;
             case SceneName.Living:
-                SceneManager.LoadScene("Living Room");
+                SceneManager.LoadScene(DialogueManager.livingScene);
                 break;
             case SceneName.Office:
-                SceneManager.LoadScene("Office Room");
+                SceneManager.LoadScene(DialogueManager.officeScene);
                 break;
             case SceneName.Bathroom1:
-                SceneManager.LoadScene("Bathroom 1");
+                SceneManager.LoadScene(DialogueManager.bathroomScene);
                 break;
             case SceneName.DemoEnd:
-                SceneManager.LoadScene("Demo End");
+                SceneManager.LoadScene(DialogueManager.demoendScene);
                 break;
             case SceneName.LoadInk:
                 SceneManager.LoadScene("Load Managers");
                 break;
             case SceneName.Ending1:
-                SceneManager.LoadScene("Ending2");
+                SceneManager.LoadScene(DialogueManager.ending1Scene);
                 break;
             case SceneName.Ending2:
-                SceneManager.LoadScene("Ending2");
+                SceneManager.LoadScene(DialogueManager.ending2Scene);
                 break;
             case SceneName.Boss:
-                SceneManager.LoadScene("boss");
+                SceneManager.LoadScene(DialogueManager.bossScene);
                 break;
             default:
                 Debug.LogError("ChangeToScene on object: " + this.gameObject.name + ", is not setup properly");

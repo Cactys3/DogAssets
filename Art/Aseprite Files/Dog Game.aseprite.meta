@@ -1241,15 +1241,15 @@ ScriptedImporter:
     uvTransform: {x: 604, y: 468}
   - name: Dog Game_Frame_20
     originalName: 
-    pivot: {x: 15.166667, y: -16.166666}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1976
-      width: 6
-      height: 6
+      x: 604
+      y: 584
+      width: 192
+      height: 108
     spriteID: 4c2f5ece7693ae446b7a1d3103bda10e
     spriteBone: []
     spriteOutline: []
@@ -1258,7 +1258,27 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1976}
+    uvTransform: {x: 604, y: 584}
+  - name: Dog Game_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 700
+      width: 192
+      height: 108
+    spriteID: b270bb2fb7ed94445a5c37a1bc32b125
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 700}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -1716,14 +1736,22 @@ ScriptedImporter:
         width: 192
         height: 108
       spriteId: dc410a68f2ceed0468916cf2cfb55543
+    - name: Dog Game_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: 4c2f5ece7693ae446b7a1d3103bda10e
     - name: Dog Game_Frame_20
       frameIndex: 20
       cellRect:
-        x: 5
-        y: 97
-        width: 6
-        height: 6
-      spriteId: 4c2f5ece7693ae446b7a1d3103bda10e
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      spriteId: b270bb2fb7ed94445a5c37a1bc32b125
     linkedCells: []
     parentIndex: -1
   platformSettings:

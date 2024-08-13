@@ -2125,6 +2125,14 @@ PrefabInstance:
       propertyPath: MultipleSpawns
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6978465679474321174, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384700142746104576, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: SoundName
+      value: f_jump
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2255,6 +2263,10 @@ PrefabInstance:
     - target: {fileID: 783026695366677085, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2101007054855006755, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -50.00006
       objectReference: {fileID: 0}
     - target: {fileID: 5323134358214271351, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
       propertyPath: m_Pivot.x

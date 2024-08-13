@@ -7,7 +7,7 @@ Go Through Door?
 
 
 === go ===
-#scene:bathroom1
+#scene:bath
 -> END
 
 

@@ -18,49 +18,49 @@ public class MusicTracker : MonoBehaviour
         {
             switch(SceneManager.GetActiveScene().name)
             {
-                case ChangeToScene.MudScene:
+                case DialogueManager.mudScene:
 
                     break;
-                case ChangeToScene.LivingRoomScene:
+                case DialogueManager.livingScene:
 
                     break;
-                case ChangeToScene.BathroomScene:
+                case DialogueManager.bathroomScene:
 
                     break;
-                case ChangeToScene.OfficeScene:
+                case DialogueManager.officeScene:
 
                     break;
-                case ChangeToScene.KitchenScene:
+                case DialogueManager.kitchenScene:
 
                     break;
-                case ChangeToScene.IntroScene:
+                case DialogueManager.introScene:
 
                     break;
-                case ChangeToScene.DogNipScene:
+                case DialogueManager.dognipScene:
 
                     break;
-                case ChangeToScene.Ending1Scene:
+                case DialogueManager.ending1Scene:
 
                     break;
-                case ChangeToScene.Ending2Scene:
+                case DialogueManager.ending2Scene:
 
                     break;
-                case ChangeToScene.BossScene:
+                case DialogueManager.bossScene:
 
                     break;
-                case ChangeToScene.DemoEndScene:
+                case DialogueManager.demoendScene:
 
                     break;
-                case ChangeToScene.LockpickingScene:
+                case DialogueManager.lockpickingScene:
 
                     break;
-                case ChangeToScene.JuicerLevelOne:
+                case DialogueManager.juicerScene:
 
                     break;
-                case ChangeToScene.FridgeLevelOne:
+                case DialogueManager.fridgeovenScene:
 
                     break;
-                case ChangeToScene.MicrowaveLevelOne:
+                case DialogueManager.microwaveScene:
 
                     break;
             }

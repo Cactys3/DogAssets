@@ -98,10 +98,32 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Sound: " + sound);
         }
 
-		s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-		s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+        if (s.volumeVariance + s.pitchVariance != 0)
+        {
+            float newvolume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+            float newpitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
-		s.source.Play();
+            if (newvolume > 1)
+            {
+                newvolume = 1;
+            }
+            if (newpitch > 3)
+            {
+                newpitch = 1;
+            }
+            if (newvolume < 0)
+            {
+                newvolume = 0;
+            }
+            if (newpitch < 0.1f)
+            {
+                newpitch = 0.1f;
+            }
+            s.source.volume = newvolume;
+            s.source.pitch = newpitch;
+        }
+
+        s.source.Play();
     }
 
     public bool PlayingSFX(string sound)
@@ -124,7 +146,7 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(SFXSounds, item => item.name == sound);
 
-        if (s == null || s.source.isPlaying)
+        if (s == null || s.source.isPlaying) //TODO: i htink "s.source.isPlaying" is bad or does nothing
         {
             Debug.LogWarning("Sound: " + sound + " not found!");
             return;
@@ -137,8 +159,30 @@ public class AudioManager : MonoBehaviour
         AudioSource audioSource = soundObject.GetComponent<AudioSource>();
 
         audioSource.clip = s.clip;
-        audioSource.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-        audioSource.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+        if (s.volumeVariance + s.pitchVariance != 0)
+        {
+            float newvolume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+            float newpitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+
+            if (newvolume > 1)
+            {
+                newvolume = 1;
+            }
+            if (newpitch > 3)
+            {
+                newpitch = 1;
+            }
+            if (newvolume < 0)
+            {
+                newvolume = 0;
+            }
+            if (newpitch < 0.1f)
+            {
+                newpitch = 0.1f;
+            }
+            audioSource.volume = newvolume;
+            audioSource.pitch = newpitch;
+        }
         audioSource.Play();
 
         Destroy(soundObject, audioSource.clip.length + 1f); // Destroy slightly after the clip ends
@@ -176,9 +220,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-        s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
-
         s.source.Stop();
     }
 
@@ -190,11 +231,89 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("Could not find sound: " + name);
         }
+        else if (TypeSource.isPlaying)
+        {
+            Debug.Log("source is playing for: " + name);
+        }
         else
         {
             TypeSource.clip = s.clip;
+            s.source = TypeSource;
+
+            if (s.volumeVariance + s.pitchVariance != 0)
+            {
+                float newvolume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+                float newpitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+
+                if (newvolume > 1)
+                {
+                    newvolume = 1;
+                }
+                if (newpitch > 3)
+                {
+                    newpitch = 1;
+                }
+                if (newvolume < 0)
+                {
+                    newvolume = 0;
+                }
+                if (newpitch < 0.1f)
+                {
+                    newpitch = 0.1f;
+                }
+                Debug.Log(newvolume + " " + newpitch);
+                Debug.Log(s.source.pitch);
+                s.source.volume = newvolume;
+                s.source.pitch = newpitch;
+            }
+
             TypeSource.Play();
         }
+    }
+    public void PlayMultipleType(string sound)
+    {
+        Sound s = Array.Find(TypeSounds, item => item.name == sound);
+
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + sound + " not found!");
+            return;
+        }
+        else
+        {
+            Debug.Log("Sound: " + sound);
+        }
+        GameObject soundObject = Instantiate(AudioPrefab, transform.position, Quaternion.identity);
+        AudioSource audioSource = soundObject.GetComponent<AudioSource>();
+
+        audioSource.clip = s.clip;
+        if (s.volumeVariance + s.pitchVariance != 0)
+        {
+            float newvolume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+            float newpitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+
+            if (newvolume > 1)
+            {
+                newvolume = 1;
+            }
+            if (newpitch > 3)
+            {
+                newpitch = 1;
+            }
+            if (newvolume < 0)
+            {
+                newvolume = 0;
+            }
+            if (newpitch < 0.1f)
+            {
+                newpitch = 0.1f;
+            }
+            audioSource.volume = newvolume;
+            audioSource.pitch = newpitch;
+        }
+        audioSource.Play();
+
+        Destroy(soundObject, audioSource.clip.length + 1f); // Destroy slightly after the clip ends
     }
     public void StopTypeSound()
     {
@@ -211,6 +330,33 @@ public class AudioManager : MonoBehaviour
         else
         {
             MusicSource.clip = s.clip;
+            s.source = MusicSource;
+
+            if (s.volumeVariance + s.pitchVariance != 0)
+            {
+                float newvolume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+                float newpitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+
+                if (newvolume > 1)
+                {
+                    newvolume = 1;
+                }
+                if (newpitch > 3)
+                {
+                    newpitch = 1;
+                }
+                if (newvolume < 0)
+                {
+                    newvolume = 0;
+                }
+                if (newpitch < 0.1f)
+                {
+                    newpitch = 0.1f;
+                }
+                s.source.volume = newvolume;
+                s.source.pitch = newpitch;
+            }
+
             MusicSource.Play();
         }
     }

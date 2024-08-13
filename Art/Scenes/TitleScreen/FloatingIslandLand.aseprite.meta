@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 9438adc657c9eaa4a9d606106fd1e652
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: FloatingIslandLand_Frame_0
+    originalName: 
+    pivot: {x: -0.33898312, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 59
+      height: 91
+    spriteID: 8b97722594abf464cbe647524d2c64b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: FloatingIslandLand_Frame_1
+    originalName: 
+    pivot: {x: -0.33898312, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 103
+      width: 59
+      height: 91
+    spriteID: cf3259c71ec67d842894efc17070abb1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 103}
+  - name: FloatingIslandLand_Frame_2
+    originalName: 
+    pivot: {x: -0.33898312, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 202
+      width: 59
+      height: 91
+    spriteID: 31b8779ddbd2c5041b08e1219ad1e760
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 202}
+  - name: FloatingIslandLand_Frame_3
+    originalName: 
+    pivot: {x: -0.33898312, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 301
+      width: 59
+      height: 91
+    spriteID: 47016a1f2cc521a4b9697402bd4d0bcc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 301}
+  - name: FloatingIslandLand_Frame_4
+    originalName: 
+    pivot: {x: -0.33898312, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 400
+      width: 59
+      height: 91
+    spriteID: 556e5d10db495994cb38b9e7efa9830d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 400}
+  - name: FloatingIslandLand_Frame_5
+    originalName: 
+    pivot: {x: -0.33898312, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 71
+      y: 4
+      width: 59
+      height: 91
+    spriteID: 6529fb58a1b0e9049bb4f9ebda806926
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 71, y: 4}
+  - name: FloatingIslandLand_Frame_6
+    originalName: 
+    pivot: {x: -0.33898312, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 71
+      y: 103
+      width: 59
+      height: 91
+    spriteID: e870cd24bed0c8f4886e8c5739df2fb7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 71, y: 103}
+  - name: FloatingIslandLand_Frame_7
+    originalName: 
+    pivot: {x: -0.33898312, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 71
+      y: 202
+      width: 59
+      height: 91
+    spriteID: 752b24eb50104e149aedc9568d19fa62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 71, y: 202}
+  - name: FloatingIslandLand_Frame_8
+    originalName: 
+    pivot: {x: -0.33898312, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 71
+      y: 301
+      width: 59
+      height: 91
+    spriteID: c183b6af2584a7449b0d5f558a34b7dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 71, y: 301}
+  - name: FloatingIslandLand_Frame_9
+    originalName: 
+    pivot: {x: -0.33898312, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 71
+      y: 400
+      width: 59
+      height: 91
+    spriteID: 0c5dd5768e8f489468a12a81389bc45f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 71, y: 400}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -357307704
+    name: FloatingIslandLand
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: FloatingIslandLand_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 116
+        y: 0
+        width: 59
+        height: 91
+      spriteId: 8b97722594abf464cbe647524d2c64b7
+    - name: FloatingIslandLand_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 116
+        y: 0
+        width: 59
+        height: 91
+      spriteId: cf3259c71ec67d842894efc17070abb1
+    - name: FloatingIslandLand_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 116
+        y: 0
+        width: 59
+        height: 91
+      spriteId: 31b8779ddbd2c5041b08e1219ad1e760
+    - name: FloatingIslandLand_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 116
+        y: 0
+        width: 59
+        height: 91
+      spriteId: 47016a1f2cc521a4b9697402bd4d0bcc
+    - name: FloatingIslandLand_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 116
+        y: 0
+        width: 59
+        height: 91
+      spriteId: 556e5d10db495994cb38b9e7efa9830d
+    - name: FloatingIslandLand_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 116
+        y: 0
+        width: 59
+        height: 91
+      spriteId: 6529fb58a1b0e9049bb4f9ebda806926
+    - name: FloatingIslandLand_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 116
+        y: 0
+        width: 59
+        height: 91
+      spriteId: e870cd24bed0c8f4886e8c5739df2fb7
+    - name: FloatingIslandLand_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 116
+        y: 0
+        width: 59
+        height: 91
+      spriteId: 752b24eb50104e149aedc9568d19fa62
+    - name: FloatingIslandLand_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 116
+        y: 0
+        width: 59
+        height: 91
+      spriteId: c183b6af2584a7449b0d5f558a34b7dd
+    - name: FloatingIslandLand_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 116
+        y: 0
+        width: 59
+        height: 91
+      spriteId: 0c5dd5768e8f489468a12a81389bc45f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 192, y: 108}

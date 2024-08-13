@@ -95,7 +95,7 @@ public class JuicerMinigameManager : MonoBehaviour
         TwoXPriceNumber.SetSpacing(0.13f);
         EightXPriceNumber.SetSpacing(0.13f);
         FiveTwelveXPriceNumber.SetSpacing(0.13f);
-
+        Cursor = FindObjectOfType<MyCursor>().sprite;
     }
     void Update()
     {

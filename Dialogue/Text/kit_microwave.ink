@@ -17,5 +17,5 @@ INCLUDE Globals.ink
   + [SKIP]?
   -> END
   + [DO IT]?
-  #scene:Microwave 1
+  #scene:microwave
   -> END

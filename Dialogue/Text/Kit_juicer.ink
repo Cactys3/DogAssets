@@ -17,5 +17,5 @@ INCLUDE Globals.ink
   -> END
   + [DO IT]?
   ~completed_jucier = true
- #scene:Juicer Minigame
+ #scene:juicer
   -> END

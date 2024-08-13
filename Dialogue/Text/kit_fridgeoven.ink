@@ -27,7 +27,7 @@ INCLUDE Globals.ink
   #name:fridgeoven #image:fridgeoven #layout:fridgeoven #sound:fridgeoven
   You dare challenge US??? 
        ~completed_fridgeoven = true
-     #scene:Fridge Level 1
+     #scene:fridgeoven
   -> END
   
   ===TryCombine(item)===

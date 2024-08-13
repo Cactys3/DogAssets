@@ -37,20 +37,35 @@ public class DialogueManager : MonoBehaviour
     [Header("Parameters and Tags")]
     [SerializeField] private float defaultTypingSpeed = 0.04f;
     private float typingSpeed;
-    private string defaultTypingSound = "default";
-    private string currentTypingSound;
+    private string defaultTypingSound = "silent";
+    [SerializeField] private string currentTypingSound;
     //Scenes
-    private const string mudScene = "Mud Room";
-    private const string kitchenScene = "Kitchen Dining Room";
-    private const string bathroomScene = "Bathroom 1";
-    private const string officeScene = "Office Room";
-    private const string deckScene = "Deck";
-    private const string livingScene = "Living Room";
-    private const string dognipScene = "DogNip";
-    private const string bossScene = "Final Boss";
-    private const string ending1Scene = "Ending1";
-    private const string ending2Scene = "Ending2";
-    private const string endchoiceScene = "EndChoice";
+    public const string demoendScene = "Demo End";
+    public const string lockpickingScene = "Lockpicking Intro";
+    public const string titleScene = "Titlescreen_Island";
+    public const string introScene = "Intro Animation";
+    public const string mudScene = "Mud Room";
+    public const string kitchenScene = "Kitchen Dining Room";
+    public const string bathroomScene = "Bathroom 1";
+    public const string officeScene = "Office Room";
+    public const string deckScene = "Deck";
+    public const string livingScene = "Living Room";
+    public const string dognipScene = "DogNip";
+    public const string bossScene = "Final Boss";
+    public const string ending1Scene = "Ending1";
+    public const string ending2Scene = "Ending2";
+    public const string endchoiceScene = "EndChoice";
+    public const string juicerScene = "Juicer Minigame";
+    public const string fridgeovenScene = "Fridge Level 1";
+    public const string fridgeovenScene2 = "Fridge Level 2";
+    public const string fridgeovenScene3 = "Fridge Level 3";
+    public const string fridgeovenScene4 = "Fridge Level 4";
+    public const string fridgeovenScene5 = "Fridge Level 5";
+    public const string microwaveScene = "Microwave 1";
+    public const string microwaveScene2 = "Microwave 2";
+    public const string microwaveScene3 = "Microwave 3";
+    public const string microwaveScene4 = "Microwave 4";
+    public const string microwaveScene5 = "Microwave 5";
     //Names
     private const string NarratorName = "narrator";
     private const string DogName = "dog";
@@ -59,12 +74,18 @@ public class DialogueManager : MonoBehaviour
     private bool canSkipTyping = true;
     private float autoSkip = 0f;
     //Sounds
-    private const string NarratorSoundDefault = "narrator_default";
-    private const string DogSoundDefault = "dog_neutral";
+    private const string NarratorSound = "narrator";
+    private const string DogSound = "dog";
     private const string DogSoundBark = "dog_bark";
     private const string DogSoundGrowl = "dog_growl";
     private const string DogSoundWhine = "dog_whine";
     private const string DogSoundWoof = "dog_woof";
+    private const string MicrowaveSound = "microwave";
+    private const string FridgeSound = "fridge";
+    private const string OvenSound = "oven";
+    private const string FridgeOvenSound = "fridge";
+    private const string JuicerSound = "juicer";
+
     //Layouts
     private const string LayoutUP = "up";
     private const string LayoutDown = "down";
@@ -343,14 +364,22 @@ public class DialogueManager : MonoBehaviour
                     //TODO: add a thing that makes it so a word jumps to the next line if it can't fit completely on the current line
                     if (!letter.ToString().Equals(" ") && !skip && currentTypingSound != "silent" && !isAddingCustomText)
                     {
-                        //TODO: if we are adding a letter and not skipping, play a sound
+                        FindObjectOfType<AudioManager>().PlayTypeSound(currentTypingSound); //TODO: choose typing sound method
+                        //FindObjectOfType<AudioManager>().PlayMultipleType(currentTypingSound); 
                     }
-                    else
+                    else if (letter.ToString().Equals(" "))
                     {
                         //TODO: maybe add here a thing for people who pause after completing a word?
                     }
-                    //if we are skipping to the end, type all letters without delay
-                    if (!skip) { yield return new WaitForSeconds(typingSpeed); }
+                    //if we are skipping to the end, type all letters without miniscule delay
+                    if (!skip) 
+                    { 
+                        yield return new WaitForSeconds(typingSpeed); 
+                    }
+                    else
+                    {
+                        yield return new WaitForSeconds(0.001f);
+                    }
                 }
             }
             if (autoSkip > 0)
@@ -545,7 +574,7 @@ public class DialogueManager : MonoBehaviour
             case DogSoundBark:
                 currentTypingSound = "dog_bark";
                 break;
-            case DogSoundDefault:
+            case DogSound:
                 currentTypingSound = "dog_default";
                 break;
             case DogSoundGrowl:
@@ -557,7 +586,7 @@ public class DialogueManager : MonoBehaviour
             case DogSoundWoof:
                 currentTypingSound = "dog_woof";
                 break;
-            case NarratorName:
+            case NarratorSound:
                 currentTypingSound = "narrator_default";
                 break;
             default:
@@ -583,7 +612,7 @@ public class DialogueManager : MonoBehaviour
             case "mud":
                 SceneManager.LoadScene(mudScene);
                 return;
-            case "bathroom1":
+            case "bath":
                 SceneManager.LoadScene(bathroomScene);
                 return;
             case "living":
@@ -604,17 +633,17 @@ public class DialogueManager : MonoBehaviour
             case "endchoice":
                 SceneManager.LoadScene(endchoiceScene);
                 break;
+            case "juicer":
+                SceneManager.LoadScene(juicerScene);
+                break;
+            case "microwave":
+                SceneManager.LoadScene(microwaveScene);
+                break;
+            case "fridgeoven":
+                SceneManager.LoadScene(fridgeovenScene);
+                break;
             default:
-                int value = -99;
-                if (int.TryParse(name, out value) && value > 0 && value <= SceneManager.sceneCountInBuildSettings)
-                {
-                    SceneManager.LoadScene(value); //TODO: no longer using the "value" part of this code since I'm going to load scenes via name string. Maybe delete later.
-                }
-                else
-                {
-                    SceneManager.LoadScene(name);
-                    //Debug.LogWarning("tried to change scene through INK but may have encountered error with scenename: " + name);
-                }
+                Debug.LogWarning("tried to change scene through INK but may have encountered error with scenename: " + name);
                 break; 
                
         }

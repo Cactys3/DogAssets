@@ -265,7 +265,25 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  TypeSounds: []
+  TypeSounds:
+  - name: dog_default
+    clip: {fileID: 8300000, guid: 6825607acba1af848acf413ffbb98db3, type: 3}
+    volume: 1
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: narrator_default
+    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    volume: 1
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   MusicSounds:
   - name: Default
     clip: {fileID: 0}

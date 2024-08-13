@@ -11,5 +11,6 @@ INCLUDE Globals.ink
  -> END
  
   === NotCompleted ===
-   #scene:UFO
+  #name:narrator #image:narrator_neutral 
+  nothing to see here...
   -> END

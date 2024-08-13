@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7813625041665672385}
   - component: {fileID: 4119054780229871689}
+  - component: {fileID: 5530173880475722423}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -115,7 +116,7 @@ Transform:
   m_Children:
   - {fileID: 2962388442359061888}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.963}
 --- !u!114 &4119054780229871689
 MonoBehaviour:
@@ -129,3 +130,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04367a4880125f443bd390b173619934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 21300000, guid: 34b2523699818734da9a020efac07394, type: 3}
+  JuicerSprite: {fileID: 21300000, guid: b9dad2cda262b824384d96f2ee945abe, type: 3}
+  FridgeOvenSprite: {fileID: 21300000, guid: b11b6691a8bf1a84a8ccddcc923296c2, type: 3}
+  MicrowaveSprite: {fileID: 21300000, guid: 5decd73178aee464d87cdd0949f2a0fd, type: 3}
+  sprite: {fileID: 589903676428858031}
+--- !u!61 &5530173880475722423
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254331841207437563}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

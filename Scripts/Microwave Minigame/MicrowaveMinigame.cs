@@ -127,11 +127,18 @@ public class MicrowaveMinigame : MonoBehaviour
     private void SetRotation()
     {
         //float angle = Mathf.Atan2(TowardsMouse(WaveShooter.position).y, TowardsMouse(WaveShooter.position).x) * Mathf.Rad2Deg;
-        float angle = WaveShooter.rotation;
-        angle = Mathf.Atan2(Wave.velocity.y, Wave.velocity.x) * Mathf.Rad2Deg;
-        //Debug.Log(angle * Mathf.Rad2Deg);
-        
-        Wave.SetRotation(angle + 90f);
+        try
+        {
+            float angle = WaveShooter.rotation;
+            angle = Mathf.Atan2(Wave.velocity.y, Wave.velocity.x) * Mathf.Rad2Deg;
+            //Debug.Log(angle * Mathf.Rad2Deg);
+
+            Wave.SetRotation(angle + 90f);
+        }
+        catch
+        {
+
+        }
     }
 
     private void WinLevel()

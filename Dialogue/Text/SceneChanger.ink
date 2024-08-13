@@ -4,21 +4,37 @@ what u want
 ->first
 *[obtain item]
 ->third
+*[test]
+->test
+*[oops]
+->END
 
+===test===
+#name:dog #image:dog_neutral #sound:dog
+name:dog image:dog_neutral sound:dog
+#name:narrator #image:narrator_neutral #sound:narrator
+name:narrator image:narrator_neutral sound:narrator
+#image:oven
+image:oven
+#image:juicer
+image:juicer
+#image:microwave
+image:microwave
+->END
 
 ===first===
 Go to... #typingspeed:0
 *[Fridge]
-#scene:Fridge Level 1
+#scene:fridgeoven
 ->END
 *[mud room]
-#scene:Mud Room
+#scene:mud
 ->END
 *[kitchen dining room]
-#scene:Kitchen Dining Room
+#scene:kitchen
 ->END
 *[living room]
-#scene:Living Room
+#scene:living
 ->END
 *[see more]
 ->second
@@ -28,13 +44,13 @@ Go to... #typingspeed:0
 Go to... #typingspeed:0
 
 *[office room]
-#scene:Office Room
+#scene:office
 ->END
 *[bathroom]
-#scene:Bathroom 1
+#scene:bath
 ->END
 *[Microwave]
-#scene:Microwave 1
+#scene:microwave
 ->END
 *[Boss]
 #scene:boss

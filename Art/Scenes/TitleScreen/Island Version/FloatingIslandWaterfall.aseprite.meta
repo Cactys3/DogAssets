@@ -1,0 +1,920 @@
+fileFormatVersion: 2
+guid: fc75bb00d36d37541a46fda18be17efd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: FloatingIslandWaterfall
+    originalName: 
+    pivot: {x: -1.4799998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 80
+      width: 25
+      height: 1
+    spriteID: 1b2361c644d91e949b5d0cd7c1f91acf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 80}
+  - name: FloatingIslandWaterfall_Frame_1
+    originalName: 
+    pivot: {x: -0.63636357, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 70
+      width: 44
+      height: 1
+    spriteID: b615c9151a312c343a8373316b96c9f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 70}
+  - name: FloatingIslandWaterfall_Frame_2
+    originalName: 
+    pivot: {x: -0.26562506, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 209
+      width: 64
+      height: 1
+    spriteID: 146c7d6aaafd82443828952a6d3fd5aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 209}
+  - name: FloatingIslandWaterfall_Frame_3
+    originalName: 
+    pivot: {x: -0.102564156, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 141
+      width: 78
+      height: 1
+    spriteID: d98d3a73b25176545934a4e71db0b724
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 141}
+  - name: FloatingIslandWaterfall_Frame_5
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 156
+      y: 161
+      width: 91
+      height: 1
+    spriteID: ccadd2b3b35fda940b45ce106fed9c81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 156, y: 161}
+  - name: FloatingIslandWaterfall_Frame_6
+    originalName: 
+    pivot: {x: 0.04999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 171
+      width: 100
+      height: 1
+    spriteID: 47dc5d7332422af4a997c6c579571565
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 171}
+  - name: FloatingIslandWaterfall_Frame_7
+    originalName: 
+    pivot: {x: 0.102803715, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 130
+      width: 107
+      height: 3
+    spriteID: 94c45554dc9dcb844af83728730b6b1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 130}
+  - name: FloatingIslandWaterfall_Frame_8
+    originalName: 
+    pivot: {x: 0.17241378, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 181
+      width: 116
+      height: 2
+    spriteID: 64860cde38a45ea449d8291345fad205
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 181}
+  - name: FloatingIslandWaterfall_Frame_9
+    originalName: 
+    pivot: {x: 0.232, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 130
+      width: 125
+      height: 2
+    spriteID: bd4afa3c75f9d794a8ca122e1ef064f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 130}
+  - name: FloatingIslandWaterfall_Frame_10
+    originalName: 
+    pivot: {x: 0.29411766, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 171
+      width: 136
+      height: 2
+    spriteID: 16034d15ea7997547b31e9af499226f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 171}
+  - name: FloatingIslandWaterfall_Frame_11
+    originalName: 
+    pivot: {x: 0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 161
+      width: 144
+      height: 2
+    spriteID: 865e36d7b73cc324f98e0d8ec58b4eb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 161}
+  - name: FloatingIslandWaterfall_Frame_12
+    originalName: 
+    pivot: {x: 0.37662333, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 151
+      width: 154
+      height: 2
+    spriteID: d28ecd85b82280e459ceb50d142a0a03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 151}
+  - name: FloatingIslandWaterfall_Frame_13
+    originalName: 
+    pivot: {x: 0.39240506, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 141
+      width: 158
+      height: 2
+    spriteID: 15677c2c0a74dc84c8dbd99db841ea03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 141}
+  - name: FloatingIslandWaterfall_Frame_14
+    originalName: 
+    pivot: {x: 0.41463417, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 120
+      width: 164
+      height: 2
+    spriteID: d2ccea009c00c2d4cb08314df99506ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 120}
+  - name: FloatingIslandWaterfall_Frame_15
+    originalName: 
+    pivot: {x: 0.43529412, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 209
+      width: 170
+      height: 1
+    spriteID: cfd692548b5e9f346ae81d1f9c8090d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 209}
+  - name: FloatingIslandWaterfall_Frame_16
+    originalName: 
+    pivot: {x: 0.46067417, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 200
+      width: 178
+      height: 1
+    spriteID: a2e5dfc838da55646a85e8a916ac81dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 200}
+  - name: FloatingIslandWaterfall_Frame_17
+    originalName: 
+    pivot: {x: 0.486631, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 191
+      width: 187
+      height: 1
+    spriteID: f94dea070939dcd48856b0a26e165ade
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 191}
+  - name: FloatingIslandWaterfall_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 192
+      height: 3
+    spriteID: fdaac1b9d54eaac418d2ee18af91c552
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: FloatingIslandWaterfall_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 15
+      width: 192
+      height: 3
+    spriteID: 166c1c51431c3fd40a5b08cd6112a613
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 15}
+  - name: FloatingIslandWaterfall_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 26
+      width: 192
+      height: 3
+    spriteID: 62950529a820fb44e95e3c76d3fca418
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 26}
+  - name: FloatingIslandWaterfall_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 70
+      width: 192
+      height: 2
+    spriteID: 5d768f8cca3ab7b46b3f6ae2da1c7869
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 70}
+  - name: FloatingIslandWaterfall_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 192
+      height: 2
+    spriteID: 908ba8a4a03461a4b996d8fc9ee94eaf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
+  - name: FloatingIslandWaterfall_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 37
+      width: 192
+      height: 3
+    spriteID: 4d9bc6340f7672c4893ff35bff977aa6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 37}
+  - name: FloatingIslandWaterfall_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 48
+      width: 192
+      height: 3
+    spriteID: f7576345ef1a86a468d59582bb8894f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 48}
+  - name: FloatingIslandWaterfall_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 59
+      width: 192
+      height: 3
+    spriteID: 1adfb68f70e5a8f4abb9285d7794d743
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 59}
+  - name: FloatingIslandWaterfall_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 90
+      width: 192
+      height: 2
+    spriteID: fc3bf2e263b29594d9dcd739d3907a50
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 90}
+  - name: FloatingIslandWaterfall_Frame_27
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 100
+      width: 192
+      height: 2
+    spriteID: 2c19ebd591f06bf41a9db07902cd5377
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 100}
+  - name: FloatingIslandWaterfall_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 110
+      width: 192
+      height: 2
+    spriteID: 10340ed1e8df3f8498318c8e31505382
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 110}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -806409013
+    name: FloatingIslandWaterfall
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: FloatingIslandWaterfall_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 133
+        y: 0
+        width: 25
+        height: 1
+      spriteId: 1b2361c644d91e949b5d0cd7c1f91acf
+    - name: FloatingIslandWaterfall_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 124
+        y: 0
+        width: 44
+        height: 1
+      spriteId: b615c9151a312c343a8373316b96c9f4
+    - name: FloatingIslandWaterfall_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 113
+        y: 0
+        width: 64
+        height: 1
+      spriteId: 146c7d6aaafd82443828952a6d3fd5aa
+    - name: FloatingIslandWaterfall_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 104
+        y: 0
+        width: 78
+        height: 1
+      spriteId: d98d3a73b25176545934a4e71db0b724
+    - name: FloatingIslandWaterfall_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 96
+        y: 0
+        width: 91
+        height: 1
+      spriteId: ccadd2b3b35fda940b45ce106fed9c81
+    - name: FloatingIslandWaterfall_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 91
+        y: 0
+        width: 100
+        height: 1
+      spriteId: 47dc5d7332422af4a997c6c579571565
+    - name: FloatingIslandWaterfall_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 85
+        y: 0
+        width: 107
+        height: 3
+      spriteId: 94c45554dc9dcb844af83728730b6b1d
+    - name: FloatingIslandWaterfall_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 76
+        y: 0
+        width: 116
+        height: 2
+      spriteId: 64860cde38a45ea449d8291345fad205
+    - name: FloatingIslandWaterfall_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 67
+        y: 0
+        width: 125
+        height: 2
+      spriteId: bd4afa3c75f9d794a8ca122e1ef064f5
+    - name: FloatingIslandWaterfall_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 56
+        y: 0
+        width: 136
+        height: 2
+      spriteId: 16034d15ea7997547b31e9af499226f8
+    - name: FloatingIslandWaterfall_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 48
+        y: 0
+        width: 144
+        height: 2
+      spriteId: 865e36d7b73cc324f98e0d8ec58b4eb4
+    - name: FloatingIslandWaterfall_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 38
+        y: 0
+        width: 154
+        height: 2
+      spriteId: d28ecd85b82280e459ceb50d142a0a03
+    - name: FloatingIslandWaterfall_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 34
+        y: 0
+        width: 158
+        height: 2
+      spriteId: 15677c2c0a74dc84c8dbd99db841ea03
+    - name: FloatingIslandWaterfall_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 28
+        y: 0
+        width: 164
+        height: 2
+      spriteId: d2ccea009c00c2d4cb08314df99506ae
+    - name: FloatingIslandWaterfall_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 22
+        y: 0
+        width: 170
+        height: 1
+      spriteId: cfd692548b5e9f346ae81d1f9c8090d3
+    - name: FloatingIslandWaterfall_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 14
+        y: 0
+        width: 178
+        height: 1
+      spriteId: a2e5dfc838da55646a85e8a916ac81dc
+    - name: FloatingIslandWaterfall_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 5
+        y: 0
+        width: 187
+        height: 1
+      spriteId: f94dea070939dcd48856b0a26e165ade
+    - name: FloatingIslandWaterfall_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 3
+      spriteId: fdaac1b9d54eaac418d2ee18af91c552
+    - name: FloatingIslandWaterfall_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 3
+      spriteId: 166c1c51431c3fd40a5b08cd6112a613
+    - name: FloatingIslandWaterfall_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 3
+      spriteId: 62950529a820fb44e95e3c76d3fca418
+    - name: FloatingIslandWaterfall_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 2
+      spriteId: 5d768f8cca3ab7b46b3f6ae2da1c7869
+    - name: FloatingIslandWaterfall_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 2
+      spriteId: 908ba8a4a03461a4b996d8fc9ee94eaf
+    - name: FloatingIslandWaterfall_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 3
+      spriteId: 4d9bc6340f7672c4893ff35bff977aa6
+    - name: FloatingIslandWaterfall_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 3
+      spriteId: f7576345ef1a86a468d59582bb8894f6
+    - name: FloatingIslandWaterfall_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 3
+      spriteId: 1adfb68f70e5a8f4abb9285d7794d743
+    - name: FloatingIslandWaterfall_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 2
+      spriteId: fc3bf2e263b29594d9dcd739d3907a50
+    - name: FloatingIslandWaterfall_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 2
+      spriteId: 2c19ebd591f06bf41a9db07902cd5377
+    - name: FloatingIslandWaterfall_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 0
+        y: 0
+        width: 192
+        height: 2
+      spriteId: 10340ed1e8df3f8498318c8e31505382
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 192, y: 108}
