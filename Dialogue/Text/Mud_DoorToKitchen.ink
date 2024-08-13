@@ -1,8 +1,10 @@
 INCLUDE Globals.ink
-Go Through Door?
- + [Go]
+#layout:up
+#name:narrator #image:narrator_neutral #sound:narrator
+Would you like to transpose yourself with the other side of this door?
+ + [Yes]
  -> go
- + [Don't Go]
+ + [No]
  -> dont
 
 
@@ -12,5 +14,6 @@ Go Through Door?
 
 
 === dont ===
-come again soon.
+#name:narrator #image:narrator_neutral #sound:narrator
+later then.
 -> END

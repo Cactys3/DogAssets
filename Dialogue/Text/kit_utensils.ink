@@ -1,5 +1,5 @@
 INCLUDE Globals.ink
-
+#layout:up
 {completed_utensils:
 -> Completed
 -else:
@@ -7,9 +7,11 @@ INCLUDE Globals.ink
 }
 
  === Completed ===
- 
+   #name:narrator #image:narrator_neutral 
+  nothing to see here...
  -> END
  
   === NotCompleted ===
-    #scene:utensils
+  #name:narrator #image:narrator_neutral 
+  nothing to see here...
   -> END

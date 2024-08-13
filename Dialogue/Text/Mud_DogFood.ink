@@ -1,5 +1,6 @@
 INCLUDE Globals.ink
 
+#layout:down
 { completed_dogfood:
     -> TakenDogFood
 - else:
@@ -10,23 +11,25 @@ INCLUDE Globals.ink
 
 
  === NotTakenDogFood ===
-Dog food,<<wait:0.5> well past its expiration date //narrator says
- + [consume]
-    Woof Woof! //dog 
-    The Dog seems disinclined to eat the rotton dog food. //narrator
+ #name:narrator #sound:narrator #image:narrator_neutral
+Dog food,<<wait:0.5> well past its expiration date 
+ * [consume]
+     #name:dog #image:dog_woof #sound:dog_woof
+    Woof Woof!
+     #name:narrator #sound:narrator #image:narrator_neutral
+    The Dog seems disinclined to eat the rotton dog food.
     They save it for later. 
     -> RecieveDogFood
- + [save for later]
+ * [save for later]
     -> RecieveDogFood
  
  === RecieveDogFood ===
  ~ completed_dogfood = true
  ~ has_dogfood = true
- ~ has_default = true
-\+1 Rotton Dog Food!
     -> END
 
  
  === TakenDogFood ===
- An empty dog food bowl. //narrator
+  #name:narrator #sound:narrator #image:narrator_neutral
+ An empty dog food bowl. 
  -> END

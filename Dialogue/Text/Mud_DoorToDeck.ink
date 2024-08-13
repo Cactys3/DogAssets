@@ -1,5 +1,6 @@
 INCLUDE Globals.ink
-
+#layout:up
+#name:narrator #image:narrator_neutral #sound:narrator
 Go to the balcony?
  * [Go]
 { unlocked_deck:
@@ -10,23 +11,17 @@ Go to the balcony?
  -> dont
 
 
-=== go === //later add substitches for if dog can speak
+=== go === 
 = unlocked
 #scene:deck
 -> END
 = locked
-{ unlocked_speech:
-    it's door... //dog
-- else: 
-    Bark! //dog
-}
-{ not unlocked_speech:
-    Bark! //dog
-}
-The dog doesn't seem to know how to operate this door. //narrator
+#name:dog #image:dog_bark #sound:dog_bark
+Bark! 
+#name:narrator #image:narrator_neutral #sound:narrator
+The dog doesn't seem to know how to operate this door.
 -> END
 
 
 === dont ===
-This saddens the door.
 -> END

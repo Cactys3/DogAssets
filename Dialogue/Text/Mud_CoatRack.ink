@@ -1,3 +1,6 @@
 INCLUDE Globals.ink
-Whine... //dog
-The dog wonders where everyone else is. //narrator
+#layout:down
+#name:dog #image:dog_whine #sound:dog_whine
+Whine... 
+#name:narrator #image:narrator_neutral #sound:narrator
+The dog wonders where everyone else is.

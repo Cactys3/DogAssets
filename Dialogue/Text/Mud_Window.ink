@@ -1,3 +1,6 @@
 INCLUDE Globals.ink
+#layout:down
+#name:dog #image:dog_growl #sound:dog_growl
 Growl...
-Bark! Bark! <<wait:2> Bark!
+#name:dog #image:dog_bark #sound:dog_bark
+Bark! Bark! <<wait:1> Bark!

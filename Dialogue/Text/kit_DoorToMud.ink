@@ -1,4 +1,6 @@
 INCLUDE Globals.ink
+#layout:up
+#name:narrator #image:narrator_neutral #sound:narrator
 Go Through Door?
  * [Go]
  -> go
