@@ -5,6 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Ink.Parsed;
 using Unity.VisualScripting;
+using Unity.Mathematics;
+
 
 public class AudioManager : MonoBehaviour
 {
@@ -13,16 +15,26 @@ public class AudioManager : MonoBehaviour
 	public AudioMixerGroup mixerGroup;
     [SerializeField] GameObject AudioPrefab;
 
+
     [Header("Sound Effects")]
-    private Sound[] SFXSounds;
     public Sound[] MicrowaveMinigame;
     public Sound[] JuicerMinigame;
     public Sound[] FridgeMinigame;
     public Sound[] Boss;
     public Sound[] TabUI;
     public Sound[] OtherUI;
-    public Sound[] SceneSounds;
+    public Sound[] MiscSounds;
     public Sound[] InteractSounds;
+    [Header("Multiple Clips")]
+    public AudioClip[] DoorClips;
+    public AudioClip[] DogfoodClips;
+    public AudioClip[] FridgeClips;
+    public AudioClip[] MicrowaveClips;
+    public AudioClip[] DrawerClips;
+    public AudioClip[] CabinetsClips;
+    public AudioClip[] ClosedDoorClips;
+    public AudioClip[] JuicerClips;
+    public AudioClip[] ValveClips;
     [Header("Type Sounds")]
     public Sound[] TypeSounds;
     [Header("Music Sounds")]
@@ -30,6 +42,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource MusicSource;
     public AudioSource TypeSource;
+
+    private Sound[] SFXSounds;
 
     void Awake()
 	{
@@ -51,7 +65,7 @@ public class AudioManager : MonoBehaviour
             Boss,
             TabUI,
             OtherUI,
-            SceneSounds,
+            MiscSounds,
             InteractSounds
         };
         int totalLength = 0;
@@ -97,6 +111,8 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("Sound: " + sound);
         }
+
+        RandomizeClips(); //for sounds that have multiple audioclips
 
         if (s.volumeVariance + s.pitchVariance != 0)
         {
@@ -269,6 +285,27 @@ public class AudioManager : MonoBehaviour
 
             TypeSource.Play();
         }
+    }
+    private void RandomizeClips()
+    {
+        Sound door = Array.Find(SFXSounds, item => item.name == "door_interact");
+        Sound microwave = Array.Find(SFXSounds, item => item.name == "microwave_interact");
+        Sound drawer = Array.Find(SFXSounds, item => item.name == "drawer_interact");
+        Sound cabinet = Array.Find(SFXSounds, item => item.name == "cabinet_interact");
+        Sound closeddoor = Array.Find(SFXSounds, item => item.name == "closed_door_interact");
+        Sound fridge = Array.Find(SFXSounds, item => item.name == "fridge_interact");
+        Sound valve = Array.Find(SFXSounds, item => item.name == "valve_interact");
+        Sound dogfood = Array.Find(SFXSounds, item => item.name == "dogfood_interact");
+
+        
+        door.clip = DoorClips[UnityEngine.Random.Range(0, DoorClips.Length)];
+        microwave.clip = MicrowaveClips[UnityEngine.Random.Range(0, MicrowaveClips.Length)];
+        drawer.clip = DrawerClips[UnityEngine.Random.Range(0, DrawerClips.Length)];
+        cabinet.clip = CabinetsClips[UnityEngine.Random.Range(0, CabinetsClips.Length)];
+        closeddoor.clip = ClosedDoorClips[UnityEngine.Random.Range(0, ClosedDoorClips.Length)];
+        fridge.clip = FridgeClips[UnityEngine.Random.Range(0, FridgeClips.Length)];
+        valve.clip = ValveClips[UnityEngine.Random.Range(0, ValveClips.Length)];
+        dogfood.clip = DogfoodClips[UnityEngine.Random.Range(0, DogfoodClips.Length)];
     }
     public void PlayMultipleType(string sound)
     {

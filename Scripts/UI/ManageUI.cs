@@ -23,11 +23,16 @@ public class ManageUI : MonoBehaviour
         {
             if (inTab || inEsc)
             {
+                if (inTab)
+                {
+                    FindObjectOfType<AudioManager>().PlaySFX("inventory_close");
+                }
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     Time.timeScale = 1;
                     TabPanel.SetActive(false);
                     EscPanel.SetActive(false);
+
                 }
                 if (Input.GetKeyDown(KeyCode.Tab))
                 {
@@ -43,6 +48,7 @@ public class ManageUI : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.Tab) && CanAccessInventory)
             {
                 TabPanel.SetActive(true);
+                FindObjectOfType<AudioManager>().PlaySFX("inventory_open");
                 Time.timeScale = 0;
             }
         }

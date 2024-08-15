@@ -135,7 +135,9 @@ public class ManageInventory : MonoBehaviour
             somethingIsHovered = false;
             HoveredItem = null;
 
-            HeldDescriptionText.text = "Holding no item!";
+            FindObjectOfType<AudioManager>().PlaySFX("inventory_unhover");
+
+            HoveredDescriptionText.text = "Hover an item!";
             //HoveredDescriptionText.text = "";
 
         }
@@ -148,6 +150,8 @@ public class ManageInventory : MonoBehaviour
     {
         HoveredItem = name;
         somethingIsHovered = true;
+
+        FindObjectOfType<AudioManager>().PlaySFX("inventory_hover");
 
         switch (name)
         {
@@ -196,6 +200,7 @@ public class ManageInventory : MonoBehaviour
     {
         if (!somethingIsSelected)
         {
+            FindObjectOfType<AudioManager>().PlaySFX("inventory_select");
             somethingIsSelected = true;
             SelectedItem = name;
 
@@ -216,6 +221,7 @@ public class ManageInventory : MonoBehaviour
     {
         if (somethingIsSelected && name.Equals(SelectedItem))
         {
+            FindObjectOfType<AudioManager>().PlaySFX("inventory_deselect");
             somethingIsSelected = false;
             SelectedItem = null;
 
@@ -236,6 +242,7 @@ public class ManageInventory : MonoBehaviour
         {
             if (ListOfItemNames.Contains(name))
             {
+                FindObjectOfType<AudioManager>().PlaySFX("inventory_hold");
                 HeldDescriptionText.text = "Holding a " + name;
                 HeldItem = name;
                 somethingIsHeld = true;
@@ -326,6 +333,7 @@ public class ManageInventory : MonoBehaviour
         {
             if (HeldItem.Equals(name))
             {
+                FindObjectOfType<AudioManager>().PlaySFX("inventory_unhold");
                 HeldItem = null;
                 somethingIsHeld = false;
                 FindObjectOfType<DialogueManager>().SetVariableStateSystem("holding_item", false);
@@ -909,6 +917,7 @@ public class ManageInventory : MonoBehaviour
     }
     private void Combine(string NewItem, string ItemOne, string ItemTwo, string Message)
     {
+        FindObjectOfType<AudioManager>().PlaySFX("inventory_combine");
         FindObjectOfType<DialogueManager>().SetVariableStateSystem(NewItem, true); //set the two combined items to false (dialogue manager will call SetState())
         FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemOne, false);
         FindObjectOfType<DialogueManager>().SetVariableStateSystem(ItemTwo, false);
@@ -921,6 +930,7 @@ public class ManageInventory : MonoBehaviour
     }
     private void FailCombine(string ItemOne, string ItemTwo, string Message)
     {
+        FindObjectOfType<AudioManager>().PlaySFX("inventory_fail_combine");
         //TODO: use Message to display the failed combined thing!
         //TODO: put up some UI text message that that combine attetmpt failed, have custom text for certian combinations (or all of them)
         Debug.Log("just failed to combined items: " + ItemOne + " and " + ItemTwo);

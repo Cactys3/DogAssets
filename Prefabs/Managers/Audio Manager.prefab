@@ -254,17 +254,233 @@ MonoBehaviour:
   Boss: []
   TabUI: []
   OtherUI: []
-  SceneSounds: []
-  InteractSounds:
-  - name: test
-    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+  MiscSounds:
+  - name: dognip_munch
+    clip: {fileID: 0}
     volume: 1
-    volumeVariance: 0.39
-    pitch: 1.203
-    pitchVariance: 0.531
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: obtained_item
+    clip: {fileID: 0}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  InteractSounds:
+  - name: default_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: toilet_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: oven_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: fridge_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: microwave_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: door_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: dogfood_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: valve_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: closed_door_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: drawer_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: cabinet_interact
+    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  DoorClips:
+  - {fileID: 8300000, guid: 5c3b2880b4274b34e9bfb45158b77bf7, type: 3}
+  - {fileID: 8300000, guid: 1ee054f6de7ac7241b23114c4de8f061, type: 3}
+  - {fileID: 8300000, guid: e3dfdc176b3986043a10792c1cf66a1e, type: 3}
+  - {fileID: 8300000, guid: 29da1bf40dd737a49a474cdcbdc288d4, type: 3}
+  - {fileID: 8300000, guid: 1131db3611adf4a4a820cf498d60e398, type: 3}
+  - {fileID: 8300000, guid: 8ddad5849a5398a4b97e5122a384e6f3, type: 3}
+  - {fileID: 8300000, guid: a4b33a2a3ea4f174ba90831de62c57ac, type: 3}
+  DogfoodClips:
+  - {fileID: 8300000, guid: dc9ef847f35f3ef408bbc299712ac47e, type: 3}
+  - {fileID: 8300000, guid: a03d91611b75f284cad7a8598bc73163, type: 3}
+  - {fileID: 8300000, guid: 49e023955f74ee54fa627db0eeba404b, type: 3}
+  FridgeClips:
+  - {fileID: 8300000, guid: 7c1b846b5b93a23449ff8a4ef16218f4, type: 3}
+  - {fileID: 8300000, guid: 727688f0910d1014f8113a0447f9e4e5, type: 3}
+  - {fileID: 8300000, guid: 9043fd2c520cfa64ea9ff7145c11a3c9, type: 3}
+  - {fileID: 8300000, guid: 0586eb32d53ace64c98ace58c485ea5c, type: 3}
+  - {fileID: 8300000, guid: 19baabc724186c549be6d100850ef23c, type: 3}
+  - {fileID: 8300000, guid: 221f051c6a2489943a3d356e16b08d94, type: 3}
+  - {fileID: 8300000, guid: 184a102ddd6ffd1498cefdb35d270be8, type: 3}
+  - {fileID: 8300000, guid: dacd21ab7333b6d4b84a640791d6c455, type: 3}
+  - {fileID: 8300000, guid: fac29e75a0fdf43459ae6cf95467e701, type: 3}
+  - {fileID: 8300000, guid: 397e234c152d05f429b8a070b26e2838, type: 3}
+  - {fileID: 8300000, guid: 762e931711c9ac245ac9992f7a4208d1, type: 3}
+  - {fileID: 8300000, guid: 3f7ba218c98d29e48bf258984b6d39aa, type: 3}
+  - {fileID: 8300000, guid: 1143d1c9449628843a42cdb3959d435b, type: 3}
+  - {fileID: 8300000, guid: 61235cc8875139542921ac0f1be2f61c, type: 3}
+  - {fileID: 8300000, guid: 68e2c989e109dc74296b43f8f9f3c865, type: 3}
+  - {fileID: 8300000, guid: 9d06449e5224bf845a3c4523adf3f4f4, type: 3}
+  - {fileID: 8300000, guid: bb013e12bde879a4b834510a6f145340, type: 3}
+  - {fileID: 8300000, guid: ada0694e36a794f4f870eca44214b960, type: 3}
+  - {fileID: 8300000, guid: b72ad94e1c242db499963a9172ae8498, type: 3}
+  - {fileID: 8300000, guid: 233e155789a4a0040bcc9d58a9e905ac, type: 3}
+  - {fileID: 8300000, guid: 8b0ee48b10a4ff64aab124ed4d8a9d0f, type: 3}
+  - {fileID: 8300000, guid: 859a776265c00b046acdc75af3d9464b, type: 3}
+  - {fileID: 8300000, guid: a0578b4d4b4c7164b9d82c5e20683c04, type: 3}
+  - {fileID: 8300000, guid: d4648a2ebf7f55748bec0f736cf54c96, type: 3}
+  - {fileID: 8300000, guid: dcceb352c893e4d4eb2b8024a6dc453c, type: 3}
+  - {fileID: 8300000, guid: a734219435aa2fb49a524176921027ae, type: 3}
+  - {fileID: 8300000, guid: 9699dc855908f5447b5c0cbd7d0a7231, type: 3}
+  - {fileID: 8300000, guid: d1f1b2d9ff6a4de499edee44b94012b1, type: 3}
+  - {fileID: 8300000, guid: 4b12c509fd8db104eaa69e7051171a55, type: 3}
+  - {fileID: 8300000, guid: 9bb511d98ee555f4c8c437dcdba902ae, type: 3}
+  - {fileID: 8300000, guid: 8eec812f421d2394cae1c4a49a99dc6e, type: 3}
+  - {fileID: 8300000, guid: 1f467fab36ac68848b6d8315160cdbe3, type: 3}
+  - {fileID: 8300000, guid: f0e97c36e439a154bb252d6d24e00fa3, type: 3}
+  MicrowaveClips:
+  - {fileID: 8300000, guid: bf70c2a8f91147b4e999c946535b08df, type: 3}
+  - {fileID: 8300000, guid: c1f477f8dad49334d9c71a73059d2573, type: 3}
+  - {fileID: 8300000, guid: bd1097fe29c3eb44ea9d3a721b17e3e1, type: 3}
+  - {fileID: 8300000, guid: d1ce1e9298e17be448ab51867a93eabe, type: 3}
+  - {fileID: 8300000, guid: 2e7fe1a841dcddd4e8743c2fc1f3f50f, type: 3}
+  - {fileID: 8300000, guid: 188d02effe5749d48b6371b6c83ae077, type: 3}
+  - {fileID: 8300000, guid: 88a65783658bdc7488d60038025dc085, type: 3}
+  - {fileID: 8300000, guid: cdaafc04d86db694f9b6c1549ec10c5a, type: 3}
+  - {fileID: 8300000, guid: 7e3591c60c2c05e4196a873496bf374f, type: 3}
+  - {fileID: 8300000, guid: e50d2d6561956634eb1093928c024459, type: 3}
+  - {fileID: 8300000, guid: d832a65df4642b94cb9aa93dc63f9e83, type: 3}
+  - {fileID: 8300000, guid: a88c9f0d77f9369429e5415903a1ef23, type: 3}
+  - {fileID: 8300000, guid: 2dba623ca91bb2b4e84be450abe7c238, type: 3}
+  DrawerClips:
+  - {fileID: 8300000, guid: 9587c136c63a23144b6267051dfbb6d5, type: 3}
+  - {fileID: 8300000, guid: 08b6a6530ce5e574abfd2eccf7459c60, type: 3}
+  - {fileID: 8300000, guid: c73542d330f9cde43b9c30c2122ce530, type: 3}
+  - {fileID: 8300000, guid: 89bf2c0d395115a409f4409ea72031d8, type: 3}
+  - {fileID: 8300000, guid: e92ad72583aa8e9468db8d5b98a8d6d0, type: 3}
+  - {fileID: 8300000, guid: 43804646b4938434bb6c62f9385678b4, type: 3}
+  - {fileID: 8300000, guid: 19218d57092e8a7419939c8f4f9f16cb, type: 3}
+  - {fileID: 8300000, guid: e234ef1fca3f1f84e93ebb8e65efd66d, type: 3}
+  - {fileID: 8300000, guid: 479f31a652f0b484788ac204078fd99f, type: 3}
+  - {fileID: 8300000, guid: ccd4014d652c1ab44bc01852d4a2ac11, type: 3}
+  - {fileID: 8300000, guid: 3b4f13cb1abd7904ba963a97130b9af4, type: 3}
+  - {fileID: 8300000, guid: 14e3024f3195f7e47af8b3b94d2a8a03, type: 3}
+  - {fileID: 8300000, guid: 172bf80497645754390c90e1c1f7d6ef, type: 3}
+  - {fileID: 8300000, guid: b7f30d1a19b45ac46a0e504ef336eabf, type: 3}
+  - {fileID: 8300000, guid: 30c238669a47e394e9bf243a19948a06, type: 3}
+  - {fileID: 8300000, guid: d2640ec77910af442815d17bc72badba, type: 3}
+  - {fileID: 8300000, guid: 950809021e0286b4da2d5c35183ce1bd, type: 3}
+  - {fileID: 8300000, guid: c73a9a3baa9ce9a4d9e2dcc26930f039, type: 3}
+  - {fileID: 8300000, guid: 3572b1f8f1ac6d9489b5050997ae8296, type: 3}
+  CabinetsClips:
+  - {fileID: 8300000, guid: d07caff0b6ce3b44ea507dc0ec66bfaf, type: 3}
+  - {fileID: 8300000, guid: 3cc640b10b73b32439f7a07fa70a9ce1, type: 3}
+  - {fileID: 8300000, guid: 0c5deef705bb28340882ac251693c078, type: 3}
+  - {fileID: 8300000, guid: 464425038981f264486df1a77e413985, type: 3}
+  - {fileID: 8300000, guid: d7534837728e66c45a34cba3d41ccd46, type: 3}
+  - {fileID: 8300000, guid: 65d2dceb5176f134cbe9ab1a9be26b9d, type: 3}
+  - {fileID: 8300000, guid: 6ee21c6d1ed51314798b0bc8845c95fb, type: 3}
+  - {fileID: 8300000, guid: 5d9ce266223d76a45b8d249efb293c45, type: 3}
+  - {fileID: 8300000, guid: 74f61d7a567238a4aa129cd6208826a1, type: 3}
+  - {fileID: 8300000, guid: 8600f2cadac55fd449f9e0e600939f49, type: 3}
+  - {fileID: 8300000, guid: dfca6dce7724a5045b9aa5579919bca5, type: 3}
+  - {fileID: 8300000, guid: 112c3a0ec512a7842a481ce67902cb89, type: 3}
+  - {fileID: 8300000, guid: 182a56e661019d74daf73f351f3d8584, type: 3}
+  - {fileID: 8300000, guid: 9853bf6b8cc846340a909fa50cb63776, type: 3}
+  - {fileID: 8300000, guid: 26bc2e515bdcaf44189641f42651ff6c, type: 3}
+  - {fileID: 8300000, guid: a00825146e48331408cbc804bf07c497, type: 3}
+  - {fileID: 8300000, guid: 236664bd66604eb46b9fc38db36d0d65, type: 3}
+  ClosedDoorClips:
+  - {fileID: 8300000, guid: 3e6e6f8ba8621834ea79ed24afe2d1c2, type: 3}
+  - {fileID: 8300000, guid: bd0bab28eee43fc469c7088fdfdd55d2, type: 3}
+  - {fileID: 8300000, guid: f2576764bde1dae4f8e2e87c6b6e8447, type: 3}
+  - {fileID: 8300000, guid: 825e2ad023b224745be067a11f7c8d18, type: 3}
+  - {fileID: 8300000, guid: f06054e1df2241842bb86d99199dbd88, type: 3}
+  JuicerClips:
+  - {fileID: 8300000, guid: a6e83b9ff38d47d46b9bd725bd79a8f2, type: 3}
+  ValveClips:
+  - {fileID: 8300000, guid: a6e83b9ff38d47d46b9bd725bd79a8f2, type: 3}
   TypeSounds:
   - name: dog_default
     clip: {fileID: 8300000, guid: 6825607acba1af848acf413ffbb98db3, type: 3}

@@ -40,10 +40,14 @@ public class DialogueTrigger : MonoBehaviour
                 spriteRenderer.sprite = ActiveSprite;
                 if (Input.GetKey(interactKeybind))
                 {
-                    if (!SoundName.IsUnityNull())
+                    if (!SoundName.IsUnityNull() && !SoundName.Equals(""))
                     {
                         FindObjectOfType<AudioManager>().PlaySFX(SoundName);
                         Debug.Log("interact sound: " + SoundName);
+                    }
+                    else
+                    {
+                        FindObjectOfType<AudioManager>().PlaySFX("default_interact");
                     }
                     FindObjectOfType<DialogueManager>().EnterDialogueMode(text);
                 }

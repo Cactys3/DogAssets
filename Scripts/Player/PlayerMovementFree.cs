@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovementFree : MonoBehaviour
 {
+    private bool WalkSoundPlaying;
     private bool wasHorizontal;
     private bool horizontal;
     private bool vertical;
@@ -15,6 +16,7 @@ public class PlayerMovementFree : MonoBehaviour
         horizontal = false;
         vertical = false;
         wasHorizontal = false;
+        WalkSoundPlaying = false;
     }
 
     // Update is called once per frame
@@ -23,6 +25,8 @@ public class PlayerMovementFree : MonoBehaviour
         //can't move during dialogue
         if (FindObjectOfType<DialogueManager>().dialogueIsPlaying || FindObjectOfType<ManageUI>().DisplayingUI()) //DialogueManager.GetInstance().dialogueIsPlaying
         {
+            FindObjectOfType<AudioManager>().StopPlayingSFX("dog_footsteps");
+            WalkSoundPlaying = false;
             return;
         }
 
@@ -67,6 +71,11 @@ public class PlayerMovementFree : MonoBehaviour
             //this all just makes it prioritize whichever direction was pressed last but also revert to the previous direction if that newly pressed direction is released
             if (vertical || horizontal)
             {
+                if (!FindObjectOfType<AudioManager>().PlayingSFX("dog_footsteps") || WalkSoundPlaying == false)
+                {
+                    FindObjectOfType<AudioManager>().PlaySFX("dog_footsteps");
+                    WalkSoundPlaying = true;
+                }
                 if (vertical && horizontal)
                 {
                     if (wasHorizontal)
@@ -87,6 +96,14 @@ public class PlayerMovementFree : MonoBehaviour
                 {
                     wasHorizontal = true;
                     this.transform.position = this.transform.position + new Vector3(MoveSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime, 0, 0);
+                }
+            }
+            else
+            {
+                if (WalkSoundPlaying == true)
+                {
+                    FindObjectOfType<AudioManager>().StopPlayingSFX("dog_footsteps");
+                    WalkSoundPlaying = false;
                 }
             }
         }

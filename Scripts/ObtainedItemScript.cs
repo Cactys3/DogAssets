@@ -111,10 +111,12 @@ public class ObtainedItemScript : MonoBehaviour
             default:
                 SetChildState(false);
                 Debug.LogWarning("called obtain item but name was invalid: " + name);
+                IsAnItem = false;
                 break;
         }
         if (IsAnItem)
         {
+            FindObjectOfType<AudioManager>().PlaySFX("obtained_item");
             StartCoroutine("DisablePopup");
         }
     }
