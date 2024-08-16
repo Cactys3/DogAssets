@@ -372,26 +372,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4119054780229871689, guid: d5b6958b7d8c4834dafa10d8bd00378c, type: 3}
-      propertyPath: sprite
-      value: 
-      objectReference: {fileID: 2047051032}
-    - target: {fileID: 4119054780229871689, guid: d5b6958b7d8c4834dafa10d8bd00378c, type: 3}
-      propertyPath: JuicerSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b9dad2cda262b824384d96f2ee945abe, type: 3}
-    - target: {fileID: 4119054780229871689, guid: d5b6958b7d8c4834dafa10d8bd00378c, type: 3}
-      propertyPath: DefaultSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 34b2523699818734da9a020efac07394, type: 3}
-    - target: {fileID: 4119054780229871689, guid: d5b6958b7d8c4834dafa10d8bd00378c, type: 3}
-      propertyPath: MicrowaveSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 34b2523699818734da9a020efac07394, type: 3}
-    - target: {fileID: 4119054780229871689, guid: d5b6958b7d8c4834dafa10d8bd00378c, type: 3}
-      propertyPath: FridgeOvenSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 34b2523699818734da9a020efac07394, type: 3}
     - target: {fileID: 7813625041665672385, guid: d5b6958b7d8c4834dafa10d8bd00378c, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -445,11 +425,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b6958b7d8c4834dafa10d8bd00378c, type: 3}
---- !u!212 &2047051032 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 589903676428858031, guid: d5b6958b7d8c4834dafa10d8bd00378c, type: 3}
-  m_PrefabInstance: {fileID: 2047051031}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2060309487
 GameObject:
   m_ObjectHideFlags: 0

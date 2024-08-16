@@ -83,7 +83,7 @@ public class DialogueManager : MonoBehaviour
     private const string MicrowaveSound = "microwave";
     private const string FridgeSound = "fridge";
     private const string OvenSound = "oven";
-    private const string FridgeOvenSound = "fridge";
+    private const string FridgeOvenSound = "fridgeoven";
     private const string JuicerSound = "juicer";
 
     //Layouts
@@ -553,18 +553,13 @@ public class DialogueManager : MonoBehaviour
     }
     private void ChangeName(string name)
     {
-        switch(name)
+        if (name != null)
         {
-            case DogName:
-                displayNameText.text = "Dog";
-                break;
-            case NarratorName:
-                displayNameText.text = "Narrator";
-                break;
-            default:
-                displayNameText.text = "???";
-                Debug.LogWarning("Couldn't Find Name Tag: " + name);
-                break;
+            displayNameText.text = name;
+        }
+        else
+        {
+            displayNameText.text = "???";
         }
     }
     private void ChangeSound(string name)
@@ -572,22 +567,37 @@ public class DialogueManager : MonoBehaviour
         switch (name)
         {
             case DogSoundBark:
-                currentTypingSound = "dog_bark";
+                currentTypingSound = DogSound;
                 break;
             case DogSound:
-                currentTypingSound = "dog_default";
+                currentTypingSound = DogSound;
                 break;
             case DogSoundGrowl:
-                currentTypingSound = "dog_growl";
+                currentTypingSound = DogSound;
                 break;
             case DogSoundWhine:
-                currentTypingSound = "dog_whine";
+                currentTypingSound = DogSound;
                 break;
             case DogSoundWoof:
-                currentTypingSound = "dog_woof";
+                currentTypingSound = DogSound;
                 break;
             case NarratorSound:
-                currentTypingSound = "narrator_default";
+                currentTypingSound = NarratorSound;
+                break;
+            case MicrowaveSound:
+                currentTypingSound = MicrowaveSound;
+                break;
+            case FridgeSound:
+                currentTypingSound = FridgeSound;
+                break;
+            case FridgeOvenSound:
+                currentTypingSound = FridgeOvenSound;
+                break;
+            case OvenSound:
+                currentTypingSound = OvenSound;
+                break;
+            case JuicerSound:
+                currentTypingSound = JuicerSound;
                 break;
             default:
                 currentTypingSound = defaultTypingSound;

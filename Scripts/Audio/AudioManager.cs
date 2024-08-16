@@ -139,6 +139,7 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = newpitch;
         }
 
+        Debug.Log(s.source.name);
         s.source.Play();
     }
 
@@ -171,6 +172,9 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("Sound: " + sound);
         }
+
+        RandomizeClips(); //for sounds that have multiple audioclips
+
         GameObject soundObject = Instantiate(AudioPrefab, transform.position, Quaternion.identity);
         AudioSource audioSource = soundObject.GetComponent<AudioSource>();
 
@@ -238,7 +242,17 @@ public class AudioManager : MonoBehaviour
 
         s.source.Stop();
     }
+    public void PausePlayingSFX(string sound)
+    {
+        Sound s = Array.Find(SFXSounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
 
+        s.source.Pause();
+    }
     // TYPING
     public void PlayTypeSound(string name)
     {
@@ -297,15 +311,14 @@ public class AudioManager : MonoBehaviour
         Sound valve = Array.Find(SFXSounds, item => item.name == "valve_interact");
         Sound dogfood = Array.Find(SFXSounds, item => item.name == "dogfood_interact");
 
-        
-        door.clip = DoorClips[UnityEngine.Random.Range(0, DoorClips.Length)];
-        microwave.clip = MicrowaveClips[UnityEngine.Random.Range(0, MicrowaveClips.Length)];
-        drawer.clip = DrawerClips[UnityEngine.Random.Range(0, DrawerClips.Length)];
-        cabinet.clip = CabinetsClips[UnityEngine.Random.Range(0, CabinetsClips.Length)];
-        closeddoor.clip = ClosedDoorClips[UnityEngine.Random.Range(0, ClosedDoorClips.Length)];
-        fridge.clip = FridgeClips[UnityEngine.Random.Range(0, FridgeClips.Length)];
-        valve.clip = ValveClips[UnityEngine.Random.Range(0, ValveClips.Length)];
-        dogfood.clip = DogfoodClips[UnityEngine.Random.Range(0, DogfoodClips.Length)];
+        door.source.clip = DoorClips[UnityEngine.Random.Range(0, DoorClips.Length)];
+        microwave.source.clip = MicrowaveClips[UnityEngine.Random.Range(0, MicrowaveClips.Length)];
+        drawer.source.clip = DrawerClips[UnityEngine.Random.Range(0, DrawerClips.Length)];
+        cabinet.source.clip = CabinetsClips[UnityEngine.Random.Range(0, CabinetsClips.Length)];
+        closeddoor.source.clip = ClosedDoorClips[UnityEngine.Random.Range(0, ClosedDoorClips.Length)];
+        fridge.source.clip = FridgeClips[UnityEngine.Random.Range(0, FridgeClips.Length)];
+        valve.source.clip = ValveClips[UnityEngine.Random.Range(0, ValveClips.Length)];
+        dogfood.source.clip = DogfoodClips[UnityEngine.Random.Range(0, DogfoodClips.Length)];
     }
     public void PlayMultipleType(string sound)
     {

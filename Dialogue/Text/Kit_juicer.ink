@@ -8,12 +8,13 @@ INCLUDE Globals.ink
 }
 
  === Completed ===
-#name:Juicer #image:juicer
+#name:Juicer #image:juicer #sound:juicer
  YOU STRONG NOW!!!
+ ME ALLOW LEAVE!
  -> END
  
   ===NotCompleted===
-  #name:Juicer #image:juicer
+  #name:Juicer #image:juicer #sound:juicer
   Do you want to skip juicer minigame or do it?
   + [SKIP]?
   ~completed_jucier = true

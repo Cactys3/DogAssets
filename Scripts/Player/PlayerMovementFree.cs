@@ -25,7 +25,7 @@ public class PlayerMovementFree : MonoBehaviour
         //can't move during dialogue
         if (FindObjectOfType<DialogueManager>().dialogueIsPlaying || FindObjectOfType<ManageUI>().DisplayingUI()) //DialogueManager.GetInstance().dialogueIsPlaying
         {
-            FindObjectOfType<AudioManager>().StopPlayingSFX("dog_footsteps");
+            FindObjectOfType<AudioManager>().PausePlayingSFX("dog_footsteps");
             WalkSoundPlaying = false;
             return;
         }
@@ -102,7 +102,7 @@ public class PlayerMovementFree : MonoBehaviour
             {
                 if (WalkSoundPlaying == true)
                 {
-                    FindObjectOfType<AudioManager>().StopPlayingSFX("dog_footsteps");
+                    FindObjectOfType<AudioManager>().PausePlayingSFX("dog_footsteps");
                     WalkSoundPlaying = false;
                 }
             }

@@ -7,11 +7,12 @@ INCLUDE Globals.ink
 }
 
  === Completed ===
-   #name:narrator #image:narrator_neutral 
+   #name:narrator #image:narrator_neutral #sound:narrator
   nothing to see here...
  -> END
  
   === NotCompleted ===
-  #name:narrator #image:narrator_neutral 
+  #name:narrator #image:narrator_neutral #sound:narrator
   nothing to see here...
   -> END
+  

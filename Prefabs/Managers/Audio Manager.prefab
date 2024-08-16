@@ -256,7 +256,7 @@ MonoBehaviour:
   OtherUI: []
   MiscSounds:
   - name: dognip_munch
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 49e023955f74ee54fa627db0eeba404b, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -265,7 +265,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: obtained_item
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: a6e83b9ff38d47d46b9bd725bd79a8f2, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -273,9 +273,18 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: dog_footsteps
+    clip: {fileID: 8300000, guid: 711da2fbc12605a488f39e3a22395e62, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   InteractSounds:
   - name: default_interact
-    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    clip: {fileID: 8300000, guid: a6e83b9ff38d47d46b9bd725bd79a8f2, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -482,7 +491,7 @@ MonoBehaviour:
   ValveClips:
   - {fileID: 8300000, guid: a6e83b9ff38d47d46b9bd725bd79a8f2, type: 3}
   TypeSounds:
-  - name: dog_default
+  - name: dog
     clip: {fileID: 8300000, guid: 6825607acba1af848acf413ffbb98db3, type: 3}
     volume: 1
     volumeVariance: 0.2
@@ -491,7 +500,52 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: narrator_default
+  - name: narrator
+    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    volume: 1
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: microwave
+    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    volume: 1
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: fridge
+    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    volume: 1
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: oven
+    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    volume: 1
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: fridgeoven
+    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    volume: 1
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: juicer
     clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
     volume: 1
     volumeVariance: 0.2
