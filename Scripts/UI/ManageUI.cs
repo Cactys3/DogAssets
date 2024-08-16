@@ -23,13 +23,13 @@ public class ManageUI : MonoBehaviour
         {
             if (inTab || inEsc)
             {
-                if (inTab)
+                if (inTab && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab)))
                 {
                     FindObjectOfType<AudioManager>().PlaySFX("inventory_close");
                 }
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    Time.timeScale = 1;
+                    //Time.timeScale = 1;
                     TabPanel.SetActive(false);
                     EscPanel.SetActive(false);
 
@@ -37,19 +37,19 @@ public class ManageUI : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Tab))
                 {
                     TabPanel.SetActive(false);
-                    Time.timeScale = 1;
+                    //Time.timeScale = 1;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
                 EscPanel.SetActive(true);
-                Time.timeScale = 0;
+                //Time.timeScale = 0;
             }
             else if (Input.GetKeyDown(KeyCode.Tab) && CanAccessInventory)
             {
                 TabPanel.SetActive(true);
                 FindObjectOfType<AudioManager>().PlaySFX("inventory_open");
-                Time.timeScale = 0;
+                //Time.timeScale = 0;
             }
         }
     }
@@ -57,7 +57,7 @@ public class ManageUI : MonoBehaviour
     {
         TabPanel.SetActive(false);
         EscPanel.SetActive(false);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
     }
     public bool DisplayingUI()
     {

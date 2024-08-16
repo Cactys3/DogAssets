@@ -42,8 +42,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 5ba9e13501d97324b8d86aeeffa92116, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -252,7 +252,97 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   Boss: []
-  TabUI: []
+  TabUI:
+  - name: inventory_close
+    clip: {fileID: 8300000, guid: 6825607acba1af848acf413ffbb98db3, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0.82
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: inventory_open
+    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1.2
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: inventory_hover
+    clip: {fileID: 8300000, guid: 2d6059afb65ac9849b2ff19d7970c46c, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: inventory_unhover
+    clip: {fileID: 8300000, guid: 5ba9e13501d97324b8d86aeeffa92116, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: inventory_select
+    clip: {fileID: 8300000, guid: 357300c1776f0614d892185ad29ff031, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: inventory_deselect
+    clip: {fileID: 8300000, guid: 357300c1776f0614d892185ad29ff031, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: inventory_combine
+    clip: {fileID: 8300000, guid: 357300c1776f0614d892185ad29ff031, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: inventory_fail_combine
+    clip: {fileID: 8300000, guid: 357300c1776f0614d892185ad29ff031, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: inventory_hold
+    clip: {fileID: 8300000, guid: 357300c1776f0614d892185ad29ff031, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: inventory_hold
+    clip: {fileID: 8300000, guid: 357300c1776f0614d892185ad29ff031, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   OtherUI: []
   MiscSounds:
   - name: dognip_munch
@@ -556,7 +646,7 @@ MonoBehaviour:
     source: {fileID: 0}
   MusicSounds:
   - name: Default
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -564,8 +654,8 @@ MonoBehaviour:
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: Song1
-    clip: {fileID: 8300000, guid: 9009241f19fabef449aea4d37a23bb82, type: 3}
+  - name: room_music
+    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -573,8 +663,8 @@ MonoBehaviour:
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: Song2
-    clip: {fileID: 8300000, guid: 7a681510fd619dc42b2aeb6d9ab6c2a1, type: 3}
+  - name: juicer_music
+    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -582,8 +672,53 @@ MonoBehaviour:
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: dognip
+  - name: dognip_music
     clip: {fileID: 8300000, guid: cdd435991d822a0459cec80c528257ac, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: fridgeoven_music
+    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: microwave_music
+    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_music
+    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: boss_music
+    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: no_music
+    clip: {fileID: 8300000, guid: 5ba9e13501d97324b8d86aeeffa92116, type: 3}
     volume: 1
     volumeVariance: 0.1
     pitch: 1
@@ -635,11 +770,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 5ba9e13501d97324b8d86aeeffa92116, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -10,8 +10,15 @@ public class PlayerMovementFree : MonoBehaviour
     private bool vertical;
     private float MoveSpeed;
     public LayerMask StopsMovement;
+    [SerializeField] SpriteRenderer sprite;
+    [SerializeField] Animator Anim;
+    private const string HorizontalAnimation = "horizontal";
+    private const string VerticalAnimation = "vertical";
+    private const string IdleAnimation = "idle";
+    private int AnimState; //1=idle 2=vertical 3=horizontal
     void Start()
     {
+        AnimState = 0;
         MoveSpeed = 3f;
         horizontal = false;
         vertical = false;
@@ -81,30 +88,72 @@ public class PlayerMovementFree : MonoBehaviour
                     if (wasHorizontal)
                     {
                         this.transform.position = this.transform.position + new Vector3(0, MoveSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime, 0);
+                        SetAnim(2);
                     }
                     else
                     {
                         this.transform.position = this.transform.position + new Vector3(MoveSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime, 0, 0);
+                        SetAnim(3);
+                        if (Input.GetAxisRaw("Horizontal") < 0)
+                        {
+                            sprite.flipX = false;
+                        }
+                        else
+                        {
+                            sprite.flipX = true;
+                        }
                     }
                 }
                 else if (vertical)
                 {
                     wasHorizontal = false;
                     this.transform.position = this.transform.position + new Vector3(0, MoveSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime, 0);
+                    SetAnim(2);
                 }
                 else if (horizontal)
                 {
                     wasHorizontal = true;
                     this.transform.position = this.transform.position + new Vector3(MoveSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime, 0, 0);
+                    SetAnim(3);
+                    if (Input.GetAxisRaw("Horizontal") < 0)
+                    {
+                        sprite.flipX = false;
+                    }
+                    else
+                    {
+                        sprite.flipX = true;
+                    }
                 }
             }
             else
             {
+                SetAnim(1);
                 if (WalkSoundPlaying == true)
                 {
                     FindObjectOfType<AudioManager>().PausePlayingSFX("dog_footsteps");
                     WalkSoundPlaying = false;
                 }
+            }
+        }
+    }
+    private void SetAnim(int i)
+    {
+        if (AnimState != i)
+        {
+            switch(i)
+            {
+                case 1:
+                    Anim.Play(IdleAnimation);
+                    AnimState = 1;
+                    break;
+                case 2:
+                    //Anim.Play(VerticalAnimation);
+                    AnimState = 2;
+                    break;
+                case 3:
+                    //Anim.Play(HorizontalAnimation);
+                    AnimState = 3;
+                    break;
             }
         }
     }

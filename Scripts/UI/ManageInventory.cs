@@ -135,7 +135,7 @@ public class ManageInventory : MonoBehaviour
             somethingIsHovered = false;
             HoveredItem = null;
 
-            FindObjectOfType<AudioManager>().PlaySFX("inventory_unhover");
+            FindObjectOfType<AudioManager>().PlayMultipleSFX("inventory_unhover");
 
             HoveredDescriptionText.text = "Hover an item!";
             //HoveredDescriptionText.text = "";
@@ -151,7 +151,7 @@ public class ManageInventory : MonoBehaviour
         HoveredItem = name;
         somethingIsHovered = true;
 
-        FindObjectOfType<AudioManager>().PlaySFX("inventory_hover");
+        FindObjectOfType<AudioManager>().PlayMultipleSFX("inventory_hover");
 
         switch (name)
         {

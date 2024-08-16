@@ -203,9 +203,9 @@ public class AudioManager : MonoBehaviour
             audioSource.volume = newvolume;
             audioSource.pitch = newpitch;
         }
+        soundObject.GetComponent<DestroyAudioPrefab>().SetClipLength(audioSource.clip.length + 0.5f);
         audioSource.Play();
 
-        Destroy(soundObject, audioSource.clip.length + 1f); // Destroy slightly after the clip ends
     }
     public void SetPitchSFX(string sound, float pitch)
     {
@@ -370,6 +370,21 @@ public class AudioManager : MonoBehaviour
         TypeSource.Stop();
     }
     // MUSIC
+    public bool PlayingMusic(string sound)
+    {
+        Sound s = Array.Find(MusicSounds, item => item.name == sound);
+
+        if (s == null)
+        {
+            Debug.LogWarning("Music: " + sound + " not found!");
+            return false;
+        }
+        else if (MusicSource.clip.Equals(s.clip))
+        {
+            return true;
+        }
+        return false;
+    }
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(MusicSounds, x => x.name == name);

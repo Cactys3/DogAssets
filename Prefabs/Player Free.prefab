@@ -445,6 +445,8 @@ MonoBehaviour:
   StopsMovement:
     serializedVersion: 2
     m_Bits: 64
+  sprite: {fileID: 6857604798368744374}
+  Anim: {fileID: 1627273872335767889}
 --- !u!114 &6891731407610954013
 MonoBehaviour:
   m_ObjectHideFlags: 0
