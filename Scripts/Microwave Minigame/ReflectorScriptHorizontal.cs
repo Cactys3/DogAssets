@@ -31,7 +31,7 @@ public class ReflectorScriptHorizontal : MonoBehaviour
     {
         //Debug.Log(ObjectState);
         //change objectstate if needed
-        if (FindObjectOfType<MicrowaveMinigame>().IsGameStarted())
+        if (wave.IsGameStarted())
         {
             ChangeObjectState(0); //go into play mode
         }
@@ -147,16 +147,21 @@ public class ReflectorScriptHorizontal : MonoBehaviour
     }
     private void SetSelected(bool b)
     {
-        ObjectSelected = b;
-        switch (ObjectSelected)
+        switch (b)
         {
             case true:
                 SelectedVisual.SetActive(true);
+                wave.PlaySound(MicrowaveMinigame.PlatformSelectSound);
                 break;
             case false:
                 SelectedVisual.SetActive(false);
+                if (ObjectSelected)
+                {
+                    wave.PlaySound(MicrowaveMinigame.PlatformPlaceSound);
+                }
                 break;
         }
+        ObjectSelected = b;
     }
     private void SetHovered(bool b)
     {

@@ -489,6 +489,14 @@ PrefabInstance:
       propertyPath: SoundName
       value: door_interact
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: door_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: door_interact
+      objectReference: {fileID: 0}
     - target: {fileID: 4101725706546749785, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.04
@@ -1262,6 +1270,10 @@ PrefabInstance:
       propertyPath: SoundName
       value: microwave_interact
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: microwave_interact
+      objectReference: {fileID: 0}
     - target: {fileID: 2928426850653504894, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.733
@@ -2009,6 +2021,10 @@ PrefabInstance:
       propertyPath: SoundName
       value: fridge_interact
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: fridge_interact
+      objectReference: {fileID: 0}
     - target: {fileID: 2928426850653504894, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.869
@@ -2561,7 +2577,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 599174186}
     - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: Spawn1IsDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: Spawn2IsDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
       propertyPath: MultipleSpawns
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: DefaultSpawnIsNotDoor
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2805,6 +2833,14 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 3a3014473e9e1d44186140ede20c7b25, type: 3}
     - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: SoundName
+      value: door_interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: door_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
       value: door_interact
       objectReference: {fileID: 0}
     - target: {fileID: 4101725706546749785, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
@@ -3279,6 +3315,10 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 71dec6d1b07adcc4a8e19598282a37c2, type: 3}
     - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: SoundName
+      value: juicer_interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
       value: juicer_interact
       objectReference: {fileID: 0}
     - target: {fileID: 4101725706546749785, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}

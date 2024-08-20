@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
     public const string officeScene = "Office Room";
     public const string deckScene = "Deck";
     public const string livingScene = "Living Room";
-    public const string dognipScene = "DogNip";
+    public const string dognipScene = "dognip";
     public const string bossScene = "Final Boss";
     public const string ending1Scene = "Ending1";
     public const string ending2Scene = "Ending2";
@@ -109,7 +109,8 @@ public class DialogueManager : MonoBehaviour
     private String currentLine;
     public bool dialogueIsPlaying { get; private set; } = false;
 
-
+    private string DialogueExitSound;
+    private bool DialogueExitSoundBool;
 
     private DialogueVariables dialogueVariables;
     
@@ -211,6 +212,11 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+
+        if (DialogueExitSoundBool)
+        {
+            FindObjectOfType<AudioManager>().PlaySFX(DialogueExitSound);
+        }
     }
 
     private IEnumerator DisplayLine(string line)
@@ -440,7 +446,7 @@ public class DialogueManager : MonoBehaviour
         //reset dialouge  UI
         displayNameText.text = "???";
         //portraitAnimator.Play("default");
-        layoutAnimator.Play("right");
+        layoutAnimator.Play("up");
         //reset image
         portraitAnimator.Play("default");
 
@@ -706,5 +712,11 @@ public class DialogueManager : MonoBehaviour
         }
         Debug.LogWarning("Tried to get an Ink variable, but Variables but dialogueVariables was null");
         return null;
+    }
+
+    public void SetDialogueExitSound(string s, bool b)
+    {
+        DialogueExitSound = s;
+        DialogueExitSoundBool = b;
     }
 }

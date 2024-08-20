@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5292911709236763418}
   - component: {fileID: 6062227003447223519}
   - component: {fileID: 6376383025123686113}
+  - component: {fileID: 1575725086221703437}
   m_Layer: 0
   m_Name: Skip Button
   m_TagString: Untagged
@@ -101,6 +102,7 @@ MonoBehaviour:
   SkipLevel: {fileID: -740879987, guid: eaeedda45de9808429931236bde11e73, type: 3}
   AreYouSure: {fileID: 627624921, guid: eaeedda45de9808429931236bde11e73, type: 3}
   time: 15
+  changer: {fileID: 1575725086221703437}
 --- !u!61 &6376383025123686113
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +148,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7235991, y: 0.7411747}
   m_EdgeRadius: 0
+--- !u!114 &1575725086221703437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450782965756348749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004a22055d4c7ba4caa7bebc1a8d2dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: 4
+  Level: 0
+  ChangeSceneOnEnabled: 0

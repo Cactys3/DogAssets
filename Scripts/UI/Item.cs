@@ -41,7 +41,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         dialoguemanager = FindObjectOfType<DialogueManager>();
         if (itemName.IsUnityNull() || itemName ==  null)
         {
-            Debug.LogError("itemName for this item class is null bro, why is it null? set it in the inspector");
+           //Debug.LogError("itemName for this item class is null bro, why is it null? set it in the inspector");
         }
         SelectButton.SetActive(false);
         HoldButton.SetActive(false);
@@ -65,7 +65,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
         if (CheckSlot() != ItemSlot) 
         {
-            Debug.Log("changing itemslot from: " + ItemSlot + " to: " + CheckSlot() + " on item: " + itemName);
+            //Debug.Log("changing itemslot from: " + ItemSlot + " to: " + CheckSlot() + " on item: " + itemName);
             SetItemSlot(CheckSlot()); //if the item slot has changed, enable/disable/move this item based on the new number;
         }
 
@@ -114,7 +114,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             ItemPanel.SetActive(true);
             if (ItemSlot >= MaxItemsTotal)
             {
-                Debug.LogError("Trying to setup an item but itemslot is: " + ItemSlot + ", which is greater than the max:  9");
+               //Debug.LogError("Trying to setup an item but itemslot is: " + ItemSlot + ", which is greater than the max:  9");
             }
             else
             {
@@ -123,11 +123,11 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 int y = OffsetY * Row;
                 int x = OffsetX * Collumn;
                 transform.localPosition = new Vector3(x, y, 0);
-                Debug.Log("setting item: " + itemName + " to x: " + x + " y: " + y);
+               //Debug.Log("setting item: " + itemName + " to x: " + x + " y: " + y);
                 //Debug.Log("Pos of " + itemName + ": " + transform.localPosition);
             }
         }
-        Debug.Log("setting item: " + itemName + " to itemslot " + ItemSlot + " and itemstate: " + ItemState);
+       //Debug.Log("setting item: " + itemName + " to itemslot " + ItemSlot + " and itemstate: " + ItemState);
     }
     /**
      * True to set this item to ItemState 3, meaning it will display the combine button. This is used when an item is selected. 
@@ -148,7 +148,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
                 if (this.IsThisSelected()) //if this is the selected item, we give option to unselect
                 {
-                    Debug.Log("this is selected so we set unselect to true: " + itemName);
+                   //Debug.Log("this is selected so we set unselect to true: " + itemName);
                     UnselectButton.SetActive(true);
                     CombineButton.SetActive(false);
                 }
@@ -162,6 +162,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 ItemState = 1; //This should have previously been 3, now it is 1 because this is obtained and nothing else is selected
                 if (InventoryScript.SomethingHovered() && InventoryScript.GetHoveredItem().Equals(itemName))
                 {
+                    InventoryScript.DontPlayNextHoverSound();
                     OnHover(); //if this is being hovered, call the method to display the correct buttons
                 }
             }
@@ -249,7 +250,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         }
         else
         {
-            Debug.LogWarning("Clicked Select button for an item but another item was already selected!");
+           //Debug.LogWarning("Clicked Select button for an item but another item was already selected!");
         }
     }
     // tells ManageUI to close the inventory and sets the INK global itemHeld value to the itemName string
@@ -286,7 +287,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         }
         else
         {
-            Debug.LogWarning("Clicked on Unselected() but this was not selected?");
+           //Debug.LogWarning("Clicked on Unselected() but this was not selected?");
         }
     }
     private bool IsThisHeld()

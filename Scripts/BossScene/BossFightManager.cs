@@ -33,16 +33,39 @@ public class BossFightManager : MonoBehaviour
     [SerializeField] private GameObject MapSlashObject;
     [SerializeField] private GameObject PhantomObject;
     [SerializeField] private BigNukeScript BigNuke;
+    private AudioManager audioMan;
     private bool StaminaRegening;
     private bool won;
     private bool DrainBossHP;
-
-
+    public static int number = 0;
+    public const string PlayerDamagedSound = "boss_player_damaged";
+    public const string PlayerSlashSound = "boss_player_slash";
+    public const string PlayerSpinSound = "boss_player_spin";
+    public const string PlayerDashSound = "boss_player_dash";
+    public const string BossDamagedSound = "boss_boss_damaged";
+    public const string BossThrustSound = "boss_boss_thrust";
+    public const string BossSlashSound = "boss_boss_slash";
+    public const string BossDashSound = "boss_boss_dash";
+    public const string MininukeFlySound = "boss_mininuke_fly";
+    public const string MininukeExplodeSound = "boss_mininuke_explode";
+    public const string BignukeFlySound = "boss_bignuke_fly";
+    public const string BignukeExplodeSound = "boss_bignuke_explode";
+    public const string MapSlashSound = "boss_mapslash";
+    public const string PhantomSound = "boss_phantom";
+    public const string WinSound = "boss_win";
+    public const string LoseSound = "boss_lose";
+    public const string PhaseChangeExplosionSound = "boss_phasechange";
     private float Stopwatch;
 
     private bool PhaseTwoPlayedBefore;
     private void Start()
     {
+        if (number > 0)//idk if works
+        {
+            PlaySound(LoseSound);
+        }
+        number++;
+
         DrainBossHP = false;
         BounceCollider.SetActive(false);
         won = false;
@@ -65,6 +88,7 @@ public class BossFightManager : MonoBehaviour
         MapSlashDamage = 45;
         PhantomDamage = 45;
         PhaseTwoPlayedBefore = false;
+        audioMan = FindObjectOfType<AudioManager>();
     }
     private void Update()
     {
@@ -75,7 +99,7 @@ public class BossFightManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            BossHP = 0;
+            BossHP = 5;
         }
 
 
@@ -93,7 +117,7 @@ public class BossFightManager : MonoBehaviour
             }
             if (PhaseNum == 2)
             {
-                Lose(); //temporary solution to just reset level on phase 2
+                Lose(); 
                 StopAllCoroutines();
                 StartCoroutine("PhaseTwo");
             }
@@ -159,6 +183,7 @@ public class BossFightManager : MonoBehaviour
             {
                 PlayerHP = 0;
             }
+            PlaySound(PlayerDamagedSound);
             HUD.UpdatePlayerHP(PlayerHP);
         }
     }
@@ -190,6 +215,7 @@ public class BossFightManager : MonoBehaviour
             {
                 BossHP = 0;
             }
+            PlaySound(BossDamagedSound);
             HUD.UpdateBossHP(BossHP);
         }
     }
@@ -204,6 +230,7 @@ public class BossFightManager : MonoBehaviour
         BounceCollider.SetActive(true);
 
         //TODO: set player and boss velocities and make explosion animation happen
+        PlaySound(PhaseChangeExplosionSound);
         PhaseTransitionExplosion.SetActive(true);
         PhaseTransitionExplosion.transform.position = new Vector3((player.transform.position.x + boss.transform.position.x) / 2, (player.transform.position.y + boss.transform.position.y) / 2, 0);
         PhaseTransitionExplosion.GetComponent<Animator>().Play("Explosion");
@@ -347,6 +374,7 @@ public class BossFightManager : MonoBehaviour
         yield return new WaitUntil(() => BigNuke.Done());
         DrainBossHP = true;
         boss.FadeOut();
+        PlaySound(WinSound);
 
         yield return new WaitUntil(() => BossHP < 2);
         yield return new WaitForSeconds(6);
@@ -355,6 +383,7 @@ public class BossFightManager : MonoBehaviour
     }
     public void Lose()
     {
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void UseStamina(string name)
@@ -403,5 +432,18 @@ public class BossFightManager : MonoBehaviour
     public float GetBossHP()
     {
         return BossHP;
+    }
+
+    public void PlaySound(string s)
+    {
+        audioMan.PlaySFX(s);
+    }
+    public void PlayMultiSound(string s)
+    {
+        audioMan.PlayMultipleSFX(s);
+    }
+    public void StopSound(string s)
+    {
+        audioMan.StopPlayingSFX(s);
     }
 }

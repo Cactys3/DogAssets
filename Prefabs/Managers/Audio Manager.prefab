@@ -160,7 +160,7 @@ Transform:
   - {fileID: 2802883232179455305}
   - {fileID: 7805854930242158626}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7935146334157349303
 MonoBehaviour:
@@ -272,7 +272,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: inventory_hover
-    clip: {fileID: 8300000, guid: 2d6059afb65ac9849b2ff19d7970c46c, type: 3}
+    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -290,7 +290,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: inventory_select
-    clip: {fileID: 8300000, guid: 357300c1776f0614d892185ad29ff031, type: 3}
+    clip: {fileID: 8300000, guid: 72e26f803fe0de4468a8d29d7049e216, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -299,7 +299,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: inventory_deselect
-    clip: {fileID: 8300000, guid: 357300c1776f0614d892185ad29ff031, type: 3}
+    clip: {fileID: 8300000, guid: fe0f92304098e7a4b9b49ee035716a4b, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -472,6 +472,15 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: door_interact_exit
+    clip: {fileID: 8300000, guid: e0a4fc64248cdf34ab0cdcf689956205, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   DoorClips:
   - {fileID: 8300000, guid: 5c3b2880b4274b34e9bfb45158b77bf7, type: 3}
   - {fileID: 8300000, guid: 1ee054f6de7ac7241b23114c4de8f061, type: 3}
@@ -480,6 +489,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1131db3611adf4a4a820cf498d60e398, type: 3}
   - {fileID: 8300000, guid: 8ddad5849a5398a4b97e5122a384e6f3, type: 3}
   - {fileID: 8300000, guid: a4b33a2a3ea4f174ba90831de62c57ac, type: 3}
+  DoorExitClips:
+  - {fileID: 8300000, guid: 8ab103c03c42ce14cac12dc8bf300654, type: 3}
+  - {fileID: 8300000, guid: fe8eda21a6ee4e841b6ec334094c140b, type: 3}
+  - {fileID: 8300000, guid: 480dd5b57bdb7844ca41e1288470a121, type: 3}
+  - {fileID: 8300000, guid: e51ca72cd7f449345a106328f3a0d0aa, type: 3}
+  - {fileID: 8300000, guid: e0a4fc64248cdf34ab0cdcf689956205, type: 3}
   DogfoodClips:
   - {fileID: 8300000, guid: dc9ef847f35f3ef408bbc299712ac47e, type: 3}
   - {fileID: 8300000, guid: a03d91611b75f284cad7a8598bc73163, type: 3}

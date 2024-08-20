@@ -9,6 +9,7 @@ public class ScriptActivator : MonoBehaviour
     [Header("0: Juice!, 1: 2x, 2: 8x, 3: 512x")]
     [SerializeField] int Button;
     private bool Hovered;
+
     void Start()
     {
         Hovered = false;
@@ -22,18 +23,19 @@ public class ScriptActivator : MonoBehaviour
             manager.ButtonClicked(Button);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnMouseEnter()
     {
-        if (collision.tag.Equals("cursor"))
-        {
-            Hovered = true;
-        }
+
+        //Debug.Log("mouse " + index +" " + Button);
+
+        Hovered = true;
+
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag.Equals("cursor"))
-        {
-            Hovered = false;
-        }
+    private void OnMouseExit()
+    { 
+        //Debug.Log("demouse " + index + " " + Button);
+
+        Hovered = false;
+
     }
 }

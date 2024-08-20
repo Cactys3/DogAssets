@@ -9,7 +9,8 @@ public class MyCursor : MonoBehaviour
     [SerializeField] private Sprite JuicerSprite;
     [SerializeField] private Sprite FridgeOvenSprite;
     [SerializeField] private Sprite MicrowaveSprite;
-    [SerializeField] public SpriteRenderer sprite;
+    //[SerializeField] public SpriteRenderer sprite;
+    [SerializeField] private GameObject collideObject;
     [SerializeField] private UnityEngine.UI.Image image;
     [SerializeField] private Canvas CursorCanvas;
     [SerializeField] private RectTransform ImageRect;
@@ -32,8 +33,6 @@ public class MyCursor : MonoBehaviour
     {
         Cursor.visible = false;
         CurrentScene = "not a scene name!!!";
-        sprite.enabled = false;
-        sprite.sprite = DefaultSprite;
         image.enabled = false;
         image.sprite = DefaultSprite;
     }
@@ -43,9 +42,8 @@ public class MyCursor : MonoBehaviour
         {
             OnSceneLoad();
         }
-        if (ShowCustomCursor != sprite.enabled)
+        if (ShowCustomCursor != image.enabled)
         {
-            sprite.enabled = ShowCustomCursor;
             image.enabled = ShowCustomCursor;
         }
         if (ShowCustomCursor)
@@ -60,20 +58,20 @@ public class MyCursor : MonoBehaviour
                 out mousePositionCanvas
             );
 
-            sprite.gameObject.transform.position = mousePositionWorld;
+            collideObject.transform.position = mousePositionWorld;
 
             ImageRect.localPosition = mousePositionCanvas;
+
+           // Debug.Log(mousePositionCanvas + " world: " + mousePositionWorld);
         }
     }
     public void ShowCursor()
     {
-        sprite.enabled = true;
         image.enabled = true;
         ShowCustomCursor = true;
     }
     public void HideCursor()
     {
-        sprite.enabled = false;
         image.enabled = false;
         ShowCustomCursor = false;
     }
@@ -83,13 +81,11 @@ public class MyCursor : MonoBehaviour
         if (CurrentScene.Equals(DialogueManager.fridgeovenScene) || CurrentScene.Equals(DialogueManager.fridgeovenScene2) || CurrentScene.Equals(DialogueManager.fridgeovenScene3) || CurrentScene.Equals(DialogueManager.fridgeovenScene4) || CurrentScene.Equals(DialogueManager.fridgeovenScene5))
         {
             ShowCursor();//potentially have custom cursor for minigames
-            sprite.sprite = FridgeOvenSprite;
             image.sprite = FridgeOvenSprite;
         }
         if (CurrentScene.Equals(DialogueManager.microwaveScene) || CurrentScene.Equals(DialogueManager.microwaveScene2) || CurrentScene.Equals(DialogueManager.microwaveScene3) || CurrentScene.Equals(DialogueManager.microwaveScene4) || CurrentScene.Equals(DialogueManager.microwaveScene5))
         {
             ShowCursor();//potentially have custom cursor for minigames
-            sprite.sprite = MicrowaveSprite;
             image.sprite = MicrowaveSprite;
         }
         switch (CurrentScene) 
@@ -108,11 +104,9 @@ public class MyCursor : MonoBehaviour
                 break;
             case DialogueManager.juicerScene:
                 ShowCursor();
-                sprite.sprite = JuicerSprite;
                 image.sprite = JuicerSprite;
                 break;
             default:
-                sprite.sprite = DefaultSprite;
                 image.sprite = DefaultSprite;
                 ShowCursor(); //potentially have custom cursor for rooms
                 break;

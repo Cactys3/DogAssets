@@ -27,8 +27,8 @@ Go to... #typingspeed:0
 *[Fridge]
 #scene:fridgeoven
 ->END
-*[mud room]
-#scene:mud
+*[juicer]
+#scene:juicer
 ->END
 *[kitchen dining room]
 #scene:kitchen

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class JuicerMinigameManager : MonoBehaviour
 {
     [Header("Gameplay Values")]
     [SerializeField] private long ClickWeight;
+    [SerializeField] private long MaxClickWeight;
     [SerializeField] private long WinCon;
     [SerializeField] private long CurrentClicks;
     [SerializeField] private long DelayBeforeNotClicking;
@@ -46,7 +48,6 @@ public class JuicerMinigameManager : MonoBehaviour
     [SerializeField] private Sprite Max;
     [SerializeField] private Sprite Price;
     [Header("Cursor Stuff")]
-    [SerializeField] private SpriteRenderer Cursor;
     [SerializeField] private Sprite Cursor1;
     [SerializeField] private Sprite Cursor2;
     [SerializeField] private Sprite Cursor3;
@@ -65,11 +66,31 @@ public class JuicerMinigameManager : MonoBehaviour
     [SerializeField] private GenerativeNumbers FiveTwelveXPriceNumber;
     [SerializeField] private GenerativeNumbers TwoXPriceNumber;
     [SerializeField] private GenerativeNumbers EightXPriceNumber;
+
+
+    public const string JuicerUpgradeSound = "juicer_upgrade";
+    public const string JuicerFailUpgradeSound = "juicer_upgrade_fail";
+    public const string JuicerClickSound = "juicer_click";
+    public const string JuicerWinSound = "juicer_win";
+    public const string JuicerBlenderSound = "juicer_blender";
+
     private bool IsClicking;
     private float ClickTimer;
+    private AudioManager audioMan;
+    private Image Cursor;
+
+    private bool WonBool;
+
     // Start is called before the first frame update
     void Start()
     {
+        MaxClickWeight = 1 * ((MaxEightX * 8) + (MaxTwoX * 2) + (MaxFiveTwelveX * 512));
+
+        MaxClickWeight = 2097152;
+
+        WonBool = false;
+        Cursor = FindObjectOfType<MyCursor>().GetComponentInChildren<Image>();
+        audioMan = FindObjectOfType<AudioManager>();
         DelayBeforeNotClicking = 3;
         WinCon = 100000000;
         ClickWeight = 1;
@@ -95,7 +116,6 @@ public class JuicerMinigameManager : MonoBehaviour
         TwoXPriceNumber.SetSpacing(0.13f);
         EightXPriceNumber.SetSpacing(0.13f);
         FiveTwelveXPriceNumber.SetSpacing(0.13f);
-        Cursor = FindObjectOfType<MyCursor>().sprite;
     }
     void Update()
     {
@@ -177,10 +197,12 @@ public class JuicerMinigameManager : MonoBehaviour
                 JuiceClicked();
                 break;
             case 1:
-                if (CurrentClicks >= TwoXCost)
+                if (TwoXBought < MaxTwoX)
                 {
-                    if (TwoXBought < MaxTwoX)
+                    if (CurrentClicks >= TwoXCost) 
                     {
+                        audioMan.PlayOverrideSFX(JuicerUpgradeSound);
+
                         ClickWeight = (ClickWeight * 2);
                         TwoXBought += 1;
                         TwoXBoughtNumber.IncrementNumber(1);
@@ -195,15 +217,17 @@ public class JuicerMinigameManager : MonoBehaviour
                     }
                     else
                     {
-                        //TODO: maybe do an animation thing 
+                        audioMan.PlayOverrideSFX(JuicerFailUpgradeSound);
                     }
                 }
                 break;
             case 2:
-                if (CurrentClicks >= EightXCost)
+                if (EightXBought < MaxEightX) 
                 {
-                    if (EightXBought < MaxEightX)
+                    if (CurrentClicks >= EightXCost)
                     {
+                        audioMan.PlayOverrideSFX(JuicerUpgradeSound);
+
                         ClickWeight = (ClickWeight * 8);
                         EightXBought += 1;
                         EightXBoughtNumber.IncrementNumber(1);
@@ -218,15 +242,17 @@ public class JuicerMinigameManager : MonoBehaviour
                     }
                     else
                     {
-                        //TODO: maybe do an animation thing 
+                        audioMan.PlayOverrideSFX(JuicerFailUpgradeSound);
                     }
                 }
                 break;
             case 3:
-                if (CurrentClicks >= FiveTwelveXCost)
+                if (FiveTwelveXBought < MaxFiveTwelveX)
                 {
-                    if (FiveTwelveXBought < MaxFiveTwelveX)
+                    if (CurrentClicks >= FiveTwelveXCost)
                     {
+                        audioMan.PlayOverrideSFX(JuicerUpgradeSound);
+
                         ClickWeight = (ClickWeight * 512);
                         FiveTwelveXBought += 1;
                         FiveTwelveXBoughtNumber.IncrementNumber(1);
@@ -242,7 +268,7 @@ public class JuicerMinigameManager : MonoBehaviour
                     }
                     else
                     {
-                        //TODO: maybe do an animation thing 
+                        audioMan.PlayOverrideSFX(JuicerFailUpgradeSound);
                     }
                 }
                 break;
@@ -250,8 +276,11 @@ public class JuicerMinigameManager : MonoBehaviour
         Number.SetNumber((int)CurrentClicks);
     }
 
-    private void Won()
+    private IEnumerator Won()
     {
+
+        audioMan.PlayMultipleSFX(JuicerWinSound);
+        yield return new WaitForSeconds(4f);
         GetComponent<ChangeToScene>().ChangeScene();
     }
 
@@ -259,11 +288,18 @@ public class JuicerMinigameManager : MonoBehaviour
     {
         ClickTimer = 0;
         CurrentClicks += ClickWeight;
+        Debug.Log((1 - ((ClickWeight / 2) / MaxClickWeight)) + " equals: 1 - " + ClickWeight + " / " + "2 / " + MaxClickWeight );
+        audioMan.SetPitchSFX(JuicerClickSound, 1 - ((ClickWeight / 2) / MaxClickWeight));
+        audioMan.PlayMultipleSFX(JuicerClickSound);
         if (CurrentClicks >= WinCon)
         {
             Cursor.sprite = Cursor1;
             ProgressionBar.position = new Vector2(ProgressionBar.position.x, -3f + (6.12f));
-            Won();
+            if (!WonBool)
+            {
+                WonBool = true;
+                StartCoroutine("Won");
+            }
         }
         else
         {

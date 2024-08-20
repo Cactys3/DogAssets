@@ -12,9 +12,23 @@ public class MicrowaveMinigame : MonoBehaviour
     Rigidbody2D Wave;
     [SerializeField] float speed;
     [SerializeField] Rigidbody2D WaveShooter;
+    public const string WaveBounceSound = "wave_bounce";
+    public const string WaveTeleportSound = "wave_teleport";
+    public const string WaveLoseSound = "wave_lose";
+    public const string WaveWinSound = "wave_win";
+    public const string WaveShootSound = "wave_shoot";
+    public const string GunRotateSound = "gun_rotate";
+    public const string GunLockSound = "gun_lock";
+    public const string PlatformSelectSound = "platform_select";
+    public const string PlatformPlaceSound = "platform_place";
+
+    private bool PlayingRotateSound;
+
+    private AudioManager audioMan;
     // Start is called before the first frame update
     void Start()
     {
+        audioMan = FindObjectOfType<AudioManager>();
         Wave = GetComponent<Rigidbody2D>();
         ResetGame();
     }
@@ -24,6 +38,7 @@ public class MicrowaveMinigame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && !GameStarted)
         {
+            audioMan.PlaySFX(WaveShootSound);
             StartGame();
         }
         else if (Input.GetKeyDown(KeyCode.R) && GameStarted)
@@ -35,14 +50,29 @@ public class MicrowaveMinigame : MonoBehaviour
         {
             float RotationSpeed = 50;
             float angle = Mathf.Atan2(TowardsMouse(WaveShooter.position).y, TowardsMouse(WaveShooter.position).x) * Mathf.Rad2Deg;
+            bool tempbool = false;
             if (angle > (WaveShooter.rotation) + 0.5f && WaveShooter.rotation < 90)
             {
+                tempbool = true;
                 WaveShooter.SetRotation(WaveShooter.rotation + (RotationSpeed * Time.deltaTime));
             }
             else if (angle < (WaveShooter.rotation) - 0.5f && WaveShooter.rotation > -90)
             {
+                tempbool = true;
                 WaveShooter.SetRotation(WaveShooter.rotation - (RotationSpeed * Time.deltaTime));
-                // 0.6528
+            }
+            if (tempbool != PlayingRotateSound)
+            {
+                if (tempbool)
+                {
+                    audioMan.PlaySFX(GunRotateSound);
+                }
+                else
+                {
+                    audioMan.PausePlayingSFX(GunRotateSound);
+                    
+                }
+                PlayingRotateSound = tempbool;
             }
             Wave.SetRotation(WaveShooter.rotation + 90 + 180);
             Wave.position = new Vector2(-4.62f + Mathf.Cos(Mathf.Deg2Rad * WaveShooter.rotation) * 0.6528f, 1.8f + Mathf.Sin(Mathf.Deg2Rad * WaveShooter.rotation) * 0.6528f);
@@ -99,16 +129,19 @@ public class MicrowaveMinigame : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("pink reflector") || collision.gameObject.tag.Equals("blue reflector"))
         {
+            audioMan.PlaySFX(WaveTeleportSound);
             return;
         }
 
         Debug.Log("collider " + collision.tag);
-        if (collision.tag.Equals("goal"))
+        if (collision.tag.Equals("goal") && GameStarted)
         {
+            audioMan.PlaySFX(WaveWinSound);
             WinLevel();
         }
-        if (collision.tag.Equals("death"))
+        if (collision.tag.Equals("death") && GameStarted)
         {
+            audioMan.PlaySFX(WaveLoseSound);
             Debug.Log("death");
             ResetGame();
         }
@@ -116,6 +149,7 @@ public class MicrowaveMinigame : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        audioMan.PlaySFX(WaveBounceSound);
         SetRotation();
     }
 
@@ -144,6 +178,11 @@ public class MicrowaveMinigame : MonoBehaviour
     private void WinLevel()
     {
         FindObjectOfType<ChangeToScene>().ChangeScene();
+    }
+
+    public void PlaySound(string s)
+    {
+        audioMan.PlayingSFX(s);
     }
 }
 

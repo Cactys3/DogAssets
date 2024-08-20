@@ -222,6 +222,14 @@ PrefabInstance:
       propertyPath: SoundName
       value: computer_interact
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: computer_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: computer_interact
+      objectReference: {fileID: 0}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
       value: 1.396457
@@ -512,6 +520,14 @@ PrefabInstance:
     - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: SoundName
       value: cabinet_interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: cabinets_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: cabinets_interact
       objectReference: {fileID: 0}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
@@ -1178,6 +1194,14 @@ PrefabInstance:
       propertyPath: SoundName
       value: door_interact
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: door_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: door_interact
+      objectReference: {fileID: 0}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
       value: 0.4704435
@@ -1367,6 +1391,14 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 1aa25dfd4fcf1f844bbc4afe2a5499c7, type: 3}
     - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: SoundName
+      value: piano_interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: piano_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
       value: piano_interact
       objectReference: {fileID: 0}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
@@ -1732,6 +1764,10 @@ PrefabInstance:
       propertyPath: Spawn4
       value: 
       objectReference: {fileID: 909396436}
+    - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: Spawn1IsDoor
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

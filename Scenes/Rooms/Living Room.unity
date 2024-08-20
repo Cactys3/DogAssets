@@ -676,6 +676,14 @@ PrefabInstance:
       propertyPath: SoundName
       value: door_interact
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: door_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: door_interact
+      objectReference: {fileID: 0}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
       value: 0.93301916
@@ -936,6 +944,14 @@ PrefabInstance:
       propertyPath: SoundName
       value: drawer_interact
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: drawers_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: drawers_interact
+      objectReference: {fileID: 0}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
       value: 1.5059416
@@ -1098,6 +1114,14 @@ PrefabInstance:
       propertyPath: SoundName
       value: cabinet_interact
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: cabinets_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: cabinets_interact
+      objectReference: {fileID: 0}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
       value: 3.7545047
@@ -1219,6 +1243,14 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: c5321336e0b6b29418cd56b74427b827, type: 3}
     - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: SoundName
+      value: door_interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: door_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
       value: door_interact
       objectReference: {fileID: 0}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
@@ -1896,6 +1928,14 @@ PrefabInstance:
       propertyPath: SoundName
       value: door_interact
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: door_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: door_interact
+      objectReference: {fileID: 0}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
       value: 0.93301916
@@ -2384,6 +2424,14 @@ PrefabInstance:
     - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: SoundName
       value: drawer_interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ExitSoundName
+      value: drawers_interact_exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: EnterSoundName
+      value: drawers_interact
       objectReference: {fileID: 0}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
@@ -3006,6 +3054,22 @@ PrefabInstance:
       propertyPath: Spawn4
       value: 
       objectReference: {fileID: 1726281922}
+    - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: Spawn1IsDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: Spawn2IsDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: Spawn3IsDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: Spawn4IsDoor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
       propertyPath: MultipleSpawns
       value: 1

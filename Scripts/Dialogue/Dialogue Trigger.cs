@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,7 +6,8 @@ public class DialogueTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
     [Header("Sound Effect To Play")]
-    [SerializeField] private string SoundName;
+    [SerializeField] private string EnterSoundName;
+    [SerializeField] private string ExitSoundName;
     [Header("Keybind To Trigger NPC")]
     [SerializeField] private KeyCode interactKeybind;
     [Header("Visual Cue")]
@@ -19,6 +21,8 @@ public class DialogueTrigger : MonoBehaviour
     private bool playerInRange;
     private bool Active;
     private InteractManager interactManager;
+    private DialogueManager dialogueMan;
+    private AudioManager audioMan;
     private void Awake()
     {
         Active = true;
@@ -29,10 +33,12 @@ public class DialogueTrigger : MonoBehaviour
     private void Start()
     {
         interactManager = FindObjectOfType<InteractManager>();
+        dialogueMan = FindObjectOfType<DialogueManager>();
+        audioMan = FindObjectOfType<AudioManager>();
     }
     private void Update()
     {
-        if (playerInRange && !FindObjectOfType<DialogueManager>().dialogueIsPlaying)
+        if (playerInRange && !dialogueMan.dialogueIsPlaying)
         {
             if (Active)
             {
@@ -40,16 +46,25 @@ public class DialogueTrigger : MonoBehaviour
                 spriteRenderer.sprite = ActiveSprite;
                 if (Input.GetKey(interactKeybind))
                 {
-                    if (!SoundName.IsUnityNull() && !SoundName.Equals(""))
+                    if (!ExitSoundName.IsUnityNull() && !ExitSoundName.Equals(""))
                     {
-                        FindObjectOfType<AudioManager>().PlaySFX(SoundName);
-                        Debug.Log("interact sound: " + SoundName);
+                        dialogueMan.SetDialogueExitSound(ExitSoundName, true);
                     }
                     else
                     {
-                        FindObjectOfType<AudioManager>().PlaySFX("default_interact");
+                        dialogueMan.SetDialogueExitSound("silent", false);
                     }
-                    FindObjectOfType<DialogueManager>().EnterDialogueMode(text);
+
+                    if (!EnterSoundName.IsUnityNull() && !EnterSoundName.Equals(""))
+                    {
+                        audioMan.PlaySFX(EnterSoundName);
+
+                        StartCoroutine("DelayInteract", 0.5f + audioMan.GetLengthSFX(EnterSoundName)); //wait until the enter sound has played to start dialogue
+                    }
+                    else
+                    {
+                        dialogueMan.EnterDialogueMode(text);
+                    }
                 }
             }
             else
@@ -62,6 +77,12 @@ public class DialogueTrigger : MonoBehaviour
         {
             visualCue.SetActive(false);
         }
+    }
+    IEnumerator DelayInteract(float time)
+    {
+        yield return new WaitForSecondsRealtime(time);
+
+        dialogueMan.EnterDialogueMode(text);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
