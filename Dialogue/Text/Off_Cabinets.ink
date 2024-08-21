@@ -1,31 +1,31 @@
 INCLUDE Globals.ink
 
+#layout:down
 {completed_off_cabinets:
 ->Completed
 - else:
 ->NotCompleted
 }
 
+
 ===Completed===
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
+#name:Narrator #image:narrator_neutral #sound:narrator
 It's an empty set of cabinets.
 ->END
 
 
 ==NotCompleted===
-#name:dog #image:dog_sniff #layout:dog1 #sound:dog_sniff
+#name:dog #image:dog_sniff #sound:dog_sniff
 sniff... sniff....
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
-The dog wishes to search through the cabinets <<wait:0.5>, will you allow it?
+#name:Narrator #image:narrator_neutral #sound:narrator
+The dog wishes to search through the cabinets<<wait:0.3>, will you allow it?
 * [yes]
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
+#name:Narrator #image:narrator_neutral #sound:narrator
 - The dog searches through the cabinets and finds some hard candy.
-* [no]
-#name:dog #image:dog_woof #layout:dog1 #sound:dog_woof
-- Woof!
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
-- The dog searches through the cabinets anyways and finds some hard candy.
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
 ~has_candy = true
 ~completed_off_cabinets = true
+->END
+* [no]
+#name:dog #image:dog_woof #sound:dog_woof
+- Woof!
 ->END

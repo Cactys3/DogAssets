@@ -1,6 +1,8 @@
 INCLUDE Globals.ink
 
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
+
+#layout:up
+#name:Narrator #image:narrator_neutral #sound:narrator
 {completed_liv_doortostairs:
 ->Completed
 - else:
@@ -16,53 +18,73 @@ INCLUDE Globals.ink
 }
 
 ===FailedKnowledge===
-#name:dog #image:dog_bark #layout:dog1 #sound:dog_bark_confused
-Woof?
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
+#name:Narrator #image:narrator_neutral #sound:narrator
 {has_tastykey || has_stinkykey:
-Although you made a key, the dog doesn't know how to open doors.
-Maybe try doing some research?
-->END
+    Although you made a key, the dog doesn't know how to open doors.
+    Maybe try doing some research?
+        {played_doortooffice:
+        That office room might have more to give.
+        - else:
+        I know there's an office around here.
+        }
+-else:
+    The dog doesn't have a key for this door,<<wait:0.3> not that they know how to open closed doors in the first place.
+        {played_doortooffice:
+        Sounds like the dog needs to use that computer room again.
+        - else:
+        I know there's an office around here somewhere.
+        }
 }
-The dog doesn't have a key for this door.
-Not that they know how to open closed doors in the first place.
 ->END
 
 
 ===TryKey===
 {has_tastykey || has_stinkykey:
-Temporary text: unlock door with key?
-* [try key]
-~has_tastykey = false
-~has_stinkykey = false
-~completed_liv_doortostairs = true //TODO: this variable should unlock the door and make display the opening door animation
-->Completed
-* [leave]
-->END
+    ~has_tastykey = false
+    ~has_stinkykey = false
+    ~completed_liv_doortostairs = true
+    ->UnlockDoor
 - else:
-#name:dog #image:dog_woof #layout:dog1 #sound:dog_woof_2
-Woof! Woof!
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
-The dog is excited to use his knewly gained knowledge on door-opening.
-#name:dog #image:dog_growl #layout:dog1 #sound:dog_growl
-Growl...
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
-But you don't have a key.
-{played_DoorToStairs:
-#name:dog #image:dog_woof #layout:dog1 #sound:dog_woof
-Woof!
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
-The dog wishes to make one with his molding skills.
-- else:
-~played_DoorToStairs = true
-}
-->END
+    #name:dog #image:dog_woof #sound:dog_woof
+    Woof! Woof!
+    #name:Narrator #image:narrator_neutral #sound:narrator
+    The dog is excited to use their newly gained knowledge on locks and doors!
+    {has_flimsykey:
+        Though they are missing a solid enough key to turn the lock
+    -else:
+        Though they are missing a key.
+    }
+    {played_DoorToStairs:
+        #name:dog #image:dog_woof #sound:dog_woof
+        Woof!
+        #name:Narrator #image:narrator_neutral #sound:narrator
+        The dog wishes to make one with his molding skills.
+    - else:
+        ~played_DoorToStairs = true
+    }
+    ->END
 }
 
-===Completed===
-Go through door?
+
+===UnlockDoor===
+The dog has applied their rigourus studies and crafted a key fit to rule each and every lock within 2000 square feet!
+Though it is a struggle for them not to eat it...
+Do you now wish to use this hand crafted key and complete this quest?
 *[yes]
-#scene:boss
-->END
+~completed_liv_doortostairs = true
+->Completed
 *[no]
 ->END
+
+===Completed===
+After battling their way through each kitchen appliance come to life,<<wait:0.2> gaining copious quantities of knowledge, applying that knowledge to craft a work of art, finest ever made by dogkind, and finally using that work of art to unlock a locked door, as a dog.
+They are finally ready to move on.
+This trip, while exilerating, has also been enlighting.
+The trials the dog conquered through this journey have tested them, and through that testing the dog has come to accept that those once called family did choose to abandon the dog and the house they turned to home.
+As the effects of the dognip start to shift, the dog realizes they must make their way through this final doorway...
+And face the cause of this destruction.<<wait:0.2>.<<wait:0.2>.<<wait:0.2> a<<wait:0.1>l<<wait:0.1>o<<wait:0.1>n<<wait:0.1>e<<wait:1>
+#scene:boss
+->END
+
+
+

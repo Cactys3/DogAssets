@@ -1,7 +1,11 @@
 INCLUDE Globals.ink
 #layout:up
-#name:narrator #image:narrator_neutral #sound:narrator
+#name:Narrator #image:narrator_neutral #sound:narrator
+{played_doortoliving:
+Go to the living room?
+-else:
 Go Through Door?
+}
  * [Go]
  -> go
  * [Don't Go]
@@ -9,27 +13,30 @@ Go Through Door?
 
 
 === go ===
+VAR count = 0
+
 {completed_microwave:
-    {completed_fridgeoven:
-        {completed_jucier:
-        #scene:living
-        - else:
-        The dog MUST beat ALL kitchen appliances before moving on!
-        ->END
-        }
-    - else:
-    The dog MUST beat ALL kitchen appliances before moving on!
-    ->END
-    }
-- else:
-The dog MUST beat ALL kitchen appliances before moving on!
-->END
+~count = count + 1
 }
 
+{completed_fridgeoven:
+~count = count + 1
+}
+
+{completed_jucier:
+~count = count + 1
+}
+
+{count == 3:
+~played_doortoliving = true
 #scene:living
--> END
+- else:
+The dog MUST beat ALL kitchen appliances before moving on!
+There are {count} appliances left!
+}
+->END 
+
 
 
 === dont ===
-come again soon.
 -> END

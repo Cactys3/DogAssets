@@ -5,6 +5,9 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private bool DisableAfterPlay = false;
+    [SerializeField] private bool DontDimAfterPlay = false;
+    private const float DimAmount = 0.75f;
     [Header("Sound Effect To Play")]
     [SerializeField] private string EnterSoundName;
     [SerializeField] private string ExitSoundName;
@@ -63,7 +66,7 @@ public class DialogueTrigger : MonoBehaviour
                     }
                     else
                     {
-                        dialogueMan.EnterDialogueMode(text);
+                        StartStory();
                     }
                 }
             }
@@ -82,7 +85,21 @@ public class DialogueTrigger : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(time);
 
+        StartStory();
+    }
+    public void StartStory()
+    {
         dialogueMan.EnterDialogueMode(text);
+        if (DisableAfterPlay)
+        {
+            dialogueMan.DisableAfterPlay(this.transform.parent.gameObject);
+        }
+        if (!DontDimAfterPlay)
+        {
+            Color c = spriteRenderer.color;
+            c.a = DimAmount;
+            spriteRenderer.color = c;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

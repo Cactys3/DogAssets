@@ -4,13 +4,14 @@ INCLUDE Globals.ink
 ->END
 }
 
-//once the key is picked up, this ink story should be unreachable anyways as the gameobject should be deleted
-#name:dog #image:dog_sniff #layout:dog1 #sound:dog_sniff
+#layout:up
+#name:dog #image:dog_sniff #sound:dog_sniff
 sniff... sniff...
-#name:dog #image:dog_whine #layout:dog1 #sound:dog_whine
+ #name:dog #image:dog_whine #sound:dog_whine
 whinnnee...
 
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator_default
-The dog has found a flimsy toy key.
+#name:Narrator #image:narrator_neutral #sound:narrator
+The dog has found a flimsy toy key with a strong, familiar scent.
+It looks like this toy was modeled after the real key of this house.
 ~has_flimsykey = true
 ~completed_flimsykey = true

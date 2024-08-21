@@ -785,7 +785,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: gun_rotate
-    clip: {fileID: 8300000, guid: a890b1c5818b60b40abf367072e5f08b, type: 3}
+    clip: {fileID: 8300000, guid: 2aa8144b2f8001244b3d451587f7cf6d, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -794,7 +794,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: gun_lock
-    clip: {fileID: 8300000, guid: 429cfd5f0c2ca3a46894d061e83724a0, type: 3}
+    clip: {fileID: 8300000, guid: 4147b8554348ca44a908075aba6c6a38, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -803,7 +803,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: platform_select
-    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    clip: {fileID: 8300000, guid: 2f668fc0923a86a45b4b1e38bb2ecf0c, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -812,7 +812,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: platform_place
-    clip: {fileID: 8300000, guid: 6825607acba1af848acf413ffbb98db3, type: 3}
+    clip: {fileID: 8300000, guid: a2f747dc98859cf4a811a7b98e84dab3, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1

@@ -1,7 +1,7 @@
 INCLUDE Globals.ink
 #layout:up
-#name:narrator #image:narrator_neutral #sound:narrator
-Go Through Door?
+#name:Narrator #image:narrator_neutral #sound:narrator
+Go to the mud room?
  * [Go]
  -> go
  * [Don't Go]
@@ -14,5 +14,5 @@ Go Through Door?
 
 
 === dont ===
-come again soon.
+Yea, I'd rather not aswell.
 -> END

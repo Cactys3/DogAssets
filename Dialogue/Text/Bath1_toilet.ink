@@ -1,38 +1,45 @@
 INCLUDE Globals.ink
+#layout:down
+#name:Narrator #image:narrator_neutral #sound:narrator
 
--> start
-
-== start ==
-#name:narrator #image:narrator_default #layout:narrator1
 Water, it's wet.
 
 {played_bath1_toilet == false:
 #name:dog #image:dog_sniff #layout:dog1
 Sniff...
-#name:narrator #image:narrator_default #layout:narrator1
+#name:Narrator #image:narrator_neutral #sound:narrator
 The dog happily drinks its fill.
 ~ played_bath1_toilet = true
 }
 
 {holding_item:
-#name:narrator #image:{held_item} #layout:{held_item}
+->IsHoldingItem
+-else:
+->NotHoldingItem
+}
+
+
+
+===NotHoldingItem===
+You could dip an item into the toilet, if you were holding one.
+->END
+
+===IsHoldingItem
+#name:Narrator #image:narrator_neutral #sound:narrator
 Would you like to splash the {held_item} in the toilet water?
 * [why yes, i would]
-->holding(held_item)
+->TestItem(held_item)
 *[no]
-#name:narrator #image:narrator_default #layout:narrator1
 Good decision, that would probably be a bad idea.
 ->END
--else:
-->END
-}
-===holding(item)===
+
+===TestItem(item)===
 {item == "has_clay":
 ~has_moldableclay = true
 ~has_clay = false
 ~holding_item = false
 ~held_item = ""
-It worked
+The clay, once dipped in the water, becomes wet and moldable.
 ->END
 -else:
 It didn't work

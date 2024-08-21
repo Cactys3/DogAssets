@@ -11,16 +11,16 @@ INCLUDE Globals.ink
 
 
  === NotTakenDogFood ===
- #name:narrator #sound:narrator #image:narrator_neutral
-Dog food,<<wait:0.5> well past its expiration date 
+#name:narrator #image:narrator_neutral #sound:narrator
+Dog food,<<wait:0.2> well past its expiration date 
  * [consume]
      #name:dog #image:dog_woof #sound:dog_woof
     Woof Woof!
-     #name:narrator #sound:narrator #image:narrator_neutral
+#name:narrator #image:narrator_neutral #sound:narrator
     The Dog seems disinclined to eat the rotton dog food.
-    They save it for later. 
+    They save it for consumption at a later date. 
     -> RecieveDogFood
- * [save for later]
+ * [save it for later]
     -> RecieveDogFood
  
  === RecieveDogFood ===
@@ -30,6 +30,6 @@ Dog food,<<wait:0.5> well past its expiration date
 
  
  === TakenDogFood ===
-  #name:narrator #sound:narrator #image:narrator_neutral
+#name:narrator #image:narrator_neutral #sound:narrator
  An empty dog food bowl. 
  -> END

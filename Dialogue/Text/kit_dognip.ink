@@ -1,8 +1,8 @@
 INCLUDE Globals.ink
 #layout:up
-#name:narrator #image:narrator_neutral #sound:narrator
+#name:Narrator #image:narrator_neutral #sound:narrator
 ~ ate_dognip = true
-It's dognip. 
+It's dognip, quite a strong batch too.
 Should the dog eat it?
 * [Yes]
     #name:dog #image:dog_sniff #sound:dog_sniff
@@ -10,8 +10,9 @@ Should the dog eat it?
     #scene:dognip
     ->END
 *[No]
-    You don't seriously think you can stop the dog, do you?
-    #name:dog #image:dog_bark #sound:dog_bark
-    Bark!
+    #name:Narrator #image:narrator_neutral #sound:narrator
+    You don't seriously think you can stop the dog,<<wait:0.2> do you?
+    #name:dog #image:dog_sniff #sound:dog_sniff
+    Sniff...
     #scene:dognip
     ->END

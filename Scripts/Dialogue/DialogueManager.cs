@@ -35,10 +35,10 @@ public class DialogueManager : MonoBehaviour
     private const string CHANGE_SCENE = "scene";
     //TODO: add ink tags (or tie to the portrait tag): sound effect, font, font color, font size, delay until next dialogue
     [Header("Parameters and Tags")]
-    [SerializeField] private float defaultTypingSpeed = 0.04f;
+    private float defaultTypingSpeed = 0.02f;
     private float typingSpeed;
     private string defaultTypingSound = "silent";
-    [SerializeField] private string currentTypingSound;
+    private string currentTypingSound;
     //Scenes
     public const string demoendScene = "Demo End";
     public const string lockpickingScene = "Lockpicking Intro";
@@ -112,6 +112,8 @@ public class DialogueManager : MonoBehaviour
     private string DialogueExitSound;
     private bool DialogueExitSoundBool;
 
+    private GameObject DisableAfterPlayObject;
+
     private DialogueVariables dialogueVariables;
     
     private void Awake()
@@ -139,6 +141,8 @@ public class DialogueManager : MonoBehaviour
       //  canContinueIcon = GameObject.FindGameObjectWithTag("dicon");
      //   portraitAnimator = GameObject.FindGameObjectWithTag("dportrait").GetComponent<Animator>();
         layoutAnimator = dialoguePanel.GetComponent<Animator>();
+
+        DisableAfterPlayObject = null;
 
         typingSpeed = defaultTypingSpeed;
         dialoguePanel.SetActive(false);
@@ -217,6 +221,13 @@ public class DialogueManager : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().PlaySFX(DialogueExitSound);
         }
+
+        if (DisableAfterPlayObject != null)
+        {
+            Debug.Log("disable: " + DisableAfterPlayObject.name);
+            DisableAfterPlayObject.SetActive(false);
+            DisableAfterPlayObject = null;
+        }
     }
 
     private IEnumerator DisplayLine(string line)
@@ -251,7 +262,7 @@ public class DialogueManager : MonoBehaviour
             {
                 visibleCharacters++;
                 //allows the dialogue to be skipped after 3 characters are displayed
-                if (canSkipTyping && Input.GetKey(SubmitKeybind) && visibleCharacters > 5)
+                if (canSkipTyping && Input.GetKeyDown(SubmitKeybind) && visibleCharacters > 1)
                 {
                     skip = true;
                 }
@@ -718,5 +729,11 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueExitSound = s;
         DialogueExitSoundBool = b;
+    }
+
+    public void DisableAfterPlay(GameObject obby)
+    {
+        Debug.Log("disable after play: " + obby.name);
+        DisableAfterPlayObject = obby;
     }
 }

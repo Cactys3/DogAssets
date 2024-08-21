@@ -1,6 +1,6 @@
 INCLUDE Globals.ink
-#layout:down
-
+#layout:up
+#image:juicer #name:Juicer #sound:juicer
 {completed_jucier:
 -> Completed
  -else:
@@ -8,18 +8,29 @@ INCLUDE Globals.ink
 }
 
  === Completed ===
-#name:Juicer #image:juicer #sound:juicer
  YOU STRONG NOW!!!
- ME ALLOW LEAVE!
+ GROWN YOU HAVE!
+ ME ALLOW LEAVE!!
+ LEAVE!
  -> END
  
   ===NotCompleted===
-  #name:Juicer #image:juicer #sound:juicer
-  Do you want to skip juicer minigame or do it?
-  + [SKIP]?
-  ~completed_jucier = true
-  -> END
-  + [DO IT]?
+CHALLENGE YOU WILL COMPLETE!!!
+NOW!!!
+DO!!!
+*[yes]
   ~completed_jucier = true
  #scene:juicer
   -> END
+*[no]
+->yes
+
+
+===yes===
+NO! YES!!!
+*[yes]
+  ~completed_jucier = true
+ #scene:juicer
+  -> END
+*[no]
+->yes

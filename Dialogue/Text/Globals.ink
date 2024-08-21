@@ -25,6 +25,15 @@ VAR completed_liv_cabinet = false
 //played_name is if an ink story has already been played in whatever way the particular story cares about (usually only used within that one story)
 VAR played_bath1_toilet = false
 VAR played_DoorToStairs = false
+VAR played_coatrack = false
+VAR played_doortodeck = false
+VAR played_movierack = false
+VAR played_doortooffice = false
+VAR played_doortobath = false
+VAR played_doortokitchen = false
+VAR played_doortoliving = false
+
+VAR played_poop = false
 //has_itemname is if a particular is currently obtained
 VAR has_dogfood = false
 VAR has_default = false

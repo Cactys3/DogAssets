@@ -1,18 +1,10 @@
 INCLUDE Globals.ink
 #layout:down
-{completed_UFO:
--> Completed
- -else:
--> NotCompleted
-}
-
- === Completed ===
-   #name:narrator #image:narrator_neutral 
-  nothing to see here...
-  -> END
-
- 
-  === NotCompleted ===
-  #name:narrator #image:narrator_neutral 
-  nothing to see here...
-  -> END
+#name:Narrator #image:narrator_neutral #sound:narrator
+Do you want me to explain what that is?
+*[yes]
+I have no idea what that is.
+->END
+*[no]
+Okay.
+->END

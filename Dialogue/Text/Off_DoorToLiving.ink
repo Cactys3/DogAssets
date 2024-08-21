@@ -1,4 +1,6 @@
 INCLUDE Globals.ink
+#layout:up
+#name:Narrator #image:narrator_neutral #sound:narrator
 Go Through Door?
  * [Go]
  -> go
@@ -12,5 +14,5 @@ Go Through Door?
 
 
 === dont ===
-come again soon.
+alright, stay then.
 -> END

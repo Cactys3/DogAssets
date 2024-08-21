@@ -7,12 +7,13 @@ INCLUDE Globals.ink
 }
 
  === Completed ===
-   #name:narrator #image:narrator_neutral #sound:narrator
-  nothing to see here...
+#name:Narrator #image:narrator_neutral #sound:narrator
+A kitchen table.
  -> END
  
   === NotCompleted ===
-  #name:narrator #image:narrator_neutral #sound:narrator
-  nothing to see here...
+#name:Narrator #image:narrator_neutral #sound:narrator
+A kitchen table?
+~completed_utensils = true
   -> END
   

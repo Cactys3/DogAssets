@@ -1,63 +1,67 @@
 INCLUDE Globals.ink
 
-VAR played = 0
-//blank tag 
-#name:blank #image:blank layout:blank #sound:blank #typingspeed:0
-why did i set it up like this, it don't work at all bro
-->END
-Play a note?
-* [A].#sound:A
--> Play
-* [B].#sound:B
--> Play
-* [C].#sound:C
--> Play
-* [D].#sound:D
-~played = 1
--> Play
-* [E].#sound:E
--> Play
-* [O].#sound:O
--> Play
-* [F].#sound:F
--> Play
-* [G].#sound:G
--> Play
-* nah
-->END
+#layout:up
+->Play
+
+
 ===Play===
-Play Another?
-* [A].#sound:A
--> Play
-* [B].#sound:B
--> Play
-* [C].#sound:C
--> Play
-* [D].#sound:D
-~played = 1
--> Play
-* [E].#sound:E
--> Play
-* [O].#sound:O
-{played == 1:
-~played = 2
-}
--> Play
-* [F].#sound:F
--> Play
-* [G].#sound:G
-{played == 2:
-~played = 3
-->complete
--else:
--> Play
-}
-* nah
+Play a note? #image:piano_silent  #sound:piano #name:Piano
+
+* D #image:piano_d  #sound:piano_d #name:Piano
+->PlayRoundTwo
+
+* C #image:piano_c  #sound:piano_c #name:Piano
+->Play
+
+* A #image:piano_a  #sound:piano_a #name:Piano
+->Play
+
+* E #image:piano_e  #sound:piano_e #name:Piano
+->Play
+
+* [nah]
 ->END
 
+
+===PlayRoundTwo===
+Play Another? #image:piano_silent  #sound:piano #name:Piano
+
+* G #image:piano_g  #sound:piano_g #name:Piano
+->Play
+
+* A #image:piano_a  #sound:piano_a #name:Piano
+->Play
+
+* F #image:piano_f  #sound:piano_f #name:Piano
+->Play
+
+* O #image:piano_c  #sound:piano_c #name:Piano
+->PlayRoundThree
+
+* [nah]
+->END
+
+
+===PlayRoundThree===
+One more? #image:piano_silent  #sound:piano #name:Piano
+
+* F #image:piano_f  #sound:piano_f #name:Piano
+->Play
+
+* C #image:piano_c  #sound:piano_c #name:Piano
+->Play
+
+* G #image:piano_g  #sound:piano_g #name:Piano
+->complete
+
+* E #image:piano_e  #sound:piano_e #name:Piano
+->Play
+
+* [nah]
+->END
 
 ===complete===
-good dog #sound:victory1
+good dog #sound:piano_victory #image:piano_silent #name:Piano
 ->END
 
 
