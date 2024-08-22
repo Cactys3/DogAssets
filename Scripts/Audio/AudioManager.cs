@@ -40,6 +40,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] JuicerClips;
     public AudioClip[] ValveClips;
     public AudioClip[] ClickClips;
+    public AudioClip[] SwordLightClips;
+    public AudioClip[] SwordHeavyClips;
     [Header("Type Sounds")]
     public Sound[] TypeSounds;
     [Header("Music Sounds")]
@@ -366,6 +368,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("length of clip: " + sound + " is: " + s.clip.length + " vs source: " + s.source.clip.length);
             return s.clip.length;
         }
     }
@@ -526,6 +529,8 @@ public class AudioManager : MonoBehaviour
         Sound dogfood = Array.Find(SFXSounds, item => item.name == "dogfood_interact");
         Sound door_exit = Array.Find(SFXSounds, item => item.name == "door_interact_exit");
         Sound click = Array.Find(SFXSounds, item => item.name == "juicer_click");
+        Sound heavysword = Array.Find(SFXSounds, item => item.name == "light_sword");
+        Sound lightsword = Array.Find(SFXSounds, item => item.name == "heavy_sword");
 
         click.source.clip = ClickClips[UnityEngine.Random.Range(0, ClickClips.Length)];
         door_exit.source.clip = DoorExitClips[UnityEngine.Random.Range(0, DoorExitClips.Length)];
@@ -537,6 +542,8 @@ public class AudioManager : MonoBehaviour
         fridge.source.clip = FridgeClips[UnityEngine.Random.Range(0, FridgeClips.Length)];
         valve.source.clip = ValveClips[UnityEngine.Random.Range(0, ValveClips.Length)];
         dogfood.source.clip = DogfoodClips[UnityEngine.Random.Range(0, DogfoodClips.Length)];
+        heavysword.source.clip = SwordHeavyClips[UnityEngine.Random.Range(0, SwordHeavyClips.Length)];
+        lightsword.source.clip = SwordLightClips[UnityEngine.Random.Range(0, SwordLightClips.Length)];
     }
     public void PlayMultipleType(string sound)
     {

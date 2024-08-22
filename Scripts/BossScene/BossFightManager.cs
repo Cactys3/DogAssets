@@ -21,6 +21,7 @@ public class BossFightManager : MonoBehaviour
     public int PlayerThrustStaminaCost;
     public int PlayerSpinStaminaCost;
     public float PlayerStaminaRegen;
+    [SerializeField] private GameObject RedOverlay;
     [SerializeField] private BossHUDManager HUD;
     [SerializeField] private BossAIScript boss;
     [SerializeField] private BossPlayerMovement player;
@@ -36,36 +37,34 @@ public class BossFightManager : MonoBehaviour
     private AudioManager audioMan;
     private bool StaminaRegening;
     private bool won;
+    private bool lost;
     private bool DrainBossHP;
-    public static int number = 0;
+    public static int DeathCount = 0;
     public const string PlayerDamagedSound = "boss_player_damaged";
-    public const string PlayerSlashSound = "boss_player_slash";
-    public const string PlayerSpinSound = "boss_player_spin";
+    public const string PlayerSlashSound = "light_sword";//"boss_player_slash";
+    public const string PlayerSpinSound = "light_sword";//"boss_player_spin";
     public const string PlayerDashSound = "boss_player_dash";
     public const string BossDamagedSound = "boss_boss_damaged";
-    public const string BossThrustSound = "boss_boss_thrust";
-    public const string BossSlashSound = "boss_boss_slash";
+    public const string BossThrustSound = "heavy_sword";//"boss_boss_thrust";
+    public const string BossSlashSound = "heavy_sword";//"boss_boss_slash";
     public const string BossDashSound = "boss_boss_dash";
     public const string MininukeFlySound = "boss_mininuke_fly";
     public const string MininukeExplodeSound = "boss_mininuke_explode";
     public const string BignukeFlySound = "boss_bignuke_fly";
     public const string BignukeExplodeSound = "boss_bignuke_explode";
-    public const string MapSlashSound = "boss_mapslash";
+    public const string MapSlashSound = "heavy_sword";//"boss_mapslash";
     public const string PhantomSound = "boss_phantom";
     public const string WinSound = "boss_win";
     public const string LoseSound = "boss_lose";
     public const string PhaseChangeExplosionSound = "boss_phasechange";
+    public const string BossHealSound = "boss_heal";
     private float Stopwatch;
 
     private bool PhaseTwoPlayedBefore;
     private void Start()
     {
-        if (number > 0)//idk if works
-        {
-            PlaySound(LoseSound);
-        }
-        number++;
-
+        lost = false;
+        RedOverlay.SetActive(false);
         DrainBossHP = false;
         BounceCollider.SetActive(false);
         won = false;
@@ -88,7 +87,15 @@ public class BossFightManager : MonoBehaviour
         MapSlashDamage = 45;
         PhantomDamage = 45;
         PhaseTwoPlayedBefore = false;
-        audioMan = FindObjectOfType<AudioManager>();
+        if (audioMan == null)
+        {
+            audioMan = FindObjectOfType<AudioManager>();
+        }
+        if (DeathCount > 0)
+        {
+            //PlaySound(LoseSound);
+        }
+        DeathCount++;
     }
     private void Update()
     {
@@ -293,6 +300,7 @@ public class BossFightManager : MonoBehaviour
         yield return new WaitForSeconds(10f);
         MiniNukeSpawn.StopSpawning();
         yield return new WaitForSeconds(7f);
+        PlaySound(BossHealSound);
         BossHP = 30;
         HUD.UpdateBossHP(30);
 
@@ -305,6 +313,7 @@ public class BossFightManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         yield return new WaitForSeconds(5f);
+        PlaySound(BossHealSound);
         BossHP = 55;
         HUD.UpdateBossHP(55);
 
@@ -317,6 +326,7 @@ public class BossFightManager : MonoBehaviour
             p.Delay = 0.6f;
             p.Play();
         }
+        PlaySound(BossHealSound);
         BossHP = 70;
         HUD.UpdateBossHP(70);
 
@@ -328,6 +338,7 @@ public class BossFightManager : MonoBehaviour
         yield return new WaitForSeconds(15f);
         MiniNukeSpawn.StopSpawning();
         yield return new WaitForSeconds(7f);
+        PlaySound(BossHealSound);
         BossHP = 85;
         HUD.UpdateBossHP(85);
 
@@ -346,7 +357,7 @@ public class BossFightManager : MonoBehaviour
         }
         yield return new WaitForSeconds(5f);
 
-        
+        PlaySound(BossHealSound);
         BossHP = 100;
         HUD.UpdateBossHP(100);
 
@@ -383,7 +394,20 @@ public class BossFightManager : MonoBehaviour
     }
     public void Lose()
     {
+        if (!lost)
+        {
+            lost = true;
+            StartCoroutine("LoseEnum");
+        }
+    }
 
+    private IEnumerator LoseEnum()
+    {
+        RedOverlay.SetActive(true);
+        PlaySound(LoseSound);
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(audioMan.GetLengthSFX(LoseSound) - 0.2f);
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void UseStamina(string name)
@@ -436,7 +460,14 @@ public class BossFightManager : MonoBehaviour
 
     public void PlaySound(string s)
     {
-        audioMan.PlaySFX(s);
+        try
+        {
+            audioMan.PlaySFX(s);
+        }
+        catch
+        {
+            Debug.Log("failed to play: " + s);
+        }
     }
     public void PlayMultiSound(string s)
     {

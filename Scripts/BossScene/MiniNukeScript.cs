@@ -18,7 +18,7 @@ public class MiniNukeScript : MonoBehaviour
     private void Start()
     {
         manager = FindObjectOfType<BossFightManager>();
-        manager.PlaySound(BossFightManager.MininukeFlySound);
+        manager.PlayMultiSound(BossFightManager.MininukeFlySound);
     }
     private void OnEnable()
     {
@@ -55,7 +55,6 @@ public class MiniNukeScript : MonoBehaviour
     }
     private IEnumerator Explode()
     {
-        manager.StopSound(BossFightManager.MininukeFlySound);
         manager.PlayMultiSound(BossFightManager.MininukeExplodeSound);
         //maybe activate a bigger trigger collider here for the explosion radius
         Anim.enabled = true;

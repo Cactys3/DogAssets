@@ -156,7 +156,7 @@ public class PhantomScript : MonoBehaviour
 
         //Phantom.velocity = Direction * velocity;
 
-        manager.PlaySound(BossFightManager.PhantomSound);
+        manager.PlayMultiSound(BossFightManager.PhantomSound);
 
         MoveBool = true;
 

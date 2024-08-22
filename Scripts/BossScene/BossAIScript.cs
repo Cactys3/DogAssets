@@ -206,7 +206,7 @@ public class BossAIScript : MonoBehaviour
 
         PointTowardsPlayerBool = false;
 
-        manager.PlaySound(BossFightManager.BossThrustSound);
+        manager.PlayMultiSound(BossFightManager.BossThrustSound);
         anim.Play(Thrust2Name);
         ThrustCollider.enabled = true;
         body.AddForce(new Vector2(-transform.up.x, -transform.up.y) * Mathf.Abs(ThrustSpeed), ForceMode2D.Impulse);
@@ -227,7 +227,7 @@ public class BossAIScript : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         yield return new WaitUntil(() => AnimDone(Slash1Name));
         PointTowardsPlayerBool = false;
-        manager.PlaySound(BossFightManager.BossSlashSound);
+        manager.PlayMultiSound(BossFightManager.BossSlashSound);
         anim.Play(Slash2Name);
         Slash2Collider.enabled = true;
         body.AddForce(new Vector2(-transform.up.x, -transform.up.y) * Mathf.Abs(SlashSpeed), ForceMode2D.Impulse);
@@ -247,7 +247,7 @@ public class BossAIScript : MonoBehaviour
     {
         AnimState = 3;
         anim.Play(DashRName);
-        manager.PlaySound(BossFightManager.BossDashSound);
+        manager.PlayMultiSound(BossFightManager.BossDashSound);
         body.AddForce(new Vector2(transform.up.y, -transform.up.x) * Mathf.Abs(DashSpeed), ForceMode2D.Impulse);
         yield return new WaitForSeconds(0.2f);
         yield return new WaitUntil(() => AnimDone(DashRName));
@@ -258,7 +258,7 @@ public class BossAIScript : MonoBehaviour
     {
         AnimState = 3;
         anim.Play(DashLName);
-        manager.PlaySound(BossFightManager.BossDashSound);
+        manager.PlayMultiSound(BossFightManager.BossDashSound);
         body.AddForce(new Vector2(-transform.up.y, transform.up.x) * Mathf.Abs(DashSpeed), ForceMode2D.Impulse);
         yield return new WaitForSeconds(0.2f);
         yield return new WaitUntil(() => AnimDone(DashLName));

@@ -33,12 +33,12 @@ public class IntroAnimationManager : MonoBehaviour
 
     public const string PlaneSound = "intro_plane";
     public const string NatureSound = "intro_nature";
-    public const string RadioSound = "intro_radio";
-    public const string SirenSound = "intro_sirens";
+    public const string CutToBlackSound = "intro_black";
+    public const string DoorSound = "intro_door";
 
     void Start()
     {
-
+        audioMan = FindObjectOfType<AudioManager>();
         ShowQuestions = false;
         SleptAlready = false;
         state = 0;
@@ -100,7 +100,8 @@ public class IntroAnimationManager : MonoBehaviour
     private IEnumerator PreBomb() //Starts out with people talking in the background and the dog awake in his igloo and a peaceful animation of the window outside.
     {
         state = 1;
-        Debug.Log("PreBomb Starts");
+        Debug.Log("nature sound");
+        Play(NatureSound);
         yield return new WaitForSeconds(2); //wait at black for 2 seconds
         Animator.Play("PreBomb");
         FadeAnimator.Play("Fade In");
@@ -109,26 +110,34 @@ public class IntroAnimationManager : MonoBehaviour
 
         yield return new WaitForSeconds(2); //wait playing the animation for 2 seconds
 
-        Debug.Log("PreBomb Over");
+        Debug.Log("plane sound");
+        Play(PlaneSound);
+        yield return new WaitForSeconds(4); //wait playing the plane sound for seconds
+
         StartCoroutine("Bomb");
     }
     private IEnumerator Bomb()
     {
         state = 2;
-        Debug.Log("Bomb Starts");
 
         FadeAnimator.Play("Plane");
         yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => FadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.977);//wait until black is shown
+        Stop(NatureSound);
+        Stop(PlaneSound);
+        Play(CutToBlackSound);
+        Debug.Log("black sound and stop other sounds");
         yield return new WaitUntil(() => FinishedFade()); //wait until bomb is finished
         yield return new WaitForSeconds(3); //wait 3 seconds on black screen
-        Debug.Log("Bomb Over");
+        Play(DoorSound);
+        Debug.Log("door sound");
+        yield return new WaitForSeconds(6); //wait 6 more seconds on black screen
         StartCoroutine("PostBomb");
     }
 
     private IEnumerator PostBomb()
     {
         state = 3;
-        Debug.Log("PostBomb Start");
         Animator.Play("PostBomb");
         FadeAnimator.Play("Fade In");
         yield return new WaitForSeconds(1);
@@ -138,7 +147,6 @@ public class IntroAnimationManager : MonoBehaviour
         ShowQuestions = true;
         StartSprite.sprite = StartNotHovered;
         SleepSprite.sprite = SleepHovered;
-        Debug.Log("PostBomb Over");
     }
 
     private IEnumerator Sleep1x()
@@ -170,10 +178,33 @@ public class IntroAnimationManager : MonoBehaviour
         yield return new WaitUntil(() => FinishedFade()); //wait until fade is finished
         yield return new WaitForSeconds(8f);
         Animator.Play("Death");
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
+        Play("monster");
+        yield return new WaitForSeconds(5f);
         Application.Quit();
     }
-
+    private void Play(string s)
+    {
+        try
+        {
+            audioMan.PlaySFX(s);
+        }
+        catch
+        {
+            Debug.LogWarning("couldn't play sound because no audioma");
+        }
+    }
+    private void Stop(string s)
+    {
+        try
+        {
+            audioMan.StopPlayingSFX(s);
+        }
+        catch
+        {
+            Debug.LogWarning("couldn't stop sound because no audioma");
+        }
+    }
     private bool FinishedFade() //returns true if the animation the fade is playing has played once
     {
         return FadeAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1;

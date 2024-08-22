@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004a22055d4c7ba4caa7bebc1a8d2dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 0
+  Scene: 1
   Level: 0
   ChangeSceneOnEnabled: 1
 --- !u!223 &581847592192315922
@@ -740,7 +740,7 @@ MonoBehaviour:
   AudioPrefab: {fileID: 8250371898052299822, guid: 8e0d99a63b21b75439649d2f3316c239, type: 3}
   MicrowaveMinigame:
   - name: wave_bounce
-    clip: {fileID: 8300000, guid: 429cfd5f0c2ca3a46894d061e83724a0, type: 3}
+    clip: {fileID: 8300000, guid: c0340fad0dec9c141953d96f57b72917, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -749,7 +749,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: wave_teleport
-    clip: {fileID: 8300000, guid: 252ef6037fd1d414984daa7e2561a46f, type: 3}
+    clip: {fileID: 8300000, guid: e9b76dedc1909c0468cff68b55a5fe69, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -758,7 +758,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: wave_lose
-    clip: {fileID: 8300000, guid: d0772755ff39d9844bb292e9e7f2e030, type: 3}
+    clip: {fileID: 8300000, guid: 7f02418e509257f409389e1c4f1f608a, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -767,7 +767,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: wave_win
-    clip: {fileID: 8300000, guid: 72e43b2da4715ec479237cb60b169581, type: 3}
+    clip: {fileID: 8300000, guid: 48e7ccd8e40269e4eaa99c25f97dc72a, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -776,7 +776,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: wave_shoot
-    clip: {fileID: 8300000, guid: 30d8f76ddeb9304439a2b5e0e8cfcf3f, type: 3}
+    clip: {fileID: 8300000, guid: c3262f8ecf602fb4083a663dd81877b2, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -904,7 +904,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: f_getup_1
-    clip: {fileID: 8300000, guid: bc6a99ed93b805d4ab85eb65646a1cb8, type: 3}
+    clip: {fileID: 8300000, guid: 022adddbd6b954c4a80af47e8f8f0900, type: 3}
     volume: 0.45
     volumeVariance: 0
     pitch: 1
@@ -913,7 +913,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: f_getup_2
-    clip: {fileID: 8300000, guid: e2f8198000d4dac47bb030413a94fd6a, type: 3}
+    clip: {fileID: 8300000, guid: b81424326a95e25418c60d184d1ea7c0, type: 3}
     volume: 0.45
     volumeVariance: 0
     pitch: 1
@@ -941,7 +941,7 @@ MonoBehaviour:
     source: {fileID: 0}
   Boss:
   - name: boss_player_damaged
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
+    clip: {fileID: 8300000, guid: 64da71ec4eb05bc4b852ab32fe2f0810, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -968,16 +968,16 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_player_dash
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
+    clip: {fileID: 8300000, guid: 5948665982846494dbbb0b508e655a41, type: 3}
+    volume: 0.717
+    volumeVariance: 0.1
+    pitch: 1.27
+    pitchVariance: 0.1
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_boss_damaged
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
+    clip: {fileID: 8300000, guid: 9594934366e0bdd49885197e8541133a, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -1004,61 +1004,61 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_boss_dash
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
+    clip: {fileID: 8300000, guid: 5948665982846494dbbb0b508e655a41, type: 3}
+    volume: 0.946
+    volumeVariance: 0.1
+    pitch: 0.76
+    pitchVariance: 0.1
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_mininuke_fly
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
+    clip: {fileID: 8300000, guid: 5948665982846494dbbb0b508e655a41, type: 3}
     volume: 1
-    volumeVariance: 0
+    volumeVariance: 0.1
     pitch: 1
-    pitchVariance: 0
-    loop: 1
+    pitchVariance: 0.1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_mininuke_explode
     clip: {fileID: 8300000, guid: 3a3509101e0983740a57d8c0f20a617b, type: 3}
-    volume: 0.1
-    volumeVariance: 0
+    volume: 0.048
+    volumeVariance: 0.277
     pitch: 1.5
-    pitchVariance: 0
+    pitchVariance: 0.325
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_bignuke_fly
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
+    clip: {fileID: 8300000, guid: 5948665982846494dbbb0b508e655a41, type: 3}
     volume: 1
-    volumeVariance: 0
+    volumeVariance: 0.1
     pitch: 1
-    pitchVariance: 0
+    pitchVariance: 0.1
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_bignuke_explode
     clip: {fileID: 8300000, guid: 3a3509101e0983740a57d8c0f20a617b, type: 3}
-    volume: 0.1
+    volume: 0.265
     volumeVariance: 0
-    pitch: 1.1
+    pitch: 0.68
     pitchVariance: 0
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_mapslash
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
+    clip: {fileID: 8300000, guid: 87ea53be182495e48bf197b86a4d5fd4, type: 3}
     volume: 1
-    volumeVariance: 0
+    volumeVariance: 0.1
     pitch: 1
-    pitchVariance: 0
+    pitchVariance: 0.1
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_phantom
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
+    clip: {fileID: 8300000, guid: 5948665982846494dbbb0b508e655a41, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -1067,8 +1067,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_win
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: c79c887e7fbced3409d82303b2315d1f, type: 3}
+    volume: 0.488
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -1076,11 +1076,11 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_lose
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: bd42328c094c0d44a9a297a84abc6c47, type: 3}
+    volume: 0.7
     volumeVariance: 0
     pitch: 1
-    pitchVariance: 0
+    pitchVariance: 0.5
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
@@ -1090,6 +1090,33 @@ MonoBehaviour:
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: light_sword
+    clip: {fileID: 8300000, guid: 514b3e79d2629d84290a51c5745ad511, type: 3}
+    volume: 1
+    volumeVariance: 0.3
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: heavy_sword
+    clip: {fileID: 8300000, guid: ac639622931e37f4a99221e607dced6a, type: 3}
+    volume: 1
+    volumeVariance: 0.3
+    pitch: 1
+    pitchVariance: 0.3
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: boss_heal
+    clip: {fileID: 8300000, guid: 7c9d6cd02f3cfbf479f336b6e84801ff, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.2
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
@@ -1266,6 +1293,87 @@ MonoBehaviour:
     pitch: 1
     pitchVariance: 0
     loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: cool_1
+    clip: {fileID: 8300000, guid: 5438058de1bee75439748afa629ccd52, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: cool_2
+    clip: {fileID: 8300000, guid: 7c9d6cd02f3cfbf479f336b6e84801ff, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: cool_3
+    clip: {fileID: 8300000, guid: 29a3c1caec5baec42a3135eb026a1ee2, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: cool_4
+    clip: {fileID: 8300000, guid: e99cc2a0763900c45acdcb9ee5bc81d0, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: intro_plane
+    clip: {fileID: 8300000, guid: e49db24f54269e44cbf699ee570b9b69, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: intro_door
+    clip: {fileID: 8300000, guid: b432631dc588f3845ac2e45389be9e1a, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: intro_black
+    clip: {fileID: 8300000, guid: 63fa8224d3b87c340bc3bf254871c201, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: intro_nature
+    clip: {fileID: 8300000, guid: 84549836b35394349a95d22daa00cdaa, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: monster
+    clip: {fileID: 8300000, guid: c79c887e7fbced3409d82303b2315d1f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   InteractSounds:
@@ -1495,9 +1603,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9cda04db08097fb4ba104ed81382f4d4, type: 3}
   - {fileID: 8300000, guid: d94f3e0c98530854899565c15e0dc926, type: 3}
   - {fileID: 8300000, guid: ab39d80e43ffc4845b8dad176862c62c, type: 3}
+  SwordLightClips:
+  - {fileID: 8300000, guid: 57c982071023a104dba23319b35f04c5, type: 3}
+  - {fileID: 8300000, guid: a507416ddb773ad48abe09b8b2094913, type: 3}
+  - {fileID: 8300000, guid: 514b3e79d2629d84290a51c5745ad511, type: 3}
+  - {fileID: 8300000, guid: c3d49f1275feb7c4288125c815bad92f, type: 3}
+  - {fileID: 8300000, guid: 6f6cc295701265e4e8a89bc96715990d, type: 3}
+  SwordHeavyClips:
+  - {fileID: 8300000, guid: 87ea53be182495e48bf197b86a4d5fd4, type: 3}
+  - {fileID: 8300000, guid: b9a178cc02fcc1040aec7a670b15163c, type: 3}
+  - {fileID: 8300000, guid: ac639622931e37f4a99221e607dced6a, type: 3}
+  - {fileID: 8300000, guid: 5de143affba6537459aabed544f6222b, type: 3}
+  - {fileID: 8300000, guid: 1abce8a7a246ae547a416b41246a8c72, type: 3}
   TypeSounds:
   - name: dog
-    clip: {fileID: 8300000, guid: 6825607acba1af848acf413ffbb98db3, type: 3}
+    clip: {fileID: 8300000, guid: 0b21d0e717d1008418bab1406042dfae, type: 3}
     volume: 1
     volumeVariance: 0.2
     pitch: 1
@@ -1506,7 +1626,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: narrator
-    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    clip: {fileID: 8300000, guid: d489fd08a8c67e747817763e028d337e, type: 3}
     volume: 1
     volumeVariance: 0.2
     pitch: 1
@@ -1515,7 +1635,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: microwave
-    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    clip: {fileID: 8300000, guid: b12e5b71051035d4a923248c92a196a1, type: 3}
     volume: 1
     volumeVariance: 0.2
     pitch: 1
@@ -1524,7 +1644,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: fridge
-    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    clip: {fileID: 8300000, guid: cb0fbc0393c2d824498382d6660a9965, type: 3}
     volume: 1
     volumeVariance: 0.2
     pitch: 1
@@ -1533,7 +1653,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: oven
-    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    clip: {fileID: 8300000, guid: 42b1841229690ac4a8a4a3d0db136c37, type: 3}
     volume: 1
     volumeVariance: 0.2
     pitch: 1
@@ -1542,7 +1662,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: fridgeoven
-    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    clip: {fileID: 8300000, guid: 528572f1f73989847834a8ea819e9d7a, type: 3}
     volume: 1
     volumeVariance: 0.2
     pitch: 1
@@ -1551,7 +1671,34 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: juicer
-    clip: {fileID: 8300000, guid: 88b0586deabbc164fbc169a58d285067, type: 3}
+    clip: {fileID: 8300000, guid: 64bd5c52bb24e7146b3704b840c2be02, type: 3}
+    volume: 1
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: dog2
+    clip: {fileID: 8300000, guid: e8e6fbc45d3f912458c0fa905a0efed6, type: 3}
+    volume: 1
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: dog3
+    clip: {fileID: 8300000, guid: f7c6c03940c384a4fa4d9b73f8055907, type: 3}
+    volume: 1
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: dog4
+    clip: {fileID: 8300000, guid: bd4ceddbab3f00e4caa34fbb5867b446, type: 3}
     volume: 1
     volumeVariance: 0.2
     pitch: 1
@@ -1593,7 +1740,7 @@ MonoBehaviour:
     volumeVariance: 0.1
     pitch: 1
     pitchVariance: 0.1
-    loop: 0
+    loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: fridgeoven_music

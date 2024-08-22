@@ -34,7 +34,7 @@ public class BossPlayerMovement : MonoBehaviour
         PlayerInPositionBool = false;
         DashCDnum = 2;
         MoveSpeed = 5;
-        DashSpeed = 0.5f;
+        DashSpeed = 1f;
         RotationSpeed = 10;
         AnimState = 0;
         CanMove = true;
@@ -150,7 +150,7 @@ public class BossPlayerMovement : MonoBehaviour
 
     IEnumerator Dashing()
     {
-        manager.PlaySound(BossFightManager.PlayerDashSound);
+        manager.PlayMultiSound(BossFightManager.PlayerDashSound);
         PlayerHitbox.enabled = false;
         yield return new WaitForSeconds(0.25f);
         PlayerHitbox.enabled = true;
@@ -158,7 +158,7 @@ public class BossPlayerMovement : MonoBehaviour
 
     IEnumerator Thrusting()
     {
-        manager.PlaySound(BossFightManager.PlayerSlashSound);
+        manager.PlayMultiSound(BossFightManager.PlayerSlashSound);
         ThrustHitbox.enabled = true;
         yield return new WaitForSeconds(0.1f);
         yield return new WaitUntil(() => AnimDone(ThrustAnimName));
@@ -168,7 +168,7 @@ public class BossPlayerMovement : MonoBehaviour
     }
     IEnumerator Spinning()
     {
-        manager.PlaySound(BossFightManager.PlayerSpinSound);
+        manager.PlayMultiSound(BossFightManager.PlayerSpinSound);
         SpinHitbox.enabled = true;
         yield return new WaitForSeconds(0.1f);
         yield return new WaitUntil(() => AnimDone(SpinAnimName));

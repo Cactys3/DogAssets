@@ -16,6 +16,7 @@ public class MusicTracker : MonoBehaviour
     public const string BossMusic = "boss_music";
     public const string DognipMusic = "dognip_music";
     public const string NoMusic = "no_music";
+    public const string PostDognipMusic = "room_music";
     void Start()
     {
         SceneIndex = "defaulttt3t3";

@@ -35,9 +35,16 @@ public class DialogueManager : MonoBehaviour
     private const string CHANGE_SCENE = "scene";
     //TODO: add ink tags (or tie to the portrait tag): sound effect, font, font color, font size, delay until next dialogue
     [Header("Parameters and Tags")]
-    private float defaultTypingSpeed = 0.02f;
+    private const float defaultTypingSpeed = 0.02f;
+    private const float NarratorTypingSpeed = 0.02f;
+    private const float DogTypingSpeed = 0.02f;
+    private const float MicrowaveTypingSpeed = 0.02f;
+    private const float FridgeTypingSpeed = 0.02f;
+    private const float OvenTypingSpeed = 0.02f;
+    private const float FridgeOvenTypingSpeed = 0.02f;
+    private const float JuicerTypingSpeed = 0.02f;
     private float typingSpeed;
-    private string defaultTypingSound = "silent";
+    private const string defaultTypingSound = "silent";
     private string currentTypingSound;
     //Scenes
     public const string demoendScene = "Demo End";
@@ -584,19 +591,19 @@ public class DialogueManager : MonoBehaviour
         switch (name)
         {
             case DogSoundBark:
-                currentTypingSound = DogSound;
+                currentTypingSound = "dog1";
                 break;
             case DogSound:
-                currentTypingSound = DogSound;
+                currentTypingSound = "dog1"; ;
                 break;
             case DogSoundGrowl:
-                currentTypingSound = DogSound;
+                currentTypingSound = "dog3"; ;
                 break;
             case DogSoundWhine:
-                currentTypingSound = DogSound;
+                currentTypingSound = "dog3"; ;
                 break;
             case DogSoundWoof:
-                currentTypingSound = DogSound;
+                currentTypingSound = "dog4"; ;
                 break;
             case NarratorSound:
                 currentTypingSound = NarratorSound;

@@ -70,7 +70,7 @@ public class MapSlashScript : MonoBehaviour
 
         anim.Play(ChosenSlashAnim);
 
-        manager.PlaySound(BossFightManager.MapSlashSound);
+        manager.PlayMultiSound(BossFightManager.MapSlashSound);
 
         yield return new WaitForSeconds(0.1f);
         yield return new WaitUntil(() => AnimDone(0.10f));
