@@ -1406,7 +1406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1575725086221703437, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
       propertyPath: Scene
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2450782965756348749, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
       propertyPath: m_Name
@@ -1815,6 +1815,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1374497395672246942, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730142138184404050, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744014342249847043, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728320861049651492, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_text
+      value: 'Click on reflectors to rotate!
+
+        Click again to lock!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_margin.w
+      value: -34.28373
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_margin.z
+      value: -257.6181
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042823982353668063, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -206
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042823982353668063, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -463
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628221898211130933, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

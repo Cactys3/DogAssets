@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
     private const float OvenTypingSpeed = 0.02f;
     private const float FridgeOvenTypingSpeed = 0.02f;
     private const float JuicerTypingSpeed = 0.02f;
-    private float typingSpeed;
+    private float typingSpeed = 0.02f;
     private const string defaultTypingSound = "silent";
     private string currentTypingSound;
     //Scenes
@@ -62,6 +62,7 @@ public class DialogueManager : MonoBehaviour
     public const string ending1Scene = "Ending1";
     public const string ending2Scene = "Ending2";
     public const string endchoiceScene = "EndChoice";
+    public const string creditScene = "Credits";
     public const string juicerScene = "Juicer Minigame";
     public const string fridgeovenScene = "Fridge Level 1";
     public const string fridgeovenScene2 = "Fridge Level 2";
@@ -80,6 +81,7 @@ public class DialogueManager : MonoBehaviour
     private bool canContinueToNextLine = false;
     private bool canSkipTyping = true;
     private float autoSkip = 0f;
+    private bool CanStartNewLine = true;
     //Sounds
     private const string NarratorSound = "narrator";
     private const string DogSound = "dog";
@@ -87,6 +89,7 @@ public class DialogueManager : MonoBehaviour
     private const string DogSoundGrowl = "dog_growl";
     private const string DogSoundWhine = "dog_whine";
     private const string DogSoundWoof = "dog_woof";
+    private const string DogSoundSniff = "dog_sniff";
     private const string MicrowaveSound = "microwave";
     private const string FridgeSound = "fridge";
     private const string OvenSound = "oven";
@@ -118,6 +121,8 @@ public class DialogueManager : MonoBehaviour
 
     private string DialogueExitSound;
     private bool DialogueExitSoundBool;
+
+    private int LineNum = 0;
 
     private GameObject DisableAfterPlayObject;
 
@@ -155,16 +160,18 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
         choicesText = new TextMeshProUGUI[choices.Length];
         portraitClips = portraitAnimator.runtimeAnimatorController.animationClips;
-        Debug.Log(portraitClips.ToString());
+        //Debug.Log(portraitClips.ToString());
         int index = 0;
         foreach (GameObject choice in choices)
         {
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
+        canContinueIcon.SetActive(false);
     }
     private void Update()
     {
+       //Debug.log(LineNum);
         if (!dialogueIsPlaying)
         {
             return;
@@ -175,6 +182,11 @@ public class DialogueManager : MonoBehaviour
             ContinueStory();
         }
 
+        if (canContinueIcon.activeSelf != canContinueToNextLine)
+        {
+            canContinueIcon.SetActive(canContinueToNextLine);
+            //Debug.Log(canContinueToNextLine);
+        }
     }
     public static DialogueManager GetInstance()
     {
@@ -185,11 +197,12 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
-        dialoguePanel.SetActive(true);
+        dialoguePanel.SetActive(true); //USED TO BE SET ACTIVE HERE, NOW IS SET ACTIVE IN DisplayLine Coroutine
 
         dialogueVariables.StartListening(currentStory);
 
         resetEncounterTags();
+        LineNum = 1;
         ContinueStory();
     }
 
@@ -200,11 +213,11 @@ public class DialogueManager : MonoBehaviour
             //if a line is already being displayed, stop it
             if (displayLineCoroutine != null)
             {
+                Debug.LogWarning("DisplayLineCoroutine was already playing, this is weird");
                 StopCoroutine(displayLineCoroutine);
             }
             //do we make it go character by character right here?
             //makes currentStory skip lines that are blank
-
             currentLine = currentStory.Continue();
             HandleTags(currentStory.currentTags);
             displayLineCoroutine = StartCoroutine(DisplayLine(currentLine));
@@ -231,7 +244,7 @@ public class DialogueManager : MonoBehaviour
 
         if (DisableAfterPlayObject != null)
         {
-            Debug.Log("disable: " + DisableAfterPlayObject.name);
+            //Debug.Log("disable: " + DisableAfterPlayObject.name);
             DisableAfterPlayObject.SetActive(false);
             DisableAfterPlayObject = null;
         }
@@ -239,68 +252,91 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator DisplayLine(string line)
     {
-        //if the line is blank we skip it because it's probably not supposed to be blank
+        LineNum++;
+        //hides certain UI while typing out dialogue
+        canContinueIcon.SetActive(false);
+        HideChoices();
+
+        //dont allow player to skip onto the next line before they see the current line fully printed out
+        bool skip = false;
+        canContinueToNextLine = false;
+
+        bool addedAngleBracket = false;
+
+        bool isAddingRichTextTag = false;
+        bool isAddingCustomText = false;
+        StringBuilder customText = new StringBuilder();
+        int bracketIndex = 0;
+        int visibleCharacters = 0;
+
+
+        //Debug.Log("Start, VisibleCharacters: " + dialogueText.maxVisibleCharacters + " line: " + line.ToCharArray().Length);
+        //empty the displayed text
+        dialogueText.text = line;
+        dialogueText.maxVisibleCharacters = 0;
+
+        int TestingValue = 0;
+
+        //yield return new WaitForSeconds(0.1f);//wait for the tags to be handled cause that can take a sec
+
+
         if (line.Trim() == "")
         {
-            Debug.LogWarning("skipped a blank line");
+            Debug.LogWarning("skipped a blank line: " + LineNum);
+            //yield return new WaitForSecondsRealtime(2f);
             ContinueStory();
+
         }
         else
         {
-            //hides certain UI while typing out dialogue
-            canContinueIcon.SetActive(false);
-            HideChoices();
-
-            //dont allow player to skip onto the next line before they see the current line fully printed out
-            bool skip = false;
-            canContinueToNextLine = false;
-            bool addedAngleBracket = true;
-            bool isAddingRichTextTag = false;
-            bool isAddingCustomText = false;
-            StringBuilder customText = new StringBuilder();
-            int bracketIndex = 0;
-            int visibleCharacters = 0;
-
-            //empty the displayed text
-            dialogueText.text = line;
-            dialogueText.maxVisibleCharacters = 0;
-
             foreach (char letter in line.ToCharArray())
             {
+                
+                //Debug.Log(typingSpeed + " character " + TestingValue);
                 visibleCharacters++;
+                if (visibleCharacters > line.Length + 1)
+                {
+                    Debug.LogError("nasty dialogue interact bug is still here");
+                }
                 //allows the dialogue to be skipped after 3 characters are displayed
-                if (canSkipTyping && Input.GetKeyDown(SubmitKeybind) && visibleCharacters > 1)
+                if (canSkipTyping && Input.GetKeyDown(SubmitKeybind) && visibleCharacters > 2)
                 {
                     skip = true;
+                    //Debug.Log("skip");
                 }
                 if (letter == '<')
                 {
                     bracketIndex++;
                     if (bracketIndex == 1)
                     {
+                       //Debug.log("<, start adding rich text");
                         isAddingRichTextTag = true;
                         addedAngleBracket = false;
                     }
                     if (bracketIndex == 2)
                     {
+                       //Debug.log("<<, start adding custom text");
                         isAddingCustomText = true;
                         isAddingRichTextTag = false;
                     }
                     if (bracketIndex != 1 && bracketIndex != 2)
                     {
+                       //Debug.log("<<<, there are too many <");
                         Debug.LogWarning("you typed three angle brackets in a row in an ink file, this is bad");
                     }
                 }
                 else if (isAddingCustomText)
                 {
+                    //Debug.Log(">");
                     if (letter != '<' && letter != '>')
                     {
                         customText.Append(letter);
                     }
                     if (letter == '>')
                     {
+                       //Debug.log("<<>, done with custom: " + customText.ToString());
                         // '>' means that the tag is fully typed out, so now we Handle Custom Tags
-                        Debug.Log(customText.ToString());
+                        //Debug.Log(customText.ToString());
 
                         string[] splitTag = customText.ToString().Split(':');
                         if (splitTag.Length != 2)
@@ -308,9 +344,9 @@ public class DialogueManager : MonoBehaviour
                             switch (customText.ToString())
                             {//if it's a one word tag then it goes to this switch statement
                                 case DELETE_CUSTOM:
-                                    Debug.Log("delete triggered");
+                                    //Debug.Log("delete triggered");
                                     DisplayChoices();
-                                    yield return new WaitForSeconds(0.5f);
+                                    yield return new WaitForSeconds(0.1f);
                                     HideChoices();
 
                                     // Calculate the number of characters to delete
@@ -337,11 +373,11 @@ public class DialogueManager : MonoBehaviour
                             switch (tagKey)
                             {//if it's a two word tag then it goes to this switch statement
                                 case WAIT_CUSTOM:
-                                    Debug.Log("wait triggered");
+                                    //Debug.Log("wait triggered");
                                     yield return new WaitForSeconds(float.Parse(tagValue));
                                     break;
                                 case SPACE_CUSTOM:
-                                    Debug.Log("space triggered");
+                                    //Debug.Log("space triggered");
                                     int spaceCount = int.Parse(tagValue);
                                     // Calculate the number of characters that are currently visible
                                     int visibleChars = Mathf.Min(dialogueText.text.Length, dialogueText.maxVisibleCharacters);
@@ -349,6 +385,7 @@ public class DialogueManager : MonoBehaviour
                                     dialogueText.text = dialogueText.text.Insert(visibleChars, new string(' ', spaceCount));
                                     // Increase maxVisibleCharacters to make the added spaces visible
                                     dialogueText.maxVisibleCharacters += spaceCount;
+                                   //Debug.log("SpaceCustom, VisibleCharacters: " + dialogueText.maxVisibleCharacters);
                                     break;
                                 default:
                                     Debug.LogWarning("Tag wasn't one of the custom tags" + tag);
@@ -366,6 +403,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 else if (isAddingRichTextTag)
                 {//add the rich text tag info and stuff
+                    //Debug.Log("<>");
                     if (!addedAngleBracket)
                     {
                         dialogueText.text += '<';
@@ -385,11 +423,12 @@ public class DialogueManager : MonoBehaviour
                 {//add the letter and play a sound
                  //dialogueText.text += letter;
                     dialogueText.maxVisibleCharacters++;
+                   //Debug.log(letter + "VisibleCharacters: " + dialogueText.maxVisibleCharacters + " skip: " + skip + " typespeed: " + typingSpeed);
                     //TODO: add a thing that makes it so a word jumps to the next line if it can't fit completely on the current line
                     if (!letter.ToString().Equals(" ") && !skip && currentTypingSound != "silent" && !isAddingCustomText)
                     {
-                        FindObjectOfType<AudioManager>().PlayTypeSound(currentTypingSound); //TODO: choose typing sound method
-                        //FindObjectOfType<AudioManager>().PlayMultipleType(currentTypingSound); 
+                        //Debug.Log("Play Typing Sound: " + LineNum);
+                        FindObjectOfType<AudioManager>().PlayTypeSound(currentTypingSound);
                     }
                     else if (letter.ToString().Equals(" "))
                     {
@@ -398,11 +437,14 @@ public class DialogueManager : MonoBehaviour
                     //if we are skipping to the end, type all letters without miniscule delay
                     if (!skip) 
                     { 
-                        yield return new WaitForSeconds(typingSpeed); 
+                        yield return new WaitForSeconds(typingSpeed);
+                        //Debug.Log(typingSpeed + " type " + TestingValue);
+                        TestingValue++;
                     }
                     else
                     {
                         yield return new WaitForSeconds(0.001f);
+                        //Debug.Log(typingSpeed + "no type"  + TestingValue);
                     }
                 }
             }
@@ -416,6 +458,7 @@ public class DialogueManager : MonoBehaviour
             canContinueIcon.SetActive(true);
             canContinueToNextLine = true;
         }
+        LineNum--;
     }
     private void DisplayChoices()
     {
@@ -453,6 +496,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (canContinueToNextLine)
         {
+            HideChoices();//NEWSTUFF
             currentStory.ChooseChoiceIndex(i);
             ContinueStory();
         }
@@ -464,10 +508,10 @@ public class DialogueManager : MonoBehaviour
         //reset dialouge  UI
         displayNameText.text = "???";
         //portraitAnimator.Play("default");
-        layoutAnimator.Play("up");
+        //layoutAnimator.Play("transparent");
+        //Debug.Log("layout: " + "transparent");
         //reset image
         portraitAnimator.Play("default");
-
     }
     private void resetLineTags()
     {
@@ -531,6 +575,7 @@ public class DialogueManager : MonoBehaviour
                 }
             }
         }
+        //displayLineCoroutine = StartCoroutine(DisplayLine(currentLine));
     }
     private void ChangePortrait(string name)
     {
@@ -561,6 +606,7 @@ public class DialogueManager : MonoBehaviour
     }
     private void ChangeLayout(string name)
     {
+        //Debug.Log("layout: " + name);
         switch (name)
         {
             case LayoutUP:
@@ -594,16 +640,19 @@ public class DialogueManager : MonoBehaviour
                 currentTypingSound = "dog1";
                 break;
             case DogSound:
-                currentTypingSound = "dog1"; ;
+                currentTypingSound = "dog1"; 
                 break;
             case DogSoundGrowl:
-                currentTypingSound = "dog3"; ;
+                currentTypingSound = "dog3"; 
                 break;
             case DogSoundWhine:
-                currentTypingSound = "dog3"; ;
+                currentTypingSound = "dog3"; 
                 break;
             case DogSoundWoof:
-                currentTypingSound = "dog4"; ;
+                currentTypingSound = "dog4"; 
+                break;
+            case DogSoundSniff:
+                currentTypingSound = "dog2";
                 break;
             case NarratorSound:
                 currentTypingSound = NarratorSound;
@@ -634,7 +683,7 @@ public class DialogueManager : MonoBehaviour
         switch (name) //try to load scene by name
         {
             case "next":
-                Debug.Log("on this scene: " + SceneManager.GetActiveScene().buildIndex + ", changing to that + 1 which is: " + SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).name);
+                //Debug.Log("on this scene: " + SceneManager.GetActiveScene().buildIndex + ", changing to that + 1 which is: " + SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).name);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 break;
             case "kitchen":
@@ -740,7 +789,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisableAfterPlay(GameObject obby)
     {
-        Debug.Log("disable after play: " + obby.name);
+        //Debug.Log("disable after play: " + obby.name);
         DisableAfterPlayObject = obby;
     }
 }

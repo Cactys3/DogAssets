@@ -1,6 +1,5 @@
 INCLUDE Globals.ink
-#layout:down
-#image:microwave #name:Microwave #sound:microwave
+#image:microwave #name:Microwave #sound:microwave  #layout:down
 {completed_microwave:
 -> Completed
  -else:

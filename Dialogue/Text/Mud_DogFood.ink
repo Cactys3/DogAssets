@@ -1,5 +1,4 @@
 INCLUDE Globals.ink
-
 #layout:down
 { completed_dogfood:
     -> TakenDogFood
@@ -11,7 +10,7 @@ INCLUDE Globals.ink
 
 
  === NotTakenDogFood ===
-#name:narrator #image:narrator_neutral #sound:narrator
+ #name:narrator #image:narrator_neutral #sound:narrator 
 Dog food,<<wait:0.2> well past its expiration date 
  * [consume]
      #name:dog #image:dog_woof #sound:dog_woof
@@ -30,6 +29,6 @@ Dog food,<<wait:0.2> well past its expiration date
 
  
  === TakenDogFood ===
-#name:narrator #image:narrator_neutral #sound:narrator
- An empty dog food bowl. 
+ #name:narrator #image:narrator_neutral #sound:narrator
+ An empty dog food bowl.  
  -> END

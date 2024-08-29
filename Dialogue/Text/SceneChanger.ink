@@ -1,4 +1,6 @@
 INCLUDE Globals.ink
+
+#layout:down
 what u want
 *[change scene]
 ->first
@@ -7,6 +9,16 @@ what u want
 *[test]
 ->test
 *[oops]
+#name:dog #image:dog_whine #sound:dog_whine
+HELLO
+im Whine
+HELLO
+asdfasdfasdfasdfasf asdfasdf asf sadfasdfa asdf 
+#name:dog #image:dog_sniff #sound:dog_sniff
+HELLO
+im sniff
+HELLO
+asdfasdfasdfasdfasf asdfasdf asf sadfasdfa asdf 
 ->END
 
 ===test===

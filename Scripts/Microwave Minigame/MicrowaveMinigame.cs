@@ -38,7 +38,7 @@ public class MicrowaveMinigame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && !GameStarted)
         {
-            audioMan.PlaySFX(WaveShootSound);
+            PlaySound(WaveShootSound);
             StartGame();
         }
         else if (Input.GetKeyDown(KeyCode.R) && GameStarted)
@@ -65,12 +65,18 @@ public class MicrowaveMinigame : MonoBehaviour
             {
                 if (tempbool)
                 {
-                    audioMan.PlaySFX(GunRotateSound);
+                    PlaySingleSound(GunRotateSound);
                 }
                 else
                 {
-                    audioMan.PausePlayingSFX(GunRotateSound);
-                    
+                    try
+                    {
+                        audioMan.PausePlayingSFX(GunRotateSound);
+                    }    
+                    catch
+                    {
+                        //nothin
+                    }
                 }
                 PlayingRotateSound = tempbool;
             }
@@ -129,19 +135,19 @@ public class MicrowaveMinigame : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("pink reflector") || collision.gameObject.tag.Equals("blue reflector"))
         {
-            audioMan.PlaySFX(WaveTeleportSound);
+            PlaySound(WaveTeleportSound);
             return;
         }
 
         Debug.Log("collider " + collision.tag);
         if (collision.tag.Equals("goal") && GameStarted)
         {
-            audioMan.PlaySFX(WaveWinSound);
+            PlaySound(WaveWinSound);
             WinLevel();
         }
         if (collision.tag.Equals("death") && GameStarted)
         {
-            audioMan.PlaySFX(WaveLoseSound);
+            PlaySound(WaveLoseSound);
             Debug.Log("death");
             ResetGame();
         }
@@ -149,7 +155,7 @@ public class MicrowaveMinigame : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        audioMan.PlaySFX(WaveBounceSound);
+        PlaySound(WaveBounceSound);
         SetRotation();
     }
 
@@ -182,7 +188,25 @@ public class MicrowaveMinigame : MonoBehaviour
 
     public void PlaySound(string s)
     {
-        audioMan.PlayingSFX(s);
+        try
+        {
+            audioMan.PlayMultipleSFX(s);
+        }
+        catch
+        {
+
+        }
+    }
+    public void PlaySingleSound(string s)
+    {
+        try
+        {
+            audioMan.PlaySFX(s);
+        }
+        catch
+        {
+
+        }
     }
 }
 

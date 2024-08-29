@@ -138,7 +138,6 @@ GameObject:
   m_Component:
   - component: {fileID: 214848454}
   - component: {fileID: 214848455}
-  - component: {fileID: 214848456}
   m_Layer: 0
   m_Name: SceneSwitcher
   m_TagString: scene
@@ -206,21 +205,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &214848456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214848453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 004a22055d4c7ba4caa7bebc1a8d2dd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Scene: 7
-  Level: 2
-  ChangeSceneOnEnabled: 0
 --- !u!1 &344324940
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +535,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2730142138184404050, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744014342249847043, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3610584952429379113, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
       propertyPath: m_text
       value: 'The dog, while on "dognip" (it''s meth) hallucinates the kitchen appliances
@@ -560,6 +552,60 @@ PrefabInstance:
         For
         this, you must maneuver through a series of challenges to escape the fridge
         unit!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728320861049651492, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_text
+      value: 'WASD - to move
+
+        SPACE - to jump'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_margin.w
+      value: -46.06525
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_margin.z
+      value: -366.47467
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042823982353668063, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -576
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042823982353668063, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628221898211130933, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -735,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1575725086221703437, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
       propertyPath: Scene
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2450782965756348749, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
       propertyPath: m_Name

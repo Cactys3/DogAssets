@@ -1,6 +1,5 @@
 INCLUDE Globals.ink
-#layout:up
-#image:juicer #name:Juicer #sound:juicer
+#image:juicer #name:Juicer #sound:juicer  #layout:up
 {completed_jucier:
 -> Completed
  -else:

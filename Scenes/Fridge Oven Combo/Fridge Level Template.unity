@@ -276,12 +276,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 214848453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 004a22055d4c7ba4caa7bebc1a8d2dd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 443e5e45946f23541b3eca847908d9aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 7
-  Level: 2
-  ChangeSceneOnEnabled: 0
 --- !u!1 &344324940
 GameObject:
   m_ObjectHideFlags: 0

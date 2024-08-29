@@ -99,14 +99,15 @@ public class BossFightManager : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            PlayerSpinDamage += 15;
+            PlayerThrustDamage += 15;
+        }
+
         if (Mathf.Abs(player.transform.position.x) > 10 || Mathf.Abs(player.transform.position.y) > 10)
         {
             player.transform.position = new Vector3(0, -2, 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            BossHP = 5;
         }
 
 
@@ -125,8 +126,8 @@ public class BossFightManager : MonoBehaviour
             if (PhaseNum == 2)
             {
                 Lose(); 
-                StopAllCoroutines();
-                StartCoroutine("PhaseTwo");
+                //StopAllCoroutines();
+                //StartCoroutine("PhaseTwo");
             }
         }
         if (PlayerStamina < 100 && StaminaRegening)

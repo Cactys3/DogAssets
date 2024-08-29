@@ -64,7 +64,7 @@ public class MusicTracker : MonoBehaviour
                     SetMusic(NoMusic);
                     break;
                 case DialogueManager.juicerScene:
-                    SetMusic(JuicerMusic);
+                    SetMusic(RoomMusic);  //(JuicerMusic);
                     break;
                 case DialogueManager.fridgeovenScene:
                     SetMusic(FridgeOvenMusic);
@@ -72,8 +72,15 @@ public class MusicTracker : MonoBehaviour
                 case DialogueManager.microwaveScene:
                     SetMusic(MicrowaveMusic);
                     break;
+                case DialogueManager.endchoiceScene:
+                    SetMusic(EndMusic);
+                    break;
+                case DialogueManager.creditScene:
+                    SetMusic(RoomMusic);
+                    break;
                 default:
-                    SetMusic(NoMusic);
+                    //do nothing because this is probably a minigame
+                    Debug.Log("set no music because scene: " + SceneManager.GetActiveScene().name);
                     break;
             }
 

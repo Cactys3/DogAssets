@@ -75,17 +75,17 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
             //Debug.Log("Was Moving: " + WasMoving);
             if (!WasMoving)
             {
-                AudioMan.PlaySFX(FootstepsSound); //is set to loop
+                Play(FootstepsSound); //is set to loop
             }
             else
             {
-                AudioMan.StopPlayingSFX(FootstepsSound);
+                Stop(FootstepsSound);
             }
             WasMoving = IsMoving;
         }
-        if (AudioMan.PlayingSFX(JumpSound))
+        if (Playing(JumpSound))
         {
-            AudioMan.StopPlayingSFX(FootstepsSound);
+            Stop(FootstepsSound);
         }
         IsMoving = false;
         ////Debug.Log(body.constraints);
@@ -149,10 +149,10 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
                 {
                     body.velocity = new Vector2(body.velocity.x, JumpSpeed);
                     IsMoving = true;
-                    if (!AudioMan.PlayingSFX(JumpSound))
+                    if (!Playing(JumpSound))
                     {
-                        AudioMan.StopPlayingSFX(FootstepsSound);
-                        AudioMan.PlaySFX(JumpSound);
+                        Stop(FootstepsSound);
+                        Play(JumpSound);
                     }
                 }
                 if (Input.GetKey(KeyCode.S) && IsGrounded)
@@ -168,7 +168,7 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.W) && !CheckUpright() && body.velocity.magnitude < 1) //to get upright, OLD: && (((Mathf.Abs(body.rotation) % 360) < 95 && (Mathf.Abs(body.rotation) % 360) > 85) || ((Mathf.Abs(body.rotation) % 360) < 275 && (Mathf.Abs(body.rotation) % 360) > 265))
             {
-                AudioMan.PlayMultipleSFX(GetUp1Sound);
+                PlayMultiple(GetUp1Sound);
                 IsMoving = true;
                 StartCoroutine("FreezeRotation");
                 
@@ -243,7 +243,7 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
             yield return null;
         }
         //Debug.Log("waiot until condition: ");
-        AudioMan.PlayMultipleSFX(GetUp2Sound);
+        PlayMultiple(GetUp2Sound);
         body.rotation = 0;
         body.freezeRotation = true;
     }
@@ -260,11 +260,11 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
             pitch = Random.Range(0.5f, 1f);
             pitch = 1.5f;
         }
-        AudioMan.SetPitchSFX(DiveSound, pitch);
-        AudioMan.PlaySFX(DiveSound);
+        try{AudioMan.SetPitchSFX(DiveSound, pitch);}catch{}
+        Play(DiveSound);
         yield return new WaitForSeconds(0.4f);
         yield return new WaitUntil(() => (body.velocity.magnitude + body.angularVelocity) < 0.8f);
-        AudioMan.StopPlayingSFX(DiveSound);
+        Stop(DiveSound);
     }
     private void FixedUpdate()
     {
@@ -295,15 +295,59 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
         if (CheckIsGrounded())
         {
             //Debug.Log("play landing sound false!");
-            AudioMan.PlaySFX(LandingSound);
+            Play(LandingSound);
             PlayLandingSound = false;
         }
     }
     private IEnumerator NextLevel()
     {
-        AudioMan.PlaySFX(GoalSound);
+        Play(GoalSound);
         yield return new WaitForSeconds(3);
         FindObjectOfType<ChangeToScene>().ChangeScene();
+    }
+    private void Play(string s)
+    {
+        try
+        {
+            AudioMan.PlaySFX(s);
+        }
+        catch
+        {
+            Debug.Log( s + " couldn't play because no audioman");
+        }
+    }
+    private void PlayMultiple(string s)
+    {
+        try
+        {
+            AudioMan.PlayMultipleSFX(s);
+        }
+        catch
+        {
+            Debug.Log(s + " couldn't play because no audioman");
+        }
+    }
+    private void Stop(string s)
+    {
+        try
+        {
+            AudioMan.StopPlayingSFX(s);
+        }
+        catch
+        {
+            Debug.Log(s + " couldn't stop because no audioman");
+        }
+    }
+    private bool Playing(string s)
+    {
+        try
+        {
+            return AudioMan.PlayingSFX(s);
+        }
+        catch
+        {
+            return false;
+        }
     }
 }
 

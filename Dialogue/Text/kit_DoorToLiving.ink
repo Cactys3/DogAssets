@@ -13,18 +13,18 @@ Go Through Door?
 
 
 === go ===
-VAR count = 0
+VAR count = 3
 
 {completed_microwave:
-~count = count + 1
+~count = count - 1
 }
 
 {completed_fridgeoven:
-~count = count + 1
+~count = count - 1
 }
 
 {completed_jucier:
-~count = count + 1
+~count = count - 1
 }
 
 {count == 3:

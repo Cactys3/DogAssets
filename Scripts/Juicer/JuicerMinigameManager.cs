@@ -217,7 +217,10 @@ public class JuicerMinigameManager : MonoBehaviour
                     }
                     else
                     {
-                        audioMan.PlayOverrideSFX(JuicerFailUpgradeSound);
+                        if (!audioMan.PlayingSFX(JuicerUpgradeSound))
+                        {
+                            audioMan.PlayOverrideSFX(JuicerFailUpgradeSound);
+                        }
                     }
                 }
                 break;
@@ -242,7 +245,10 @@ public class JuicerMinigameManager : MonoBehaviour
                     }
                     else
                     {
-                        audioMan.PlayOverrideSFX(JuicerFailUpgradeSound);
+                        if (!audioMan.PlayingSFX(JuicerUpgradeSound))
+                        {
+                            audioMan.PlayOverrideSFX(JuicerFailUpgradeSound);
+                        }
                     }
                 }
                 break;
@@ -268,7 +274,10 @@ public class JuicerMinigameManager : MonoBehaviour
                     }
                     else
                     {
-                        audioMan.PlayOverrideSFX(JuicerFailUpgradeSound);
+                        if (!audioMan.PlayingSFX(JuicerUpgradeSound))
+                        {
+                            audioMan.PlayOverrideSFX(JuicerFailUpgradeSound);
+                        }
                     }
                 }
                 break;

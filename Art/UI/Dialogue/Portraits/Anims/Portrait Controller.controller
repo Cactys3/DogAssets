@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Oven
+  m_Name: oven
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -85,7 +85,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Piano_E
+  m_Name: piano_E
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -163,7 +163,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dog_growl 0
+  m_Name: dog_growl
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -189,7 +189,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Piano_A
+  m_Name: piano_A
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -208,32 +208,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-5539322894576142399
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: dog_neutral 0
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 47c6e2a04a15b454f9227f2e2d14be20, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &-5232863403852460784
 AnimatorState:
   serializedVersion: 6
@@ -241,7 +215,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dog_sniff 0
+  m_Name: dog_sniff
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -267,7 +241,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Piano_C
+  m_Name: piano_C
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -293,7 +267,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Piano_D
+  m_Name: piano_D
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -307,84 +281,6 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 405f7380ae1b1e64e86bf14f666f2a35, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &-2292379116271516378
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: dog_whine 0
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 814e523214754314a92a1fe192866c7a, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &-2135869287501163136
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: dog_sniff
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0b1f6c0b42a2aa44b8e92bbac32078b0, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &-1516693584373283874
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: dog_growl
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ec9a413cc64ab6e47aa41c0a2b57a403, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -423,7 +319,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dog_woof 0
+  m_Name: dog_woof
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -474,101 +370,83 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 1216431192655235846}
-    m_Position: {x: 480, y: 560, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -1516693584373283874}
-    m_Position: {x: 480, y: 310, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: 318026662316620587}
-    m_Position: {x: 480, y: 360, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -2135869287501163136}
-    m_Position: {x: 480, y: 410, z: 0}
+    m_Position: {x: 830, y: 480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8547334242898993493}
-    m_Position: {x: 480, y: 460, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 6894742956317357560}
-    m_Position: {x: 480, y: 510, z: 0}
+    m_Position: {x: 830, y: 580, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8483890873047810672}
-    m_Position: {x: 700, y: 310, z: 0}
+    m_Position: {x: 110, y: 1040, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7007249860871873522}
     m_Position: {x: 260, y: 310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3172219443022064301}
-    m_Position: {x: 295, y: 375, z: 0}
+    m_Position: {x: 260, y: 360, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7314010929761483193}
-    m_Position: {x: 330, y: 440, z: 0}
+    m_Position: {x: 830, y: 680, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5686191248841516132}
-    m_Position: {x: 365, y: 505, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -5539322894576142399}
-    m_Position: {x: 400, y: 570, z: 0}
+    m_Position: {x: 830, y: 730, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5232863403852460784}
-    m_Position: {x: 435, y: 635, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -2292379116271516378}
-    m_Position: {x: 470, y: 700, z: 0}
+    m_Position: {x: 830, y: 530, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1012376321741368787}
-    m_Position: {x: 505, y: 765, z: 0}
+    m_Position: {x: 830, y: 630, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5984996709841151280}
-    m_Position: {x: 540, y: 830, z: 0}
+    m_Position: {x: 470, y: 310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4221024884578934282}
-    m_Position: {x: 575, y: 895, z: 0}
+    m_Position: {x: 550, y: 880, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8436169740768328757}
-    m_Position: {x: 610, y: 960, z: 0}
+    m_Position: {x: 560, y: 940, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1133452490364009712}
-    m_Position: {x: 645, y: 1025, z: 0}
+    m_Position: {x: 560, y: 1000, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7136959284616474643}
-    m_Position: {x: 680, y: 1090, z: 0}
+    m_Position: {x: 100, y: 880, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5539652534397921020}
-    m_Position: {x: 715, y: 1155, z: 0}
+    m_Position: {x: 90, y: 940, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4508285128380529842}
-    m_Position: {x: 750, y: 1220, z: 0}
+    m_Position: {x: 110, y: 990, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4213342639600210027}
-    m_Position: {x: 785, y: 1285, z: 0}
+    m_Position: {x: -120, y: 830, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7414547675027177711}
-    m_Position: {x: 820, y: 1350, z: 0}
+    m_Position: {x: 310, y: 830, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5050998854253070497}
-    m_Position: {x: 855, y: 1415, z: 0}
+    m_Position: {x: 320, y: 880, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1273373559158226656}
-    m_Position: {x: 890, y: 1480, z: 0}
+    m_Position: {x: 330, y: 940, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4290197595073718809}
-    m_Position: {x: 925, y: 1545, z: 0}
+    m_Position: {x: 330, y: 990, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1388724052266292815}
-    m_Position: {x: 960, y: 1610, z: 0}
+    m_Position: {x: -130, y: 880, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 213220530898457888}
-    m_Position: {x: 995, y: 1675, z: 0}
+    m_Position: {x: -130, y: 930, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4672973024897751712}
-    m_Position: {x: 1030, y: 1740, z: 0}
+    m_Position: {x: -120, y: 990, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8796828727049765670}
-    m_Position: {x: 1065, y: 1805, z: 0}
+    m_Position: {x: -110, y: 1040, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1229171215787962131}
-    m_Position: {x: 1100, y: 1870, z: 0}
+    m_Position: {x: 90, y: 830, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -578,7 +456,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 280, y: 220, z: 0}
   m_ExitPosition: {x: 600, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -7007249860871873522}
+  m_DefaultState: {fileID: -5984996709841151280}
 --- !u!1102 &213220530898457888
 AnimatorState:
   serializedVersion: 6
@@ -586,7 +464,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jucer
+  m_Name: juicer
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -657,32 +535,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1216431192655235846
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: dog_bark
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e342e06ca40b69f4cac2e0b79bee62c1, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &1273373559158226656
 AnimatorState:
   serializedVersion: 6
@@ -690,7 +542,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Piano_G
+  m_Name: piano_G
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -716,7 +568,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fridge
+  m_Name: fridge
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -794,7 +646,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Piano_Silent
+  m_Name: piano_Silent
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -820,7 +672,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Microwave
+  m_Name: microwave
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -846,7 +698,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Piano_F
+  m_Name: piano_F
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -860,32 +712,6 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 02fc4971d407cf048bf4088967644441, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &6894742956317357560
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: dog_woof
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: faf9ef4b1d4e6f74189ee703a05b5ae9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -924,7 +750,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dog_bark 0
+  m_Name: dog_bark
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

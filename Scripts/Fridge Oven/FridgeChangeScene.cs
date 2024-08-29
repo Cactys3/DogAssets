@@ -8,11 +8,27 @@ public class FridgeChangeScene : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GetComponent<ChangeToScene>().ChangeScene();
+            FindObjectOfType<ChangeToScene>().ChangeScene();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GetComponent<ChangeToScene>().ChangeScene();
+        FindObjectOfType<ChangeToScene>().ChangeScene();
+    }
+
+    private IEnumerator ChangeScene()
+    {
+        float time = 0.5f;
+        try
+        {
+            FindObjectOfType<AudioManager>().PlaySFX(FridgeOvenPlayerMovement.GoalSound);
+            time = FindObjectOfType<AudioManager>().GetLengthSFX(FridgeOvenPlayerMovement.GoalSound);
+        }
+        catch
+        {
+
+        }
+        yield return new WaitForSecondsRealtime(time);
+        FindObjectOfType<ChangeToScene>().ChangeScene();
     }
 }

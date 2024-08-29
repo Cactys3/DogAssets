@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1575725086221703437, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
       propertyPath: Scene
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2450782965756348749, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
       propertyPath: m_Name
@@ -271,7 +271,6 @@ GameObject:
   m_Component:
   - component: {fileID: 214848454}
   - component: {fileID: 214848455}
-  - component: {fileID: 214848456}
   m_Layer: 0
   m_Name: SceneSwitcher
   m_TagString: scene
@@ -339,21 +338,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &214848456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214848453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 004a22055d4c7ba4caa7bebc1a8d2dd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Scene: 7
-  Level: 4
-  ChangeSceneOnEnabled: 0
 --- !u!1 &344324940
 GameObject:
   m_ObjectHideFlags: 0

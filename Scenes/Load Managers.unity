@@ -260,6 +260,59 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &849458099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849458100}
+  - component: {fileID: 849458101}
+  m_Layer: 0
+  m_Name: collider3D
+  m_TagString: cursor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &849458100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849458099}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.051499978, y: -0.018599987, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3677361466102768067}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &849458101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849458099}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.30951822, y: 0.3212511, z: 1}
+  m_Center: {x: -0.09312087, y: 0.04361835, z: 0}
 --- !u!1 &1632047536
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004a22055d4c7ba4caa7bebc1a8d2dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 1
+  Scene: 0
   Level: 0
   ChangeSceneOnEnabled: 1
 --- !u!223 &581847592192315922
@@ -560,7 +613,8 @@ Transform:
   m_LocalPosition: {x: 0.1265, y: -0.1234, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 849458100}
   m_Father: {fileID: 8470068125366684869}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1149,11 +1203,11 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: title_water
-    clip: {fileID: 8300000, guid: c1fcb8379c56a0d4d83f4b17930f4260, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 7c9d6cd02f3cfbf479f336b6e84801ff, type: 3}
+    volume: 0
     volumeVariance: 0
     pitch: 1
-    pitchVariance: 0
+    pitchVariance: 0.183
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
@@ -1278,7 +1332,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: obtained_item
-    clip: {fileID: 8300000, guid: a6e83b9ff38d47d46b9bd725bd79a8f2, type: 3}
+    clip: {fileID: 8300000, guid: 7a3868c760c8a82408feca5d8c8af2b3, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -1485,6 +1539,15 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: keyboard_interact
+    clip: {fileID: 8300000, guid: 9e4567a545927b2479e416923ca2b44f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   DoorClips:
   - {fileID: 8300000, guid: 5c3b2880b4274b34e9bfb45158b77bf7, type: 3}
   - {fileID: 8300000, guid: 1ee054f6de7ac7241b23114c4de8f061, type: 3}
@@ -1616,9 +1679,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5de143affba6537459aabed544f6222b, type: 3}
   - {fileID: 8300000, guid: 1abce8a7a246ae547a416b41246a8c72, type: 3}
   TypeSounds:
+  - name: dog1
+    clip: {fileID: 8300000, guid: 6fed5c323ec0f9c48b12085aa2f3388c, type: 3}
+    volume: 0.6
+    volumeVariance: 0.2
+    pitch: 1
+    pitchVariance: 0.2
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   - name: dog
-    clip: {fileID: 8300000, guid: 0b21d0e717d1008418bab1406042dfae, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 6fed5c323ec0f9c48b12085aa2f3388c, type: 3}
+    volume: 0.6
     volumeVariance: 0.2
     pitch: 1
     pitchVariance: 0.2
@@ -1626,8 +1698,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: narrator
-    clip: {fileID: 8300000, guid: d489fd08a8c67e747817763e028d337e, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 7add407daf82ca9448542635e96b53a8, type: 3}
+    volume: 0.6
     volumeVariance: 0.2
     pitch: 1
     pitchVariance: 0.2
@@ -1635,8 +1707,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: microwave
-    clip: {fileID: 8300000, guid: b12e5b71051035d4a923248c92a196a1, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 80273336c3b406549a3da8e41df22976, type: 3}
+    volume: 0.6
     volumeVariance: 0.2
     pitch: 1
     pitchVariance: 0.2
@@ -1644,8 +1716,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: fridge
-    clip: {fileID: 8300000, guid: cb0fbc0393c2d824498382d6660a9965, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 5c0256a63cb7c204ab05db337f68c2be, type: 3}
+    volume: 0.6
     volumeVariance: 0.2
     pitch: 1
     pitchVariance: 0.2
@@ -1653,8 +1725,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: oven
-    clip: {fileID: 8300000, guid: 42b1841229690ac4a8a4a3d0db136c37, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 817f888be8665224e939881e22a299ab, type: 3}
+    volume: 0.6
     volumeVariance: 0.2
     pitch: 1
     pitchVariance: 0.2
@@ -1662,8 +1734,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: fridgeoven
-    clip: {fileID: 8300000, guid: 528572f1f73989847834a8ea819e9d7a, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: f942689f9e47cc840982b7cf6c4ab1d6, type: 3}
+    volume: 0.6
     volumeVariance: 0.2
     pitch: 1
     pitchVariance: 0.2
@@ -1671,8 +1743,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: juicer
-    clip: {fileID: 8300000, guid: 64bd5c52bb24e7146b3704b840c2be02, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 38adfed9af3bc0048914c88b1b184565, type: 3}
+    volume: 0.6
     volumeVariance: 0.2
     pitch: 1
     pitchVariance: 0.2
@@ -1680,8 +1752,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: dog2
-    clip: {fileID: 8300000, guid: e8e6fbc45d3f912458c0fa905a0efed6, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 962e40ed9c9cfc8488bfabfe75204a9d, type: 3}
+    volume: 0.6
     volumeVariance: 0.2
     pitch: 1
     pitchVariance: 0.2
@@ -1689,8 +1761,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: dog3
-    clip: {fileID: 8300000, guid: f7c6c03940c384a4fa4d9b73f8055907, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: bb9f2f14c67c9534a906790ac66a4eac, type: 3}
+    volume: 0.6
     volumeVariance: 0.2
     pitch: 1
     pitchVariance: 0.2
@@ -1698,8 +1770,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: dog4
-    clip: {fileID: 8300000, guid: bd4ceddbab3f00e4caa34fbb5867b446, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 0adec98d02a86d242b129fc7b174a8e1, type: 3}
+    volume: 0.6
     volumeVariance: 0.2
     pitch: 1
     pitchVariance: 0.2
@@ -1718,7 +1790,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: room_music
     clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
-    volume: 1
+    volume: 0.689
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -1727,7 +1799,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: juicer_music
     clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
-    volume: 1
+    volume: 0.317
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -1737,15 +1809,15 @@ MonoBehaviour:
   - name: dognip_music
     clip: {fileID: 8300000, guid: 7a8c68ad25541c04792aab2fde596678, type: 3}
     volume: 1
-    volumeVariance: 0.1
+    volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: fridgeoven_music
-    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 25fdb8e5f8a619148ae6bd7ef3218965, type: 3}
+    volume: 0.415
     volumeVariance: 0.1
     pitch: 1
     pitchVariance: 0.1
@@ -1753,8 +1825,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: microwave_music
-    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 5967440e1690dbe4e85c4ba58d66cf9a, type: 3}
+    volume: 0.348
     volumeVariance: 0.1
     pitch: 1
     pitchVariance: 0.1
@@ -1762,8 +1834,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: end_music
-    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 84549836b35394349a95d22daa00cdaa, type: 3}
+    volume: 0.64
     volumeVariance: 0.1
     pitch: 1
     pitchVariance: 0.1
@@ -1771,8 +1843,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_music
-    clip: {fileID: 8300000, guid: 7e49145b0140270479e6a45fc64f7c25, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: b5f9ed8fb09ac764eab5004334110651, type: 3}
+    volume: 0.36
     volumeVariance: 0.1
     pitch: 1
     pitchVariance: 0.1

@@ -5,7 +5,7 @@ INCLUDE Globals.ink
 Water, it's wet.
 
 {played_bath1_toilet == false:
-#name:dog #image:dog_sniff #layout:dog1
+#name:dog #image:dog_bark #layout:dog1
 Sniff...
 #name:Narrator #image:narrator_neutral #sound:narrator
 The dog happily drinks its fill.
@@ -26,7 +26,7 @@ You could dip an item into the toilet, if you were holding one.
 
 ===IsHoldingItem
 #name:Narrator #image:narrator_neutral #sound:narrator
-Would you like to splash the {held_item} in the toilet water?
+Would you like to splash your item in the toilet water?
 * [why yes, i would]
 ->TestItem(held_item)
 *[no]
@@ -42,7 +42,7 @@ Good decision, that would probably be a bad idea.
 The clay, once dipped in the water, becomes wet and moldable.
 ->END
 -else:
-It didn't work
+Water doesn't seem to have a lasting impact on that particular item.
 ->END
 }
 

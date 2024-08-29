@@ -123,17 +123,17 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + sound + " not found!");
+            ////Debug.LogWarning("Sound: " + sound + " not found!");
             return;
         }
         else if (s.source.isPlaying)
         {
-            Debug.LogWarning("Sound: " + sound + " is playing: " + s.source.time);
+            ////Debug.LogWarning("Sound: " + sound + " is playing: " + s.source.time);
             return;
         }
         else
         {
-            Debug.Log("Sound: " + sound);
+            ////Debug.Log("Sound: " + sound);
         }
 
         RandomizeClips(); //for sounds that have multiple audioclips
@@ -150,17 +150,17 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + sound + " not found!");
+            ////Debug.LogWarning("Sound: " + sound + " not found!");
             return;
         }
         else if (!s.source.isPlaying)
         {
-            Debug.LogWarning("Sound: " + sound + " is not playing but FadeOutSFX was called");
+            ////Debug.LogWarning("Sound: " + sound + " is not playing but FadeOutSFX was called");
             return;
         }
         else
         {
-            Debug.Log("Sound: " + sound);
+            ////Debug.Log("Sound: " + sound);
         }
 
         RandomizeClips(); //for sounds that have multiple audioclips
@@ -180,17 +180,17 @@ public class AudioManager : MonoBehaviour
        
 		if (s == null)
 		{
-			Debug.LogWarning("Sound: " + sound + " not found!");
+			////Debug.LogWarning("Sound: " + sound + " not found!");
 			return;
 		}
         else if (s.source.isPlaying)
         {
-            Debug.LogWarning("Sound: " + sound + " is playing: " + s.source.time);
+            ////Debug.LogWarning("Sound: " + sound + " is playing: " + s.source.time);
             return;
         }
         else
         {
-            Debug.Log("Sound: " + sound);
+            ////Debug.Log("Sound: " + sound);
         }
 
         RandomizeClips(); //for sounds that have multiple audioclips
@@ -223,7 +223,7 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = newpitch;
         }
 
-        //Debug.Log(s.source.name);
+        //////Debug.Log(s.source.name);
         s.source.Play();
     }
     public void PlayOverrideSFX(string sound)
@@ -232,12 +232,12 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + sound + " not found!");
+            ////Debug.LogWarning("Sound: " + sound + " not found!");
             return;
         }
         else
         {
-            Debug.Log("Sound: " + sound);
+            ////Debug.Log("Sound: " + sound);
         }
 
         RandomizeClips(); //for sounds that have multiple audioclips
@@ -270,21 +270,21 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = newpitch;
         }
 
-        //Debug.Log(s.source.name);
+        //////Debug.Log(s.source.name);
         s.source.Play();
     }
     public void PlayMultipleSFX(string sound)
     {
         Sound s = Array.Find(SFXSounds, item => item.name == sound);
 
-        if (s == null || s.source.isPlaying)
+        if (s == null)
         {
-            Debug.LogWarning("Sound: " + sound + " not found!");
+            ////Debug.LogWarning("Sound: " + sound + " not found!");
             return;
         }
         else
         {
-            Debug.Log("Sound: " + sound);
+            ////Debug.Log("Sound: " + sound);
         }
 
         RandomizeClips(); //for sounds that have multiple audioclips
@@ -322,12 +322,12 @@ public class AudioManager : MonoBehaviour
             }
             if (obj == null)
             {
-                //Debug.Log(audioObjectPool.Count);
+                //////Debug.Log(audioObjectPool.Count);
                 return Instantiate(AudioPrefab, transform.position, Quaternion.identity);
             }
             else
             {
-                //Debug.Log(audioObjectPool.Count);
+                //////Debug.Log(audioObjectPool.Count);
                 obj.SetActive(true);
                 return obj;
             }
@@ -348,7 +348,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + sound + " not found!");
+            ////Debug.LogWarning("Sound: " + sound + " not found!");
             return false;
         }
         else if (s.source.isPlaying)
@@ -363,12 +363,12 @@ public class AudioManager : MonoBehaviour
 
         if (s == null || s.clip == null)
         {
-            Debug.LogWarning("Sound: " + sound + " not found!");
+            //////Debug.LogWarning("Sound: " + sound + " not found!");
             return 0.1f;
         }
         else
         {
-            Debug.Log("length of clip: " + sound + " is: " + s.clip.length + " vs source: " + s.source.clip.length);
+            //////Debug.Log("length of clip: " + sound + " is: " + s.clip.length + " vs source: " + s.source.clip.length);
             return s.clip.length;
         }
     }
@@ -378,12 +378,12 @@ public class AudioManager : MonoBehaviour
 
         if (s == null || s.source.isPlaying) //TODO: i htink "s.source.isPlaying" is bad or does nothing
         {
-            Debug.LogWarning("Sound: " + sound + " not found!");
+            ////Debug.LogWarning("Sound: " + sound + " not found!");
             return;
         }
         else
         {
-            Debug.Log("Sound: " + sound);
+            ////Debug.Log("Sound: " + sound);
         }
 
         RandomizeClips(); //for sounds that have multiple audioclips
@@ -426,7 +426,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.LogError("Sound: " + sound + " not found!");
+            ////Debug.LogError("Sound: " + sound + " not found!");
             return;
         }
         if (pitch <= 3 && pitch >= 0)
@@ -442,7 +442,7 @@ public class AudioManager : MonoBehaviour
             pitch = 0;
         }
 
-        Debug.Log("setpitch: " + sound + " to: " + pitch);
+        ////Debug.Log("setpitch: " + sound + " to: " + pitch);
         s.pitch = pitch;
     }
     public void StopPlayingSFX(string sound)
@@ -450,7 +450,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(SFXSounds, item => item.name == sound);
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + name + " not found!");
+            ////Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
 
@@ -461,7 +461,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(SFXSounds, item => item.name == sound);
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + name + " not found!");
+            ////Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
 
@@ -474,11 +474,11 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(TypeSounds, x => x.name == name);
         if (s == null)
         {
-            Debug.Log("Could not find sound: " + name);
+            //////Debug.Log("Could not find sound: " + name);
         }
         else if (TypeSource.isPlaying)
         {
-            Debug.Log("source is playing for: " + name);
+            //////Debug.Log("source is playing for: " + name);
         }
         else
         {
@@ -508,8 +508,8 @@ public class AudioManager : MonoBehaviour
                 {
                     newpitch = 0.1f;
                 }
-                //Debug.Log(newvolume + " " + newpitch);
-                //Debug.Log(s.source.pitch);
+                //////Debug.Log(newvolume + " " + newpitch);
+                //////Debug.Log(s.source.pitch);
                 s.source.volume = newvolume;
                 s.source.pitch = newpitch;
             }
@@ -551,47 +551,37 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + sound + " not found!");
+            ////Debug.LogWarning("Sound: " + sound + " not found!");
             return;
         }
         else
         {
-            Debug.Log("Sound: " + sound);
+            ////Debug.Log("Sound: " + sound);
         }
-        GameObject soundObject = Instantiate(AudioPrefab, transform.position, Quaternion.identity);
+
+        RandomizeClips(); //for sounds that have multiple audioclips
+
+        GameObject soundObject = GetPooledAudioObject();
         AudioSource audioSource = soundObject.GetComponent<AudioSource>();
 
         audioSource.clip = s.clip;
-        s.source.volume = s.volume;
-        s.source.pitch = s.pitch;
+        audioSource.volume = s.volume;
+        audioSource.pitch = s.pitch;
 
         if (s.volumeVariance + s.pitchVariance != 0)
         {
-            float newvolume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-            float newpitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+            float newVolume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+            float newPitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
-            if (newvolume > 1)
-            {
-                newvolume = 1;
-            }
-            if (newpitch > 3)
-            {
-                newpitch = 1;
-            }
-            if (newvolume < 0)
-            {
-                newvolume = 0;
-            }
-            if (newpitch < 0.1f)
-            {
-                newpitch = 0.1f;
-            }
-            audioSource.volume = newvolume;
-            audioSource.pitch = newpitch;
+            newVolume = Mathf.Clamp(newVolume, 0, 1);
+            newPitch = Mathf.Clamp(newPitch, 0.1f, 3);
+
+            audioSource.volume = newVolume;
+            audioSource.pitch = newPitch;
         }
-        audioSource.Play();
 
-        Destroy(soundObject, audioSource.clip.length + 1f); // Destroy slightly after the clip ends
+        soundObject.GetComponent<DestroyAudioPrefab>().SetReturnTime(s.clip.length);
+        audioSource.Play();
     }
     public void StopTypeSound()
     {
@@ -605,7 +595,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.LogWarning("Music: " + sound + " not found!");
+            ////Debug.LogWarning("Music: " + sound + " not found!");
             return false;
         }
         else if (MusicSource.clip.Equals(s.clip))
@@ -620,7 +610,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null || s.clip == null)
         {
-            Debug.LogWarning("Sound: " + sound + " not found!");
+            ////Debug.LogWarning("Sound: " + sound + " not found!");
             return 0.1f;
         }
         else
@@ -633,7 +623,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(MusicSounds, x => x.name == name);
         if (s == null)
         {
-            Debug.Log("Could not find sound: " + name);
+            ////Debug.Log("Could not find sound: " + name);
         }
         else
         {

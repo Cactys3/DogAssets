@@ -38,7 +38,7 @@ public class ChangeToScene : MonoBehaviour
                 SceneManager.LoadScene(DialogueManager.kitchenScene);
                 break;
             case SceneName.Microwave:
-                if (Level > 0 && Level <= 5)
+                if (Level > 0 && Level <= 7)
                 {
                     SceneManager.LoadScene("Microwave " + Level.ToString());
                 }
@@ -51,7 +51,7 @@ public class ChangeToScene : MonoBehaviour
                 SceneManager.LoadScene(DialogueManager.juicerScene);
                 break;
             case SceneName.FridgeOven:
-                if (Level > 0 && Level <= 4)
+                if (Level > 0 && Level <= 9)
                 {
                     SceneManager.LoadScene("Fridge Level " + Level.ToString());
                 }
@@ -84,6 +84,12 @@ public class ChangeToScene : MonoBehaviour
             case SceneName.Boss:
                 SceneManager.LoadScene(DialogueManager.bossScene);
                 break;
+            case SceneName.EndChoice:
+                SceneManager.LoadScene(DialogueManager.endchoiceScene);
+                break;
+            case SceneName.Credits:
+                SceneManager.LoadScene(DialogueManager.creditScene);
+                break;
             default:
                 Debug.LogError("ChangeToScene on object: " + this.gameObject.name + ", is not setup properly");
                 break;
@@ -108,7 +114,9 @@ public enum SceneName
     Bathroom1,
     DemoEnd,
     LoadInk,
+    EndChoice,
     Ending1,
     Ending2,
+    Credits,
     Boss
 };

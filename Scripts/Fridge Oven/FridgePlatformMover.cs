@@ -14,6 +14,7 @@ public class FridgePlatformMover : MonoBehaviour
     [SerializeField] bool VerticalBool; //True = Up, False = Down
     [SerializeField] bool SquareBool; //True = Vertical, False = Horizontal
     [SerializeField] int SquareDirection; //should be -1 for Clockwise or 1 for CounterClockwise (maybe?)
+    [SerializeField] bool DisablePlayerRiding;
     bool PlayerOnPlatform;
     public float Speed; 
     private Rigidbody2D body;
@@ -44,7 +45,7 @@ public class FridgePlatformMover : MonoBehaviour
     {
         if (HorizontalBool)
         {
-            //body.velocity = new Vector2(Speed, 0);
+            transform.position += new Vector3(Speed * Time.deltaTime, 0, 0);
             if (transform.position.x >= RightMax)
             {
 
@@ -54,6 +55,7 @@ public class FridgePlatformMover : MonoBehaviour
         }
         else
         {
+            transform.position += new Vector3(Speed * -1 * Time.deltaTime, 0, 0);
             if (transform.position.x <= LeftMax)
             {
                 HorizontalBool = !HorizontalBool;
@@ -111,21 +113,28 @@ public class FridgePlatformMover : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !DisablePlayerRiding)
         {
             PlayerOnPlatform = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !DisablePlayerRiding)
         {
             PlayerOnPlatform = false;
         }
     }
     private void PlaySound()
     {
-        FindObjectOfType<AudioManager>().PlayingSFX("f_platform");
+        try
+        {
+            FindObjectOfType<AudioManager>().PlayingSFX("f_platform");
+        }
+        catch
+        {
+            Debug.Log("f_platform" + " couldn't play sound");
+        }
     }
 }
 

@@ -7,7 +7,7 @@ public class DialogueTrigger : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private bool DisableAfterPlay = false;
     [SerializeField] private bool DontDimAfterPlay = false;
-    private const float DimAmount = 0.75f;
+    private const float DimAmount = 0.25f;
     [Header("Sound Effect To Play")]
     [SerializeField] private string EnterSoundName;
     [SerializeField] private string ExitSoundName;
@@ -23,9 +23,12 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     private bool playerInRange;
     private bool Active;
+    private bool WaitingForInteract = false;
     private InteractManager interactManager;
     private DialogueManager dialogueMan;
     private AudioManager audioMan;
+
+    private bool InteractedAlready = false;
     private void Awake()
     {
         Active = true;
@@ -41,7 +44,7 @@ public class DialogueTrigger : MonoBehaviour
     }
     private void Update()
     {
-        if (playerInRange && !dialogueMan.dialogueIsPlaying)
+        if (playerInRange && !dialogueMan.dialogueIsPlaying && !WaitingForInteract)
         {
             if (Active)
             {
@@ -83,8 +86,9 @@ public class DialogueTrigger : MonoBehaviour
     }
     IEnumerator DelayInteract(float time)
     {
+        WaitingForInteract = true;
         yield return new WaitForSecondsRealtime(time);
-
+        WaitingForInteract = false;
         StartStory();
     }
     public void StartStory()
