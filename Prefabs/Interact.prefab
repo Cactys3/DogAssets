@@ -294,11 +294,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisableAfterPlay: 0
   DontDimAfterPlay: 0
+  PlayEnterSoundOnce: 0
   EnterSoundName: 
   ExitSoundName: 
   interactKeybind: 101
   visualCue: {fileID: 4769180217670185565}
   text: {fileID: 4900000, guid: 3bea9041197cf8743a4a6f874f8c9018, type: 3}
   ActiveSprite: {fileID: 21300000, guid: 8faef5f8f6902c741ba7b39fa3bd658d, type: 3}
-  InactiveSprite: {fileID: 21300000, guid: 2df012c9fb6c60c4880ae1ef0f3d3796, type: 3}
+  InactiveSprite: {fileID: 21300000, guid: 4abec1297497eda4aa3a5c89ee338117, type: 3}
   spriteRenderer: {fileID: 264872987485105867}

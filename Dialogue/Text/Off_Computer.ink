@@ -1,5 +1,7 @@
 INCLUDE Globals.ink
 
+
+~played_keyboard = true
 {completed_computer:
 -> AlreadyLearned
 - else:
@@ -8,10 +10,11 @@ INCLUDE Globals.ink
 
 
 ===Learn===
-#name:dog #image:dog_growl #layout:dog1 sound:dog_growl
+#name:dog #image:dog_growl #sound:dog_growl
 Grrrrrr...
-#name:dog #image:dog_neutral #layout:dog1 sound:keyboard
+#name:dog #image:dog_neutral #sound:dog
 ..................
+   #name:Narrator #image:narrator_neutral #sound:narrator
 {has_tastykey:
 The dog has just researched online about keys, doors, and molds.
 He knew most of the stuff about molds already, but can now operate doors!
@@ -24,7 +27,7 @@ He knew most of the stuff about molds already, but can now operate doors!
     ~completed_computer = true
     ->END
     - else:
-    #name:narrator #image:narrator_default #layout:narrator1 #sound:narrator1
+    #name:Narrator #image:narrator_neutral #sound:narrator
     The dog has just researched online about keys, doors, and molds. <<wait:1> It's now very knolwedgable about such things.
     ~completed_computer = true
     ->END
@@ -34,6 +37,6 @@ He knew most of the stuff about molds already, but can now operate doors!
 
 
 ===AlreadyLearned===
-#name:narrator #image:narrator_default #layout:narrator1 #sound:narrator1
+#name:Narrator #image:narrator_neutral #sound:narrator
 The dog learned about keys, doors, and molds here.
 ->END

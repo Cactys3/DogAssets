@@ -2,7 +2,7 @@ INCLUDE Globals.ink
 #layout:up
 VAR trap = false
 
-
+~played_intro = true
 #name:??? #image:narrator_neutral #sound:narrator
 Hey, you! 
 You're finally awake.

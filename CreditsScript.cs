@@ -20,7 +20,8 @@ public class CreditsScript : MonoBehaviour
     }
     IEnumerator End()
     {
-        yield return new WaitForSeconds(3);
+        Application.OpenURL("https://forms.gle/9u2wfGr32NBC2Bq98");
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Escape));
         Application.Quit();
     }
     void Update()

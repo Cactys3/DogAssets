@@ -32,6 +32,8 @@ VAR played_doortooffice = false
 VAR played_doortobath = false
 VAR played_doortokitchen = false
 VAR played_doortoliving = false
+VAR played_intro = false
+VAR played_keyboard = false
 
 VAR played_poop = false
 //has_itemname is if a particular is currently obtained

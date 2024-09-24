@@ -9,6 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool DontDimAfterPlay = false;
     private const float DimAmount = 0.25f;
     [Header("Sound Effect To Play")]
+    [SerializeField] private bool PlayEnterSoundOnce;
     [SerializeField] private string EnterSoundName;
     [SerializeField] private string ExitSoundName;
     [Header("Keybind To Trigger NPC")]
@@ -28,7 +29,7 @@ public class DialogueTrigger : MonoBehaviour
     private DialogueManager dialogueMan;
     private AudioManager audioMan;
 
-    private bool InteractedAlready = false;
+    static bool InteractedAlready = false;
     private void Awake()
     {
         Active = true;
@@ -61,14 +62,24 @@ public class DialogueTrigger : MonoBehaviour
                         dialogueMan.SetDialogueExitSound("silent", false);
                     }
 
-                    if (!EnterSoundName.IsUnityNull() && !EnterSoundName.Equals(""))
+                    if (PlayEnterSoundOnce && !InteractedAlready)
                     {
+                        Debug.Log("1");
+                        InteractedAlready = true;
+                        audioMan.PlaySFX(EnterSoundName);
+
+                        StartCoroutine("DelayInteract", 0.5f + audioMan.GetLengthSFX(EnterSoundName)); //wait until the enter sound has played to start dialogue
+                    }
+                    else if (!PlayEnterSoundOnce && (!EnterSoundName.IsUnityNull() && !EnterSoundName.Equals("")))
+                    {
+                        Debug.Log("2");
                         audioMan.PlaySFX(EnterSoundName);
 
                         StartCoroutine("DelayInteract", 0.5f + audioMan.GetLengthSFX(EnterSoundName)); //wait until the enter sound has played to start dialogue
                     }
                     else
                     {
+                        Debug.Log("3");
                         StartStory();
                     }
                 }
@@ -86,13 +97,16 @@ public class DialogueTrigger : MonoBehaviour
     }
     IEnumerator DelayInteract(float time)
     {
+        FindObjectOfType<PlayerMovementFree>().DialogueTriggerStoppingMovement = true;
         WaitingForInteract = true;
         yield return new WaitForSecondsRealtime(time);
         WaitingForInteract = false;
+        FindObjectOfType<PlayerMovementFree>().DialogueTriggerStoppingMovement = false;
         StartStory();
     }
     public void StartStory()
     {
+        InteractedAlready = true;
         dialogueMan.EnterDialogueMode(text);
         if (DisableAfterPlay)
         {

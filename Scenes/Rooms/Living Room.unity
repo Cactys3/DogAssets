@@ -2615,15 +2615,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tab to open the inventory
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 96e062baab643bc45afc6736ba51872c, type: 2}
+  m_sharedMaterial: {fileID: 8737137348636498703, guid: 96e062baab643bc45afc6736ba51872c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 2785017855
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.64705884}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2640,8 +2640,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3345,6 +3345,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2652109247754818943}
+    - target: {fileID: 6978029573772140594, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978029573772140594, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 96e062baab643bc45afc6736ba51872c, type: 2}
+    - target: {fileID: 6978029573772140594, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978029573772140594, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8737137348636498703, guid: 96e062baab643bc45afc6736ba51872c, type: 2}
+    - target: {fileID: 6978029573772140594, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7142819116239035855, guid: f6b6e05486061ca4c805e606a47b1e0e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

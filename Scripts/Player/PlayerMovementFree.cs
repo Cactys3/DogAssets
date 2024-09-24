@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovementFree : MonoBehaviour
 {
+    public bool DialogueTriggerStoppingMovement;
+
     private bool WalkSoundPlaying;
     private bool wasHorizontal;
     private bool horizontal;
@@ -18,6 +20,7 @@ public class PlayerMovementFree : MonoBehaviour
     private int AnimState; //1=idle 2=vertical 3=horizontal
     void Start()
     {
+        DialogueTriggerStoppingMovement = false;
         AnimState = 0;
         MoveSpeed = 3f;
         horizontal = false;
@@ -30,7 +33,7 @@ public class PlayerMovementFree : MonoBehaviour
     void Update()
     {
         //can't move during dialogue
-        if (FindObjectOfType<DialogueManager>().dialogueIsPlaying || FindObjectOfType<ManageUI>().DisplayingUI()) //DialogueManager.GetInstance().dialogueIsPlaying
+        if (DialogueTriggerStoppingMovement || FindObjectOfType<DialogueManager>().dialogueIsPlaying || FindObjectOfType<ManageUI>().DisplayingUI()) //DialogueManager.GetInstance().dialogueIsPlaying
         {
             FindObjectOfType<AudioManager>().PausePlayingSFX("dog_footsteps");
             WalkSoundPlaying = false;

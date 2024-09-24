@@ -5,7 +5,7 @@ INCLUDE Globals.ink
 Water, it's wet.
 
 {played_bath1_toilet == false:
-#name:dog #image:dog_bark #layout:dog1
+ #name:dog #image:dog_sniff #sound:dog_sniff
 Sniff...
 #name:Narrator #image:narrator_neutral #sound:narrator
 The dog happily drinks its fill.

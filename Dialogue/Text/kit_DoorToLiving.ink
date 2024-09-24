@@ -27,7 +27,7 @@ VAR count = 3
 ~count = count - 1
 }
 
-{count == 3:
+{count == 0:
 ~played_doortoliving = true
 #scene:living
 - else:
