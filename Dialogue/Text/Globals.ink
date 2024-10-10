@@ -8,6 +8,7 @@ VAR unlocked_deck = false
 VAR unlocked_speech = false
 VAR unlocked_dooropening = false
 VAR ate_dognip = false
+VAR narratortired_bool = false
 //completed_name is if an ink story has already been played out
 VAR completed_dogfood = false
 VAR completed_plant = false
@@ -34,6 +35,7 @@ VAR played_doortokitchen = false
 VAR played_doortoliving = false
 VAR played_intro = false
 VAR played_keyboard = false
+VAR played_narratortired = false
 
 VAR played_poop = false
 //has_itemname is if a particular is currently obtained

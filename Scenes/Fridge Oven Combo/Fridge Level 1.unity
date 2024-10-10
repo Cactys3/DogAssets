@@ -561,7 +561,12 @@ PrefabInstance:
       propertyPath: m_text
       value: 'WASD - to move
 
-        SPACE - to jump'
+        SPACE - to jump
+
+        R - to restart
+
+        Click
+        on "Skip Button" to skip the minigame'
       objectReference: {fileID: 0}
     - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
       propertyPath: m_fontSize
@@ -569,11 +574,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
       propertyPath: m_margin.w
-      value: -46.06525
+      value: -1.1259766
       objectReference: {fileID: 0}
     - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
       propertyPath: m_margin.z
-      value: -366.47467
+      value: -0.5404511
       objectReference: {fileID: 0}
     - target: {fileID: 3958149288514666211, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
       propertyPath: m_fontColor.b
@@ -596,12 +601,20 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5042823982353668063, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 542.6682
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042823982353668063, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 213.4612
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042823982353668063, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -576
+      value: -488
       objectReference: {fileID: 0}
     - target: {fileID: 5042823982353668063, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -373
+      value: -413
       objectReference: {fileID: 0}
     - target: {fileID: 8628221898211130933, guid: e7626e50f9ac43145ac00526c84b6191, type: 3}
       propertyPath: m_IsActive
@@ -786,6 +799,10 @@ PrefabInstance:
     - target: {fileID: 2450782965756348749, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
       propertyPath: m_Name
       value: Skip Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062227003447223519, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
+      propertyPath: time
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6376383025123686113, guid: b284bc77b60940841b63a309b21c29e7, type: 3}
       propertyPath: m_IsTrigger

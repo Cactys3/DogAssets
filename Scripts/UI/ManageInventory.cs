@@ -62,7 +62,7 @@ public class ManageInventory : MonoBehaviour
         {
 
             HoveredDescriptionText.text = "";
-            HeldDescriptionText.text = "Holding no item!";
+            //HeldDescriptionText.text = "Holding no item!";
         }
     }
     /**
@@ -266,6 +266,7 @@ public class ManageInventory : MonoBehaviour
             {
                 Debug.LogWarning("SetHold() was called with a string name: " + name + " that isn't one of the items");
             }
+
             switch (name)
             {
                 case dogfood:
@@ -351,7 +352,7 @@ public class ManageInventory : MonoBehaviour
                 FindObjectOfType<DialogueManager>().SetVariableStateSystem("holding_item", false);
                 FindObjectOfType<DialogueManager>().SetVariableStateSystem("held_item", "");
 
-                HeldDescriptionText.text = "Item Name: this is the default text the item description textbox would display given";
+                HeldDescriptionText.text = "Holding no item!";
             }
             else
             {

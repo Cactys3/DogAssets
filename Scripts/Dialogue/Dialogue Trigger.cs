@@ -14,6 +14,8 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private string ExitSoundName;
     [Header("Keybind To Trigger NPC")]
     [SerializeField] private KeyCode interactKeybind;
+
+
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
     [Header("Ink JSON")]
@@ -36,6 +38,7 @@ public class DialogueTrigger : MonoBehaviour
         visualCue.SetActive(false);
         playerInRange = false;
         //interactKeybind = KeyCode.E;
+
     }
     private void Start()
     {

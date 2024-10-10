@@ -442,6 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da80eeb42908e94a94eabe9d618da5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTriggerStoppingMovement: 0
   StopsMovement:
     serializedVersion: 2
     m_Bits: 64
@@ -748,7 +749,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 224833833755961019, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Name
-      value: Interact
+      value: CheatInteract
       objectReference: {fileID: 0}
     - target: {fileID: 224833833755961019, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_IsActive

@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scene: 5
-  Level: 5
+  Level: 6
   ChangeSceneOnEnabled: 0
 --- !u!1001 &1504482713
 PrefabInstance:

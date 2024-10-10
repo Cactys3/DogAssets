@@ -30,23 +30,29 @@ public class ManageUI : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     //Time.timeScale = 1;
-                    TabPanel.SetActive(false);
-                    EscPanel.SetActive(false);
+                    TabPanel.SetActive(true);
+                    EscPanel.SetActive(true);
+                    TabPanel.SetActive(false);//twice
+                    EscPanel.SetActive(false);//twice
 
                 }
                 if (Input.GetKeyDown(KeyCode.Tab))
                 {
+                    TabPanel.SetActive(true);//twice
                     TabPanel.SetActive(false);
                     //Time.timeScale = 1;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
+                EscPanel.SetActive(false);//twice
                 EscPanel.SetActive(true);
                 //Time.timeScale = 0;
             }
             else if (Input.GetKeyDown(KeyCode.Tab) && CanAccessInventory)
             {
+                TabPanel.SetActive(true);
+                TabPanel.SetActive(false);//flip flop so it resets and everything is set up??
                 TabPanel.SetActive(true);
                 FindObjectOfType<AudioManager>().PlayMultipleSFX("inventory_open");
                 //Time.timeScale = 0;

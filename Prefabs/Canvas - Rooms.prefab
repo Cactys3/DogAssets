@@ -201,8 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Item Name: this is the default text the item description textbox would
-    display given'
+  m_text: Hover your mouse over an item!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 96e062baab643bc45afc6736ba51872c, type: 2}
   m_sharedMaterial: {fileID: 8737137348636498703, guid: 96e062baab643bc45afc6736ba51872c, type: 2}
@@ -3241,8 +3240,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Item Name: this is the default text the item description textbox would
-    display given'
+  m_text: Holding no item!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 96e062baab643bc45afc6736ba51872c, type: 2}
   m_sharedMaterial: {fileID: 8737137348636498703, guid: 96e062baab643bc45afc6736ba51872c, type: 2}
@@ -3586,6 +3584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StinkyFilledKeyMold
       objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: Filled Keymold
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3660,6 +3662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clay
       objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: Clay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3725,6 +3731,10 @@ PrefabInstance:
     - target: {fileID: 7310245231456396372, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
       propertyPath: m_Name
       value: Default
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: YouCan'tHaveThis.txt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3798,6 +3808,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7310245231456396372, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
       propertyPath: m_Name
+      value: Candy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
       value: Candy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3874,6 +3888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DogFood
       objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: Dog Food
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3947,6 +3965,10 @@ PrefabInstance:
     - target: {fileID: 7310245231456396372, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
       propertyPath: m_Name
       value: TastyKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: Candy Key
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4022,6 +4044,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlimsyKey
       objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: Flimsy Key
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4043,7 +4069,7 @@ PrefabInstance:
     - target: {fileID: 3966524981706487856, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0e1bb11f51c29d04aacc3c1d2e89d51e, type: 3}
+      objectReference: {fileID: 21300000, guid: 0b4f90c2e29e7f9439e21dfcab2c7ccb, type: 3}
     - target: {fileID: 5995107419736351140, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4095,6 +4121,10 @@ PrefabInstance:
     - target: {fileID: 7310245231456396372, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
       propertyPath: m_Name
       value: Keymold
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: Unprepared Keymold
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4170,6 +4200,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StinkyKey
       objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: Poop Key
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4243,6 +4277,10 @@ PrefabInstance:
     - target: {fileID: 7310245231456396372, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
       propertyPath: m_Name
       value: MoldableClay
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: Moldable Clay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4318,6 +4356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poop
       objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: Poop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4391,6 +4433,10 @@ PrefabInstance:
     - target: {fileID: 7310245231456396372, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
       propertyPath: m_Name
       value: TastyFilledKeyMold
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460866697818052022, guid: b096f0f7f80e7ea49b27620bb50ca4a8, type: 3}
+      propertyPath: m_text
+      value: Filled Keymold
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

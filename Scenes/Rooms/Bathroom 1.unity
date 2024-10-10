@@ -434,6 +434,10 @@ PrefabInstance:
       value: bath
       objectReference: {fileID: 0}
     - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 4900000, guid: 87ce38d69fd088b4e95060a8e7ecc509, type: 3}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: SoundName
       value: valve_interact
       objectReference: {fileID: 0}
@@ -615,6 +619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sink
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 4900000, guid: 87ce38d69fd088b4e95060a8e7ecc509, type: 3}
     - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: SoundName
       value: valve_interact
@@ -834,6 +842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: basura
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 4900000, guid: 87ce38d69fd088b4e95060a8e7ecc509, type: 3}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
       value: 0.66236943
@@ -1517,6 +1529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toilet paper
       objectReference: {fileID: 0}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 4900000, guid: 87ce38d69fd088b4e95060a8e7ecc509, type: 3}
     - target: {fileID: 2864535793363202084, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Size.x
       value: 0.63852
