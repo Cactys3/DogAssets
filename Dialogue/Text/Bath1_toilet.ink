@@ -12,6 +12,11 @@ The dog happily drinks its fill.
 ~ played_bath1_toilet = true
 }
 
+{completed_toilet:
+->END
+}
+
+
 {holding_item:
 ->IsHoldingItem
 -else:
@@ -40,6 +45,7 @@ Good decision, that would probably be a bad idea.
 ~holding_item = false
 ~held_item = ""
 The clay, once dipped in the water, becomes wet and moldable.
+~completed_toilet = true
 ->END
 -else:
 Water doesn't seem to have a lasting impact on that particular item.

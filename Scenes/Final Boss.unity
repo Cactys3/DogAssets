@@ -4238,7 +4238,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Space - dash\nMouse 1 - Thrust\nMouse 2 - Speen\n\nPress P to lower the
-    difficulty \n(works multiple times)\n"
+    difficulty \n(works multiple times)\n\nPress R to reset (if stuck)\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 96e062baab643bc45afc6736ba51872c, type: 2}
   m_sharedMaterial: {fileID: 8737137348636498703, guid: 96e062baab643bc45afc6736ba51872c, type: 2}

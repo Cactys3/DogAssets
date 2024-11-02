@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private bool ToyKey = false;
     [SerializeField] private bool DisableAfterPlay = false;
     [SerializeField] private bool DontDimAfterPlay = false;
     private const float DimAmount = 0.25f;
@@ -45,6 +46,10 @@ public class DialogueTrigger : MonoBehaviour
         interactManager = FindObjectOfType<InteractManager>();
         dialogueMan = FindObjectOfType<DialogueManager>();
         audioMan = FindObjectOfType<AudioManager>();
+        if  (ToyKey && (bool)dialogueMan.GetVariableStateSystem("completed_flimsykey") == true)
+        {
+            this.transform.parent.gameObject.SetActive(false);
+        }
     }
     private void Update()
     {

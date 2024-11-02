@@ -99,6 +99,11 @@ public class BossFightManager : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             PlayerSpinDamage += 15;

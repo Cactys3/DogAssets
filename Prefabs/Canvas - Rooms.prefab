@@ -1249,19 +1249,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e7ca7f2e79ffa469d1dbd3d1a5a98a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dogfoodImage: {fileID: 21300000, guid: 8611d0a02516d704889191f124789bca, type: 3}
-  defaultitemImage: {fileID: -1196989855, guid: 6c9c8504e0e9b7d4e92d8d92f9c2f0f4, type: 3}
-  flimsykeyImage: {fileID: 21300000, guid: 14e36c79403b2aa46b84d0472d76f434, type: 3}
-  clayImage: {fileID: 21300000, guid: 0e97361a56592284baa3e45a7105921c, type: 3}
-  poopImage: {fileID: 21300000, guid: ca1aae856c5d28d488f6050f6afb1fac, type: 3}
-  candyImage: {fileID: 21300000, guid: 87725cb17e266ab40b23d1effe296ce6, type: 3}
-  Image: {fileID: -1196989855, guid: 6c9c8504e0e9b7d4e92d8d92f9c2f0f4, type: 3}
-  moldableclayImage: {fileID: 21300000, guid: f28b7b5651e08f14baa7eaeda5647d48, type: 3}
-  keymoldImage: {fileID: -1196989855, guid: 6c9c8504e0e9b7d4e92d8d92f9c2f0f4, type: 3}
-  tastykeymoldImage: {fileID: -1196989855, guid: 6c9c8504e0e9b7d4e92d8d92f9c2f0f4, type: 3}
-  stinkyfilledkeymoldImage: {fileID: -1196989855, guid: 6c9c8504e0e9b7d4e92d8d92f9c2f0f4, type: 3}
-  stinkykeyImage: {fileID: -1196989855, guid: 6c9c8504e0e9b7d4e92d8d92f9c2f0f4, type: 3}
-  tastykeyImage: {fileID: -1196989855, guid: 6c9c8504e0e9b7d4e92d8d92f9c2f0f4, type: 3}
+  dogfoodImage: {fileID: 21300000, guid: e4a5c18ca10ae1d4eb3c78c6d6c2d3f6, type: 3}
+  defaultitemImage: {fileID: 21300000, guid: 5694d5b8b94132c4bb26c249bc2ef204, type: 3}
+  flimsykeyImage: {fileID: 21300000, guid: e43b9f6c2077bd5479a280bf427d024e, type: 3}
+  clayImage: {fileID: 21300000, guid: cadca002b1afc694ca979ae1ba82007e, type: 3}
+  poopImage: {fileID: 21300000, guid: ef3df23b46cadc9419418aef8bcf2891, type: 3}
+  candyImage: {fileID: 21300000, guid: 1e98f07e67593ea48a652c6ea2a20f67, type: 3}
+  Image: {fileID: 21300000, guid: 5694d5b8b94132c4bb26c249bc2ef204, type: 3}
+  moldableclayImage: {fileID: 21300000, guid: 31cf30977f15bf9439166b15693eb3bd, type: 3}
+  keymoldImage: {fileID: 21300000, guid: 0b4f90c2e29e7f9439e21dfcab2c7ccb, type: 3}
+  tastykeymoldImage: {fileID: 21300000, guid: 0e1bb11f51c29d04aacc3c1d2e89d51e, type: 3}
+  stinkyfilledkeymoldImage: {fileID: 21300000, guid: 13dc45ee6ac44064ca300ac58be49856, type: 3}
+  stinkykeyImage: {fileID: 21300000, guid: 515634558080b5b418469200b713090a, type: 3}
+  tastykeyImage: {fileID: 21300000, guid: c41faf4ba81506b43a99a3911cd4068c, type: 3}
   ItemText: {fileID: 7191299148851443065}
   ItemImage: {fileID: 8512879811693295086}
 --- !u!1 &2892681873293007318

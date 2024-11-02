@@ -69,11 +69,17 @@ public class DialogueManager : MonoBehaviour
     public const string fridgeovenScene3 = "Fridge Level 3";
     public const string fridgeovenScene4 = "Fridge Level 4";
     public const string fridgeovenScene5 = "Fridge Level 5";
+    public const string fridgeovenScene6 = "Fridge Level 6";
+    public const string fridgeovenScene7 = "Fridge Level 7";
+    public const string fridgeovenScene8 = "Fridge Level 8";
+    public const string fridgeovenScene9 = "Fridge Level 9";
     public const string microwaveScene = "Microwave 1";
     public const string microwaveScene2 = "Microwave 2";
     public const string microwaveScene3 = "Microwave 3";
     public const string microwaveScene4 = "Microwave 4";
     public const string microwaveScene5 = "Microwave 5";
+    public const string microwaveScene6 = "Microwave 6";
+    public const string microwaveScene7 = "Microwave 7";
     //Names
     private const string NarratorName = "narrator";
     private const string DogName = "dog";
@@ -302,7 +308,7 @@ public class DialogueManager : MonoBehaviour
                 if (canSkipTyping && Input.GetKeyDown(SubmitKeybind) && visibleCharacters > 2)
                 {
                     skip = true;
-                    //Debug.Log("skip");
+                    Debug.Log("skip100");
                 }
                 if (letter == '<')
                 {
@@ -374,7 +380,10 @@ public class DialogueManager : MonoBehaviour
                             {//if it's a two word tag then it goes to this switch statement
                                 case WAIT_CUSTOM:
                                     //Debug.Log("wait triggered");
-                                    yield return new WaitForSeconds(float.Parse(tagValue));
+                                    if (!skip)
+                                    {
+                                        yield return new WaitForSeconds(float.Parse(tagValue));
+                                    }
                                     break;
                                 case SPACE_CUSTOM:
                                     //Debug.Log("space triggered");
@@ -436,13 +445,14 @@ public class DialogueManager : MonoBehaviour
                     }
                     //if we are skipping to the end, type all letters without miniscule delay
                     if (!skip) 
-                    { 
+                    {
                         yield return new WaitForSeconds(typingSpeed);
                         //Debug.Log(typingSpeed + " type " + TestingValue);
                         TestingValue++;
                     }
                     else
                     {
+                        //Debug.Log("skip2");
                         yield return new WaitForSeconds(0.001f);
                         //Debug.Log(typingSpeed + "no type"  + TestingValue);
                     }

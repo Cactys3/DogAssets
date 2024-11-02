@@ -575,10 +575,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toy Key
       objectReference: {fileID: 0}
+    - target: {fileID: 264872987485105867, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 264872987485105867, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 264872987485105867, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: text
       value: 
       objectReference: {fileID: 4900000, guid: 7746cdf7cd7cc604eb416c8ac7bc399b, type: 3}
+    - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: ToyKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 413487868384211629, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: DisableAfterPlay
       value: 1
@@ -640,12 +656,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4576154131490910398, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
-      propertyPath: m_Sprite
-      value: 
+      propertyPath: m_Size.x
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 4576154131490910398, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576154131490910398, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 60f8457d068952f4f87a6354300a73f7, type: 3}
+    - target: {fileID: 4576154131490910398, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4576154131490910398, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
       propertyPath: m_Color.b
@@ -660,8 +684,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4576154131490910398, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
-      propertyPath: m_WasSpriteAssigned
+      propertyPath: m_SortingLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576154131490910398, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576154131490910398, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576154131490910398, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8138342798933293506, guid: 4e24ade1b27da5a49b12c4149eda566f, type: 3}
@@ -3234,6 +3270,10 @@ PrefabInstance:
     - target: {fileID: 6891731407610954013, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
       propertyPath: MultipleSpawns
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978465679474321174, guid: 2b3317683789c6941a11e6b83dabf591, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

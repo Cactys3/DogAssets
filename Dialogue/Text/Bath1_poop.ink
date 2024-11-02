@@ -27,6 +27,7 @@ Woof!
 #name:Narrator #image:narrator_neutral #sound:narrator
 The dog has decided to replace the poop with one of their own.
 ~ has_poop = true
+~ played_poop = true
 -> END
 * [It doesn't look foreign]
 #name:dog #image:dog_woof #sound:dog_woof
@@ -34,6 +35,7 @@ Woof!
 #name:Narrator #image:narrator_neutral #sound:narrator
 The dog has decided to replace the poop with a fresh one.
 ~ has_poop = true
+~ played_poop = true
 -> END
 * [I can't tell]
 #name:dog #image:dog_woof #sound:dog_woof

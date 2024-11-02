@@ -77,12 +77,14 @@ Do you now wish to use this hand crafted key and complete this quest?
 ->END
 
 ===Completed===
-After battling their way through each kitchen appliance come to life,<<wait:0.2> gaining copious quantities of knowledge, applying that knowledge to craft a work of art, finest ever made by dogkind, and finally using that work of art to unlock a locked door, as a dog.
+After battling their way through each kitchen appliance come to life, gaining copious quantities of knowledge, 
+applying that knowledge to craft a work of art, finest ever made by dogkind, and finally using that work of art to unlock a locked door, as a dog.
 They are finally ready to move on.
 This trip, while exilerating, has also been enlighting.
-The trials the dog conquered through this journey have tested them, and through that testing the dog has come to accept that those once called family did choose to abandon the dog and the house they turned to home.
+In conquering the trials this journey through at them, the dog has come to accept a cold truth. 
+Those that were once called family chose to abandon the dog and the house they turned to home.
 As the effects of the dognip start to shift, the dog realizes they must make their way through this final doorway...
-And face the cause of this destruction.<<wait:0.2>.<<wait:0.2>.<<wait:0.2> a<<wait:0.1>l<<wait:0.1>o<<wait:0.1>n<<wait:0.1>e<<wait:1>
+And face the cause of this destruction.<<wait:0.3>.<<wait:0.3>.<<wait:0.3> a<<wait:0.1>l<<wait:0.1>o<<wait:0.1>n<<wait:0.1>e<<wait:1>
 #scene:boss
 ->END
 

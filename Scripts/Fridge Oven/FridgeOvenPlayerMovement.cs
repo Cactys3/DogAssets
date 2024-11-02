@@ -301,6 +301,7 @@ public class FridgeOvenPlayerMovement : MonoBehaviour
     }
     private IEnumerator NextLevel()
     {
+        Stop(FootstepsSound);
         Play(GoalSound);
         yield return new WaitForSeconds(3);
         FindObjectOfType<ChangeToScene>().ChangeScene();

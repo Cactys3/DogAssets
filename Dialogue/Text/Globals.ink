@@ -9,6 +9,7 @@ VAR unlocked_speech = false
 VAR unlocked_dooropening = false
 VAR ate_dognip = false
 VAR narratortired_bool = false
+VAR introduced_dognip = false
 //completed_name is if an ink story has already been played out
 VAR completed_dogfood = false
 VAR completed_plant = false
@@ -23,6 +24,7 @@ VAR completed_off_cabinets = false
 VAR completed_flimsykey = false
 VAR completed_liv_doortostairs = false
 VAR completed_liv_cabinet = false
+VAR completed_toilet = false
 //played_name is if an ink story has already been played in whatever way the particular story cares about (usually only used within that one story)
 VAR played_bath1_toilet = false
 VAR played_DoorToStairs = false

@@ -65,8 +65,13 @@ public class MyCursor : MonoBehaviour
            // Debug.Log(mousePositionCanvas + " world: " + mousePositionWorld);
         }
     }
+    public void DisableCollider()
+    {
+        collideObject.SetActive(false);
+    }
     public void ShowCursor()
     {
+        collideObject.SetActive(true);
         image.enabled = true;
         ShowCustomCursor = true;
     }
@@ -77,39 +82,45 @@ public class MyCursor : MonoBehaviour
     }
     private void OnSceneLoad()
     {
-        CurrentScene = SceneManager.GetActiveScene().name; 
-        if (CurrentScene.Equals(DialogueManager.fridgeovenScene) || CurrentScene.Equals(DialogueManager.fridgeovenScene2) || CurrentScene.Equals(DialogueManager.fridgeovenScene3) || CurrentScene.Equals(DialogueManager.fridgeovenScene4) || CurrentScene.Equals(DialogueManager.fridgeovenScene5))
+        CurrentScene = SceneManager.GetActiveScene().name;
+        if (CurrentScene.Equals(DialogueManager.fridgeovenScene) || CurrentScene.Equals(DialogueManager.fridgeovenScene2) || CurrentScene.Equals(DialogueManager.fridgeovenScene3) || CurrentScene.Equals(DialogueManager.fridgeovenScene4) || CurrentScene.Equals(DialogueManager.fridgeovenScene5) || CurrentScene.Equals(DialogueManager.fridgeovenScene6) || CurrentScene.Equals(DialogueManager.fridgeovenScene7) || CurrentScene.Equals(DialogueManager.fridgeovenScene8) || CurrentScene.Equals(DialogueManager.fridgeovenScene9))
         {
             ShowCursor();//potentially have custom cursor for minigames
+            DisableCollider();
             image.sprite = FridgeOvenSprite;
         }
-        if (CurrentScene.Equals(DialogueManager.microwaveScene) || CurrentScene.Equals(DialogueManager.microwaveScene2) || CurrentScene.Equals(DialogueManager.microwaveScene3) || CurrentScene.Equals(DialogueManager.microwaveScene4) || CurrentScene.Equals(DialogueManager.microwaveScene5))
+        else if (CurrentScene.Equals(DialogueManager.microwaveScene) || CurrentScene.Equals(DialogueManager.microwaveScene2) || CurrentScene.Equals(DialogueManager.microwaveScene3) || CurrentScene.Equals(DialogueManager.microwaveScene4) || CurrentScene.Equals(DialogueManager.microwaveScene5) || CurrentScene.Equals(DialogueManager.microwaveScene6) || CurrentScene.Equals(DialogueManager.microwaveScene7))
         {
             ShowCursor();//potentially have custom cursor for minigames
+            DisableCollider();
             image.sprite = MicrowaveSprite;
         }
-        switch (CurrentScene) 
+        else
         {
-            case DialogueManager.dognipScene:
-                HideCursor();
-                break;
-            case DialogueManager.ending1Scene:
-                HideCursor();
-                break;
-            case DialogueManager.ending2Scene:
-                HideCursor();
-                break;
-            case DialogueManager.introScene:
-                HideCursor();
-                break;
-            case DialogueManager.juicerScene:
-                ShowCursor();
-                image.sprite = JuicerSprite;
-                break;
-            default:
-                image.sprite = DefaultSprite;
-                ShowCursor(); //potentially have custom cursor for rooms
-                break;
+            switch (CurrentScene)
+            {
+                case DialogueManager.dognipScene:
+                    HideCursor();
+                    break;
+                case DialogueManager.ending1Scene:
+                    HideCursor();
+                    break;
+                case DialogueManager.ending2Scene:
+                    HideCursor();
+                    break;
+                case DialogueManager.introScene:
+                    HideCursor();
+                    break;
+                case DialogueManager.juicerScene:
+                    ShowCursor();
+                    DisableCollider();
+                    image.sprite = JuicerSprite;
+                    break;
+                default:
+                    image.sprite = DefaultSprite;
+                    ShowCursor(); //potentially have custom cursor for rooms
+                    break;
+            }
         }
     }
 }

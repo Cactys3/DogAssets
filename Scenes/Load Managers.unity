@@ -1835,16 +1835,16 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: end_music
     clip: {fileID: 8300000, guid: 84549836b35394349a95d22daa00cdaa, type: 3}
-    volume: 0.64
-    volumeVariance: 0.1
+    volume: 0.55
+    volumeVariance: 0
     pitch: 1
-    pitchVariance: 0.1
+    pitchVariance: 0
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: boss_music
     clip: {fileID: 8300000, guid: b5f9ed8fb09ac764eab5004334110651, type: 3}
-    volume: 0.36
+    volume: 0.72
     volumeVariance: 0.1
     pitch: 1
     pitchVariance: 0.1
