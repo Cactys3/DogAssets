@@ -8,8 +8,8 @@ public class ManageUI : MonoBehaviour
     [SerializeField] bool CanAccessInventory;
     [SerializeField] GameObject TabPanel;
     [SerializeField] GameObject EscPanel;
-    private bool inTab;
-    private bool inEsc;
+    public bool inTab;
+    public bool inEsc;
     private void Start()
     {
         TabPanel.SetActive(false);
@@ -47,12 +47,17 @@ public class ManageUI : MonoBehaviour
             {
                 EscPanel.SetActive(false);//twice
                 EscPanel.SetActive(true);
+                EscPanel.SetActive(false);//twice
+                EscPanel.SetActive(true);
                 //Time.timeScale = 0;
             }
             else if (Input.GetKeyDown(KeyCode.Tab) && CanAccessInventory)
             {
+                TabPanel.SetActive(false);
                 TabPanel.SetActive(true);
                 TabPanel.SetActive(false);//flip flop so it resets and everything is set up??
+                TabPanel.SetActive(true);
+                TabPanel.SetActive(false);//Just do it again
                 TabPanel.SetActive(true);
                 FindObjectOfType<AudioManager>().PlayMultipleSFX("inventory_open");
                 //Time.timeScale = 0;

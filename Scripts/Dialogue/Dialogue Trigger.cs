@@ -31,6 +31,7 @@ public class DialogueTrigger : MonoBehaviour
     private InteractManager interactManager;
     private DialogueManager dialogueMan;
     private AudioManager audioMan;
+    private ManageUI UIManager;
 
     static bool InteractedAlready = false;
     private void Awake()
@@ -46,6 +47,7 @@ public class DialogueTrigger : MonoBehaviour
         interactManager = FindObjectOfType<InteractManager>();
         dialogueMan = FindObjectOfType<DialogueManager>();
         audioMan = FindObjectOfType<AudioManager>();
+        UIManager = FindObjectOfType<ManageUI>();
         if  (ToyKey && (bool)dialogueMan.GetVariableStateSystem("completed_flimsykey") == true)
         {
             this.transform.parent.gameObject.SetActive(false);
@@ -53,7 +55,7 @@ public class DialogueTrigger : MonoBehaviour
     }
     private void Update()
     {
-        if (playerInRange && !dialogueMan.dialogueIsPlaying && !WaitingForInteract)
+        if (playerInRange && !dialogueMan.dialogueIsPlaying && !WaitingForInteract && !UIManager.inTab && !UIManager.inEsc)
         {
             if (Active)
             {
