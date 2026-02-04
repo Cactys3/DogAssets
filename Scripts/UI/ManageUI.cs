@@ -59,10 +59,19 @@ public class ManageUI : MonoBehaviour
                 TabPanel.SetActive(true);
                 TabPanel.SetActive(false);//Just do it again
                 TabPanel.SetActive(true);
+                StartCoroutine(EnableTab());
                 FindObjectOfType<AudioManager>().PlayMultipleSFX("inventory_open");
                 //Time.timeScale = 0;
             }
         }
+    }
+    IEnumerator EnableTab()
+    {
+        TabPanel.SetActive(false);
+        TabPanel.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        TabPanel.SetActive(false);
+        TabPanel.SetActive(true);
     }
     public void DisableUI()
     {
